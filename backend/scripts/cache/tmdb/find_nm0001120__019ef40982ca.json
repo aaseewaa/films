@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 12329,
+      "name": "Vittorio De Sica",
+      "original_name": "Vittorio De Sica",
+      "media_type": "person",
+      "popularity": 1.5304,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/o3Q3yWT4nHFP8UKNM8c1ywmXWlG.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/nd6ItWuWGmTKhHXuxVC8kp86CmQ.jpg",
+          "id": 5156,
+          "title": "Bicycle Thieves",
+          "original_title": "Ladri di biciclette",
+          "overview": "Unemployed Antonio is elated when he finally finds work hanging posters around war-torn Rome. However on his first day, his bicycle—essential to his work—gets stolen. His job is doomed unless he can find the thief. With the help of his son, Antonio combs the city, becoming desperate for justice.",
+          "poster_path": "/iPdVqIpmR3bRvOQJPrn4pr2KR3q.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 3.4606,
+          "release_date": "1948-07-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.172,
+          "vote_count": 2644
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oHL7gjqFgxHiwm45hqj4Xou9Odg.jpg",
+          "id": 833,
+          "title": "Umberto D.",
+          "original_title": "Umberto D.",
+          "overview": "When elderly pensioner Umberto Domenico Ferrari returns to his boarding house from a protest calling for a hike in old-age pensions, his landlady demands her 15,000-lire rent by the end of the month or he and his small dog will be turned out onto the street. Unable to get the money in time, Umberto fakes illness to get sent to a hospital, giving his beloved dog to the landlady's pregnant and abandoned maid for temporary safekeeping.",
+          "poster_path": "/5I7SYsNQmZRZpQ2MAarIQYU9vaX.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.8654,
+          "release_date": "1952-01-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.88,
+          "vote_count": 737
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3TcUsPiVU0fSLX0Mk7lc3DDuzkY.jpg",
+          "id": 24167,
+          "title": "Two Women",
+          "original_title": "La ciociara",
+          "overview": "A young widow flees from Rome during WWII and takes her lonely twelve-year-old-daughter to her rural hometown but the horrors of war soon catch up with them.",
+          "poster_path": "/biWDAUQD58enMEcyO2BqIVSycF4.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "popularity": 2.4901,
+          "release_date": "1960-12-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.822,
+          "vote_count": 573
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

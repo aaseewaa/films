@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "2001-04-12",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 5512256,
+  "imdb_id": "nm11271517",
+  "known_for_department": "Acting",
+  "name": "Сэм Лок",
+  "place_of_birth": "Wales, UK",
+  "popularity": 0.2779,
+  "profile_path": "/5e33CGwTztSLeSuurikvEF3AIjx.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm11271517",
+    "tvrage_id": null,
+    "wikidata_id": "Q135112405",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

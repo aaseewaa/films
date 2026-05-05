@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1964-02-28",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 142000,
+  "imdb_id": "nm4121173",
+  "known_for_department": "Acting",
+  "name": "Hans Morten Hansen",
+  "place_of_birth": "Stavanger, Norway",
+  "popularity": 0.4535,
+  "profile_path": "/q6avDYFpDLCNHV5x3ILE02i3GmH.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm4121173",
+    "tvrage_id": null,
+    "wikidata_id": "Q5650497",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

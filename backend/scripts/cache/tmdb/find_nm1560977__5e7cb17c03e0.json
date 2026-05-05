@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 87257,
+      "name": "Cary Joji Fukunaga",
+      "original_name": "Cary Joji Fukunaga",
+      "media_type": "person",
+      "popularity": 0.9207,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/uVh6HtOwDxOxrjIbUMeRz5b0A7S.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/x9td0NQha0t44K2qgcMipLOGjVi.jpg",
+          "id": 370172,
+          "title": "No Time to Die",
+          "original_title": "No Time to Die",
+          "overview": "Bond has left active service and is enjoying a tranquil life in Jamaica. His peace is short-lived when his old friend Felix Leiter from the CIA turns up asking for help. The mission to rescue a kidnapped scientist turns out to be far more treacherous than expected, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.",
+          "poster_path": "/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            53,
+            12
+          ],
+          "popularity": 10.4282,
+          "release_date": "2021-09-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.339,
+          "vote_count": 7059
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/v8YFr8BbU9qsO8PYIulzTeM6Qk.jpg",
+          "id": 46648,
+          "name": "True Detective",
+          "original_name": "True Detective",
+          "overview": "An American anthology police detective series utilizing multiple timelines in which investigations seem to unearth personal and professional secrets of those involved, both within or outside the law.",
+          "poster_path": "/zYqVTiHK5ZajYcNzAW7qWte5NWS.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            9648
+          ],
+          "popularity": 55.5401,
+          "first_air_date": "2014-01-12",
+          "softcore": false,
+          "vote_average": 8.288,
+          "vote_count": 4078,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vDfbeUK3OhoeyQRlUODwfSy6tyE.jpg",
+          "id": 283587,
+          "title": "Beasts of No Nation",
+          "original_title": "Beasts of No Nation",
+          "overview": "Based on the experiences of Agu, a child fighting in the civil war of a West African country. Follows Agu's journey as he's forced to join a group of soldiers. While he fears his commander and many of the men around him, his fledgling childhood has been brutally shattered by the war raging through his country, and he is at first torn between conflicting revulsion and fascination.",
+          "poster_path": "/1D4vcJmJc58WXarpRtwgd2do9Rg.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "popularity": 2.5072,
+          "release_date": "2015-09-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.59,
+          "vote_count": 1865
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

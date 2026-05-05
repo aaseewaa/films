@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 67924,
+      "name": "Steno",
+      "original_name": "Steno",
+      "media_type": "person",
+      "popularity": 1.0038,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/osXoJ0ARTKcpGiQ8WuZ0jm0STPA.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3aClURRSl7ujSTgOCXqJOzGPIQD.jpg",
+          "id": 11340,
+          "title": "Banana Joe",
+          "original_title": "Banana Joe",
+          "overview": "Island farmer Banana Joe helps the local community by trading his bananas for goods. When gangsters arrive with plans to construct a banana processing plant, Joe kicks them out, but the mob boss discovers that Joe is operating without a license. After the mob tips off the authorities and Joe's boat is impounded, he ventures into a big city for the first time to seek help.",
+          "poster_path": "/jMFM6rbvpglsazWkTBTbF9RUKXH.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            28,
+            35
+          ],
+          "popularity": 2.0128,
+          "release_date": "1982-03-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.671,
+          "vote_count": 499
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/C8oE4pj9toWpP9L4G9CVCGr9VH.jpg",
+          "id": 38528,
+          "title": "Horse Fever",
+          "original_title": "Febbre da cavallo",
+          "overview": "Bruno Fioretti, known as \"Mandrake\", is an inveterate gambler who never misses a day at the horse racing track in Rome. He is doubly unlucky: he bets too much on one horse, and his wife is sleeping with his best friend because Mandrake is always at the track. Penniless and cuckolded, Mandrake decides to make one last bet.",
+          "poster_path": "/zprLOtwwjjTF84YOGIZxakRu9Mc.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.9053,
+          "release_date": "1976-10-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.35,
+          "vote_count": 380
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kZ7H3eRqscmG0n2rZEoDgFkuquS.jpg",
+          "id": 43294,
+          "title": "An American in Rome",
+          "original_title": "Un americano a Roma",
+          "overview": "Nando Moriconi is a young Italian living in Rome obsessed with all-things American.",
+          "poster_path": "/bFaNi1GmVMdXLFkKhdNKx3gc3kL.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.233,
+          "release_date": "1954-12-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.128,
+          "vote_count": 265
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

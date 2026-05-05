@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 3060978,
+  "imdb_id": "nm11303072",
+  "known_for_department": "Acting",
+  "name": "Solly McLeod",
+  "place_of_birth": null,
+  "popularity": 0.462,
+  "profile_path": "/6aMA4kUV1ji4uu3zzBzQ9fwgUDO.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm11303072",
+    "tvrage_id": null,
+    "wikidata_id": "Q113757045",
+    "facebook_id": null,
+    "instagram_id": "sollymcleod",
+    "tiktok_id": null,
+    "twitter_id": "solly_mcleod",
+    "youtube_id": null
+  }
+}

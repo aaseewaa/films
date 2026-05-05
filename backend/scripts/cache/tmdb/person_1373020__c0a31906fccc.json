@@ -1,0 +1,30 @@
+{
+  "adult": true,
+  "also_known_as": [
+    "Rachel Bernard"
+  ],
+  "biography": "",
+  "birthday": "1995-06-14",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 1373020,
+  "imdb_id": "nm6367070",
+  "known_for_department": "Acting",
+  "name": "Ava Taylor",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 0.0,
+  "profile_path": "/ov3ElY5s1t1kmPdVqBKPvW5j7RC.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm6367070",
+    "tvrage_id": null,
+    "wikidata_id": "Q56466901",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

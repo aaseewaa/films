@@ -1,0 +1,42 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1077300,
+      "name": "Eadweard Muybridge",
+      "original_name": "Eadweard Muybridge",
+      "media_type": "person",
+      "popularity": 0.1126,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/idESyuc7NbHnKRDvSWXgOVBxtQU.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/zwHdnIgtbZpAl9gsrB6Joj4gcxJ.jpg",
+          "id": 123092,
+          "title": "Eadweard Muybridge, Zoopraxographer",
+          "original_title": "Eadweard Muybridge, Zoopraxographer",
+          "overview": "Thom Andersen's hour-long documentary adroitly combines biography, history, film theory, and philosophical reflection. Muybridge's photographic studies of animal locomotion in the 1870s were a major forerunner of movies; even more interesting are his subsequent studies of diverse people, photographed against neutral backgrounds.",
+          "poster_path": "/gZtOIpFKNrSn74wZhsnwcPSmBdF.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99,
+            36
+          ],
+          "popularity": 0.2329,
+          "release_date": "1975-09-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.167,
+          "vote_count": 18
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,224 @@
+{
+  "adult": false,
+  "backdrop_path": null,
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "драма"
+    }
+  ],
+  "homepage": "",
+  "id": 1509951,
+  "imdb_id": "tt22169278",
+  "origin_country": [
+    "FR"
+  ],
+  "original_language": "fr",
+  "original_title": "Mon amour",
+  "overview": "",
+  "popularity": 21.1532,
+  "poster_path": "/jfJoVJ8sKrYdgyCwrcYalVU90h0.jpg",
+  "production_companies": [
+    {
+      "id": 94025,
+      "logo_path": "/vmBv7OeVHO74JjsDxriKoSkYqDr.png",
+      "name": "Norte Productions",
+      "origin_country": "FR"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "FR",
+      "name": "France"
+    }
+  ],
+  "release_date": "2013-02-26",
+  "revenue": 0,
+  "runtime": 13,
+  "softcore": false,
+  "spoken_languages": [],
+  "status": "Released",
+  "tagline": "",
+  "title": "Mon amour",
+  "video": false,
+  "vote_average": 0.0,
+  "vote_count": 0,
+  "external_ids": {
+    "imdb_id": "tt22169278",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1330967,
+        "known_for_department": "Acting",
+        "name": "Sigrid Bouaziz",
+        "original_name": "Sigrid Bouaziz",
+        "popularity": 0.8587,
+        "profile_path": "/h7MPoCDefNWM6GmKizs1WAneAMf.jpg",
+        "cast_id": 1,
+        "character": "",
+        "credit_id": "686c0a5d1e2d400fe070302a",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 910944,
+        "known_for_department": "Acting",
+        "name": "Bastien Bouillon",
+        "original_name": "Bastien Bouillon",
+        "popularity": 1.1946,
+        "profile_path": "/8ksm25v40MS2p2y0EyyNrxdt7it.jpg",
+        "cast_id": 2,
+        "character": "",
+        "credit_id": "686c0a69a722d3894b103d02",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5550087,
+        "known_for_department": "Acting",
+        "name": "Jeanne Lamaison",
+        "original_name": "Jeanne Lamaison",
+        "popularity": 0.0,
+        "profile_path": null,
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "686c0a8323b31a518d6e85c8",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 992623,
+        "known_for_department": "Acting",
+        "name": "Винсент Макен",
+        "original_name": "Vincent Macaigne",
+        "popularity": 1.2204,
+        "profile_path": "/6Z4JmAauiallW2lXTOuSAiHdHGf.jpg",
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "686c0a984621fbdb6751e851",
+        "order": 3
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1330967,
+        "known_for_department": "Acting",
+        "name": "Sigrid Bouaziz",
+        "original_name": "Sigrid Bouaziz",
+        "popularity": 0.8587,
+        "profile_path": "/h7MPoCDefNWM6GmKizs1WAneAMf.jpg",
+        "credit_id": "686c0abcaf6b528508ed5b0e",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5550093,
+        "known_for_department": "Writing",
+        "name": "Pauline Lévêque",
+        "original_name": "Pauline Lévêque",
+        "popularity": 0.0,
+        "profile_path": null,
+        "credit_id": "686c0adb3773a7fdb951e2e8",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1185784,
+        "known_for_department": "Directing",
+        "name": "Dania Reymond",
+        "original_name": "Dania Reymond",
+        "popularity": 0.0468,
+        "profile_path": null,
+        "credit_id": "686c0b2b9dbe918916103a7d",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1703655,
+        "known_for_department": "Editing",
+        "name": "Raphaëlle Martin-Hölger",
+        "original_name": "Raphaëlle Martin-Hölger",
+        "popularity": 0.1508,
+        "profile_path": null,
+        "credit_id": "686c0b4689dc8fa30e51e2fc",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2238747,
+        "known_for_department": "Sound",
+        "name": "Matthieu Perrot",
+        "original_name": "Matthieu Perrot",
+        "popularity": 0.6658,
+        "profile_path": "/mKoVrJ41j6AGFXOMDy0ZKQh8z1o.jpg",
+        "credit_id": "686c0b5b89dc8fa30e51e2ff",
+        "department": "Sound",
+        "job": "Sound"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2246187,
+        "known_for_department": "Sound",
+        "name": "Alexis Meynet",
+        "original_name": "Alexis Meynet",
+        "popularity": 0.0777,
+        "profile_path": "/hYMcltBGW1yTiRXGgCJ8sPMOWr1.jpg",
+        "credit_id": "686c0b6f6ddea7161651e07c",
+        "department": "Sound",
+        "job": "Sound Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 149294,
+        "known_for_department": "Sound",
+        "name": "Matthieu Deniau",
+        "original_name": "Matthieu Deniau",
+        "popularity": 0.0481,
+        "profile_path": null,
+        "credit_id": "686c0b8ba2223230c3ed60fa",
+        "department": "Sound",
+        "job": "Sound Mixer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2100959,
+        "known_for_department": "Camera",
+        "name": "Julia Mingo",
+        "original_name": "Julia Mingo",
+        "popularity": 0.0647,
+        "profile_path": null,
+        "credit_id": "686c0b9e3443346997a95c40",
+        "department": "Editing",
+        "job": "Color Grading"
+      }
+    ]
+  },
+  "keywords": {
+    "keywords": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Джо Перрі,"
+  ],
+  "biography": "Joe Perry is an American film and television actor.",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1193887,
+  "imdb_id": "nm5102821",
+  "known_for_department": "Acting",
+  "name": "Joe Perry",
+  "place_of_birth": null,
+  "popularity": 0.2387,
+  "profile_path": "/6NMVlMatC1bVTwIGDwWE2Xe3uIx.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm5102821",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

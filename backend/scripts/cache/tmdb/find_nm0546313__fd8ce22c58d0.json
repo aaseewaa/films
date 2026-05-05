@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1171037,
+      "name": "Kote Mardjanishvili",
+      "original_name": "კოტე მარჯანიშვილი",
+      "media_type": "person",
+      "popularity": 0.176,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/8D80eZrIKfVnfE8MBJLN5NJEWCR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/2ebsttEVi3LEdaUxyIxtK5e812G.jpg",
+          "id": 234363,
+          "title": "Gogi Ratiani",
+          "original_title": "გოგი რატიანი",
+          "overview": "Directed by Kote Mardzhanishvili Production: Georgia Goskinprom The fate of two Georgian schoolchildren, Gogi and Kiko, who share a love of painting, a dream to go to art school. The action of the film begins on the eve of the October Revolution.",
+          "poster_path": "/7FoMeJ6B74kViNMHNbOcNTWgRDl.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18,
+            10751
+          ],
+          "popularity": 0.2885,
+          "release_date": "1927-12-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.8,
+          "vote_count": 10
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4OcbBcRONGeRbultQz64lPD3OHb.jpg",
+          "id": 190326,
+          "title": "The Communard's Pipe",
+          "original_title": "კომუნარის ჩიბუხი",
+          "overview": "Home alone, little Jules starves while the people rise up and uphold their commune in the streets of Paris. His father joins the revolutionaries, taking his son, whose enthusiasm and pipe are quickly noticed by both his comrades and his enemies, which leads to an appalling ending.",
+          "poster_path": "/5at1ZPZWStBz816ROUzflDcRlgg.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.1769,
+          "release_date": "1929-07-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.111,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/njr2UmQfO6850WEUHqxX0vofJRe.jpg",
+          "id": 776009,
+          "title": "The Gadfly",
+          "original_title": "კრაზანა",
+          "overview": "In Italy during the first half of the 19th century, Arthur, a student at a seminary, joined the revolutionary society “Young Italy.” His sincere faith in God compelled him to reveal the society’s secret during confession to his new confessor. However, the confessor denounced the society, leading to the arrest of its members.",
+          "poster_path": "/s243yLWg8KFLSW1k4hls91w21qv.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            28,
+            18,
+            12,
+            10752,
+            10749
+          ],
+          "popularity": 0.9154,
+          "release_date": "1928-12-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.7,
+          "vote_count": 3
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

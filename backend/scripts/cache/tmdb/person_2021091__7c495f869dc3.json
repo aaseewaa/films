@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 3,
+  "homepage": "https://www.emilycarding.com/",
+  "id": 2021091,
+  "imdb_id": "nm6205905",
+  "known_for_department": "Acting",
+  "name": "Эмили Кардинг",
+  "place_of_birth": null,
+  "popularity": 0.1557,
+  "profile_path": "/zW0SKNWWlEFrLm5XAZh24rL0E6b.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm6205905",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": "EmilyCardingActor",
+    "instagram_id": "emilycarding",
+    "tiktok_id": null,
+    "twitter_id": "emilycarding",
+    "youtube_id": null
+  }
+}

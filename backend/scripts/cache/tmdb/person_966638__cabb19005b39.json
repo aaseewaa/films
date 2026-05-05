@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Moises Arizmendi",
+    "모이세스 아리스멘디"
+  ],
+  "biography": "",
+  "birthday": "1976-04-22",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 966638,
+  "imdb_id": "nm1209192",
+  "known_for_department": "Acting",
+  "name": "Moisés Arizmendi",
+  "place_of_birth": "Mexico City, Mexico",
+  "popularity": 0.5032,
+  "profile_path": "/327RMDJerAG2y2qbXLa0UWsy1IV.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1209192",
+    "tvrage_id": null,
+    "wikidata_id": "Q27786353",
+    "facebook_id": "moi.arizmendi",
+    "instagram_id": "moiarizmendi",
+    "tiktok_id": null,
+    "twitter_id": "moiarizmendi",
+    "youtube_id": null
+  }
+}

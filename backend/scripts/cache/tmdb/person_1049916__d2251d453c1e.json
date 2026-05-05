@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "한나 그로스"
+  ],
+  "biography": "",
+  "birthday": "1992-09-25",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.documentaries.org/filmmakers/hannah-gross/",
+  "id": 1049916,
+  "imdb_id": "nm2193120",
+  "known_for_department": "Acting",
+  "name": "Ханна Гросс",
+  "place_of_birth": " Toronto, Ontario, Canada",
+  "popularity": 1.4398,
+  "profile_path": "/p94oyYrrywfSH3vkimTL1cbaWQt.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0h8bh5w",
+    "freebase_id": null,
+    "imdb_id": "nm2193120",
+    "tvrage_id": null,
+    "wikidata_id": "Q17411184",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

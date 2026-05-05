@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "برنارد هیل"
+  ],
+  "biography": "",
+  "birthday": "1944-12-17",
+  "deathday": "2024-05-05",
+  "gender": 2,
+  "homepage": null,
+  "id": 1369,
+  "imdb_id": "nm0384060",
+  "known_for_department": "Acting",
+  "name": "Бернард Хилл",
+  "place_of_birth": "Blackley, Manchester, England, UK",
+  "popularity": 1.6072,
+  "profile_path": "/5i8bj2nsTrFU2ddSynleOjapxor.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/015t7v",
+    "freebase_id": "/en/bernard_hill",
+    "imdb_id": "nm0384060",
+    "tvrage_id": 81526,
+    "wikidata_id": "Q310515",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

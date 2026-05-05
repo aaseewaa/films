@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 26157,
+      "name": "Harold Pinter",
+      "original_name": "Harold Pinter",
+      "media_type": "person",
+      "popularity": 1.0903,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/w0ItHr1DFWT01i07354nFZ3cX04.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/7wazgiTbygqijaduEiapT43YxTJ.jpg",
+          "id": 4520,
+          "title": "Sleuth",
+          "original_title": "Sleuth",
+          "overview": "Locked in a high-tech English manor, bound in a deadly duel of wits, Andrew Wyke and Milo Tindle come together as English gentlemen to discuss the matter of Wyke's wife: the woman both are sleeping with.",
+          "poster_path": "/y70r13kOHp7pcYToG25uwMYm562.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            9648,
+            53
+          ],
+          "popularity": 1.7745,
+          "release_date": "2007-10-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.279,
+          "vote_count": 583
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/a5NNxs0HA6CEEtCNCUDvOZiQqIK.jpg",
+          "id": 42987,
+          "title": "The Servant",
+          "original_title": "The Servant",
+          "overview": "Indolent aristocrat Tony employs competent Barrett as his manservant and all seems to be going well until Barrett persuades Tony to hire his sister as a live-in maid.",
+          "poster_path": "/pRa4og93BeOoMCt6oWuPCwu5Coo.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 2.5363,
+          "release_date": "1963-11-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.6,
+          "vote_count": 371
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ti84zQAKUm049pf2yLIZqy53Hw1.jpg",
+          "id": 20815,
+          "title": "The Handmaid's Tale",
+          "original_title": "The Handmaid's Tale",
+          "overview": "In a dystopian, polluted right-wing religious tyranny, a young woman is put in sexual slavery on account of her now rare fertility.",
+          "poster_path": "/cnkKQyRzoCMZliMaknTOXHqXKaz.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            878
+          ],
+          "popularity": 2.3606,
+          "release_date": "1990-02-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.103,
+          "vote_count": 272
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Charles Morris"
+  ],
+  "biography": "",
+  "birthday": "1984-10-02",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1116442,
+  "imdb_id": "nm0606658",
+  "known_for_department": "Acting",
+  "name": "Джон Моррис",
+  "place_of_birth": "Greenbrae, California, USA",
+  "popularity": 0.5592,
+  "profile_path": "/lSdNMhN3DoXEQJ37IeOD5mTMUQK.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0606658",
+    "tvrage_id": null,
+    "wikidata_id": "Q3048680",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 5602,
+      "name": "David Lynch",
+      "original_name": "David Lynch",
+      "media_type": "person",
+      "popularity": 2.4179,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/wwBzRDoIW6Ld64h6OkQ6ImCZKsR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/g9ClaS5EqU0Hk8WIbMNhld0Bk6f.jpg",
+          "id": 1018,
+          "title": "Mulholland Drive",
+          "original_title": "Mulholland Drive",
+          "overview": "Blonde Betty Elms has only just arrived in Hollywood to become a movie star when she meets an enigmatic brunette with amnesia. Meanwhile, as the two set off to solve the second woman's identity, filmmaker Adam Kesher runs into ominous trouble while casting his latest project.",
+          "poster_path": "/x7A59t6ySylr1L7aubOQEA480vM.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            18,
+            9648
+          ],
+          "popularity": 8.7471,
+          "release_date": "2001-06-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.801,
+          "vote_count": 6994
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/6huSptAsqYg3wbsi1jbMognSgmp.jpg",
+          "id": 1955,
+          "title": "The Elephant Man",
+          "original_title": "The Elephant Man",
+          "overview": "A Victorian surgeon rescues a heavily disfigured man being mistreated by his \"owner\" as a side-show freak. Behind his monstrous façade, there is revealed a person of great intelligence and sensitivity. Based on the true story of Joseph Merrick (called John Merrick in the film), a severely deformed man in 19th century London.",
+          "poster_path": "/u0wpPYjuSt8DIe1Y3Vapnh8jcKE.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "popularity": 5.1759,
+          "release_date": "1980-10-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.047,
+          "vote_count": 3904
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/s1CBwblInR0ZBIv59CSko2QdLD3.jpg",
+          "id": 793,
+          "title": "Blue Velvet",
+          "original_title": "Blue Velvet",
+          "overview": "The discovery of a severed human ear found in a field leads a young man on an investigation related to a beautiful, mysterious nightclub singer and a group of psychopathic criminals who have kidnapped her child.",
+          "poster_path": "/6v1zYh2FKOYVddY5pCQhd4PO9uX.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            9648,
+            53,
+            80
+          ],
+          "popularity": 5.8487,
+          "release_date": "1986-09-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.607,
+          "vote_count": 3803
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 146996,
+      "name": "Mariano Laurenti",
+      "original_name": "Mariano Laurenti",
+      "media_type": "person",
+      "popularity": 0.6634,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/l1lOjtrZMigI5Qyq9mof0gZZqPl.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/buY3IPCISNe6kYw5EsXamXuOrIu.jpg",
+          "id": 51912,
+          "title": "The Overtaxed",
+          "original_title": "I tartassati",
+          "overview": "Mr. Pezzella owns and operates a well-established luxury-clothing store. He does not like and does not consider it right to pay taxes and therefore uses a tax consultant to be able to evade more taxes.",
+          "poster_path": "/lFq0XCLiv02qTjZPm4I5w8zcZ8w.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.0219,
+          "release_date": "1959-04-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.133,
+          "vote_count": 113
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qtpWXlBxueMtNT3SfAFAVHtEEKN.jpg",
+          "id": 128341,
+          "title": "Ci hai rotto papà",
+          "original_title": "Ci hai rotto papà",
+          "overview": "Kids from a huge apartment complex in Rome form a secret society to unite their forces and get back at the nasty adults who 'oppress' them, playing pranks on them to expose their weaknesses.",
+          "poster_path": "/ouTV4zQAXRDY32W1SZkEQOwMlSn.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.6395,
+          "release_date": "1993-09-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.139,
+          "vote_count": 101
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/51Hq5jVODhKyKHSqpFblSIwJJb6.jpg",
+          "id": 56920,
+          "title": "Totò diabolicus",
+          "original_title": "Totò diabolicus",
+          "overview": "The marquis Galeazzo di Torre Alta is murdered by a mysterious killer who calls himself Diabolicus. His heirs are his three brothers and a sister, but all of them, with the exception of Monsignor Antonino di Torre Alta, are killed by Diabolicus. The police are unable to solve the case, but when Antonino gives his inheritance to Pasquale Bonocore, illegitimate son of his father and Pasquale is in prison and therefore can't be the killer, all the clues are in the hand of the police.",
+          "poster_path": "/eMFarI2PQTXbVBPhPzC3u8ydYGP.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.9987,
+          "release_date": "1962-04-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.125,
+          "vote_count": 88
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

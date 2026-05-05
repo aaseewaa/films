@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1936-10-23",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://philipkaufman.com/",
+  "id": 648,
+  "imdb_id": "nm0442241",
+  "known_for_department": "Writing",
+  "name": "Philip Kaufman",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 1.0208,
+  "profile_path": "/AtTB8qM4UsifYsKtEPgQSCibP5s.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03kbsw",
+    "freebase_id": null,
+    "imdb_id": "nm0442241",
+    "tvrage_id": null,
+    "wikidata_id": "Q176126",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

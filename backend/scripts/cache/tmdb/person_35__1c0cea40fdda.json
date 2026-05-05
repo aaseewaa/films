@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Sally Margaret Field"
+  ],
+  "biography": "",
+  "birthday": "1946-11-06",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 35,
+  "imdb_id": "nm0000398",
+  "known_for_department": "Acting",
+  "name": "Салли Филд",
+  "place_of_birth": "Pasadena, California, USA",
+  "popularity": 6.4587,
+  "profile_path": "/iMeq1j9Xwvaf6PbTJ0FQz69fpuA.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01jw4r",
+    "freebase_id": "/en/sally_field",
+    "imdb_id": "nm0000398",
+    "tvrage_id": 8570,
+    "wikidata_id": "Q187033",
+    "facebook_id": "SallyField",
+    "instagram_id": "sallyfield",
+    "tiktok_id": null,
+    "twitter_id": "sally_field",
+    "youtube_id": null
+  }
+}

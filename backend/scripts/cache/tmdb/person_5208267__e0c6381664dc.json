@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 5208267,
+  "imdb_id": "nm16642800",
+  "known_for_department": "Acting",
+  "name": "Jack Patten",
+  "place_of_birth": null,
+  "popularity": 0.3188,
+  "profile_path": "/sIE11wI7czGjYCUOlEKqXguIdsl.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm16642800",
+    "tvrage_id": null,
+    "wikidata_id": "Q135749445",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

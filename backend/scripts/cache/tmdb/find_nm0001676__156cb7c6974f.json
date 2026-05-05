@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 14132,
+      "name": "Nicolas Roeg",
+      "original_name": "Nicolas Roeg",
+      "media_type": "person",
+      "popularity": 0.8181,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/t5EuHzllJjQrlVqzniVHDXBqUEC.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/hehaK1jIuTOvRPGPccVivZcZ2Cb.jpg",
+          "id": 10166,
+          "title": "The Witches",
+          "original_title": "The Witches",
+          "overview": "While staying at a hotel in England with his grandmother, Helga, a young boy named Luke inadvertently spies on a convention of witches. The Grand High Witch reveals a plan to turn all children into mice via a magical formula. When they discover the eavesdropper, the witches test the formula on him. Now, with the help of Helga and hotel manager Mr Stringer, Luke the mouse must fight back against the witches.",
+          "poster_path": "/mPYBjVkeHakkPGY7WaKyyNU4RWm.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            10751,
+            27
+          ],
+          "popularity": 3.1994,
+          "release_date": "1990-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 1361
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gsP414XS7iJ5Xe8bX4e1l7HH07M.jpg",
+          "id": 931,
+          "title": "Don't Look Now",
+          "original_title": "Don't Look Now",
+          "overview": "While grieving a terrible loss, a married couple meet two mysterious sisters, one of whom gives them a message sent from the afterlife.",
+          "poster_path": "/ivWsU3QtcstImCTOjItsH0SAbNn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            18,
+            27
+          ],
+          "popularity": 2.4249,
+          "release_date": "1973-10-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.922,
+          "vote_count": 1174
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ew3x9p8A28p3sLE8OaHwUsb1mSQ.jpg",
+          "id": 991,
+          "title": "The Man Who Fell to Earth",
+          "original_title": "The Man Who Fell to Earth",
+          "overview": "Thomas Jerome Newton is an alien who has come to Earth in search of water to save his home planet. Aided by lawyer Oliver Farnsworth, Thomas uses his knowledge of advanced technology to create profitable inventions. While developing a method to transport water, Thomas meets Mary-Lou, a quiet hotel clerk, and begins to fall in love with her. Just as he is ready to leave Earth, Thomas is intercepted by the U.S. government, and his entire plan is threatened.",
+          "poster_path": "/gwmPVphE5DMFFGXGMhfEFyxOOYj.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            878,
+            18,
+            14
+          ],
+          "popularity": 2.4538,
+          "release_date": "1976-03-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.461,
+          "vote_count": 590
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

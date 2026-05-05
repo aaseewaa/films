@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Adrian Vazquez"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1413394,
+  "imdb_id": "nm1281571",
+  "known_for_department": "Acting",
+  "name": "Adrián Vázquez",
+  "place_of_birth": null,
+  "popularity": 1.3331,
+  "profile_path": "/cyhuSSuFA6DYKG3eI9w6VxPaUrs.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1281571",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

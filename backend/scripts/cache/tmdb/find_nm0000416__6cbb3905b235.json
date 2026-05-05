@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 280,
+      "name": "Terry Gilliam",
+      "original_name": "Terry Gilliam",
+      "media_type": "person",
+      "popularity": 1.6109,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/7qBkaXxANmnb6hqQCBc4iWqXEL6.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/mKIkGoyuR71qz6FdiEiOjxvBQcS.jpg",
+          "id": 63,
+          "title": "Twelve Monkeys",
+          "original_title": "Twelve Monkeys",
+          "overview": "In the year 2035, convict James Cole reluctantly volunteers to be sent back in time to discover the origin of a deadly virus that wiped out nearly all of the earth's population and forced the survivors into underground communities. But when Cole is mistakenly sent to 1990 instead of 1996, he's arrested and locked up in a mental hospital. There he meets psychiatrist Dr. Kathryn Railly and the son of a famous virus expert who may hold the key to the Army of the 12 Monkeys; thought to be responsible for unleashing the killer disease.",
+          "poster_path": "/gt3iyguaCIw8DpQZI1LIN5TohM2.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            878,
+            53,
+            9648
+          ],
+          "popularity": 7.0329,
+          "release_date": "1995-12-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.605,
+          "vote_count": 9071
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1KgXxv6tHXOnakqYvMPvFwYKWiw.jpg",
+          "id": 762,
+          "title": "Monty Python and the Holy Grail",
+          "original_title": "Monty Python and the Holy Grail",
+          "overview": "King Arthur, accompanied by his squire, recruits his Knights of the Round Table, including Sir Bedevere the Wise, Sir Lancelot the Brave, Sir Robin the Not-Quite-So-Brave-As-Sir-Lancelot and Sir Galahad the Pure. On the way, Arthur battles the Black Knight who, despite having had all his limbs chopped off, insists he can still fight. They reach Camelot, but Arthur decides not  to enter, as \"it is a silly place\".",
+          "poster_path": "/h3rksLHevpCbHfSoaUXm85nt2CH.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            35,
+            14
+          ],
+          "popularity": 7.2282,
+          "release_date": "1975-04-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.804,
+          "vote_count": 6370
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4BcunK3qpDAMBM5YBsCgQWx9zB6.jpg",
+          "id": 1878,
+          "title": "Fear and Loathing in Las Vegas",
+          "original_title": "Fear and Loathing in Las Vegas",
+          "overview": "Raoul Duke and his attorney Dr. Gonzo drive a red convertible across the Mojave desert to Las Vegas with a suitcase full of drugs to cover a motorcycle race. As their consumption of drugs increases at an alarming rate, the stoned duo trash their hotel room and fear legal repercussions. Duke begins to drive back to L.A., but after an odd run-in with a cop, he returns to Sin City and continues his wild drug binge.",
+          "poster_path": "/tisNLcMkxryU2zxhi0PiyDFqhm0.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            18,
+            35
+          ],
+          "popularity": 4.5729,
+          "release_date": "1998-05-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.206,
+          "vote_count": 4998
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

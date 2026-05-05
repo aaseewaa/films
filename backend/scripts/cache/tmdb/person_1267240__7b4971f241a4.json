@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Nicola Mary Coughlan"
+  ],
+  "biography": "",
+  "birthday": "1987-01-09",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.curtisbrown.co.uk/client/nicola-coughlan",
+  "id": 1267240,
+  "imdb_id": "nm1965552",
+  "known_for_department": "Acting",
+  "name": "Никола Кохлан",
+  "place_of_birth": "Galway, Ireland",
+  "popularity": 3.4081,
+  "profile_path": "/shSN86O3qckxcO7YXVtaNy9ksSU.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1965552",
+    "tvrage_id": null,
+    "wikidata_id": "Q38769353",
+    "facebook_id": null,
+    "instagram_id": "nicolacoughlan",
+    "tiktok_id": null,
+    "twitter_id": "",
+    "youtube_id": null
+  }
+}

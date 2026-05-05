@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 89670,
+      "name": "Stan Laurel",
+      "original_name": "Stan Laurel",
+      "media_type": "person",
+      "popularity": 1.3767,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/eT15ERUT5T3CVyf2a9JD1VAzC6q.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/aX476hnJ3qbDs6nwWgcUeBACGlL.jpg",
+          "id": 43128,
+          "title": "Sons of the Desert",
+          "original_title": "Sons of the Desert",
+          "overview": "Ollie and Stan deceive their wives into thinking they are taking a medically necessary cruise when they are really going to a lodge convention.",
+          "poster_path": "/4ojrxP6qiyDOQ5jHQlh7Yn59wJt.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.2129,
+          "release_date": "1933-12-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.065,
+          "vote_count": 262
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oAool2HnsroNOV0QOnKBGA0icDk.jpg",
+          "id": 25599,
+          "title": "Way Out West",
+          "original_title": "Way Out West",
+          "overview": "Stan and Ollie try to deliver the deed to a valuable gold mine to the daughter of a dead prospector. Unfortunately, the daughter's evil guardian is determined to have the gold mine for himself and his saloon-singer wife.",
+          "poster_path": "/pTYnwvsD4j5chX8MFgiwx9AzSXj.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            35,
+            37
+          ],
+          "popularity": 1.2956,
+          "release_date": "1937-04-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.069,
+          "vote_count": 226
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/y3FJ80lgiOyD9D1Q141qypVRtxC.jpg",
+          "id": 22999,
+          "title": "The Flying Deuces",
+          "original_title": "The Flying Deuces",
+          "overview": "Ollie falls in love with a woman. When he discovers she's already married, he unsuccessfully attempts suicide but he and Stan then decide to join the Foreign Legion to get away from their troubles. When they’re arrested for soon trying to desert the Legion—they escape a firing squad by stealing an aircraft.",
+          "poster_path": "/wXXA3s9tzRV7tgiFqhm7Nvu9W8B.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10752
+          ],
+          "popularity": 1.4718,
+          "release_date": "1939-11-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.353,
+          "vote_count": 174
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Marwood Cleese",
+    "Cleesey"
+  ],
+  "biography": "",
+  "birthday": "1939-10-27",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 8930,
+  "imdb_id": "nm0000092",
+  "known_for_department": "Acting",
+  "name": "Джон Клиз",
+  "place_of_birth": "Weston-Super-Mare, Somerset, England, UK",
+  "popularity": 6.8103,
+  "profile_path": "/nQpBf77cStmR35V0XOinm2zZMWG.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/041c4",
+    "freebase_id": "/en/john_cleese",
+    "imdb_id": "nm0000092",
+    "tvrage_id": 1751,
+    "wikidata_id": "Q25014",
+    "facebook_id": "thejohncleese",
+    "instagram_id": "johncleeseofficial",
+    "tiktok_id": null,
+    "twitter_id": "JohnCleese",
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1339289,
+      "name": "Nan Goldin",
+      "original_name": "Nan Goldin",
+      "media_type": "person",
+      "popularity": 0.2531,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/emNf04TFb1sDPdbrYaJe43QnLXN.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/anw7ONmtm1BrHd1Du0GQ5FoNd6r.jpg",
+          "id": 1004663,
+          "title": "All the Beauty and the Bloodshed",
+          "original_title": "All the Beauty and the Bloodshed",
+          "overview": "The life of internationally renowned artist and activist Nan Goldin is told through her slideshows, intimate interviews, ground-breaking photography, and rare footage of her personal fight to hold the Sackler family accountable for the overdose crisis.",
+          "poster_path": "/cvO51xxtIUHc5w5ZgFsigiFaUaO.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.4598,
+          "release_date": "2022-11-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.178,
+          "vote_count": 160
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/y7Ii1GLh2LsQk7gXfC8cdtFnOl9.jpg",
+          "id": 85129,
+          "title": "Variety",
+          "original_title": "Variety",
+          "overview": "A repressed young woman becomes obsessed with pornography and the mysterious rich patrons of the Times Square porn theater where she works selling tickets.",
+          "poster_path": "/hwqY6igW7oRM9NJyotQ8oSt6BcF.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.1795,
+          "release_date": "1985-02-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.352,
+          "vote_count": 44
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fjrN8AokVkDUEUyeT2QusLYhbRs.jpg",
+          "id": 685263,
+          "title": "Wojnarowicz: Fuck You Faggot Fucker",
+          "original_title": "Wojnarowicz: Fuck You Faggot Fucker",
+          "overview": "A collage-like, incisive look at the life of writer, painter and thinker David Wojnarowicz, whose powerful, unapologetic way of seeing the world gave voice to queer rights at a critical time in US history.",
+          "poster_path": "/xTToc9TY2D3XXDM1MVDfQTP1JUA.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0931,
+          "release_date": "2020-04-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 25
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "迈克尔·杰勒尼克"
+  ],
+  "biography": "",
+  "birthday": "1977-05-12",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 113901,
+  "imdb_id": "nm2398585",
+  "known_for_department": "Writing",
+  "name": "Майкл Еленик",
+  "place_of_birth": "Los Angeles, California, USA",
+  "popularity": 1.3202,
+  "profile_path": "/rzfpbDQ3S3lDqnyMfcGzDv0QCwZ.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/02wk_p5",
+    "freebase_id": "/en/michael_jelenic",
+    "imdb_id": "nm2398585",
+    "tvrage_id": 41610,
+    "wikidata_id": "Q5394838",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

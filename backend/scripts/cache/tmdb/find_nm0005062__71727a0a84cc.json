@@ -1,0 +1,88 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 100888,
+      "name": "Chuck Jones",
+      "original_name": "Chuck Jones",
+      "media_type": "person",
+      "popularity": 0.879,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/6LaYJXpfX6hry3mT8QTEGCPIUdi.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/1Q5b34cge5nClCpamxf3HkU18W1.jpg",
+          "id": 13377,
+          "title": "How the Grinch Stole Christmas!",
+          "original_title": "How the Grinch Stole Christmas!",
+          "overview": "Bitter and hateful, the Grinch is irritated at the thought of a nearby village having a happy time celebrating Christmas. Disguised as Santa Claus, with his dog made to look like a reindeer, he decides to raid the village to steal all the Christmas things.",
+          "poster_path": "/7ir0iRuPK9OEuH569cp0nF5CJce.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            35
+          ],
+          "popularity": 2.6103,
+          "release_date": "1966-12-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.504,
+          "vote_count": 1132
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wgONOAadfVB0AIut5ZHZEUankN6.jpg",
+          "id": 53210,
+          "title": "Duck Amuck",
+          "original_title": "Duck Amuck",
+          "overview": "The short-tempered Daffy Duck must improvise madly as the backgrounds, his costumes, the soundtrack, even his physical form, shifts and changes at the whim of the animator.",
+          "poster_path": "/gRZYLCncLa2mzE59qY38McDlFdN.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35
+          ],
+          "popularity": 0.8106,
+          "release_date": "1953-02-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.1,
+          "vote_count": 245
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ysL5BiUTbdSaCAXtlzCU507kj6W.jpg",
+          "id": 20007,
+          "title": "The Bugs Bunny/Road Runner Movie",
+          "original_title": "The Bugs Bunny/Road Runner Movie",
+          "overview": "A collection of Warner Brothers short cartoon features, \"starring\" the likes of Daffy Duck, Porky Pig and Wile.E.Coyote. These animations are interspersed by Bugs Bunny reminiscing on past events and providing links between the individual animations which are otherwise unconnected. This 1979 feature-length compilation includes several of his best cartoons. Among the 11 shorts shown in their entirety are the classics \"Robin Hood Daffy,\" \"What's Opera, Doc?,\" \"Bully for Bugs,\" and \"Duck Amuck\". The Bugs Bunny Road Runner Movie provides a showcase not only for Jones's razor-sharp timing, but for the work of his exceptional crew, which included designer Maurice Noble, writer Mike Maltese, composers Carl Stalling and Milt Franklyn, and voice actor Mel Blanc.",
+          "poster_path": "/5fogEHQJvyVkqk1R9ZzVyxtT5gH.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            10751,
+            10402,
+            878
+          ],
+          "popularity": 1.2572,
+          "release_date": "1979-09-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.39,
+          "vote_count": 222
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

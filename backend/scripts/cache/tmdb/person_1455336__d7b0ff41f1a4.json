@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jo-Issa Rae Diop"
+  ],
+  "biography": "",
+  "birthday": "1985-01-12",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://blog.issarae.com/",
+  "id": 1455336,
+  "imdb_id": "nm4793987",
+  "known_for_department": "Acting",
+  "name": "Исса Рэй",
+  "place_of_birth": "Los Angeles, California, USA",
+  "popularity": 1.8017,
+  "profile_path": "/uFjimuDgBv8kckApr19t8DykxPH.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0s8xs5h",
+    "freebase_id": null,
+    "imdb_id": "nm4793987",
+    "tvrage_id": null,
+    "wikidata_id": "Q13560267",
+    "facebook_id": "IssaRaePresents",
+    "instagram_id": "issarae",
+    "tiktok_id": null,
+    "twitter_id": "IssaRae",
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "エミリー・ベネット"
+  ],
+  "biography": "",
+  "birthday": "1992-03-30",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 2536479,
+  "imdb_id": null,
+  "known_for_department": "Directing",
+  "name": "Emily Bennett",
+  "place_of_birth": "London, England",
+  "popularity": 0.4233,
+  "profile_path": "/yIByRjhsfKqeUHQYFeM94oK8Iw.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": null,
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

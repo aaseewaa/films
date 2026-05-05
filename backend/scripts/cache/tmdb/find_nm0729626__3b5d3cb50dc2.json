@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 73153,
+      "name": "Jacques Rivette",
+      "original_name": "Jacques Rivette",
+      "media_type": "person",
+      "popularity": 0.6827,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/4zA3QdtgIsYLD0ihn4385DZZ0jN.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/bFXrPXV6GjWK5mQZYMncve0bisi.jpg",
+          "id": 12627,
+          "title": "La Belle Noiseuse",
+          "original_title": "La Belle Noiseuse",
+          "overview": "The former famous painter Frenhofer lives quietly with his wife on a countryside residence in the French Provence. When the young artist Nicolas visits him with his girlfriend Marianne, Frenhofer decides to start again the work on a painting he long ago stopped: La Belle Noiseuse. And he wants Marianne as model.",
+          "poster_path": "/n6f7I9RUdoDa9AgM9X2oAc3pk4l.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 2.263,
+          "release_date": "1991-09-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 291
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2sTbxKAPjLsH4RzQAP6ibYduJv2.jpg",
+          "id": 27019,
+          "title": "Céline and Julie Go Boating",
+          "original_title": "Céline et Julie vont en bateau",
+          "overview": "Julie, a daydreaming librarian, meets Céline, an enigmatic magician, and together they become the heroines of a time-warping adventure involving a haunted house, psychotropic candy, and a murder-mystery melodrama.",
+          "poster_path": "/ijpehUwH4XFNFm8UcYHpRQVRQUF.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35,
+            18,
+            14
+          ],
+          "popularity": 1.5313,
+          "release_date": "1974-09-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 163
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/auWpC62GLdB5je6TOOw1a4jGm2F.jpg",
+          "id": 42722,
+          "title": "The Nun",
+          "original_title": "La Religieuse",
+          "overview": "In eighteenth-century France, a girl is forced against her will to take vows as a nun. Three mothers superior treat her in radically different ways, ranging from maternal concern, to sadistic persecution, to lesbian desire.",
+          "poster_path": "/75EehgZs63K70RODuFLXXgopPl.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.9556,
+          "release_date": "1967-07-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 103
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

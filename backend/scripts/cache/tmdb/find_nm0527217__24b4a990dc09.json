@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 11429,
+      "name": "Hamilton Luske",
+      "original_name": "Hamilton Luske",
+      "media_type": "person",
+      "popularity": 0.8887,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/bEccjwuG6QGc4V0AtA87rexRHYo.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/puJKgNcWaGgMk5VHanSSomUTpmw.jpg",
+          "id": 11224,
+          "title": "Cinderella",
+          "original_title": "Cinderella",
+          "overview": "Cinderella has faith her dreams of a better life will come true. With help from her loyal mice friends and a wave of her Fairy Godmother's wand, Cinderella's rags are magically turned into a glorious gown and off she goes to the Royal Ball. But when the clock strikes midnight, the spell is broken, leaving a single glass slipper... the only key to the ultimate fairy-tale ending!",
+          "poster_path": "/ug3ndicuPM1V07vhVFGLMsd4AZl.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            14,
+            16,
+            10749
+          ],
+          "popularity": 10.7472,
+          "release_date": "1950-02-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.042,
+          "vote_count": 7123
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/cZgUATpU4NDlsfGj7sRriKJEiLB.jpg",
+          "id": 12230,
+          "title": "One Hundred and One Dalmatians",
+          "original_title": "One Hundred and One Dalmatians",
+          "overview": "When a litter of dalmatian puppies are abducted by the minions of Cruella De Vil, the parents must find them before she uses them for a diabolical fashion statement.",
+          "poster_path": "/kSlYq6FrBUviGSEh8v4L9nrSnBT.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            10751
+          ],
+          "popularity": 6.2778,
+          "release_date": "1961-01-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.173,
+          "vote_count": 6647
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tyj0QztA0PkYo6XauifWjkx7UVi.jpg",
+          "id": 12092,
+          "title": "Alice in Wonderland",
+          "original_title": "Alice in Wonderland",
+          "overview": "On a golden afternoon, wildly curious young Alice tumbles into the burrow and enters the merry, madcap world of Wonderland full of whimsical escapades.",
+          "poster_path": "/20cvfwfaFqNbe9Fc3VEHJuPRxmn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            14,
+            12
+          ],
+          "popularity": 10.0086,
+          "release_date": "1951-07-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.187,
+          "vote_count": 6249
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

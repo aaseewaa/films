@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 41779,
+      "name": "Monica Vitti",
+      "original_name": "Monica Vitti",
+      "media_type": "person",
+      "popularity": 0.9882,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/fwDSIup9fJHnu7DHlAp20OSTDly.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/kF5AeKG5XIZkAXY0kRgm57qEbJI.jpg",
+          "id": 5165,
+          "title": "L'Avventura",
+          "original_title": "L'avventura",
+          "overview": "Claudia and Anna join Anna's lover, Sandro, on a boat trip to a remote volcanic island. When Anna goes missing, a search is launched. In the meantime, Sandro and Claudia become involved in a romance despite Anna's disappearance, though the relationship suffers from guilt and tension.",
+          "poster_path": "/7kUXAS8K7Ihw1T1mhARjnLuMVk3.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            9648,
+            10749
+          ],
+          "popularity": 1.4949,
+          "release_date": "1960-09-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.527,
+          "vote_count": 752
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xe43LKesFXjQgP4W1s2juf7Tb4t.jpg",
+          "id": 26638,
+          "title": "Red Desert",
+          "original_title": "Il deserto rosso",
+          "overview": "In an industrializing Italian town, a married woman, rendered mentally unstable after a traffic accident, drifts into an affair with a friend of her husband.",
+          "poster_path": "/rGcTVdyhaGzMxPPRVApXre6F7SD.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.401,
+          "release_date": "1964-09-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.327,
+          "vote_count": 504
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/n6hmnEqU9W4jcVxCU00S4XJ5ecw.jpg",
+          "id": 21135,
+          "title": "L'Eclisse",
+          "original_title": "L'eclisse",
+          "overview": "Vittoria is a beautiful literary translator living in Rome. After splitting from her writer boyfriend, Riccardo, Vittoria meets Piero, a lively stockbroker, on the hectic floor of the Roman stock exchange. Though Vittoria and Piero begin a relationship, it is not one without difficulties, and their commitment to one another is tested during an eclipse.",
+          "poster_path": "/oXoe0Fp92Yw3mMJ9Vq0hPlaMELg.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 2.1573,
+          "release_date": "1962-04-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.7,
+          "vote_count": 534
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

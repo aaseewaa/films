@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 59255,
+      "name": "Mitch Hedberg",
+      "original_name": "Mitch Hedberg",
+      "media_type": "person",
+      "popularity": 0.4039,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/1Urrrx1TOCF8Q2mu5lcQcQoyDRt.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/AqLtFRKVX2G0ghMnMnQoSGan4pY.jpg",
+          "id": 786,
+          "title": "Almost Famous",
+          "original_title": "Almost Famous",
+          "overview": "In 1973, 15-year-old William Miller's unabashed love of music and aspiration to become a rock journalist lands him an assignment from Rolling Stone magazine to interview and tour with the up-and-coming band, Stillwater.",
+          "poster_path": "/3rrkyLYbgLj84AYvjhdcJot4JPx.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10402
+          ],
+          "popularity": 5.2123,
+          "release_date": "2000-09-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 3083
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/r19wkx0JESCD74GVyREFLzZN2VA.jpg",
+          "id": 9787,
+          "title": "Lords of Dogtown",
+          "original_title": "Lords of Dogtown",
+          "overview": "The radical true story behind three teenage surfers from Venice Beach, California, who took skateboarding to the extreme and changed the world of sports forever. Stacy Peralta, Tony Alva and Jay Adams are the Z-Boys, a bunch of nobodies until they create a new style of skateboarding that becomes a worldwide phenomenon. But when their hobby becomes a business, the success shreds their friendship.",
+          "poster_path": "/k2NiPfydLSwmk28C6qpvpJPuqtq.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            28
+          ],
+          "popularity": 3.8065,
+          "release_date": "2005-06-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 800
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/s40l4dni4o8oRrNFwhgZaz6dC8g.jpg",
+          "id": 73098,
+          "title": "Los Enchiladas!",
+          "original_title": "Los Enchiladas!",
+          "overview": "When the boss of a \"Mexican\" joint flees from the cops for beating up a competitor's mascot, slacker cook Lee takes charge as manager, which means alcohol and free food.",
+          "poster_path": "/8dCMoonEytik1aYqYLfuVF7iUK5.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.5933,
+          "release_date": "1999-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.4,
+          "vote_count": 19
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

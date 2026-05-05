@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1058100,
+      "name": "Cindy Sherman",
+      "original_name": "Cindy Sherman",
+      "media_type": "person",
+      "popularity": 0.1986,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/qItnYxSJcDbpxZ1cO52QUi2sChp.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 143439,
+          "title": "Doll Clothes",
+          "original_title": "Doll Clothes",
+          "overview": "One of the First Cindy Sherman's super-8 film,\"Doll Clothes\" (officially, the film is \"Untitled\") has not been viewed since 1975, the year it was made. It comically crosses Duchamp's Nude Descending a Staircase with animated paper dolls in a sly, funny and clever precursor to the concerns that became signature elements in Sherman's remarkable body of photographic work.",
+          "poster_path": "/3le6qBpWLwEzvyPg3ZjwcB6ZQnU.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.0495,
+          "release_date": "1975-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.2,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vOxIhxV5D578Cmm7JEptJsyeBxB.jpg",
+          "id": 11855,
+          "title": "Pecker",
+          "original_title": "Pecker",
+          "overview": "A Baltimore teenager who picks up a second-hand camera starts snapping his way to stardom, soon turning into a nationwide sensation, with a fateful choice between his life and his art.",
+          "poster_path": "/ox6Myr2r36zr7aqnisQGZp2EW33.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 1.6679,
+          "release_date": "1998-09-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.068,
+          "vote_count": 205
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nOiItOedPFUAvbg4zIsZOzIrrpm.jpg",
+          "id": 654403,
+          "title": "30/30 Vision: Three Decades of Strand Releasing",
+          "original_title": "30/30 Vision: Three Decades of Strand Releasing",
+          "overview": "Over 30 filmmakers and friends of Strand Releasing have come together to honor the company’s indelible contribution to independent cinema over the past thirty years. The participating filmmakers have each created a short film for the project, all shot on iPhones.",
+          "poster_path": "/tdRHjL7sWp87mDfDQebnV7AM1RW.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            878,
+            18
+          ],
+          "popularity": 6.094,
+          "release_date": "2019-12-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.3,
+          "vote_count": 6
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

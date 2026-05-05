@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Derek Thomas"
+  ],
+  "biography": "",
+  "birthday": "1939-07-30",
+  "deathday": "2022-01-06",
+  "gender": 2,
+  "homepage": null,
+  "id": 39012,
+  "imdb_id": "nm0000953",
+  "known_for_department": "Directing",
+  "name": "Питер Богданович",
+  "place_of_birth": "Kingston, New York, USA",
+  "popularity": 1.3919,
+  "profile_path": "/m3aMMYzzEbqKEwGOyEPq7Rt1gAj.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0b_7k",
+    "freebase_id": "/en/peter_bogdanovich",
+    "imdb_id": "nm0000953",
+    "tvrage_id": 52782,
+    "wikidata_id": "Q158250",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "",
+    "youtube_id": null
+  }
+}

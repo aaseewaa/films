@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Marie-Josee Croze",
+    "마리 조제 크로즈",
+    "Марі-Жозе Кроз"
+  ],
+  "biography": "",
+  "birthday": "1970-02-23",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 8791,
+  "imdb_id": "nm0189887",
+  "known_for_department": "Acting",
+  "name": "Marie-Josée Croze",
+  "place_of_birth": "Montréal, Québec, Canada",
+  "popularity": 1.2775,
+  "profile_path": "/d7sRQCDFijXaSnyiZpURknJAQFi.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0189887",
+    "tvrage_id": null,
+    "wikidata_id": "Q239341",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

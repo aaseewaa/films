@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jennifer Ellen Chan",
+    "Jennifer Chan"
+  ],
+  "biography": "",
+  "birthday": "1958-09-16",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 7906,
+  "imdb_id": "nm0000236",
+  "known_for_department": "Acting",
+  "name": "Дженнифер Тилли",
+  "place_of_birth": "Harbor City, California, USA",
+  "popularity": 4.4513,
+  "profile_path": "/9vYoYF385cVq9oDO3pDpXihP4vz.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03jjzf",
+    "freebase_id": "/en/jennifer_tilly",
+    "imdb_id": "nm0000236",
+    "tvrage_id": 32747,
+    "wikidata_id": "Q495549",
+    "facebook_id": null,
+    "instagram_id": "jennifertilly",
+    "tiktok_id": null,
+    "twitter_id": "JenniferTilly",
+    "youtube_id": null
+  }
+}

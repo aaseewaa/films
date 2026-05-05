@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 11630,
+      "name": "Bertolt Brecht",
+      "original_name": "Bertolt Brecht",
+      "media_type": "person",
+      "popularity": 0.7213,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/cFfD5goJjn9fZ5opYbHoSzDBxsZ.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/7rL5tbuSmtpKeLAKcBTqQwmXAGj.jpg",
+          "id": 22178,
+          "title": "Hangmen Also Die!",
+          "original_title": "Hangmen Also Die!",
+          "overview": "During the Nazi occupation of Czechoslovakia, surgeon Dr. Franticek Svoboda, a Czech patriot, assassinates the brutal \"Hangman of Europe\", Reichsprotektor Reinhard Heydrich, and is wounded in the process. In his attempt to escape, he is helped by history professor Stephen Novotny and his daughter Mascha.",
+          "poster_path": "/d9J86BpP7NLreJJ9VCbr1SDMRii.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            53,
+            10752
+          ],
+          "popularity": 1.6433,
+          "release_date": "1943-04-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.932,
+          "vote_count": 139
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tNynKhMCy215pLuDeleRsEy85tr.jpg",
+          "id": 42837,
+          "title": "The 3 Penny Opera",
+          "original_title": "Die 3 Groschen-Oper",
+          "overview": "In London at the turn of the century, underworld kingpin Mack the Knife marries Polly Peachum without the knowledge of her father, the equally enterprising 'king of the beggars'.",
+          "poster_path": "/w39cIJWmtLRxyqAE2KdhSuUa0wC.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            10402,
+            80
+          ],
+          "popularity": 0.5827,
+          "release_date": "1931-02-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.103,
+          "vote_count": 63
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/l4vdoEQnOYrMgl4hetzXCXAlfK9.jpg",
+          "id": 785,
+          "title": "Kuhle Wampe or Who Owns the World?",
+          "original_title": "Kuhle Wampe oder: Wem gehört die Welt?",
+          "overview": "Kuhle Wampe takes place in early-1930s Berlin. The film begins with a montage of newspaper headlines describing steadily-rising unemployment figures. This is followed by scenes of a young man looking for work in the city and the family discussing the unpaid back rent. The young man, brother of the protagonist Anni, removes his wristwatch and throws himself from a window out of despair. Shortly thereafter his family is evicted from their apartment. Now homeless, the family moves into a garden colony of sorts with the name “Kuhle Wampe.”",
+          "poster_path": "/xEkaDbgek7TwSkfC6Ft2ReRhOlg.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.8258,
+          "release_date": "1932-05-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.885,
+          "vote_count": 26
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

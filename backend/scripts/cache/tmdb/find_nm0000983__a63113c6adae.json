@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 13,
+      "name": "Albert Brooks",
+      "original_name": "Albert Brooks",
+      "media_type": "person",
+      "popularity": 1.9168,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/8iDSGu5l93N7benjf6b3AysBore.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/9BQtqeJGKnSGdn6UF2SxhShUTgy.jpg",
+          "id": 12186,
+          "title": "Defending Your Life",
+          "original_title": "Defending Your Life",
+          "overview": "Is there love after death? After he dies suddenly, the hapless advertising executive Daniel Miller finds himself in Judgment City, a gleaming way station where the newly deceased must prove they lived a life of sufficient courage to advance in their journey through the universe. As the self-doubting Daniel struggles to make his case, a budding relationship with the uninhibited Julia offers him a chance to finally feel alive.",
+          "poster_path": "/flXJ4AnKYq8DH1f1TmQ4QrqSwsB.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10749,
+            14,
+            35,
+            18
+          ],
+          "popularity": 2.1874,
+          "release_date": "1991-03-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.9,
+          "vote_count": 305
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7XpgGenPC31U3nsqIQPJCr8OdhY.jpg",
+          "id": 27223,
+          "title": "Lost in America",
+          "original_title": "Lost in America",
+          "overview": "David and Linda Howard are successful yuppies from LA. When he gets a job disappointment, David convinces Linda that they should quit their jobs, liquidate their assets, and emulate the movie Easy Rider, spending the rest of their lives traveling around America...in a Winnebago.",
+          "poster_path": "/j7QiwUekGiYOmjKratNORIr35zg.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.1915,
+          "release_date": "1985-02-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.889,
+          "vote_count": 166
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vJd0ZCeGeuG5lzolUNlhoaoPaCK.jpg",
+          "id": 37718,
+          "title": "The Muse",
+          "original_title": "The Muse",
+          "overview": "With his career on the skids, a Hollywood screenwriter enlists the aid of a modern-day muse, who proves to test his patience.",
+          "poster_path": "/hmtvDW52V3EuFmbhTOLjaGMYCDx.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            35,
+            10749
+          ],
+          "popularity": 1.8761,
+          "release_date": "1999-08-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.217,
+          "vote_count": 150
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

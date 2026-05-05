@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 934994,
+      "name": "Tengiz Abuladze",
+      "original_name": "თენგიზ აბულაძე",
+      "media_type": "person",
+      "popularity": 0.279,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/6WPlPj04VX4xfHIEqKOQCNlXyke.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/b6rWjJbPePlyLGLebdmf30042Ok.jpg",
+          "id": 96920,
+          "title": "Repentance",
+          "original_title": "მონანიება",
+          "overview": "The day after his funeral, the corpse of Varlam Aravidze, the mayor of a small Georgian town,  turns up in his son's garden.  Although it is secretly reburied, the corpse keeps returning until the police capture the local woman who is responsible.  This woman says that Varlam should never be laid to rest since his Stalin-like reign of terror led to the disappearance of her family and friends.",
+          "poster_path": "/9kZqQ2tlwfts6ch2s4ibKhjQgzW.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "popularity": 0.9692,
+          "release_date": "1987-05-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.136,
+          "vote_count": 70
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/eGGnArwo28bNd007Peo9LRcPPoX.jpg",
+          "id": 150223,
+          "title": "The Wishing Tree",
+          "original_title": "ნატვრის ხე",
+          "overview": "Marita arrives at a small village in Georgia to live with her aunt. She meets a poor young lad, Gedia, and falls in love with him. But her relatives are determined to marry the girl off to a local rich man…",
+          "poster_path": "/pWt4grF2eztN53h1hs1fpiKZxBa.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.6251,
+          "release_date": "1976-12-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 32
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/x0Z90leYTZJchi2G0DW4FO4F1hx.jpg",
+          "id": 149727,
+          "title": "The Plea",
+          "original_title": "ვედრება",
+          "overview": "Brave sons of Khevsureti and Kisteti fight against each to protect their homelands. But, they confront faulty domestic traditions to respect enemy’s true prowess and find themselves in conflict with own compatriots.",
+          "poster_path": "/inW0AJ8Cllmru8dPA9ao7cWfxMM.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.4697,
+          "release_date": "1967-12-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.286,
+          "vote_count": 21
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

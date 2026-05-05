@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 124749,
+  "imdb_id": "nm0655053",
+  "known_for_department": "Writing",
+  "name": "Серджо Паблос",
+  "place_of_birth": "  Madrid, Spain",
+  "popularity": 0.461,
+  "profile_path": "/yUbwlVSiUZpjRYoD4XqFdiM1Knq.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0655053",
+    "tvrage_id": null,
+    "wikidata_id": "Q27870243",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

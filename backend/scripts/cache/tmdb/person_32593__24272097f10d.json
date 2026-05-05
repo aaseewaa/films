@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1962-05-27",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 32593,
+  "imdb_id": "nm0109359",
+  "known_for_department": "Directing",
+  "name": "Steven Brill",
+  "place_of_birth": "Utica, New York, USA",
+  "popularity": 1.1242,
+  "profile_path": "/bhWId1JKFtFECSJPCYo9DbXeOaS.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0fvgnw",
+    "freebase_id": null,
+    "imdb_id": "nm0109359",
+    "tvrage_id": null,
+    "wikidata_id": "Q345259",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

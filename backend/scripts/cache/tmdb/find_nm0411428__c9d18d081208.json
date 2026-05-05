@@ -1,0 +1,41 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 237071,
+      "name": "Isidore Isou",
+      "original_name": "Isidore Isou",
+      "media_type": "person",
+      "popularity": 0.0286,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/zEiSPfd3xUHAIK22AYU44adMTUi.jpg",
+          "id": 63400,
+          "title": "Venom and Eternity",
+          "original_title": "Traité de bave et d'éternité",
+          "overview": "In this experimental film, Isidore Isou, the leader of the lettrist movement, lashes out at conventional cinema and offers a revolutionary form of movie-making: through scratching and bleaching the film, through desynchronizing the soundtrack and the visual track, through deconstructing the story, he aims to renew the seventh art the same way he tried to revolutionize the literary world.",
+          "poster_path": "/vUc1nBIHKn5Y4soDaKf9JgcYCBP.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.4092,
+          "release_date": "1952-01-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.889,
+          "vote_count": 18
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

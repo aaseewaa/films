@@ -1,0 +1,39 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1790165,
+      "name": "Tristan Tzara",
+      "original_name": "Tristan Tzara",
+      "media_type": "person",
+      "popularity": 0.0143,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 450672,
+          "title": "The Bearded Heart",
+          "original_title": "Le Cœur à barbe",
+          "overview": "The young poets, a nucleus of the dada art movement and pioneers of surrealist poetry, sit in a corner reading their works and ringing a bell.",
+          "poster_path": "/cDXcJpy4UwyalJQ0xeRvORUsVfx.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.1331,
+          "release_date": "1930-12-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 9.0,
+          "vote_count": 1
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

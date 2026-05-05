@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2888,
+      "name": "Will Smith",
+      "original_name": "Will Smith",
+      "media_type": "person",
+      "popularity": 5.3077,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/8TlKqbXYgHmmaEoPBJ7djJ8Rxxa.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/wAk0yKrhAmvsoMvlKs4QImhvK5X.jpg",
+          "id": 297761,
+          "title": "Suicide Squad",
+          "original_title": "Suicide Squad",
+          "overview": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+          "poster_path": "/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "popularity": 7.7944,
+          "release_date": "2016-08-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.917,
+          "vote_count": 22038
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aTLq0TMKdsmIy1ZyFM1LfPs326d.jpg",
+          "id": 6479,
+          "title": "I Am Legend",
+          "original_title": "I Am Legend",
+          "overview": "Robert Neville is a scientist who was unable to stop the spread of the terrible virus that was incurable and man-made. Immune, Neville is now the last human survivor in what is left of New York City and perhaps the world. For three years, Neville has faithfully sent out daily radio messages, desperate to find any other survivors who might be out there. But he is not alone.",
+          "poster_path": "/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            878,
+            53
+          ],
+          "popularity": 11.0232,
+          "release_date": "2007-12-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.21,
+          "vote_count": 16756
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lOXVbF2mBK0xUt8sLInF3TIk5YS.jpg",
+          "id": 2048,
+          "title": "I, Robot",
+          "original_title": "I, Robot",
+          "overview": "In 2035, where robots are commonplace and abide by the three laws of robotics, a technophobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in danger.",
+          "poster_path": "/efwv6F2lGaghjPpBRSINHtoEiZB.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            878
+          ],
+          "popularity": 8.6863,
+          "release_date": "2004-07-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.961,
+          "vote_count": 12595
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

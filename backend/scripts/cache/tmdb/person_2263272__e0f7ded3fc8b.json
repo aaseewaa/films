@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Scott Dale"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2263272,
+  "imdb_id": "nm5642951",
+  "known_for_department": "Directing",
+  "name": "С. К. Дэйл",
+  "place_of_birth": null,
+  "popularity": 0.3645,
+  "profile_path": "/8ZwQLeDswGXnnCBpcEdprrUDUZ5.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm5642951",
+    "tvrage_id": null,
+    "wikidata_id": "Q114913746",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

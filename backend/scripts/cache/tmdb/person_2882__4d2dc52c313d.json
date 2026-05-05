@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Даєн Лейн",
+    "دایان لین"
+  ],
+  "biography": "",
+  "birthday": "1965-01-22",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 2882,
+  "imdb_id": "nm0000178",
+  "known_for_department": "Acting",
+  "name": "Дайан Лейн",
+  "place_of_birth": "New York City, New York, USA",
+  "popularity": 4.424,
+  "profile_path": "/6OfP3vFMuCL51zamFKgb8aS74hs.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01skmp",
+    "freebase_id": "/en/diane_lane",
+    "imdb_id": "nm0000178",
+    "tvrage_id": 59355,
+    "wikidata_id": "Q255070",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

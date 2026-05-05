@@ -1,0 +1,417 @@
+{
+  "page": 4,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/u1tUWb3W6nIzVzUQxx54TMq9kIq.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1193501,
+      "title": "Whistle",
+      "original_language": "en",
+      "original_title": "Whistle",
+      "overview": "A misfit group of unwitting high school students stumble upon a cursed object, an ancient Aztec Death Whistle. They discover that blowing the whistle and the terrifying sound it emits will summon their future deaths to hunt them down.",
+      "popularity": 52.1028,
+      "poster_path": "/eGxPyseSnEZBMJaopGfRUO9HSYx.jpg",
+      "release_date": "2026-01-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.197,
+      "vote_count": 315
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/Aqldsq65Nj1KAkQD2MzkZsAk5N5.jpg",
+      "genre_ids": [
+        28,
+        80,
+        18
+      ],
+      "id": 846433,
+      "title": "The Enforcer",
+      "original_language": "en",
+      "original_title": "The Enforcer",
+      "overview": "A noir thriller set in Miami, the film follows an enforcer who discovers his femme fatale boss has branched out into cyber sex trafficking, putting a young runaway he’s befriended at risk. He sacrifices everything to save the young girl from the deadly organization he’s spent his life building.",
+      "popularity": 46.6774,
+      "poster_path": "/72V1r1G8S87ELagVxjqAUdChMCt.jpg",
+      "release_date": "2022-09-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.022,
+      "vote_count": 488
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 299536,
+      "title": "Avengers: Infinity War",
+      "original_language": "en",
+      "original_title": "Avengers: Infinity War",
+      "overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+      "popularity": 50.5036,
+      "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "release_date": "2018-04-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.234,
+      "vote_count": 31829
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5AsIFZ2AJC7JcGpq40aRPuRuaRc.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 1241752,
+      "title": "Rita",
+      "original_language": "tl",
+      "original_title": "Rita",
+      "overview": "Rita, who finds herself alone when husband Ariel works abroad. They both find solace and sexual satisfaction in other people. When Ariel comes back, they both act like nothing happened. But will this keep their marriage from falling apart?",
+      "popularity": 66.8907,
+      "poster_path": "/pXENxAzOBrTSDJGxDcUnlNTNmWr.jpg",
+      "release_date": "2024-03-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.143,
+      "vote_count": 21
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zD5v1E4joAzFvmAEytt7fM3ivyT.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 634649,
+      "title": "Spider-Man: No Way Home",
+      "original_language": "en",
+      "original_title": "Spider-Man: No Way Home",
+      "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+      "popularity": 47.6255,
+      "poster_path": "/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+      "release_date": "2021-12-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.933,
+      "vote_count": 21878
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 24428,
+      "title": "The Avengers",
+      "original_language": "en",
+      "original_title": "The Avengers",
+      "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+      "popularity": 52.5169,
+      "poster_path": "/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "release_date": "2012-04-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.014,
+      "vote_count": 37574
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/240ZADOdI5WjD0eBFyiNh3KQl4m.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 412201,
+      "title": "The Fixer",
+      "original_language": "ro",
+      "original_title": "Fixeur",
+      "overview": "Romanian-born Radu Patru is a trainee at a prestigious French news network. Serving as a translator and general problem solver, or \"fixer,\" for the headlining journalists during his trial period, he's looking to make his big break. He sees his opportunity when two underage Romanian prostitutes are repatriated from France, creating an international scandal. Taking advantage of his language skills and local connections, Radu is prepared to do whatever it takes to interview one of the young girls. But as he ventures into tricky moral ground, he must stop to ask himself if, as an aspiring journalist, he can live with the consequences of his actions, and if, as a father, he's setting a good example for his son.",
+      "popularity": 45.1108,
+      "poster_path": "/aCTDG1kKROuCt3jnTkiFKmY3BHq.jpg",
+      "release_date": "2017-03-22",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 17
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/o3XZUwX37gqhpoQcBpqturGTF3Z.jpg",
+      "genre_ids": [
+        10751,
+        35,
+        16,
+        12
+      ],
+      "id": 387592,
+      "title": "Early Man",
+      "original_language": "en",
+      "original_title": "Early Man",
+      "overview": "Dug, along with his sidekick Hognob, unite a cavemen tribe to save their hidden valley from being spoiled and, all together as a team, to face the menace of a mysterious and mighty enemy, on the turf of an ancient and sacred sport.",
+      "popularity": 46.1802,
+      "poster_path": "/5iW2rntwLZoGlFCYYy8TjHyblbw.jpg",
+      "release_date": "2018-01-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 870
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uNToXatdunyvWXyXMrTI1nLvh6r.jpg",
+      "genre_ids": [
+        35,
+        878,
+        80
+      ],
+      "id": 1115544,
+      "title": "Mike & Nick & Nick & Alice",
+      "original_language": "en",
+      "original_title": "Mike & Nick & Nick & Alice",
+      "overview": "Two gangsters and the woman they love try to survive the most dangerous night of their lives. As if that wasn’t enough, there’s one wild ingredient added to the mix: a time machine.",
+      "popularity": 48.7914,
+      "poster_path": "/7F0jc75HrSkLVcvOXR2FXAIwuEv.jpg",
+      "release_date": "2026-03-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.799,
+      "vote_count": 291
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uQmr1eJvNwa7mCd3rXEXquA6Z3c.jpg",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 1383731,
+      "title": "Protector",
+      "original_language": "en",
+      "original_title": "Protector",
+      "overview": "Former war hero Nikki's peaceful life is shattered when her daughter is kidnapped. Thrust into the criminal underworld while hunted by cops and military, she must fight to rescue her child.",
+      "popularity": 55.3787,
+      "poster_path": "/icOZpnGuH9YrEaW3wrw5GJaXGih.jpg",
+      "release_date": "2026-02-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 44
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tZiRd4IpoNiaoLXr2o2YfhTMjE2.jpg",
+      "genre_ids": [
+        12,
+        28
+      ],
+      "id": 662707,
+      "title": "Starbright",
+      "original_language": "en",
+      "original_title": "Starbright",
+      "overview": "A young woman becomes the guardian of a fallen star, which she must protect from dangerous forces with the help of a brave stranger.",
+      "popularity": 50.1455,
+      "poster_path": "/m1Zl07DNYeSyNcz9hf8hDsS2oB5.jpg",
+      "release_date": "2026-02-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.5,
+      "vote_count": 16
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yPbW94JRopYqjz2CLyEiUhEwbB5.jpg",
+      "genre_ids": [
+        10749
+      ],
+      "id": 300496,
+      "title": "Nefeli",
+      "original_language": "el",
+      "original_title": "Nefeli",
+      "overview": "A beautiful woman is going to the island of Lesbos to rest, there she will meet two other beautiful young women and it will be great having sex with everyone.",
+      "popularity": 46.881,
+      "poster_path": "/4EgkcisexFjGfQmGI0IrVxZUBIv.jpg",
+      "release_date": "1980-01-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 3.571,
+      "vote_count": 7
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wz1eLrNxK77xAY7JYi4iYrtiMEd.jpg",
+      "genre_ids": [
+        99,
+        10402
+      ],
+      "id": 78192,
+      "title": "Michael Jackson: The Life of an Icon",
+      "original_language": "en",
+      "original_title": "Michael Jackson: The Life of an Icon",
+      "overview": "See Michael Jackson, one of the most recognizable and popular entertainers of all time, like never before in the feature-length tribute Michael Jackson: The Life of an Icon. Known to millions of fans worldwide for his record-breaking albums, groundbreaking music videos, mesmerizing dance moves and humanitarian efforts, his true story has never really been told...until now. This unprecedented look into the King of Pop's fascinating life includes all-new interviews with his mother Katherine Jackson as well as siblings Tito and Rebbie Jackson, family, friends and music legends such as Smokey Robinson, Dionne Warwick and many more.",
+      "popularity": 52.4465,
+      "poster_path": "/tOCYV9JCXXFtb7YehKXJBMKI4aD.jpg",
+      "release_date": "2011-11-02",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.945,
+      "vote_count": 145
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5rxEnsgriw8z065q51lrvPKYmCL.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 1367642,
+      "title": "Reminders of Him",
+      "original_language": "en",
+      "original_title": "Reminders of Him",
+      "overview": "When Diem's custodial grandparents adamantly refuse Kenna's attempts to see her daughter, Kenna discovers unexpected compassion, and then something truer and deeper, with former NFL player and local bar owner Ledger. As their secret romance develops, so do the dangers for both of them, leading Kenna toward heartbreak and, ultimately, the hope for a second chance.",
+      "popularity": 47.4111,
+      "poster_path": "/7L6rceYgzQ0NeHD7PRDNrRoQ291.jpg",
+      "release_date": "2026-03-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.322,
+      "vote_count": 183
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mxdiaM2tsx8M6W3zLgiPwAkhQfq.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 744275,
+      "title": "After We Fell",
+      "original_language": "en",
+      "original_title": "After We Fell",
+      "overview": "Just as Tessa's life begins to become unglued, nothing is what she thought it would be. Not her friends nor her family. The only person that she should be able to rely on is Hardin, who is furious when he discovers the massive secret that she's been keeping. Before Tessa makes the biggest decision of her life, everything changes because of revelations about her family.",
+      "popularity": 53.5296,
+      "poster_path": "/dU4HfnTEJDf9KvxGS9hgO7BVeju.jpg",
+      "release_date": "2021-09-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.0,
+      "vote_count": 2727
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/iQSXJs6RbTumcwxMjCedDoK99rx.jpg",
+      "genre_ids": [
+        53,
+        80,
+        18,
+        10770
+      ],
+      "id": 1659087,
+      "title": "180",
+      "original_language": "en",
+      "original_title": "180",
+      "overview": "When an unexpected road rage incident puts his son in critical condition, an enraged father spirals down a dark path of emotional turmoil and vengeance.",
+      "popularity": 46.4588,
+      "poster_path": "/9ISjrhA38HpSSGtfiCk8lpziC3K.jpg",
+      "release_date": "2026-04-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.605,
+      "vote_count": 81
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tcBX2dtkNozZ0uDLVaxXrE6rqyN.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1038392,
+      "title": "The Conjuring: Last Rites",
+      "original_language": "en",
+      "original_title": "The Conjuring: Last Rites",
+      "overview": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
+      "popularity": 48.0913,
+      "poster_path": "/byWgphT74ClOVa8EOGzYDkl8DVL.jpg",
+      "release_date": "2025-09-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.884,
+      "vote_count": 1772
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/z3bzhmC0CPikWeerUkLO73YvGrC.jpg",
+      "genre_ids": [
+        10402,
+        53,
+        28,
+        27
+      ],
+      "id": 1084187,
+      "title": "Pretty Lethal",
+      "original_language": "en",
+      "original_title": "Pretty Lethal",
+      "overview": "A troupe of ballerinas find themselves fighting for survival as they attempt to escape from a remote inn after their bus breaks down on the way to a dance competition.",
+      "popularity": 51.034,
+      "poster_path": "/znTPnXCK3lEQJgqXCvP7e5FUz6f.jpg",
+      "release_date": "2026-03-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.756,
+      "vote_count": 330
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/w3Bi0wygeFQctn6AqFTwhGNXRwL.jpg",
+      "genre_ids": [
+        14,
+        10402,
+        35,
+        16
+      ],
+      "id": 803796,
+      "title": "KPop Demon Hunters",
+      "original_language": "en",
+      "original_title": "KPop Demon Hunters",
+      "overview": "When K-pop superstars Rumi, Mira and Zoey aren't selling out stadiums, they're using their secret powers to protect their fans from supernatural threats.",
+      "popularity": 46.1774,
+      "poster_path": "/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg",
+      "release_date": "2025-06-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.011,
+      "vote_count": 2691
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hHDNOlATHhre4eZ7aYz5cdyJLik.jpg",
+      "genre_ids": [
+        27,
+        53,
+        878
+      ],
+      "id": 1272837,
+      "title": "28 Years Later: The Bone Temple",
+      "original_language": "en",
+      "original_title": "28 Years Later: The Bone Temple",
+      "overview": "Dr. Kelson finds himself in a shocking new relationship - with consequences that could change the world as they know it - and Spike's encounter with Jimmy Crystal becomes a nightmare he can't escape.",
+      "popularity": 38.769,
+      "poster_path": "/kK1BGkG3KAvWB0WMV1DfOx9yTMZ.jpg",
+      "release_date": "2026-01-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.116,
+      "vote_count": 1115
+    }
+  ],
+  "total_pages": 56569,
+  "total_results": 1131376
+}

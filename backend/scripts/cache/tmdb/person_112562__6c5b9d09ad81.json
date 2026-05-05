@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "캐서린 다이어"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 112562,
+  "imdb_id": "nm0245696",
+  "known_for_department": "Acting",
+  "name": "Кэтрин Дайер",
+  "place_of_birth": "New York, New York, USA",
+  "popularity": 0.6856,
+  "profile_path": "/tMZkfDMu7U6IcIE9hx4NlJJIB39.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/09ms6s3",
+    "freebase_id": "/en/catherine_dyer",
+    "imdb_id": "nm0245696",
+    "tvrage_id": null,
+    "wikidata_id": "Q29514595",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Mr. Wonderful",
+    "Terrence Thomas Kevin O'Leary"
+  ],
+  "biography": "",
+  "birthday": "1954-07-09",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1240877,
+  "imdb_id": "nm2891968",
+  "known_for_department": "Acting",
+  "name": "Кевин О’Лири",
+  "place_of_birth": "Montreal, Quebec, Canada",
+  "popularity": 2.0702,
+  "profile_path": "/eUDfTddvXHOAZR5Sh1hs3IVF5mb.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/027mj37",
+    "freebase_id": "/en/kevin_oleary",
+    "imdb_id": "nm2891968",
+    "tvrage_id": 232683,
+    "wikidata_id": "Q6397147",
+    "facebook_id": "kevinolearytv",
+    "instagram_id": "kevinolearytv",
+    "tiktok_id": null,
+    "twitter_id": "kevinolearytv",
+    "youtube_id": null
+  }
+}

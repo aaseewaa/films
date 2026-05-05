@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://thebrandonchristensen.com/",
+  "id": 1588833,
+  "imdb_id": "nm3417134",
+  "known_for_department": "Directing",
+  "name": "Brandon Christensen",
+  "place_of_birth": "Calgary, Alberta, Canada",
+  "popularity": 0.8189,
+  "profile_path": "/da3en8QZnhFmEVIwvhXdYnP3qPK.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3417134",
+    "tvrage_id": null,
+    "wikidata_id": "Q113679118",
+    "facebook_id": null,
+    "instagram_id": "thebrandonchristensen",
+    "tiktok_id": null,
+    "twitter_id": "thebrandonc85",
+    "youtube_id": null
+  }
+}

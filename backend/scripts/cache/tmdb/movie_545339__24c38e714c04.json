@@ -1,0 +1,221 @@
+{
+  "adult": false,
+  "backdrop_path": "/s8QGlg2rnVlYkUl4qBHatkZgnJs.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "homepage": "",
+  "id": 545339,
+  "imdb_id": "tt0311411",
+  "origin_country": [
+    "IN"
+  ],
+  "original_language": "hi",
+  "original_title": "Kranti",
+  "overview": "Inspector Abhay Pratap Singh is a young, honest and diligent police inspector, serving with Bombay Police, and comes from a respectable family, which consists of sister Anu; mom Sushma; and dad, Awadesh, who is also the Commissioner of Police. Abhay has long suspected Mahendra Pratap Rana of being a criminal don, who also has links with terrorists, but thus far has been unable to gather any material evidence for the police to lay charges. The Commissioner is unable to accept his son's word, as Mahendra is well-known, influential, and wealthy. Abhay continues to pursue his investigation despite of warnings from his superiors, and is ultimately suspended from duty. Now even after suspension, Abhay has come to know that the life of Coloney Krishnakanth is threatened by Mahendra, and reaches out to his dad, who will not have anything to do with him anymore. It will upto Abhay to save the life of Krishnakanth, against all odds that are stacked up against him.",
+  "popularity": 32.1565,
+  "poster_path": "/dH9jHruCCwPHEdNq6KY5iL6hdA4.jpg",
+  "production_companies": [],
+  "production_countries": [],
+  "release_date": "2002-03-27",
+  "revenue": 0,
+  "runtime": 142,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Hindi",
+      "iso_639_1": "hi",
+      "name": "हिन्दी"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Kranti",
+  "video": false,
+  "vote_average": 7.0,
+  "vote_count": 3,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 77235,
+        "known_for_department": "Acting",
+        "name": "Bobby Deol",
+        "original_name": "Bobby Deol",
+        "popularity": 0.8011,
+        "profile_path": "/2npVa3PduichY8e7qBiE54m9VVP.jpg",
+        "cast_id": 0,
+        "character": "ACP Abhay Pratap Singh",
+        "credit_id": "5b86f5c092514149f9013248",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 76450,
+        "known_for_department": "Acting",
+        "name": "Ameesha Patel",
+        "original_name": "Ameesha Patel",
+        "popularity": 1.2158,
+        "profile_path": "/d6FmmnSylIxvmJezAJLkPpJ9z1t.jpg",
+        "cast_id": 1,
+        "character": "Sanjana Roy",
+        "credit_id": "5b86f5d80e0a26110f014076",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85458,
+        "known_for_department": "Acting",
+        "name": "Vinod Khanna",
+        "original_name": "Vinod Khanna",
+        "popularity": 1.5283,
+        "profile_path": "/pwrChfSmvPX4HndI7j3fnAzPvaw.jpg",
+        "cast_id": 2,
+        "character": "Awadesh Pratap Singh",
+        "credit_id": "5b86f5f4c3a3683f7e014092",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 35790,
+        "known_for_department": "Acting",
+        "name": "Rati Agnihotri",
+        "original_name": "Rati Agnihotri",
+        "popularity": 0.4123,
+        "profile_path": "/a4E2eoMZAt8bxRwSzX208UXBza5.jpg",
+        "cast_id": 3,
+        "character": "Sushma Singh",
+        "credit_id": "5b86f61892514149f3011865",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 10510,
+        "known_for_department": "Acting",
+        "name": "Kabir Bedi",
+        "original_name": "Kabir Bedi",
+        "popularity": 1.7174,
+        "profile_path": "/jTvXd0iXyKa9KBBFOxt9DASK5QG.jpg",
+        "cast_id": 4,
+        "character": "Mahendra Pratap Rana",
+        "credit_id": "5b86f638c3a3683f8101695e",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 11861,
+        "known_for_department": "Acting",
+        "name": "Dalip Tahil",
+        "original_name": "Dalip Tahil",
+        "popularity": 0.9324,
+        "profile_path": "/4kgTd5aKh3IRxrJ7uG5h9mojb57.jpg",
+        "cast_id": 7,
+        "character": "Home Minister Sharatchandra Agashe",
+        "credit_id": "631e0dc1c3aa3f007d0de31e",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 593137,
+        "known_for_department": "Acting",
+        "name": "Yunus Parvez",
+        "original_name": "Yunus Parvez",
+        "popularity": 0.5237,
+        "profile_path": "/8y0u0NS7j9lzffw8ePGxf6NNLpr.jpg",
+        "cast_id": 8,
+        "character": "Chief Minister",
+        "credit_id": "631e0de9568463007bbde8b9",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 11851,
+        "known_for_department": "Acting",
+        "name": "Om Puri",
+        "original_name": "Om Puri",
+        "popularity": 1.1882,
+        "profile_path": "/3xENmjr7CA8ACRViHnjOI5jPQUt.jpg",
+        "cast_id": 9,
+        "character": "Colonel Krishnakant",
+        "credit_id": "631e0dfbce9e91007f753369",
+        "order": 7
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 230031,
+        "known_for_department": "Writing",
+        "name": "Sanjay Masoom",
+        "original_name": "Sanjay Masoom",
+        "popularity": 0.1205,
+        "profile_path": null,
+        "credit_id": "5b86f6830e0a26110f014157",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1041789,
+        "known_for_department": "Directing",
+        "name": "Naresh Malhotra",
+        "original_name": "Naresh Malhotra",
+        "popularity": 0.2106,
+        "profile_path": null,
+        "credit_id": "5b86f6650e0a26110d012ffc",
+        "department": "Directing",
+        "job": "Director"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt0311411",
+    "wikidata_id": "Q6436115",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 6149,
+        "name": "police"
+      },
+      {
+        "id": 4480,
+        "name": "businessman"
+      },
+      {
+        "id": 41379,
+        "name": "argument"
+      },
+      {
+        "id": 207534,
+        "name": "police commissioner"
+      },
+      {
+        "id": 240119,
+        "name": "father son relationship"
+      }
+    ]
+  }
+}

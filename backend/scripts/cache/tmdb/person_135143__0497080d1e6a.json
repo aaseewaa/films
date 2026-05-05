@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 135143,
+  "imdb_id": "nm0845873",
+  "known_for_department": "Acting",
+  "name": "Maurizio Tabani",
+  "place_of_birth": null,
+  "popularity": 0.1081,
+  "profile_path": "/rf1RRAnqgcXoIfgo5IkkQTut6Qe.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0845873",
+    "tvrage_id": null,
+    "wikidata_id": "Q66060229",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

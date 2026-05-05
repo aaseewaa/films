@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 115128,
+      "name": "Bo Burnham",
+      "original_name": "Bo Burnham",
+      "media_type": "person",
+      "popularity": 1.3838,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/xMAatohXadCfz9ipvqvIaTLwOmV.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gESm6yc2MZpSXakgqLF0OlLaRn1.jpg",
+          "id": 582014,
+          "title": "Promising Young Woman",
+          "original_title": "Promising Young Woman",
+          "overview": "A young woman, traumatized by a tragic event in her past, seeks out vengeance against those who crossed her path.",
+          "poster_path": "/73QoFJFmUrJfDG2EynFjNc5gJxk.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            80,
+            18
+          ],
+          "popularity": 5.8695,
+          "release_date": "2020-12-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.391,
+          "vote_count": 3679
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9sfVyE3sP2dkCwDyV7UlYP5TAAR.jpg",
+          "id": 823754,
+          "title": "Bo Burnham: Inside",
+          "original_title": "Bo Burnham: Inside",
+          "overview": "Stuck in COVID-19 lockdown, US comedian and musician Bo Burnham attempts to stay sane and happy by writing, shooting and performing a one-man comedy special.",
+          "poster_path": "/ku1UvTWYvhFQbSesOD6zteY7bXT.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 1.663,
+          "release_date": "2021-07-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.01,
+          "vote_count": 601
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nicDo6SnBxK93ROGAhpKTOAhy2i.jpg",
+          "id": 400608,
+          "title": "Bo Burnham: Make Happy",
+          "original_title": "Bo Burnham: Make Happy",
+          "overview": "Combining his trademark wit and self-deprecating humor with original music, Bo Burnham offers up his unique twist on life in this stand-up special about  life, death, sexuality, hypocrisy, mental illness and Pringles cans.",
+          "poster_path": "/qVThhskXZZHDfj4m8jOx2CxIVIW.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10402
+          ],
+          "popularity": 1.0353,
+          "release_date": "2016-06-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 429
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

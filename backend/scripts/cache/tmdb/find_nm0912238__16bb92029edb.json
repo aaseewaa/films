@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 18626,
+      "name": "Andy Warhol",
+      "original_name": "Andy Warhol",
+      "media_type": "person",
+      "popularity": 0.8301,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/4FwsJKGOpYcYwFqxFKnbl5bFx3Y.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/sSAX59Kf01lBRkBW4UcIL4kIoIm.jpg",
+          "id": 1667,
+          "name": "Saturday Night Live",
+          "original_name": "Saturday Night Live",
+          "overview": "A late-night live television sketch comedy and variety show created by Lorne Michaels. The show's comedy sketches, which parody contemporary culture and politics, are performed by a large and varying cast of repertory and newer cast members. Each episode is hosted by a celebrity guest, who usually delivers an opening monologue and performs in sketches with the cast, and features performances by a musical guest.",
+          "poster_path": "/s1cZBqbMwAF3w8S3Yo0j5nr2Yuo.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10763
+          ],
+          "popularity": 111.7142,
+          "first_air_date": "1975-10-11",
+          "softcore": false,
+          "vote_average": 7.0,
+          "vote_count": 492,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/prIJsrX5PE3UqsqjamA2kbypRLE.jpg",
+          "id": 44503,
+          "title": "Blow Job",
+          "original_title": "Blow Job",
+          "overview": "Andy Warhol directs a single 35-minute shot of a man's face to capture his facial expressions as he receives the sexual act depicted in the title.",
+          "poster_path": "/rbtmS87QC7vKr4kpIYV3R8rWuBa.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.2714,
+          "release_date": "1964-07-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.318,
+          "vote_count": 55
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4MZwxXhz4iGPsm5t3gcMrBVQYWS.jpg",
+          "id": 108419,
+          "title": "Empire",
+          "original_title": "Empire",
+          "overview": "Filmed by Jonas Mekas from the 44th floor of the Time-Life Building, “Empire” explores the passage of time without the use of characters or a traditional narrative. The film, that consists of one stationary shot of the Empire State Building, was made from standard 1,200-foot rolls of 16mm film with a more than eight-hour runtime.",
+          "poster_path": "/70Hh09YIGa3M6WBwpXXd1wj6gTM.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.3171,
+          "release_date": "1965-03-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.307,
+          "vote_count": 44
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

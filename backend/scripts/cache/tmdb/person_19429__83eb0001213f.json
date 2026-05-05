@@ -1,0 +1,35 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Lee Jun Fan",
+    "Lee Jun-fan",
+    "Λι Τζουν-φαν",
+    "Μπρους Λι",
+    "李振藩",
+    "Lei Zan faan"
+  ],
+  "biography": "Брюс Ли (имя при рождении - Ли Чаньфань) - гонконгский и американский мастер боевых искусств, киноактёр, режиссёр, сценарист, продюсер. Ли был основателем Джиткундо, гибридной философии боевых искусств, основанной на различных боевых дисциплинах. Некоторые комментаторы и мастера боевых искусств считают его самым влиятельным мастером боевых искусств всех времён и иконой поп-культуры XX века, который помог преодолеть разрыв между Востоком и Западом. Ему приписывают продвижение гонконгских боевиков и помощь в изменении образа китайцев в американских фильмах.",
+  "birthday": "1940-11-27",
+  "deathday": "1973-07-20",
+  "gender": 2,
+  "homepage": "https://brucelee.com",
+  "id": 19429,
+  "imdb_id": "nm0000045",
+  "known_for_department": "Acting",
+  "name": "Брюс Ли",
+  "place_of_birth": "San Francisco, California, USA",
+  "popularity": 2.6211,
+  "profile_path": "/vFtLJ37tjqPdq6oJr0OSpyo9Wcp.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/099d4",
+    "freebase_id": "/en/bruce_lee",
+    "imdb_id": "nm0000045",
+    "tvrage_id": 15047,
+    "wikidata_id": "Q16397",
+    "facebook_id": "BruceLee",
+    "instagram_id": "brucelee",
+    "tiktok_id": null,
+    "twitter_id": "brucelee",
+    "youtube_id": "brucelee"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Isabella Hoffman"
+  ],
+  "biography": "",
+  "birthday": "1958-12-11",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 108213,
+  "imdb_id": "nm0389374",
+  "known_for_department": "Acting",
+  "name": "Isabella Hofmann",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 1.3516,
+  "profile_path": "/vPRXu2u0vewF6dRJLZ2p8rhrIou.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/06nx4h",
+    "freebase_id": "/en/isabella_hofmann",
+    "imdb_id": "nm0389374",
+    "tvrage_id": 27111,
+    "wikidata_id": "Q4500475",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

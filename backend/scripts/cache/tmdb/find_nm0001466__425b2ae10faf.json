@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 4385,
+      "name": "Sergio Leone",
+      "original_name": "Sergio Leone",
+      "media_type": "person",
+      "popularity": 2.1516,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/2576qoW8l9Z1nKGM10ar60aIwUu.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/Adrip2Jqzw56KeuV2nAxucKMNXA.jpg",
+          "id": 429,
+          "title": "The Good, the Bad and the Ugly",
+          "original_title": "Il buono, il brutto, il cattivo",
+          "overview": "While the Civil War rages on between the Union and the Confederacy, three men – a quiet loner, a ruthless hitman, and a Mexican bandit – comb the American Southwest in search of a strongbox containing $200,000 in stolen gold.",
+          "poster_path": "/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            37
+          ],
+          "popularity": 21.8657,
+          "release_date": "1966-12-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.468,
+          "vote_count": 9589
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xlDUjb0Q5Dv6jPQRF5VE4IMjIy.jpg",
+          "id": 311,
+          "title": "Once Upon a Time in America",
+          "original_title": "Once Upon a Time in America",
+          "overview": "A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan over thirty years later, where he once again must confront the ghosts and regrets of his old life.",
+          "poster_path": "/i0enkzsL5dPeneWnjl1fCWm6L7k.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "popularity": 11.5262,
+          "release_date": "1984-05-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.383,
+          "vote_count": 6004
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/h31SOVlekuHXsMWVGxI8nPPfY82.jpg",
+          "id": 335,
+          "title": "Once Upon a Time in the West",
+          "original_title": "C'era una volta il West",
+          "overview": "As the railroad builders advance unstoppably through the Arizona desert on their way to the sea, Jill arrives in the small town of Flagstone with the intention of starting a new life.",
+          "poster_path": "/qbYgqOczabWNn2XKwgMtVrntD6P.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            37
+          ],
+          "popularity": 10.1847,
+          "release_date": "1968-12-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.273,
+          "vote_count": 4874
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

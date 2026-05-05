@@ -1,0 +1,89 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 95024,
+      "name": "Bobcat Goldthwait",
+      "original_name": "Bobcat Goldthwait",
+      "media_type": "person",
+      "popularity": 1.657,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/7Q6MWUQ5YheFm6xxUxigqIFAB95.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/oG9dcGSSu13fjFp1Uly15ZXjRKV.jpg",
+          "id": 11970,
+          "title": "Hercules",
+          "original_title": "Hercules",
+          "overview": "Bestowed with superhuman strength, a young mortal named Hercules sets out to prove himself a hero in the eyes of his father, the great god Zeus. Along with his friends Pegasus, a flying horse, and Phil, a personal trainer, Hercules is tricked by the hilarious, hotheaded villain Hades, who's plotting to take over Mount Olympus!",
+          "poster_path": "/dK9rNoC97tgX3xXg5zdxFisdfcp.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            14,
+            12,
+            35,
+            10749
+          ],
+          "popularity": 12.2609,
+          "release_date": "1997-06-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.491,
+          "vote_count": 7890
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/6Cld2xtKYfWnWK3w3gfJRRA82vd.jpg",
+          "id": 9647,
+          "title": "Scrooged",
+          "original_title": "Scrooged",
+          "overview": "Frank Cross is a wildly successful television executive whose cold ambition and curmudgeonly nature has driven away the love of his life. But after firing a staff member on Christmas Eve, Frank is visited by a series of ghosts who give him a chance to re-evaluate his actions and right the wrongs of his past.",
+          "poster_path": "/uO0znfB2ZzTXA1IS7jkrjNbpkYK.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            35,
+            18
+          ],
+          "popularity": 3.437,
+          "release_date": "1988-11-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.789,
+          "vote_count": 1689
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/v3ClsT59peXyGJ4XuDvIQAPwcZy.jpg",
+          "id": 4133,
+          "title": "Blow",
+          "original_title": "Blow",
+          "overview": "A boy named George Jung grows up in a struggling family in the 1950's. His mother nags at her husband as he is trying to make a living for the family. It is finally revealed that George's father cannot make a living and the family goes bankrupt. George does not want the same thing to happen to him, and his friend Tuna, in the 1960's, suggests that he deal marijuana. He is a big hit in California in the 1960's, yet he goes to jail, where he finds out about the wonders of cocaine. As a result, when released, he gets rich by bringing cocaine to America. However, he soon pays the price.",
+          "poster_path": "/yYZFVfk8aeMP4GxBSU9MTvqs9mJ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            80,
+            18
+          ],
+          "popularity": 5.2695,
+          "release_date": "2001-04-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.353,
+          "vote_count": 4576
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

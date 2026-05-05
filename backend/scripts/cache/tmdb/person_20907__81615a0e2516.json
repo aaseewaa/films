@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "安东尼·福奎阿",
+    "آنتوان فوکوا"
+  ],
+  "biography": "",
+  "birthday": "1965-05-30",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 20907,
+  "imdb_id": "nm0298807",
+  "known_for_department": "Directing",
+  "name": "Антуан Фукуа",
+  "place_of_birth": "Pittsburgh, Pennsylvania, USA",
+  "popularity": 4.6109,
+  "profile_path": "/h58HRBCQOtWIR8zMqOIVgkHjssU.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/05mdqj",
+    "freebase_id": "/en/antoine_fuqua",
+    "imdb_id": "nm0298807",
+    "tvrage_id": 188902,
+    "wikidata_id": "Q465139",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

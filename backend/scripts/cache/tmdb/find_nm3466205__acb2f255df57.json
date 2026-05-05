@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2191711,
+      "name": "Giovanni Morassutti",
+      "original_name": "Giovanni Morassutti",
+      "media_type": "person",
+      "popularity": 0.2265,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/8wJf6T6BhJKYKZ9xbf8eeU8WBbx.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/pH6tXFobpuxD7J9kVe0YeKWAnMk.jpg",
+          "id": 1665,
+          "title": "Last Days",
+          "original_title": "Last Days",
+          "overview": "The life and struggles of a notorious rock musician seeping into a pit of loneliness whose everyday life involves friends and family seeking financial aid and favors, inspired by rock music legend Kurt Cobain and his final hours.",
+          "poster_path": "/btbp47CHXgLhw30kyDoVfNFLB3g.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.5049,
+          "release_date": "2005-06-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.573,
+          "vote_count": 409
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/91yMEHiOfzMv0Lq7uV9MPKTpTJC.jpg",
+          "id": 1291202,
+          "title": "Duse",
+          "original_title": "Duse",
+          "overview": "In the years between WWI and the rise of Fascism, legendary thespian Eleonora Duse shocks everyone by getting back onstage at over 60 years of age. Struggling with the brutality of historical events unfolding and clinging to the possibility of utopia, she makes her art a revolutionary act, even at the cost of sacrificing health and affection—facing her final journey aware she could give up life itself, but not her own true nature.",
+          "poster_path": "/5PJ4DfW9T2uG9Bj6X20i2R3yW3A.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "popularity": 1.0681,
+          "release_date": "2025-09-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 36
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/67zpujcaKxyNhhuXitib7QZLqU2.jpg",
+          "id": 323664,
+          "title": "A Holy Venetian Family",
+          "original_title": "Leoni",
+          "overview": "Gualtiero Cecchin, the son of an entrepreneur must find a new way to make money after squandering his huge family fortune. With an idea and a good dose of recklessness Gualtiero must find a way to fund his new business while navigating the shady world of the Neapolitan mob.",
+          "poster_path": "/7an1KzWFr65i14j8zgtB6ZusFMB.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.3841,
+          "release_date": "2015-02-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 23
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

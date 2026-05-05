@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1942-12-06",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2305,
+  "imdb_id": "nm0359563",
+  "known_for_department": "Writing",
+  "name": "Peter Handke",
+  "place_of_birth": "Griffen, Austria",
+  "popularity": 0.2373,
+  "profile_path": null,
+  "external_ids": {
+    "freebase_mid": "/m/05_x0",
+    "freebase_id": null,
+    "imdb_id": "nm0359563",
+    "tvrage_id": null,
+    "wikidata_id": "Q44107",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

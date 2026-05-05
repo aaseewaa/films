@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 9730,
+      "name": "Jean Cocteau",
+      "original_name": "Jean Cocteau",
+      "media_type": "person",
+      "popularity": 0.6079,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/vD73WSmN0hH3ZDjlh6n73CJI5sC.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/2Ae0iV2HR3Raoras8G40MjBtJnn.jpg",
+          "id": 648,
+          "title": "Beauty and the Beast",
+          "original_title": "La Belle et la Bête",
+          "overview": "The story of a gentle-hearted beast in love with a simple and beautiful girl. She is drawn to the repellent but strangely fascinating Beast, who tests her fidelity by giving her a key, telling her that if she doesn't return it to him by a specific time, he will die of grief. She is unable to return the key on time, but it is revealed that the Beast is the genuinely handsome one. A simple tale of tragic love that turns into a surreal vision of death, desire, and beauty.",
+          "poster_path": "/iYSe3yrkma0e1B0wWPXgr8w5sDN.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            14,
+            10749
+          ],
+          "popularity": 1.8679,
+          "release_date": "1946-10-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.511,
+          "vote_count": 665
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aZCi37ZOJZnECirobe36Fx9r1Yr.jpg",
+          "id": 4558,
+          "title": "Orpheus",
+          "original_title": "Orphée",
+          "overview": "A famous poet in postwar Paris, scorned by the Left Bank youth, is in love with both his wife Eurydice and a mysterious princess. Seeking inspiration, the poet becomes obsessed and follows the princess from the world of the living to the land of the dead.",
+          "poster_path": "/wcUmMtipWBBx7lpsfpPsUM4Snh1.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            10749,
+            14,
+            18
+          ],
+          "popularity": 2.183,
+          "release_date": "1950-09-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.643,
+          "vote_count": 294
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kRQVehqORmZPeK3kt7ktmeKPhqt.jpg",
+          "id": 36877,
+          "title": "The Blood of a Poet",
+          "original_title": "Le Sang d'un poète",
+          "overview": "In a poet’s room, an armless statue abruptly comes to life. It invites the poet to step through a mirror and to discover another world. Strange places and characters present themselves to him. The poet tears himself away from these twisted fascinations and returns, with some difficulty, to his room.",
+          "poster_path": "/paHmfMrtQVT2cUTeteni3iDgRym.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            14
+          ],
+          "popularity": 0.6971,
+          "release_date": "1932-01-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.036,
+          "vote_count": 194
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

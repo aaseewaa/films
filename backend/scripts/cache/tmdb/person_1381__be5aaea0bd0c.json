@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "جان نوبل"
+  ],
+  "biography": "",
+  "birthday": "1948-08-20",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1381,
+  "imdb_id": "nm0633604",
+  "known_for_department": "Acting",
+  "name": "Джон Ноубл",
+  "place_of_birth": "Port Pirie, South Australia, Australia",
+  "popularity": 4.2533,
+  "profile_path": "/t9dB8uU27sQDaEEFMiQvp5sbrXU.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/02fgm7",
+    "freebase_id": "/en/john_noble",
+    "imdb_id": "nm0633604",
+    "tvrage_id": 9653,
+    "wikidata_id": "Q312399",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "thejohnnoble",
+    "youtube_id": null
+  }
+}

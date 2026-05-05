@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 6817,
+      "name": "Agnès Varda",
+      "original_name": "Agnès Varda",
+      "media_type": "person",
+      "popularity": 1.0338,
+      "gender": 1,
+      "known_for_department": "Directing",
+      "profile_path": "/8XKM6DCVcH5RsgIRh9mwVaEM0YB.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/oyatchDPpS4I9jpIIezFJGrmXcR.jpg",
+          "id": 499,
+          "title": "Cléo from 5 to 7",
+          "original_title": "Cléo de 5 à 7",
+          "overview": "Agnès Varda eloquently captures Paris in the sixties with this real-time portrait of a singer set adrift in the city as she awaits test results of a biopsy. A chronicle of the minutes of one woman’s life, Cléo from 5 to 7 is a spirited mix of vivid vérité and melodrama, featuring a score by Michel Legrand and cameos by Jean-Luc Godard and Anna Karina.",
+          "poster_path": "/oelBStY4xpguaplRv15P3Za7Xsr.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 2.4636,
+          "release_date": "1962-04-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.657,
+          "vote_count": 772
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/w4uYP6ebNaLQIjsHcjQhjz3BB2m.jpg",
+          "id": 451995,
+          "title": "Faces Places",
+          "original_title": "Visages Villages",
+          "overview": "Director Agnès Varda and photographer/muralist JR journey through rural France and form an unlikely friendship.",
+          "poster_path": "/1NX6NTj9FiiJwEgRUmEifSzE7Na.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.6201,
+          "release_date": "2017-06-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.633,
+          "vote_count": 414
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tKsFh8qpYyi2AMg5O8QTVdChm4k.jpg",
+          "id": 44018,
+          "title": "Vagabond",
+          "original_title": "Sans toit ni loi",
+          "overview": "Mona Bergeron is dead, her frozen body found in a ditch in the French countryside. From this, the film flashes back to the weeks leading up to her death. Through these flashbacks, Mona gradually declines as she travels from place to place, taking odd jobs and staying with whomever will offer her a place to sleep. Mona is fiercely independent, craving freedom over comfort, but it is this desire to be free that will eventually lead to her demise.",
+          "poster_path": "/2KFfwiPct1hwqi9dkKqoom0BenC.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.6705,
+          "release_date": "1985-12-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.353,
+          "vote_count": 363
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 588159,
+      "name": "Blanche Gardin",
+      "original_name": "Blanche Gardin",
+      "media_type": "person",
+      "popularity": 0.4768,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/bMlrHb3guCpI9YqwiKUoPr8huH1.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gdF4eUHLeEizqTdSGoqfWPIdDX6.jpg",
+          "id": 450179,
+          "title": "Problemos",
+          "original_title": "Problemos",
+          "overview": "When a pandemic strikes the world, Victor and his family get stuck within a hippie community.",
+          "poster_path": "/12KzS7zZ2Kj4p556lvR7UtJsQoT.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35,
+            10751
+          ],
+          "popularity": 0.8662,
+          "release_date": "2017-05-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.5,
+          "vote_count": 435
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/l6V9uWgQPz2kReUFYbfNUpPO1R3.jpg",
+          "id": 515841,
+          "title": "I Am Not an Easy Man",
+          "original_title": "Je ne suis pas un homme facile",
+          "overview": "The chauvinist Damien wakes up in a world where women and men have their roles reversed in society, and everything is dominated by women.",
+          "poster_path": "/fPPT1MDkvY4XvzbHTd2DsL7qH7S.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35,
+            14
+          ],
+          "popularity": 1.3435,
+          "release_date": "2018-04-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.226,
+          "vote_count": 1020
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ifiw0r2wMSP8ERz7QcJwJV5wHJ.jpg",
+          "id": 659699,
+          "title": "Delete History",
+          "original_title": "Effacer l'historique",
+          "overview": "In a provincial suburb, three neighbours come to terms with the consequences of the new world of social media. Marie, who lives off her husband’s family allowance, is afraid of losing her son’s respect because of a sex tape. Bertrand can’t say no to advertising calls and is fighting to protect his daughter, who is being bullied online. Christine, after losing everything because of her addiction to TV series, wonders why her rating as an Uber driver is not taking off. These three lone fighters are incapable of finding a solution to their problems on their own — until they join forces to declare war on the tech giants.",
+          "poster_path": "/5JXC451k9TD9zE4FSrASv66MowV.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.3557,
+          "release_date": "2020-08-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 243
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

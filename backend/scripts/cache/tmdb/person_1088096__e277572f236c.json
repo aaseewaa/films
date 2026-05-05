@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "제임스 넌"
+  ],
+  "biography": "",
+  "birthday": "1985-10-24",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1088096,
+  "imdb_id": "nm2071556",
+  "known_for_department": "Directing",
+  "name": "James Nunn",
+  "place_of_birth": "Surrey, England, UK",
+  "popularity": 0.4672,
+  "profile_path": "/fa83eZedZOTM4DqkX1BrEUowkaT.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2071556",
+    "tvrage_id": null,
+    "wikidata_id": "Q111209551",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

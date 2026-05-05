@@ -1,0 +1,79 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1130793,
+      "name": "Margaret Mead",
+      "original_name": "Margaret Mead",
+      "media_type": "person",
+      "popularity": 0.1714,
+      "gender": 1,
+      "known_for_department": "Directing",
+      "profile_path": "/2Xu3Vrgwah6yNm8OYZZXXLBmnE0.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 150933,
+          "title": "Trance and Dance in Bali",
+          "original_title": "Trance and Dance in Bali",
+          "overview": "Filmed in Bali in 1937 and released in 1952, this short documentary records a staged performance of the Kris Dance, documenting trance, ritual possession, and ceremonial movement within Balinese religious practice.",
+          "poster_path": "/wXv7U6FHjQPxgeNe6s2mGpFkHdd.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0468,
+          "release_date": "1952-01-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.444,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 282208,
+          "title": "Childhood Rivalry in Bali and New Guinea",
+          "original_title": "Childhood Rivalry in Bali and New Guinea",
+          "overview": "This short ethnographic film presents comparative scenes of children of the same age in Bali and New Guinea responding to maternal attention given to another child. Produced as part of Gregory Bateson and Margaret Mead’s Character Formation in Different Cultures series, the film documents culturally distinct approaches to sibling rivalry through observational sequences involving infant care, ritual ear-piercing, and experimental interaction with a doll.",
+          "poster_path": "/dWesGQtXSkg1h6WvRqxQBuNrL0x.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.0143,
+          "release_date": "1952-01-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 410984,
+          "title": "Bathing Babies in Three Cultures",
+          "original_title": "Bathing Babies in Three Cultures",
+          "overview": "This short ethnographic film presents a comparative study of infant bathing practices in three cultural settings: Bali, Iatmul communities along the Sepik River in New Guinea, and the United States. Through observational sequences, the film documents differing methods of mother–child interaction, caregiving routines, and degrees of maternal protection, situating everyday domestic practices within broader patterns of cultural socialization.",
+          "poster_path": "/eLkkyn3EbSPKHnxAcCnRmpsZtYT.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0671,
+          "release_date": "1954-06-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

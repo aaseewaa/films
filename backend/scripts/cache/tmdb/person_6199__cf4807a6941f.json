@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Miriam Margolyes, OBE"
+  ],
+  "biography": "",
+  "birthday": "1941-05-18",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.miriammargolyes.com",
+  "id": 6199,
+  "imdb_id": "nm0546816",
+  "known_for_department": "Acting",
+  "name": "Мириам Маргулис",
+  "place_of_birth": "Oxford, Oxfordshire, England UK",
+  "popularity": 2.0502,
+  "profile_path": "/vsnCGCp0nhJTag56HP8XFhXnZo9.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03dpqd",
+    "freebase_id": "/en/miriam_margolyes",
+    "imdb_id": "nm0546816",
+    "tvrage_id": 5797,
+    "wikidata_id": "Q234128",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

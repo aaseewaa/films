@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 29298,
+      "name": "Eric McCormack",
+      "original_name": "Eric McCormack",
+      "media_type": "person",
+      "popularity": 2.5227,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/nAVgJZeptg0ay0adsYhnrGf9Jsc.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/yUDJ1r0UQdhb904povev5apjTVh.jpg",
+          "id": 67683,
+          "name": "Travelers",
+          "original_name": "Travelers",
+          "overview": "Hundreds of years from now, the last surviving humans discover the means of sending consciousness back through time, directly into people in the 21st century. These \"travelers\" assume the lives of seemingly random people, while secretly working as teams to perform missions in order to save humanity from a terrible future.",
+          "poster_path": "/aUVeyeyTrQrSFuUkqLCT8FtV7pp.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10765
+          ],
+          "popularity": 20.3842,
+          "first_air_date": "2016-10-17",
+          "softcore": false,
+          "vote_average": 7.58,
+          "vote_count": 849,
+          "origin_country": [
+            "CA"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pIPMPMEZErCxTvQG9HDt4AsnAfn.jpg",
+          "id": 4454,
+          "name": "Will & Grace",
+          "original_name": "Will & Grace",
+          "overview": "Will Truman and Grace Adler are best friends living in New York, and when Grace's engagement falls apart, she moves in with Will. Together, along with their friends, they go through the trials of dating, sex, relationships and their careers, butting heads at times but ultimately supporting one another while exchanging plenty of witty banter along the way.",
+          "poster_path": "/aEaYdyHcpHN3fIXHhXHtXOs8Rtk.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 41.9298,
+          "first_air_date": "1998-09-21",
+          "softcore": false,
+          "vote_average": 6.861,
+          "vote_count": 559,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mEuysnOZceRFx1BbRcz4gsCkSzN.jpg",
+          "id": 39957,
+          "name": "Perception",
+          "original_name": "Perception",
+          "overview": "Dr. Daniel Pierce, a neuroscientist and professor, is recruited to help the federal government crack difficult cases. His intimate knowledge of human behavior and masterful understanding of the mind give him an extraordinary ability to read people, but his eccentric view of the world and less-than-stellar social skills can often interfere with his work.",
+          "poster_path": "/5L6MsJVdMDbdGZ4P1lGBunOp0VZ.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            80,
+            18,
+            9648
+          ],
+          "popularity": 22.8558,
+          "first_air_date": "2012-07-09",
+          "softcore": false,
+          "vote_average": 7.2,
+          "vote_count": 268,
+          "origin_country": [
+            "US"
+          ]
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

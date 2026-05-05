@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.iantuason.com",
+  "id": 5435491,
+  "imdb_id": "nm3688666",
+  "known_for_department": "Directing",
+  "name": "Ian Tuason",
+  "place_of_birth": "Montreal, Quebec, Canada",
+  "popularity": 0.4592,
+  "profile_path": "/5nsagSoITyBovBp6vqwCtz0y3fW.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3688666",
+    "tvrage_id": null,
+    "wikidata_id": "Q137608255",
+    "facebook_id": null,
+    "instagram_id": "iantuason",
+    "tiktok_id": null,
+    "twitter_id": "IanTuason",
+    "youtube_id": null
+  }
+}

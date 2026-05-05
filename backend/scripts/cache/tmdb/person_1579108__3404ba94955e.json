@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.julioalves.pt/",
+  "id": 1579108,
+  "imdb_id": "nm0023481",
+  "known_for_department": "Directing",
+  "name": "Júlio Alves",
+  "place_of_birth": "Lisbon, Portugal",
+  "popularity": 0.0546,
+  "profile_path": null,
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0023481",
+    "tvrage_id": null,
+    "wikidata_id": "Q122982899",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

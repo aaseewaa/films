@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1983-01-23",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1440649,
+  "imdb_id": "nm2174554",
+  "known_for_department": "Acting",
+  "name": "Рубен де Йонг",
+  "place_of_birth": "Waitakere, West Auckland, New Zealand",
+  "popularity": 0.444,
+  "profile_path": "/opjLobu1AKKspKfYzY6AXrjUglt.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2174554",
+    "tvrage_id": null,
+    "wikidata_id": "Q1998253",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

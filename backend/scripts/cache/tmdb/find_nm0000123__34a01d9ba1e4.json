@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1461,
+      "name": "George Clooney",
+      "original_name": "George Clooney",
+      "media_type": "person",
+      "popularity": 6.2766,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/dt0a7DT0SQeHb7NpURD6ifyEzsN.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/ncoqdHs1poUaBqyKic9YI8ai7MP.jpg",
+          "id": 161,
+          "title": "Ocean's Eleven",
+          "original_title": "Ocean's Eleven",
+          "overview": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.",
+          "poster_path": "/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            80
+          ],
+          "popularity": 12.2779,
+          "release_date": "2001-12-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.458,
+          "vote_count": 12483
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/a2n6bKD7qhCPCAEALgsAhWOAQcc.jpg",
+          "id": 49047,
+          "title": "Gravity",
+          "original_title": "Gravity",
+          "overview": "Dr Ryan Stone, an engineer on her first space mission, and Matt Kowalski, an astronaut on his final expedition, have to survive in space after they are hit by debris while spacewalking.",
+          "poster_path": "/kZ2nZw8D681aphje8NJi8EfbL1U.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            878,
+            53,
+            18
+          ],
+          "popularity": 7.6325,
+          "release_date": "2013-10-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.168,
+          "vote_count": 16273
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5b5HrewiViLWEdMR4dmbd7ajQ8Q.jpg",
+          "id": 163,
+          "title": "Ocean's Twelve",
+          "original_title": "Ocean's Twelve",
+          "overview": "Despite pulling off one of the biggest heists in Las Vegas history and splitting the $160 million take, each of the infamous Ocean's crew have tried to go straight, lay low and live a legit life... but that's proven to be a challenge. Casino owner Terry Benedict demands that Danny Ocean return the money, plus millions more in interest. Unable to come up the cash, the crew is forced to come together to pull off another series of heists, this time in Rome, Paris, and Amsterdam – but a Europol agent is hot on their heels.",
+          "poster_path": "/pE5anFf7nf6ah7V3VRezQ1KSovi.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            80
+          ],
+          "popularity": 6.5998,
+          "release_date": "2004-12-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.566,
+          "vote_count": 7852
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

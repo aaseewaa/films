@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Elizabeth Cappucino ",
+    "Ελίζαμπεθ Καπουτσίνο"
+  ],
+  "biography": "",
+  "birthday": "1994-10-30",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 1617987,
+  "imdb_id": "nm4327544",
+  "known_for_department": "Acting",
+  "name": "Elizabeth Cappuccino",
+  "place_of_birth": "USA",
+  "popularity": 0.3948,
+  "profile_path": "/iFNCw4W5exsiouCMJeaChcL9ZSl.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm4327544",
+    "tvrage_id": null,
+    "wikidata_id": "Q63870950",
+    "facebook_id": null,
+    "instagram_id": "elizabethcappuccino",
+    "tiktok_id": null,
+    "twitter_id": "lizcappuccino",
+    "youtube_id": null
+  }
+}

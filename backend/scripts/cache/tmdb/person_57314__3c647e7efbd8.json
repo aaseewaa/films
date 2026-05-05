@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Wooly Reitherman",
+    "Woolie Reitherman"
+  ],
+  "biography": "",
+  "birthday": "1909-06-26",
+  "deathday": "1985-05-22",
+  "gender": 2,
+  "homepage": null,
+  "id": 57314,
+  "imdb_id": "nm0718627",
+  "known_for_department": "Visual Effects",
+  "name": "Wolfgang Reitherman",
+  "place_of_birth": "Munich, Germany",
+  "popularity": 0.6518,
+  "profile_path": "/biIAk3hrc7Ed2ZnjadMiMS1EswM.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/05phqb",
+    "freebase_id": "/en/wolfgang_reitherman",
+    "imdb_id": "nm0718627",
+    "tvrage_id": 201722,
+    "wikidata_id": "Q703588",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

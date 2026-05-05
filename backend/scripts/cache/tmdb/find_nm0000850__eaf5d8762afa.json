@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 31211,
+      "name": "Clive Barker",
+      "original_name": "Clive Barker",
+      "media_type": "person",
+      "popularity": 1.086,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/h6JebwvNTpOquhJGrmDh8zCYjQZ.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/j4irvwRLITgGr6vcP8NIKCUA67y.jpg",
+          "id": 9003,
+          "title": "Hellraiser",
+          "original_title": "Hellraiser",
+          "overview": "A hedonistic man finds a mysterious puzzle box that summons a group of gruesome beings known as the Cenobites. These otherworldly entities open the doors to a dominion where pain and pleasure are indivisible.",
+          "poster_path": "/3Z0oPHyLnk3Vx6ZMC1MiVwIrKhO.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            27,
+            53
+          ],
+          "popularity": 5.3604,
+          "release_date": "1987-09-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.878,
+          "vote_count": 2842
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/l0JgqFNxeMb1OoHq1CzdYC3Y5J8.jpg",
+          "id": 9529,
+          "title": "Candyman",
+          "original_title": "Candyman",
+          "overview": "The Candyman, a murderous soul with a hook for a hand, is accidentally summoned to reality by a skeptic grad student researching the monster's myth.",
+          "poster_path": "/jQtgkgDZE7egMq532sOt83DnT83.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            27,
+            53
+          ],
+          "popularity": 3.5614,
+          "release_date": "1992-10-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.678,
+          "vote_count": 1792
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/g1cMEQnEptUJ7Sv8SRjWBTTHyMv.jpg",
+          "id": 565028,
+          "title": "Candyman",
+          "original_title": "Candyman",
+          "overview": "A Chicago artist's sanity starts to unravel, unleashing a terrifying wave of violence when he begins to explore the macabre history of the Candyman.",
+          "poster_path": "/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            27,
+            53
+          ],
+          "popularity": 3.3044,
+          "release_date": "2021-08-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.01,
+          "vote_count": 1747
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

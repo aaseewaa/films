@@ -1,0 +1,67 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1258767,
+      "name": "Steven Cuitlahuac Melendez",
+      "original_name": "Steven Cuitlahuac Melendez",
+      "media_type": "person",
+      "popularity": 0.0286,
+      "gender": 0,
+      "known_for_department": "Editing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/k7F9aj6Vmz8rJ9lcm2mIgUiWDWV.jpg",
+          "id": 13353,
+          "title": "It's the Great Pumpkin, Charlie Brown",
+          "original_title": "It's the Great Pumpkin, Charlie Brown",
+          "overview": "Join the Peanuts gang for a timeless adventure as Charlie Brown preps for a party, Snoopy sets his sights on the Red Baron, and Linus patiently awaits a pumpkin patch miracle.",
+          "poster_path": "/59wp9OWexYsxlSPHYmVLsl5xlFt.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            16,
+            10770,
+            35
+          ],
+          "popularity": 1.1463,
+          "release_date": "1966-10-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.492,
+          "vote_count": 447
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/y7S1JNJ9g9Qa5tsZ2ths8B3FQuK.jpg",
+          "id": 52952,
+          "title": "Charlie Brown's All-Stars!",
+          "original_title": "Charlie Brown's All-Stars!",
+          "overview": "After their humiliating 999th defeat, Charlie Brown's whole baseball team quits on him. All seems lost...until Charlie Brown learns that his team can join the Little League and become an official team with real uniforms! But as the team's enthusiasm sparks, Charlie Brown learns that neither girls nor Snoopy would be allowed to play. Charlie Brown faces the difficult decision of breaking this horrible news to his excited team.",
+          "poster_path": "/43yzLBevC6lprNslYejaLrQyydZ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            10751,
+            10770
+          ],
+          "popularity": 0.5845,
+          "release_date": "1966-06-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.476,
+          "vote_count": 41
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

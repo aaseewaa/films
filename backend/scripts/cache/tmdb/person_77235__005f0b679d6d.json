@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "बॉबी द्योल",
+    "Vijay Singh Deol"
+  ],
+  "biography": "",
+  "birthday": "1969-01-27",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 77235,
+  "imdb_id": "nm0219967",
+  "known_for_department": "Acting",
+  "name": "Bobby Deol",
+  "place_of_birth": "Mumbai, Maharashtra, India",
+  "popularity": 0.8567,
+  "profile_path": "/2npVa3PduichY8e7qBiE54m9VVP.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/040wdl",
+    "freebase_id": "/en/bobby_deol",
+    "imdb_id": "nm0219967",
+    "tvrage_id": 210878,
+    "wikidata_id": "Q48619",
+    "facebook_id": null,
+    "instagram_id": "iambobbydeol",
+    "tiktok_id": null,
+    "twitter_id": "thedeol",
+    "youtube_id": null
+  }
+}

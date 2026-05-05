@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1335097,
+      "name": "Ernesto Remani",
+      "original_name": "Ernesto Remani",
+      "media_type": "person",
+      "popularity": 0.1517,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/qJ2uf6K7bEYVv4oT2eEKZFTHSB5.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 170309,
+          "title": "Gold",
+          "original_title": "Gold",
+          "overview": "Using an atomic reactor, two scientists try to create gold.",
+          "poster_path": "/zzURC7xi3NApgYp2EMolWsZK2hC.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            80,
+            878
+          ],
+          "popularity": 0.4045,
+          "release_date": "1934-03-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 13
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 312136,
+          "title": "Vergiß mein nicht",
+          "original_title": "Vergiß mein nicht",
+          "overview": "Tenor Enzo Curti, a widower with a young child, falls in love with a secretary from New York. Liselotte has experienced disappointment in her first love, Helmut, an ocean liner officer. She marries Enzo Curti, but later, when she meets Helmut again, she experiences emotional stress as love struggles with a sense of duty in her heart.",
+          "poster_path": "/kz0KvhNED6V2JQyXzwS9f4v6ryo.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.5084,
+          "release_date": "1935-10-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 2
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 81349,
+          "title": "Mother Song",
+          "original_title": "Mutterlied",
+          "overview": "A romance between two temperamental singing stars. Highlights include a lengthy selection from Faust, with Gigli making a most impressive Mephistopheles. The plot takes a melodramatic turn towards the climax, with the lives of the characters mirrored in their on-stage behavior. Director Carmine Gallone was something of an expert in the field of filmed opera, as witness his Tosca, Rigoletto and Il Trovatore.",
+          "poster_path": null,
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            10402,
+            18
+          ],
+          "popularity": 0.4941,
+          "release_date": "1937-12-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 2
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

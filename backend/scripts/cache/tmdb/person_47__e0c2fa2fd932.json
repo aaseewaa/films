@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Björk Guðmundsdóttir",
+    "The Sugarcubes"
+  ],
+  "biography": "",
+  "birthday": "1965-11-21",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "http://bjork.com",
+  "id": 47,
+  "imdb_id": "nm0001951",
+  "known_for_department": "Acting",
+  "name": "Björk",
+  "place_of_birth": "Reykjavík, Iceland",
+  "popularity": 1.0996,
+  "profile_path": "/Ahc3TWomYakLcbqZRVBDdf3rhMR.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01vrqtm",
+    "freebase_id": "/en/bjork",
+    "imdb_id": "nm0001951",
+    "tvrage_id": 58925,
+    "wikidata_id": "Q42455",
+    "facebook_id": "bjork",
+    "instagram_id": "bjork",
+    "tiktok_id": null,
+    "twitter_id": "bjork",
+    "youtube_id": "bjork"
+  }
+}

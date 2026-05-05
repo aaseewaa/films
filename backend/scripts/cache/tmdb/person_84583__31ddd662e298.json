@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1964-12-30",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.agencegoodwin.com/artistes/sylvie-moreau",
+  "id": 84583,
+  "imdb_id": "nm0603440",
+  "known_for_department": "Acting",
+  "name": "Sylvie Moreau",
+  "place_of_birth": "Montréal, Québec, Canada",
+  "popularity": 0.3473,
+  "profile_path": "/dE9cU3jFhEs3Tc1YDpoQrgeUwU0.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0gfkh6",
+    "freebase_id": "/en/sylvie_moreau",
+    "imdb_id": "nm0603440",
+    "tvrage_id": 174844,
+    "wikidata_id": "Q3507371",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

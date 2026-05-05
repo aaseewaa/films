@@ -1,0 +1,43 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 4010969,
+      "name": "Gino McKoy",
+      "original_name": "Gino McKoy",
+      "media_type": "person",
+      "popularity": 0.0327,
+      "gender": 0,
+      "known_for_department": "Directing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/9q0henxKLdLLlNlwUGwDB3VPHgz.jpg",
+          "id": 1113231,
+          "title": "Lumina",
+          "original_title": "Lumina",
+          "overview": "When the sudden appearance of lights from the sky causes his girlfriend to disappear, Alex and his friends embark on a quest to find her. Their journey soon leads them to a deep underground military base where they encounter government agents and an alien menace that threatens their lives.",
+          "poster_path": "/tySni5LziDoPSgicjAc3FRFiKfe.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            27,
+            878,
+            53
+          ],
+          "popularity": 0.7521,
+          "release_date": "2024-07-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 3.8,
+          "vote_count": 10
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

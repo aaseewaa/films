@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1985-12-13",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 543162,
+  "imdb_id": "nm2712811",
+  "known_for_department": "Acting",
+  "name": "Ivan Botha",
+  "place_of_birth": "Sud Africa",
+  "popularity": 0.1353,
+  "profile_path": "/z3lrKNSPAJsHmt9wSCNikM3WJBQ.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2712811",
+    "tvrage_id": null,
+    "wikidata_id": "Q10969016",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

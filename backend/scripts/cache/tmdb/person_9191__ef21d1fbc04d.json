@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Tim Spall",
+    "Timothy Leonard Spall"
+  ],
+  "biography": "",
+  "birthday": "1957-02-27",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 9191,
+  "imdb_id": "nm0001758",
+  "known_for_department": "Acting",
+  "name": "Тимоти Сполл",
+  "place_of_birth": "Battersea, London, England, UK",
+  "popularity": 2.0772,
+  "profile_path": "/pcR6t8kpAgGwIUo4UjlP5gyKkNA.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/05kwx2",
+    "freebase_id": "/en/timothy_spall",
+    "imdb_id": "nm0001758",
+    "tvrage_id": 51100,
+    "wikidata_id": "Q287824",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1980-07-01",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.fortunefeimster.com/",
+  "id": 1183672,
+  "imdb_id": "nm3833084",
+  "known_for_department": "Acting",
+  "name": "Фортун Феймстер",
+  "place_of_birth": "Charlotte, North Carolina, USA",
+  "popularity": 1.7402,
+  "profile_path": "/9f2p2T61K4pIvKQMLRlow8znkXU.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3833084",
+    "tvrage_id": null,
+    "wikidata_id": "Q22277760",
+    "facebook_id": "fortunefunny",
+    "instagram_id": "fortunefeimster",
+    "tiktok_id": null,
+    "twitter_id": "FortuneFeimster",
+    "youtube_id": null
+  }
+}

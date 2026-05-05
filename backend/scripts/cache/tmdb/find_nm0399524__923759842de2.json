@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1035385,
+      "name": "John Hubley",
+      "original_name": "John Hubley",
+      "media_type": "person",
+      "popularity": 0.3306,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/iQ4sG12AEGOzYhdBH7DLSzTk1X4.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/4yWayBvwl9gHXaWrDrAslxjL7mh.jpg",
+          "id": 408,
+          "title": "Snow White and the Seven Dwarfs",
+          "original_title": "Snow White and the Seven Dwarfs",
+          "overview": "A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen. The Queen is jealous because she wants to be known as \"the fairest in the land,\" and Snow White's beauty surpasses her own.",
+          "poster_path": "/3VAHfuNb6Z7UiW12iYKANSPBl8m.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            16,
+            10751
+          ],
+          "popularity": 9.9786,
+          "release_date": "1938-01-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.123,
+          "vote_count": 7961
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2jPbbyIja38UYT9VNmECRywB9C0.jpg",
+          "id": 46990,
+          "title": "Gerald McBoing-Boing",
+          "original_title": "Gerald McBoing-Boing",
+          "overview": "The story of a little boy who would only talk in sound effects. With story by Dr. Seuss (and Bill Scott of Rocky and Bullwinkle fame) this cartoon won the Oscar for best short subject (animated) for 1950.",
+          "poster_path": "/afgivuAiO9ZllYvISlzDRU9kzuv.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35
+          ],
+          "popularity": 0.5484,
+          "release_date": "1950-11-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.634,
+          "vote_count": 71
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aFjR7ELSqn50QAqteNehpw5Z6jG.jpg",
+          "id": 36373,
+          "title": "M",
+          "original_title": "M",
+          "overview": "Remake of the 1931 Fritz Lang original. In the city, someone is murdering children. The Police search is so intense, it is disturbing the 'normal' criminals, and the local hoods decide to help find the murderer as quickly as possible.",
+          "poster_path": "/jJWNGF5FxbKyk8EyH4Ad8FA0WK.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            80,
+            18,
+            53,
+            9648
+          ],
+          "popularity": 1.4312,
+          "release_date": "1951-03-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.429,
+          "vote_count": 63
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

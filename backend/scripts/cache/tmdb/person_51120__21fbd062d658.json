@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Έλιοτ Κόουαν",
+    "Elliot A Cowan",
+    "艾略特考萬 "
+  ],
+  "biography": "",
+  "birthday": "1976-09-07",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 51120,
+  "imdb_id": "nm1259002",
+  "known_for_department": "Acting",
+  "name": "Эллиот Кауэн",
+  "place_of_birth": "London, England, UK",
+  "popularity": 1.4012,
+  "profile_path": "/zxewsfDGYuCqV7gsZjMQct6BXMJ.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03y967b",
+    "freebase_id": "/en/elliot_cowan",
+    "imdb_id": "nm1259002",
+    "tvrage_id": 100896,
+    "wikidata_id": "Q966282",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

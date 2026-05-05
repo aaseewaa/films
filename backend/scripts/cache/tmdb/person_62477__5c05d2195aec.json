@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Antonio Monroi "
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 62477,
+  "imdb_id": "nm0598590",
+  "known_for_department": "Acting",
+  "name": "Антонио Монрой",
+  "place_of_birth": "Mexico City, Mexico",
+  "popularity": 0.9199,
+  "profile_path": "/kV2DMkExJ26SCTap134DTqXwv8c.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0598590",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": "antonio.monroi",
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

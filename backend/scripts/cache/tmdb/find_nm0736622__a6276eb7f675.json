@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 19274,
+      "name": "Seth Rogen",
+      "original_name": "Seth Rogen",
+      "media_type": "person",
+      "popularity": 7.5309,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/nYl9bvQzaPQLzlf0wf75clLN6Hi.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/hsb8nNBt3emvWqBs7Xv5IKlz6Im.jpg",
+          "id": 223702,
+          "title": "Sausage Party",
+          "original_title": "Sausage Party",
+          "overview": "Hot dog Frank leads a group of supermarket products on a quest to discover the truth about their existence and what really happens when they become chosen to leave the grocery store.",
+          "poster_path": "/vNgdPJQ5CI60oEiiHLKRNrsDhMy.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            14
+          ],
+          "popularity": 7.6687,
+          "release_date": "2016-07-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.754,
+          "vote_count": 7690
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tqSR6GOG2Hde0gwG3vO1Bw6TTo5.jpg",
+          "id": 195589,
+          "title": "Neighbors",
+          "original_title": "Neighbors",
+          "overview": "A couple with a newborn baby face unexpected difficulties after they are forced to live next to a fraternity house.",
+          "poster_path": "/sN1RU08CMi8xkRIibremh3AOdgw.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 5.1151,
+          "release_date": "2014-05-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.181,
+          "vote_count": 7258
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zgckZ4VZM4UoZlwVS1Dk8mPwqiZ.jpg",
+          "id": 325133,
+          "title": "Neighbors 2: Sorority Rising",
+          "original_title": "Neighbors 2: Sorority Rising",
+          "overview": "A sorority moves in next door to the home of Mac and Kelly Radner who have a young child. The Radner's enlist their former nemeses from the fraternity to help battle the raucous sisters.",
+          "poster_path": "/eyjcLLwxuRXACbglIbwWwaXK9DN.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 4.402,
+          "release_date": "2016-05-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.815,
+          "vote_count": 4601
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

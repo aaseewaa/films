@@ -1,0 +1,89 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 11159,
+      "name": "Cheech Marin",
+      "original_name": "Cheech Marin",
+      "media_type": "person",
+      "popularity": 1.8024,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/eecHDNRn9K80ZcuSocsMhQb2G1i.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg",
+          "id": 920,
+          "title": "Cars",
+          "original_title": "Cars",
+          "overview": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+          "poster_path": "/2Touk3m5gzsqr1VsvxypdyHY5ci.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            12,
+            35,
+            10751
+          ],
+          "popularity": 16.8665,
+          "release_date": "2006-06-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.025,
+          "vote_count": 15043
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/6GF9uJs7AnbcJvyfoZyjZv063Oo.jpg",
+          "id": 8587,
+          "title": "The Lion King",
+          "original_title": "The Lion King",
+          "overview": "Young lion prince Simba, eager to one day become king of the Pride Lands, grows up under the watchful eye of his father Mufasa; all the while his villainous uncle Scar conspires to take the throne for himself. Amid betrayal and tragedy, Simba must confront his past and find his rightful place in the Circle of Life.",
+          "poster_path": "/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            18
+          ],
+          "popularity": 20.1004,
+          "release_date": "1994-06-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.253,
+          "vote_count": 19610
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/g7CHF8gTLGooTbP4GznIGwaqAGL.jpg",
+          "id": 354912,
+          "title": "Coco",
+          "original_title": "Coco",
+          "overview": "Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history.",
+          "poster_path": "/6Ryitt95xrO8KXuqRGm1fUuNwqF.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            16,
+            10402,
+            12
+          ],
+          "popularity": 18.1971,
+          "release_date": "2017-10-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.196,
+          "vote_count": 20874
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

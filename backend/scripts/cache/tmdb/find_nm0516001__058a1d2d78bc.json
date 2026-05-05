@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 88953,
+      "name": "Harold Lloyd",
+      "original_name": "Harold Lloyd",
+      "media_type": "person",
+      "popularity": 0.8897,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/alOOCzYnr08aEYekwsA3onrdeXk.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3zo6ZONR4Mth2nWFbQK9dhCWbVz.jpg",
+          "id": 22596,
+          "title": "Safety Last!",
+          "original_title": "Safety Last!",
+          "overview": "When a store clerk organizes a contest to climb the outside of a tall building, circumstances force him to make the perilous climb himself.",
+          "poster_path": "/fEt5HWJ32ek8ibef7zSZnA00Jp0.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 1.5738,
+          "release_date": "1923-04-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.715,
+          "vote_count": 577
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kKRDECULj8d81IAshuJ8k04B53Y.jpg",
+          "id": 42359,
+          "title": "The Freshman",
+          "original_title": "The Freshman",
+          "overview": "An unathletic college freshman ridiculed by his peers for his mannerisms strives to become popular by making the football team.",
+          "poster_path": "/3531lJNSMhrpcNWXrDIYYoYH6Rp.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 1.0824,
+          "release_date": "1925-09-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.973,
+          "vote_count": 128
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/6NfwgI1eKHfprTv1nMqVUVi0Otq.jpg",
+          "id": 22595,
+          "title": "Speedy",
+          "original_title": "Speedy",
+          "overview": "A hapless young man living in New York City rallies to save his girlfriend's grandfather's horse-drawn trolley, the last in the city, from being put out of business by a railroad company.",
+          "poster_path": "/zWhWaWCCIsnQDsFTAe98ap3R5y.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            28
+          ],
+          "popularity": 0.7904,
+          "release_date": "1928-04-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.327,
+          "vote_count": 110
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

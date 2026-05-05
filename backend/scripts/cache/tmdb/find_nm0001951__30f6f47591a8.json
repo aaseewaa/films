@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 47,
+      "name": "Björk",
+      "original_name": "Björk",
+      "media_type": "person",
+      "popularity": 1.0996,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/Ahc3TWomYakLcbqZRVBDdf3rhMR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/vxvzf0cGtFY2Vpw5ULWumCIW6Ri.jpg",
+          "id": 16,
+          "title": "Dancer in the Dark",
+          "original_title": "Dancer in the Dark",
+          "overview": "Selma, a Czech immigrant on the verge of blindness, struggles to make ends meet for herself and her son, who has inherited the same genetic disorder and will suffer the same fate without an expensive operation. When life gets too difficult, Selma learns to cope through her love of musicals, dreaming up little numbers to the rhythmic beats of her surroundings.",
+          "poster_path": "/pWzOfTJRZHPNO1VNrMnNFqRcJwg.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "popularity": 3.1242,
+          "release_date": "2000-09-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.849,
+          "vote_count": 1992
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fMiEp00v8gGWEceL4QeLu6H6z69.jpg",
+          "id": 639933,
+          "title": "The Northman",
+          "original_title": "The Northman",
+          "overview": "Prince Amleth is on the verge of becoming a man when his father is brutally murdered by his uncle, who kidnaps the boy's mother. Two decades later, Amleth is now a Viking who's on a mission to save his mother, kill his uncle and avenge his father.",
+          "poster_path": "/aSSJMnHknzKjlZ6zybwD7eyJ4Po.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "popularity": 8.4293,
+          "release_date": "2022-04-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.032,
+          "vote_count": 4999
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1RDAbIOaQ2MskpTS2PRnoAVbmxv.jpg",
+          "id": 29460,
+          "title": "The Juniper Tree",
+          "original_title": "The Juniper Tree",
+          "overview": "Margit and her older sister Katla flee for safety after their mother is burned to death for witchcraft. Finding shelter with Johan and his resentful young son, Jonas, the sisters help form an impromptu family unit that’s soon strained by Katla’s burgeoning sorcery.",
+          "poster_path": "/xcKxbhJ41JZM3QqauFG6YgL9gpz.jpg",
+          "media_type": "movie",
+          "original_language": "is",
+          "genre_ids": [
+            18,
+            14
+          ],
+          "popularity": 0.51,
+          "release_date": "1990-04-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.824,
+          "vote_count": 88
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Nicolas Wansycki"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1122960,
+  "imdb_id": "nm1577101",
+  "known_for_department": "Acting",
+  "name": "Николас Ваншыцкий",
+  "place_of_birth": null,
+  "popularity": 0.5839,
+  "profile_path": "/xksvgEBrpOB26BCga8JDqHZRRqZ.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/04mwhvw",
+    "freebase_id": null,
+    "imdb_id": "nm1577101",
+    "tvrage_id": null,
+    "wikidata_id": "Q16832022",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Tom Wilson",
+    "Thomas Wilson"
+  ],
+  "biography": "Томас Фрэнсис Уилсон - американский актёр, писатель, музыкант, художник, закадровый артист и стендап-комик. Наиболее известен по роли Биффа Таннена (и его внука Гриффа Таннена и прадеда Буфорда «Бешеного пса» Таннена) в трилогии «Назад в будущее» и тренера Бена Фредрикса в сериале «Чудики и чокнутые» на канале NBC.",
+  "birthday": "1959-04-15",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1065,
+  "imdb_id": "nm0001855",
+  "known_for_department": "Acting",
+  "name": "Томас Ф. Уилсон",
+  "place_of_birth": "Philadelphia, Pennsylvania, USA",
+  "popularity": 2.0952,
+  "profile_path": "/mVhm65ZVBIRIptWGiMIvoUy0Khi.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03d_qmm",
+    "freebase_id": null,
+    "imdb_id": "nm0001855",
+    "tvrage_id": 2,
+    "wikidata_id": "Q360663",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "TomWilsonUSA",
+    "youtube_id": null
+  }
+}

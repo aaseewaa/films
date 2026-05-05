@@ -1,0 +1,34 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jon Chu",
+    "John M. Chu",
+    "朱浩伟",
+    "Джон М. Чу",
+    "جان ام. چو"
+  ],
+  "biography": "",
+  "birthday": "1979-11-02",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 54507,
+  "imdb_id": "nm0160840",
+  "known_for_department": "Directing",
+  "name": "Джон М. Чу",
+  "place_of_birth": "Palo Alto, California, USA",
+  "popularity": 1.3652,
+  "profile_path": "/85kOxm7w4nGRwyhquj9wtUM8KUW.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/06401pw",
+    "freebase_id": null,
+    "imdb_id": "nm0160840",
+    "tvrage_id": null,
+    "wikidata_id": "Q1702754",
+    "facebook_id": "officialjonmchu",
+    "instagram_id": "jonmchu",
+    "tiktok_id": null,
+    "twitter_id": "jonmchu",
+    "youtube_id": "chupictures"
+  }
+}

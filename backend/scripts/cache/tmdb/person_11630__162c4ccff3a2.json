@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Bert Brecht",
+    "Бертольд Брехт"
+  ],
+  "biography": "Eugen Berthold Friedrich \"Bertolt\" Brecht was a German poet, playwright, and theatre director of the 20th century.",
+  "birthday": "1898-02-10",
+  "deathday": "1956-08-14",
+  "gender": 2,
+  "homepage": null,
+  "id": 11630,
+  "imdb_id": "nm0106517",
+  "known_for_department": "Writing",
+  "name": "Bertolt Brecht",
+  "place_of_birth": "Augsburg, Germany",
+  "popularity": 0.7213,
+  "profile_path": "/cFfD5goJjn9fZ5opYbHoSzDBxsZ.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/017r2",
+    "freebase_id": null,
+    "imdb_id": "nm0106517",
+    "tvrage_id": null,
+    "wikidata_id": "Q38757",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

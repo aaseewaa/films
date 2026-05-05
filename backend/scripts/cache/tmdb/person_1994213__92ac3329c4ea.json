@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Manuel Rodriguez"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1994213,
+  "imdb_id": "nm3923661",
+  "known_for_department": "Acting",
+  "name": "Мануэль Родригес-Саенз",
+  "place_of_birth": null,
+  "popularity": 0.6808,
+  "profile_path": "/7X46IGRRkxEpLnC0r7LDavStSQ2.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3923661",
+    "tvrage_id": null,
+    "wikidata_id": "Q66424636",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 55824,
+      "name": "Murilo Benício",
+      "original_name": "Murilo Benício",
+      "media_type": "person",
+      "popularity": 0.9022,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/l8ZZQ1U1kSnfBhx1hEPOTRbu7ln.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/5ssgDp28z1Nif6hR8OFrNQUspd4.jpg",
+          "id": 45815,
+          "name": "Brazil Avenue",
+          "original_name": "Avenida Brasil",
+          "overview": "Brazil Avenue is a dynamic, lifelike, and modern telenovela that reveals how unrelenting ambition and inflicted cruelty can change a young girl’s destiny and lead her to seek revenge.\n\n",
+          "poster_path": "/3wH4kZ0hdoizAcgqCgp3gUD1fFq.jpg",
+          "media_type": "tv",
+          "original_language": "pt",
+          "genre_ids": [
+            10766,
+            18,
+            9648,
+            80
+          ],
+          "popularity": 14.7003,
+          "first_air_date": "2012-03-26",
+          "softcore": false,
+          "vote_average": 8.107,
+          "vote_count": 1300,
+          "origin_country": [
+            "BR"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jdzd5rTeUi1njP4SPJf43SpDSUf.jpg",
+          "id": 14853,
+          "name": "The Clone",
+          "original_name": "O Clone",
+          "overview": "Human cloning. The Islamic world. Two young people, two different cultures, two different beliefs. An impossible love story that not even time could erase. During a trip to Morocco, Lucas has a forbidden romance with Jade. He returns to Brazil after the death of his twin brother Diogo. A close family friend, scientist Albieri uses this situation to produce the first human clone using cells taken from Lucas. Twenty years later, Jade, Lucas and his clone form an odd love triangle.",
+          "poster_path": "/55r16i772LJkfeGGtlWugScVA10.jpg",
+          "media_type": "tv",
+          "original_language": "pt",
+          "genre_ids": [
+            10766,
+            18,
+            10765
+          ],
+          "popularity": 17.7287,
+          "first_air_date": "2001-10-01",
+          "softcore": false,
+          "vote_average": 8.032,
+          "vote_count": 365,
+          "origin_country": [
+            "BR"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jobrjnPjNM4bekB9VtmkvKRjBTf.jpg",
+          "id": 461774,
+          "title": "Friendly Beast",
+          "original_title": "O Animal Cordial",
+          "overview": "A restaurant owner going over the edge when an armed robbery is attempted at his establishment. He holds everyone captive at gunpoint – criminals and customers alike – and situations corrode into a nightmare state, guided by manipulation and raw compulsion.",
+          "poster_path": "/o7TZODLR9pMhKypYclFDdo1Z68o.jpg",
+          "media_type": "movie",
+          "original_language": "pt",
+          "genre_ids": [
+            53,
+            27,
+            80
+          ],
+          "popularity": 0.3923,
+          "release_date": "2018-08-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.5,
+          "vote_count": 135
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

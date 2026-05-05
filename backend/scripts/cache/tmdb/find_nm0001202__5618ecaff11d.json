@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2725,
+      "name": "Rainer Werner Fassbinder",
+      "original_name": "Rainer Werner Fassbinder",
+      "media_type": "person",
+      "popularity": 1.1738,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/xll1qAg0TOzcuNlfZWEEKB1JxqR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/ih2q5hoclUTICLxMzV31vxgpCzR.jpg",
+          "id": 216,
+          "title": "Ali: Fear Eats the Soul",
+          "original_title": "Angst essen Seele auf",
+          "overview": "Emmi Kurowski, a cleaning lady, is lonely in her old age. Her husband died years ago, and her grown children offer little companionship. One night she goes to a bar frequented by Arab immigrants and strikes up a friendship with middle-aged mechanic Ali. Their relationship soon develops into something more, and Emmi's family and neighbors criticize their spontaneous marriage. Soon Emmi and Ali are forced to confront their own insecurities about their future.",
+          "poster_path": "/cRL8j5RhL4YUviwcfTiCVHfrBFM.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            10749,
+            18
+          ],
+          "popularity": 1.7764,
+          "release_date": "1974-03-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.74,
+          "vote_count": 452
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ejp6CZQ64mEvewfit2fSIpOYxGR.jpg",
+          "id": 661,
+          "title": "The Marriage of Maria Braun",
+          "original_title": "Die Ehe der Maria Braun",
+          "overview": "Maria marries a young soldier in the last days of World War II, only for him to go missing in the war. She must rely on her beauty and ambition to navigate the difficult post-war years alone.",
+          "poster_path": "/tXjZEzlf4WQwZ4Dt53gXeJVuO7p.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.3962,
+          "release_date": "1979-03-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.364,
+          "vote_count": 298
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kyVtVCs493JAL3lxfSC8UrGbrwS.jpg",
+          "id": 10310,
+          "title": "The Bitter Tears of Petra von Kant",
+          "original_title": "Die bitteren Tränen der Petra von Kant",
+          "overview": "Petra von Kant is a successful fashion designer -- arrogant, caustic, and self-satisfied. She mistreats Marlene (her secretary, maid, and co-designer). Enter Karin, a 23-year-old beauty who wants to be a model. Petra falls in love with Karin and invites her to move in.",
+          "poster_path": "/bkxrRfXaoTvZObG1Gd91x2mnmFX.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.1195,
+          "release_date": "1972-10-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.389,
+          "vote_count": 235
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

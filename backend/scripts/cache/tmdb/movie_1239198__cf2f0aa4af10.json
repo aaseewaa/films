@@ -1,0 +1,482 @@
+{
+  "adult": false,
+  "backdrop_path": "/u0FLlb0vKQLvKmiGE6nyhHODFWH.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "homepage": "https://www.netflix.com/title/81714543",
+  "id": 1239198,
+  "imdb_id": "tt31116965",
+  "origin_country": [
+    "ES"
+  ],
+  "original_language": "es",
+  "original_title": "Mi querida señorita",
+  "overview": "A young woman from a traditional family learns she's intersex, sparking a journey of self-discovery, gender identity and love found in unexpected places.",
+  "popularity": 28.9356,
+  "poster_path": "/cTcJs2bEsJDhQEpeYSOZD3yayZI.jpg",
+  "production_companies": [
+    {
+      "id": 204802,
+      "logo_path": "/2OexMEM9tU63n8DrwkO8u1JC7ne.png",
+      "name": "Suma Content",
+      "origin_country": "ES"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "ES",
+      "name": "Spain"
+    }
+  ],
+  "release_date": "2026-04-17",
+  "revenue": 0,
+  "runtime": 116,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "My Dearest Señorita",
+  "video": false,
+  "vote_average": 5.25,
+  "vote_count": 14,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4810867,
+        "known_for_department": "Acting",
+        "name": "Elisabeth Martínez",
+        "original_name": "Elisabeth Martínez",
+        "popularity": 0.5588,
+        "profile_path": null,
+        "cast_id": 7,
+        "character": "Adela",
+        "credit_id": "67a4cf381fcbfee54d2fdcb2",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1031914,
+        "known_for_department": "Acting",
+        "name": "Anna Castillo",
+        "original_name": "Anna Castillo",
+        "popularity": 2.3604,
+        "profile_path": "/skQ9HzWM4Ya9YB6J9QSRPVgjfNG.jpg",
+        "cast_id": 8,
+        "character": "Isabel",
+        "credit_id": "67a4cf4477b8ced45666eacf",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 224870,
+        "known_for_department": "Acting",
+        "name": "Paco León",
+        "original_name": "Paco León",
+        "popularity": 1.2344,
+        "profile_path": "/dZd0Z3mUgXrE0y21KknLp40Ivuk.jpg",
+        "cast_id": 9,
+        "character": "José María",
+        "credit_id": "67a4cf4bdf336f38ab85bfc7",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1303016,
+        "known_for_department": "Acting",
+        "name": "Nagore Aranburu",
+        "original_name": "Nagore Aranburu",
+        "popularity": 0.6035,
+        "profile_path": "/ibNfgTrEH7GXaHtPXm1GFO984f3.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "67a4cf548dbb4c099066e0d6",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 3128586,
+        "known_for_department": "Acting",
+        "name": "Manu Ríos",
+        "original_name": "Manu Ríos",
+        "popularity": 1.3508,
+        "profile_path": "/wmEqpP580rRGYh5Ts8jNzn0UyKa.jpg",
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "67a4cf5adf336f38ab85bfd3",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1658652,
+        "known_for_department": "Acting",
+        "name": "Eneko Sagardoy",
+        "original_name": "Eneko Sagardoy",
+        "popularity": 0.7398,
+        "profile_path": "/rDVddEvLjCMSdR9Uu7zFds2pQEz.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "67a4cf625088b945972fd383",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1655012,
+        "known_for_department": "Acting",
+        "name": "Lola Rodríguez",
+        "original_name": "Lola Rodríguez",
+        "popularity": 0.5296,
+        "profile_path": "/ffSpfKPAE1VA6mwEMNoUlnHR43M.jpg",
+        "cast_id": 13,
+        "character": "",
+        "credit_id": "67a4cf6b8dbb4c099066e0f0",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 132441,
+        "known_for_department": "Acting",
+        "name": "María Galiana",
+        "original_name": "María Galiana",
+        "popularity": 1.9504,
+        "profile_path": "/A2uYbs3J0pLOExhyo4GDrAt2Ck4.jpg",
+        "cast_id": 14,
+        "character": "",
+        "credit_id": "67a4cfc943781b4bfa2fdd2d",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5229369,
+        "known_for_department": "Acting",
+        "name": "Delphina Bianco",
+        "original_name": "Delphina Bianco",
+        "popularity": 0.3052,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "",
+        "credit_id": "67a4cfe95088b945972fd473",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3776283,
+        "known_for_department": "Acting",
+        "name": "Nico Montoya",
+        "original_name": "Nico Montoya",
+        "popularity": 0.0598,
+        "profile_path": "/kVYtg5cwd3Q8Z7YtbvBLCM7lXPb.jpg",
+        "cast_id": 22,
+        "character": "Reparto",
+        "credit_id": "69dfcb89032d4173eb211ce1",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2366951,
+        "known_for_department": "Acting",
+        "name": "Esperanza Guardado",
+        "original_name": "Esperanza Guardado",
+        "popularity": 0.1811,
+        "profile_path": "/3QFw6TzUbHBx4upzmy0kXHuezdF.jpg",
+        "cast_id": 23,
+        "character": "Madame Deneb",
+        "credit_id": "69dfcb9c3a54a6ba933af783",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 6144424,
+        "known_for_department": "Acting",
+        "name": "Alina Razumenko",
+        "original_name": "Alina Razumenko",
+        "popularity": 0.0505,
+        "profile_path": null,
+        "cast_id": 24,
+        "character": "Madame Altair",
+        "credit_id": "69dfcba9284b71232b2d96eb",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2887552,
+        "known_for_department": "Acting",
+        "name": "Usue Álvarez",
+        "original_name": "Usue Álvarez",
+        "popularity": 0.0382,
+        "profile_path": null,
+        "cast_id": 25,
+        "character": "Begoña",
+        "credit_id": "69dfcbb4284b71232b2d96ef",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3311823,
+        "known_for_department": "Acting",
+        "name": "Isabel Miguel Hernanz",
+        "original_name": "Isabel Miguel Hernanz",
+        "popularity": 0.0552,
+        "profile_path": null,
+        "cast_id": 26,
+        "character": "Celadora",
+        "credit_id": "69dfcbbe188c9fc2d62d9744",
+        "order": 13
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5201300,
+        "known_for_department": "Acting",
+        "name": "Jaime García Machín",
+        "original_name": "Jaime García Machín",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 27,
+        "character": "",
+        "credit_id": "69dfcbcc188c9fc2d62d974a",
+        "order": 14
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1443615,
+        "known_for_department": "Acting",
+        "name": "Javier Calvo",
+        "original_name": "Javier Calvo",
+        "popularity": 0.3482,
+        "profile_path": "/fzy9mi5iWP88tYZfALV7EoKa7Gy.jpg",
+        "credit_id": "65bbd3c9cffeed017cae155e",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 231882,
+        "known_for_department": "Directing",
+        "name": "José Luis Borau",
+        "original_name": "José Luis Borau",
+        "popularity": 0.4788,
+        "profile_path": "/frFWRG5FXQrMWQp3s72MWUijCrD.jpg",
+        "credit_id": "65bbd3eed556970162a96a3e",
+        "department": "Writing",
+        "job": "Original Film Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 95606,
+        "known_for_department": "Acting",
+        "name": "Javier Ambrossi",
+        "original_name": "Javier Ambrossi",
+        "popularity": 0.6994,
+        "profile_path": "/chlb3jpgEm0lEgVwfG6XUQW8l8b.jpg",
+        "credit_id": "65bbd3d8d7cd06017b541f02",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 82724,
+        "known_for_department": "Directing",
+        "name": "Fernando González Molina",
+        "original_name": "Fernando González Molina",
+        "popularity": 0.5972,
+        "profile_path": "/gs1doMhC6Uk4ElmTDZL6JviY4IN.jpg",
+        "credit_id": "67a4ce8b77b8ced45666ea90",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1032564,
+        "known_for_department": "Directing",
+        "name": "Jaime de Armiñán",
+        "original_name": "Jaime de Armiñán",
+        "popularity": 0.4122,
+        "profile_path": "/9NkuzE1sSF9Bsi4zSeOtnyydUwS.jpg",
+        "credit_id": "67a4cef11fcbfee54d2fdc7e",
+        "department": "Writing",
+        "job": "Original Film Writer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 4653926,
+        "known_for_department": "Writing",
+        "name": "Alana S. Portero",
+        "original_name": "Alana S. Portero",
+        "popularity": 0.1305,
+        "profile_path": null,
+        "credit_id": "67a4d007bf36040c5d85c7dd",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2904375,
+        "known_for_department": "Camera",
+        "name": "Carlos Rigo",
+        "original_name": "Carlos Rigo",
+        "popularity": 0.0297,
+        "profile_path": "/sJKlqG62b1wrPnpHZofwBowtSG2.jpg",
+        "credit_id": "67a4d01adf336f38ab85c06f",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 5767487,
+        "known_for_department": "Production",
+        "name": "Andrea Herrera Catalá",
+        "original_name": "Andrea Herrera Catalá",
+        "popularity": 0.0789,
+        "profile_path": null,
+        "credit_id": "69a56d54908f8ac976a7a31c",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 6530,
+        "known_for_department": "Production",
+        "name": "Eva Leira",
+        "original_name": "Eva Leira",
+        "popularity": 0.7094,
+        "profile_path": "/sGNVIbZgY1f2CyH8ROLe15C42WB.jpg",
+        "credit_id": "69a56d6aefcf3404eec4bb1d",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 6531,
+        "known_for_department": "Production",
+        "name": "Yolanda Serrano",
+        "original_name": "Yolanda Serrano",
+        "popularity": 0.6537,
+        "profile_path": "/tUNgoNVTpL6uVK9FKJbYLiNk6ki.jpg",
+        "credit_id": "69a56d7ad4c72c3b85c4bca0",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1885491,
+        "known_for_department": "Editing",
+        "name": "Verónica Callón",
+        "original_name": "Verónica Callón",
+        "popularity": 0.2461,
+        "profile_path": "/aYBNq1Q1WzvM3muyne6cxd0WHCL.jpg",
+        "credit_id": "69a56dc431b5ee4be6e2bc34",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2067395,
+        "known_for_department": "Sound",
+        "name": "Álex de Lucas",
+        "original_name": "Álex de Lucas",
+        "popularity": 0.1646,
+        "profile_path": "/8ElC9MgfDrp5Gz8WFMCVE5HhpkU.jpg",
+        "credit_id": "69dfcbfcaa4a645831f94087",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2602850,
+        "known_for_department": "Acting",
+        "name": "Zahara",
+        "original_name": "Zahara",
+        "popularity": 0.207,
+        "profile_path": "/gXDNdpLhV4IRpg97wPKPjnxJEJy.jpg",
+        "credit_id": "69dfcc0df33dcbe192012906",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt31116965",
+    "wikidata_id": "Q132192624",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 514,
+        "name": "spain"
+      },
+      {
+        "id": 744,
+        "name": "madrid, spain"
+      },
+      {
+        "id": 2796,
+        "name": "self-discovery"
+      },
+      {
+        "id": 9331,
+        "name": "intersexuality"
+      },
+      {
+        "id": 9714,
+        "name": "remake"
+      },
+      {
+        "id": 210039,
+        "name": "gender identity"
+      },
+      {
+        "id": 240109,
+        "name": "intersex"
+      }
+    ]
+  }
+}

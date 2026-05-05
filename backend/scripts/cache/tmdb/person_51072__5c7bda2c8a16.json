@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Kate Rooney Mara"
+  ],
+  "biography": "",
+  "birthday": "1983-02-27",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 51072,
+  "imdb_id": "nm0544718",
+  "known_for_department": "Acting",
+  "name": "Кейт Мара",
+  "place_of_birth": "Bedford, New York, USA",
+  "popularity": 5.9197,
+  "profile_path": "/xZYD8wYHMmN9dMMPiohnKEFoTGx.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0b2pdr",
+    "freebase_id": "/en/kate_mara",
+    "imdb_id": "nm0544718",
+    "tvrage_id": null,
+    "wikidata_id": "Q231249",
+    "facebook_id": null,
+    "instagram_id": "katemara",
+    "tiktok_id": null,
+    "twitter_id": "katemara",
+    "youtube_id": null
+  }
+}

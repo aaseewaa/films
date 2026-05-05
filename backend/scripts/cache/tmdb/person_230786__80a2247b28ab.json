@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jacques Cousteau",
+    "J.Y. Cousteau"
+  ],
+  "biography": "",
+  "birthday": "1910-06-11",
+  "deathday": "1997-06-25",
+  "gender": 2,
+  "homepage": "https://www.cousteau.org/",
+  "id": 230786,
+  "imdb_id": "nm0184150",
+  "known_for_department": "Acting",
+  "name": "Jacques-Yves Cousteau",
+  "place_of_birth": "Saint-André-de-Cubzac, Gironde, France",
+  "popularity": 0.2189,
+  "profile_path": "/vpsua5AW1EVEmsCRFPabjaUY7Zx.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/044lg",
+    "freebase_id": "/en/jacques-yves_cousteau",
+    "imdb_id": "nm0184150",
+    "tvrage_id": 183211,
+    "wikidata_id": "Q83233",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

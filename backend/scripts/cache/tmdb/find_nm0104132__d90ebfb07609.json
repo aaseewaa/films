@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 563461,
+      "name": "Stan Brakhage",
+      "original_name": "Stan Brakhage",
+      "media_type": "person",
+      "popularity": 0.3212,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/jqpZxCtg17kcJl51zDDzCjFUPGj.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/wVDOoeErw4xPMtPnXvKwObAj2EG.jpg",
+          "id": 97514,
+          "title": "Mothlight",
+          "original_title": "Mothlight",
+          "overview": "Seemingly at random, the wings and other bits of moths and insects move rapidly across the screen. Most are brown or sepia; up close, we can see patterns within wings, similar to the veins in a leaf. Sometimes the images look like paper cutouts, like Matisse. Green objects occasionally appear. Most wings are translucent. The technique makes them appear to be stuck directly to the film.",
+          "poster_path": "/b6njz1aa3pkaPzoXjww9nwSHoX9.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.3617,
+          "release_date": "1963-12-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.665,
+          "vote_count": 100
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/oDubRo4fv0TkYiSvt6urG8EKrpF.jpg",
+          "id": 97513,
+          "title": "Window Water Baby Moving",
+          "original_title": "Window Water Baby Moving",
+          "overview": "On a winter's day, a woman stretches near a window then sits in a bathtub of water. She's happy. Her lover is nearby; there are close ups of her face, her pregnant belly, and his hands caressing her. She gives birth: we see the crowning of the baby's head, then the birth itself; we watch a pair of hands tie off and cut the umbilical cord. With the help of the attending hands, the mother expels the placenta. The infant, a baby girl, nurses. We return from time to time to the bath scene. By the end, dad's excited; mother and daughter rest.  Preserved by the Academy Film Archive in 2013.",
+          "poster_path": "/cDGJ3vy1WIBCKfZkeqpBYu0Ava4.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.3478,
+          "release_date": "1959-08-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.904,
+          "vote_count": 73
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/10n0DddvbXiswJua3GRuZ030Alc.jpg",
+          "id": 97516,
+          "title": "Eye Myth",
+          "original_title": "Eye Myth",
+          "overview": "After the title, a white screen gives way to a series of frames suggestive of abstract art, usually with one or two colors dominating and rapid change in the images. Two figures emerge from this jungle of color: the first, a shirtless man, appears twice, coming into focus, then disappearing behind the bursts and patterns of color, then reappearing; the second figure appears later, in the right foreground. This figure suggests someone older, someone of substance. The myth?  Preserved by the Academy Film Archive in 2012.",
+          "poster_path": "/meHL1T6kaLsJoOckNynht23LeZZ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.1276,
+          "release_date": "1967-08-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.423,
+          "vote_count": 65
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

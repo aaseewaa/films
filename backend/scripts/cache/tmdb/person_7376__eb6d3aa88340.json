@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 7376,
+  "imdb_id": "nm0959172",
+  "known_for_department": "Acting",
+  "name": "Jorge Zárate",
+  "place_of_birth": null,
+  "popularity": 0.7324,
+  "profile_path": "/jLUr9TFdVfDgNqF83jbgA6cXsNe.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0959172",
+    "tvrage_id": null,
+    "wikidata_id": "Q20807872",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

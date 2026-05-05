@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2294,
+      "name": "Robert Rodriguez",
+      "original_name": "Robert Rodriguez",
+      "media_type": "person",
+      "popularity": 2.1929,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/bPqRdLWWwpOT8sBdj9PWOzNgwou.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/9zcbqSxdsRMZWHYtyCd1nXPr2xq.jpg",
+          "id": 82856,
+          "name": "The Mandalorian",
+          "original_name": "The Mandalorian",
+          "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+          "poster_path": "/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            10765,
+            10759
+          ],
+          "popularity": 55.0153,
+          "first_air_date": "2019-11-12",
+          "softcore": false,
+          "vote_average": 8.406,
+          "vote_count": 10838,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jXDselREPq8TOVGM4dzBBUM7xVk.jpg",
+          "id": 399579,
+          "title": "Alita: Battle Angel",
+          "original_title": "Alita: Battle Angel",
+          "overview": "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
+          "poster_path": "/xRWht48C2V8XNfzvPehyClOvDni.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            878,
+            12
+          ],
+          "popularity": 9.2972,
+          "release_date": "2019-01-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.245,
+          "vote_count": 9935
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/t9kQnqiaxQ8TLB25rTzDKLd0fdM.jpg",
+          "id": 187,
+          "title": "Sin City",
+          "original_title": "Sin City",
+          "overview": "Welcome to Sin City. This town beckons to the tough, the corrupt, the brokenhearted. Some call it dark… Hard-boiled. Then there are those who call it home — Crooked cops, sexy dames, desperate vigilantes. Some are seeking revenge, others lust after redemption, and then there are those hoping for a little of both. A universe of unlikely and reluctant heroes still trying to do the right thing in a city that refuses to care.",
+          "poster_path": "/i66G50wATMmPrvpP95f0XP6ZdVS.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            80,
+            53
+          ],
+          "popularity": 6.7806,
+          "release_date": "2005-04-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.464,
+          "vote_count": 8791
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

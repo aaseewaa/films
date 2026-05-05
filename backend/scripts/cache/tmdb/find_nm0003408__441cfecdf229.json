@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 9956,
+      "name": "Chris Marker",
+      "original_name": "Chris Marker",
+      "media_type": "person",
+      "popularity": 0.7145,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/f3WALvrJGu829oq8N467DnGJuer.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3Z2OhNVU0FhxGZJIq6Gn32UNoKu.jpg",
+          "id": 662,
+          "title": "La Jetée",
+          "original_title": "La Jetée",
+          "overview": "A man confronts his past during an experiment that attempts to find a solution to the problems of a post-apocalyptic world caused by a world war.",
+          "poster_path": "/elGidsRHXkk8UyrtLbcMhaptDyp.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749,
+            878
+          ],
+          "popularity": 2.0075,
+          "release_date": "1962-02-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.874,
+          "vote_count": 999
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/cnl95VtUon66J1PLRPpsgYgwHF7.jpg",
+          "id": 803,
+          "title": "Night and Fog",
+          "original_title": "Nuit et Brouillard",
+          "overview": "Filmmaker Alain Resnais documents the atrocities behind the walls of Hitler's concentration camps.",
+          "poster_path": "/2iWYQia8enOai7QEO3TvenleD7r.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99,
+            36
+          ],
+          "popularity": 3.8493,
+          "release_date": "1956-05-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.253,
+          "vote_count": 557
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lns7roobSPQQTF54oSPzkT3qH1q.jpg",
+          "id": 1563,
+          "title": "Sans Soleil",
+          "original_title": "Sans soleil",
+          "overview": "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
+          "poster_path": "/sspJu9K03FZQP8A1cheurkiePD0.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.1377,
+          "release_date": "1983-03-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.453,
+          "vote_count": 265
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

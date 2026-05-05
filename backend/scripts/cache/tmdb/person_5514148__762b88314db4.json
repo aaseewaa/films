@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 3,
+  "homepage": null,
+  "id": 5514148,
+  "imdb_id": "nm10547656",
+  "known_for_department": "Acting",
+  "name": "Маура Бёрд",
+  "place_of_birth": "Ballymena, Northern Ireland, UK",
+  "popularity": 0.259,
+  "profile_path": "/kuQCb4Nhe0xEE4LqanGAizuCAGR.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm10547656",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

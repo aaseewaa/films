@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "에이온 바일리"
+  ],
+  "biography": "",
+  "birthday": "1976-06-08",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 7498,
+  "imdb_id": "nm0047248",
+  "known_for_department": "Acting",
+  "name": "Эйон Бэйли",
+  "place_of_birth": "Santa Ynez Valley, California, USA",
+  "popularity": 5.4868,
+  "profile_path": "/3DW13W47cKk4LQZwS4EvRaNBoVu.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/05c040",
+    "freebase_id": "/en/eion_bailey",
+    "imdb_id": "nm0047248",
+    "tvrage_id": 14321,
+    "wikidata_id": "Q964006",
+    "facebook_id": "eionbaileyofficial",
+    "instagram_id": "baileyeion",
+    "tiktok_id": null,
+    "twitter_id": "@eionbailey",
+    "youtube_id": null
+  }
+}

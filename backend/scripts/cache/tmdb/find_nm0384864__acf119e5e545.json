@@ -1,0 +1,93 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 70651,
+      "name": "Stephen Hillenburg",
+      "original_name": "Stephen Hillenburg",
+      "media_type": "person",
+      "popularity": 1.3735,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/c4850yRqFMC1GZpCvDx4q2PRY1E.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/aasp5EmwclAQbwfGABWLTNLhjwB.jpg",
+          "id": 387,
+          "name": "SpongeBob SquarePants",
+          "original_name": "SpongeBob SquarePants",
+          "overview": "Deep down in the Pacific Ocean in the subterranean city of Bikini Bottom lives a square yellow sponge named SpongeBob SquarePants. SpongeBob lives in a pineapple with his pet snail, Gary, loves his job as a fry cook at the Krusty Krab, and has a knack for getting into all kinds of trouble without really trying. When he's not getting on the nerves of his cranky next door neighbor Squidward, SpongeBob can usually be found smack in the middle of all sorts of strange situations with his best buddy, the simple yet lovable starfish, Patrick, or his thrill-seeking surfer-girl squirrel pal, Sandy Cheeks.",
+          "poster_path": "/5h0EU2lqBb03dp5vtRuUHJwqzem.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            10751
+          ],
+          "popularity": 12.6753,
+          "first_air_date": "1999-05-01",
+          "softcore": false,
+          "vote_average": 7.7,
+          "vote_count": 3190,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/i2fZIltljrhFPsUK9PN6O6ZE7M4.jpg",
+          "id": 11836,
+          "title": "The SpongeBob SquarePants Movie",
+          "original_title": "The SpongeBob SquarePants Movie",
+          "overview": "There's trouble brewing in Bikini Bottom. Someone has stolen King Neptune's crown, and it looks like Mr. Krab, SpongeBob's boss, is the culprit. Though he's just been passed over for the promotion of his dreams, SpongeBob stands by his boss, and along with his best pal Patrick, sets out on a treacherous mission to Shell City to reclaim the crown and save Mr. Krab's life.",
+          "poster_path": "/1rvzKV1d18EbDVaEd4VDzK3cgnY.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            10751,
+            14
+          ],
+          "popularity": 7.522,
+          "release_date": "2004-11-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.08,
+          "vote_count": 3170
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wu1uilmhM4TdluKi2ytfz8gidHf.jpg",
+          "id": 400160,
+          "title": "The SpongeBob Movie: Sponge on the Run",
+          "original_title": "The SpongeBob Movie: Sponge on the Run",
+          "overview": "When his best friend Gary is suddenly snatched away, SpongeBob takes Patrick on a madcap mission far beyond Bikini Bottom to save their pink-shelled pal.",
+          "poster_path": "/jlJ8nDhMhCYJuzOw3f52CP1W8MW.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            10751,
+            14
+          ],
+          "popularity": 4.9028,
+          "release_date": "2020-08-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 2969
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

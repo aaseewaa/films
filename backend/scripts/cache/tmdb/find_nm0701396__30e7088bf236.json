@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 71777,
+      "name": "Olivier Py",
+      "original_name": "Olivier Py",
+      "media_type": "person",
+      "popularity": 0.26,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/27irRy4qzeiHvmNJ6IKECLghT8U.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/zQPEo9JVbfbKagRyr92Vfk9xqXT.jpg",
+          "id": 11956,
+          "title": "When the Cat's Away",
+          "original_title": "Chacun cherche son chat",
+          "overview": "When Chloe, a young Parisian, decides to take a long-overdue vacation, she has to find someone to look after Gris-Gris, her beloved cat. Everyone, including her gay male roommate, refuses to help her, but she finally makes an arrangement with the elderly Madame Renée, who often watches over other peoples' cats and dogs. However, when Chloe comes back, Madame Renée tells her that unfortunately the cat has been lost, and the unlucky owner goes on a search for her dear animal friend. While looking for the cat, she meets many colorful characters who populate the neighborhood.",
+          "poster_path": "/vZjHfDpE74EmbknicrTg4n5YOLr.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.0028,
+          "release_date": "1996-04-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.218,
+          "vote_count": 101
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nS0ZhRWncmNTTTopaqJHMvP3pz1.jpg",
+          "id": 209282,
+          "title": "Violette",
+          "original_title": "Violette",
+          "overview": "Born out of wedlock early in the last century, Violette Leduc meets Simone de Beauvoir in postwar Saint-Germain-des-Près. An intense lifelong relationship develops between the two women authors, based on Violette's quest for freedom through writing and on Simone's conviction that she holds in her hands the destiny of an extraordinary writer.",
+          "poster_path": "/jo9AfceTbWND9uPjbZCFvzWyJgT.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.9211,
+          "release_date": "2013-09-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.957,
+          "vote_count": 58
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/pw3uumStKVQVvPIYy1X6xlrxuY1.jpg",
+          "id": 1001143,
+          "title": "Molière's Last Stage",
+          "original_title": "Le Molière imaginaire",
+          "overview": "Royal Palace Theatre, Paris . February 17th 1673, the King’s theatre group is playing « Le Malade Imaginaire » when Moliere started spitting blood, but he takes the decision to keep playing until the end. During his agony, he let enter in the theatre all the elements and ghost who made his life. Starting a fight to preserve his dignity, he plan to transfigure his death in a last laugh instrument.",
+          "poster_path": "/w1h89yTg4cArBt8okPE5VqH79AF.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            36,
+            35,
+            18
+          ],
+          "popularity": 0.5066,
+          "release_date": "2024-02-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.9,
+          "vote_count": 30
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1088217,
+      "name": "Len Lye",
+      "original_name": "Len Lye",
+      "media_type": "person",
+      "popularity": 0.1012,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/rGNL1Bzvje4x7wWxtapS3en2NVO.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/hTs39Kqy9wgTsnr7Mt4Gc5stOoA.jpg",
+          "id": 129614,
+          "title": "Free Radicals",
+          "original_title": "Free Radicals",
+          "overview": "In this powerful abstract film with a soundtrack of African drum music, Lye scratched \"white ziggle-zag-splutter scratches\" on to black leader, using a variety of tools from saw teeth to arrow heads. The first version of the film won a major award at the International Experimental Film Festival Held in Brussels in 1958 in association with the World's Fair. Stan Brakhage described the film as \"an almost unbelievably immense masterpiece\".",
+          "poster_path": "/9VApH2rC5ZA6jVyX38HlS5HvF4R.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10402
+          ],
+          "popularity": 0.1481,
+          "release_date": "1958-04-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 69
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uXCfx1Tb4LPWbOBsSwJtBrgrpQU.jpg",
+          "id": 128937,
+          "title": "A Colour Box",
+          "original_title": "A Colour Box",
+          "overview": "Animated shapes dance to Cuban music. This was one of the first animations to be painted directly onto the film.",
+          "poster_path": "/f6xsCdmlBLomS4KQeY4Zb4zZofi.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.085,
+          "release_date": "1935-09-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.028,
+          "vote_count": 53
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hK4AaUQ38NHhVcoMhp9DsJ1y01X.jpg",
+          "id": 145860,
+          "title": "Rainbow Dance",
+          "original_title": "Rainbow Dance",
+          "overview": "Rainbow Dance is a 1936 British animated film released by the GPO Film Unit. This is Lye's second film. It uses the Gasparcolor process.",
+          "poster_path": "/eD0BQMWA5tJMQXntE3sHg5oOiVC.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10402,
+            16
+          ],
+          "popularity": 0.122,
+          "release_date": "1936-10-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.26,
+          "vote_count": 50
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

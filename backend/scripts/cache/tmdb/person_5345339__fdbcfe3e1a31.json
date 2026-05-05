@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "2018-02-16",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 5345339,
+  "imdb_id": "nm17019630",
+  "known_for_department": "Acting",
+  "name": "Bram Scott-Breheny",
+  "place_of_birth": null,
+  "popularity": 0.3389,
+  "profile_path": "/kI51jREZQm4Gvlh4A0PzNmroU6M.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm17019630",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

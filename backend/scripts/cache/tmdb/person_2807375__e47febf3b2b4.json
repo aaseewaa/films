@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Please Don't Destroy",
+    "Martin M. Herlihy"
+  ],
+  "biography": "",
+  "birthday": "1998-09-13",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2807375,
+  "imdb_id": "nm11958939",
+  "known_for_department": "Acting",
+  "name": "Мартин Херлихи",
+  "place_of_birth": null,
+  "popularity": 0.8413,
+  "profile_path": "/3SxAueQPPc27P7zJoUmj0QMYdOK.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm11958939",
+    "tvrage_id": null,
+    "wikidata_id": "Q110089643",
+    "facebook_id": null,
+    "instagram_id": "martinmherlihy",
+    "tiktok_id": null,
+    "twitter_id": "martinmherlihy",
+    "youtube_id": null
+  }
+}

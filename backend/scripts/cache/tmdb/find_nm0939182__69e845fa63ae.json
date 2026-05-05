@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 12453,
+      "name": "Wong Kar-Wai",
+      "original_name": "王家衛",
+      "media_type": "person",
+      "popularity": 2.0885,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/iI4IxsIA5DMhIFHcD6C2FyZGKwc.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/ffQFnAUm2Uu4RU0nijpjPRf9TBT.jpg",
+          "id": 843,
+          "title": "In the Mood for Love",
+          "original_title": "花樣年華",
+          "overview": "In 1960s Hong Kong, two neighbors form an intimate bond after making a discovery about their spouses in this visually stunning tale of unrequited love.",
+          "poster_path": "/iYypPT4bhqXfq1b6EnmxvRt6b2Y.jpg",
+          "media_type": "movie",
+          "original_language": "cn",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 8.5774,
+          "release_date": "2000-09-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.088,
+          "vote_count": 3228
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vuglA60RqvpHK9rIcG8sXaiWw1L.jpg",
+          "id": 11104,
+          "title": "Chungking Express",
+          "original_title": "重慶森林",
+          "overview": "Two melancholic Hong Kong policemen fall in love: one with a mysterious underworld figure, the other with a beautiful and ethereal server at a late-night restaurant.",
+          "poster_path": "/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg",
+          "media_type": "movie",
+          "original_language": "cn",
+          "genre_ids": [
+            18,
+            35,
+            10749
+          ],
+          "popularity": 9.4898,
+          "release_date": "1994-07-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.967,
+          "vote_count": 2173
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/v4FepSc09TsRy2fQtUg6vvzrTq0.jpg",
+          "id": 11220,
+          "title": "Fallen Angels",
+          "original_title": "墮落天使",
+          "overview": "An indifferent hitman, his infatuated business partner and an ex-convict search for love and meaning as their lives cross paths in Hong Kong.",
+          "poster_path": "/yyM9BPdwttK5LKZSLvHae7QPKo1.jpg",
+          "media_type": "movie",
+          "original_language": "cn",
+          "genre_ids": [
+            28,
+            10749,
+            80
+          ],
+          "popularity": 6.1935,
+          "release_date": "1995-09-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.681,
+          "vote_count": 1287
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

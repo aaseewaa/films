@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 20556,
+      "name": "Bertrand Tavernier",
+      "original_name": "Bertrand Tavernier",
+      "media_type": "person",
+      "popularity": 0.7907,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/uTGywwLxJuriOEEsRPuCAMVbWqR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/tQ5TSuddADLFzFugvIW49YK2NcR.jpg",
+          "id": 13975,
+          "title": "In the Electric Mist",
+          "original_title": "In the Electric Mist",
+          "overview": "Lt. Dave Robicheaux, a detective in New Iberia, Louisiana, is trying to link the murder of a local hooker to New Orleans mobster Julie (Baby Feet) Balboni, who is co-producer of a Civil War film. At the same time, after Elrod Sykes, the star of the film, reports finding another corpse in the Atchafalaya Swamp near the movie set, Robicheaux starts another investigation, believing the corpse to be the remains of a black man who he saw being murdered 35 years before.",
+          "poster_path": "/gsyUJovik2t5vzPyXL5tq5VWLym.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            18,
+            80,
+            9648
+          ],
+          "popularity": 2.4702,
+          "release_date": "2009-04-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.1,
+          "vote_count": 459
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/aqdU45qrak58686flWheHLXuq0N.jpg",
+          "id": 209355,
+          "title": "The French Minister",
+          "original_title": "Quai d’Orsay",
+          "overview": "Alexandre Taillard de Vorms is a force to be reckoned with. With his silver mane and tanned, athletic body, he stalks the world stage as Minister of Foreign Affairs for France, waging his own war backed up by the holy trinity of diplomatic concepts: legitimacy, lucidity, and efficacy. Enter Arthur Vlaminck. Hired to write the minister's speeches, Arthur must contend with the sensibilities of his boss and the dirty dealings within the Quai d'Orsay, the ministry's home.",
+          "poster_path": "/7uXxAaZudlNEg1Lwu7GDEWbK3dV.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 0.8033,
+          "release_date": "2013-11-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.028,
+          "vote_count": 302
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vHP7i4qvmKyxFkqpycGZtuhP3J2.jpg",
+          "id": 57695,
+          "title": "The Princess of Montpensier",
+          "original_title": "La Princesse de Montpensier",
+          "overview": "Set in the high courts of 16th Century France, where the wars of religion between Catholics and Protestants are raging. Marie de Mézières, a beautiful young aristocrat, is in love with Henri de Guise, but her hand in marriage is promised to the Prince of Montpensier.",
+          "poster_path": "/ozR4LwG9vjV9oFKtEYUO8VsYamf.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            28,
+            18,
+            36,
+            10749
+          ],
+          "popularity": 1.1305,
+          "release_date": "2010-11-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.351,
+          "vote_count": 276
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

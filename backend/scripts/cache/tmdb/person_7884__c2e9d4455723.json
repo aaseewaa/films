@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Dan Gerson",
+    "Daniel \"Dan\" Gerson"
+  ],
+  "biography": "",
+  "birthday": "1966-08-01",
+  "deathday": "2016-02-06",
+  "gender": 2,
+  "homepage": null,
+  "id": 7884,
+  "imdb_id": "nm0314870",
+  "known_for_department": "Writing",
+  "name": "Daniel Gerson",
+  "place_of_birth": "New York City, New York, USA",
+  "popularity": 0.4539,
+  "profile_path": "/amOuK3ytWV7KXeWrpl9joCglRlF.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/08hxkb",
+    "freebase_id": "/en/dan_gerson",
+    "imdb_id": "nm0314870",
+    "tvrage_id": 148824,
+    "wikidata_id": "Q4473347",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

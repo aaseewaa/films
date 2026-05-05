@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Lily Jane Collins"
+  ],
+  "biography": "",
+  "birthday": "1989-03-18",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 112561,
+  "imdb_id": "nm2934314",
+  "known_for_department": "Acting",
+  "name": "Лили Коллинз",
+  "place_of_birth": "Guildford, Surrey, England, UK",
+  "popularity": 2.3864,
+  "profile_path": "/zhJISAc4qi7xiHMzHMzUTgZSIRH.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/03hh6bw",
+    "freebase_id": "/en/lily_collins",
+    "imdb_id": "nm2934314",
+    "tvrage_id": 314409,
+    "wikidata_id": "Q229184",
+    "facebook_id": "OfficialLilyCollins",
+    "instagram_id": "lilyjcollins",
+    "tiktok_id": null,
+    "twitter_id": "lilycollins",
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1188,
+      "name": "Kim Ki-duk",
+      "original_name": "김기덕",
+      "media_type": "person",
+      "popularity": 1.0402,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/jvDwwSEtcPfxcUB1NlLbMHFB5ze.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/nqY8yuxLU4K9cSCQpsW4PGyotlN.jpg",
+          "id": 1280,
+          "title": "3-Iron",
+          "original_title": "빈집",
+          "overview": "A drifter lives in people's houses while they are away and repays them by doing chores for them. His life changes when he meets a beautiful woman who wants to escape her unhappy marriage.",
+          "poster_path": "/mejeTOe8aGWyAAjaGj7Mi66Vtfc.jpg",
+          "media_type": "movie",
+          "original_language": "ko",
+          "genre_ids": [
+            18,
+            10749,
+            80
+          ],
+          "popularity": 2.2092,
+          "release_date": "2004-10-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.822,
+          "vote_count": 1258
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/dgjR7X6WjgjuwJ02idEOxvMyFjP.jpg",
+          "id": 113,
+          "title": "Spring, Summer, Fall, Winter... and Spring",
+          "original_title": "봄 여름 가을 겨울 그리고 봄",
+          "overview": "An isolated lake, where an old monk lives in a small floating temple. The monk has a young boy living with him, learning to become a monk. We watch as seasons and years pass by.",
+          "poster_path": "/6SQQ5REuAz7k0FMQ9mSCT40T2LN.jpg",
+          "media_type": "movie",
+          "original_language": "ko",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 2.9595,
+          "release_date": "2003-09-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.795,
+          "vote_count": 1193
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/iOmGHgU3qhCMTBcf73m528risb.jpg",
+          "id": 123377,
+          "title": "Pieta",
+          "original_title": "피에타",
+          "overview": "A loan shark is forced to reconsider his violent lifestyle after the arrival of a mysterious woman claiming to be his long-lost mother.",
+          "poster_path": "/cI9SXHxBsEF0cgUTZKDDaPC0ozT.jpg",
+          "media_type": "movie",
+          "original_language": "ko",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.8105,
+          "release_date": "2012-09-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.1,
+          "vote_count": 414
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

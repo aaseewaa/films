@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Vincent Crochon"
+  ],
+  "biography": "",
+  "birthday": "1966-11-23",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1925,
+  "imdb_id": "nm0001993",
+  "known_for_department": "Acting",
+  "name": "Венсан Кассель",
+  "place_of_birth": "Paris, France",
+  "popularity": 4.0759,
+  "profile_path": "/ivUQfhn5olOmR5hthN8C8GThBV4.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01kmzs",
+    "freebase_id": "/en/vincent_cassel",
+    "imdb_id": "nm0001993",
+    "tvrage_id": 314279,
+    "wikidata_id": "Q193504",
+    "facebook_id": "VinceCassel",
+    "instagram_id": "vincentcassel",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

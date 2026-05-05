@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 32958,
+      "name": "Dominik Graf",
+      "original_name": "Dominik Graf",
+      "media_type": "person",
+      "popularity": 0.5933,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/6oUf3azdLaDPPAi37yFYVxMrJw.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/lUrtMjiunomHPDC2sQNIxswbmdU.jpg",
+          "id": 3034,
+          "name": "Scene of the Crime",
+          "original_name": "Tatort",
+          "overview": "Tatort is a long-running German/Austrian/Swiss, crime television series set in various parts of these countries. The show is broadcast on the channels of ARD in Germany, ORF in Austria and SF1 in Switzerland.",
+          "poster_path": "/yh43TKi9himQWhzrlWBxV8WjsFn.jpg",
+          "media_type": "tv",
+          "original_language": "de",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "popularity": 78.0947,
+          "first_air_date": "1970-11-29",
+          "softcore": false,
+          "vote_average": 6.2,
+          "vote_count": 123,
+          "origin_country": [
+            "DE",
+            "AT",
+            "CH"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/kQTPNUtXSowT14cY0FnV3CaBDli.jpg",
+          "id": 620498,
+          "title": "Fabian: Going to the Dogs",
+          "original_title": "Fabian oder der Gang vor die Hunde",
+          "overview": "In 1930s Berlin, Dr. Jakob Fabian, who works by day in advertising for a cigarette company and by night wanders the streets of the city, falls in love with an actress. As her career begins to blossom, prospects for his future begin to wane.",
+          "poster_path": "/kfrHq2hg24ZMpesf8xfXUt3wAKb.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18,
+            10749,
+            36
+          ],
+          "popularity": 4.0698,
+          "release_date": "2021-08-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.492,
+          "vote_count": 62
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9vyBAlruD163qboCGTR5Y0gmtr7.jpg",
+          "id": 248934,
+          "title": "Beloved Sisters",
+          "original_title": "Die geliebten Schwestern",
+          "overview": "A love triangle forms between post-Enlightenment writer Friedrich Schiller and two sisters -- one who became his wife, and the other, his biographer.",
+          "poster_path": "/6uszdo0cY7tcOEobd8LPTrRuUQM.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            10749,
+            18,
+            36
+          ],
+          "popularity": 0.9499,
+          "release_date": "2014-07-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.7,
+          "vote_count": 51
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

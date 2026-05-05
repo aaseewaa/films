@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 21339,
+      "name": "Jez Butterworth",
+      "original_name": "Jez Butterworth",
+      "media_type": "person",
+      "popularity": 1.1474,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/fCdknBtQMVoIEW0VfKiL2yMZqgW.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
+          "id": 137113,
+          "title": "Edge of Tomorrow",
+          "original_title": "Edge of Tomorrow",
+          "overview": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
+          "poster_path": "/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            878
+          ],
+          "popularity": 11.3034,
+          "release_date": "2014-05-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.637,
+          "vote_count": 14974
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8lBViysvNJBPkl6zG1LVAaW3qhj.jpg",
+          "id": 206647,
+          "title": "Spectre",
+          "original_title": "Spectre",
+          "overview": "A cryptic message from Bond’s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+          "poster_path": "/zj8ongFhtWNsVlfjOGo8pSr7PQg.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            53
+          ],
+          "popularity": 8.2652,
+          "release_date": "2015-10-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.569,
+          "vote_count": 11203
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2vq5GTJOahE03mNYZGxIynlHcWr.jpg",
+          "id": 359724,
+          "title": "Ford v Ferrari",
+          "original_title": "Ford v Ferrari",
+          "overview": "American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966.",
+          "poster_path": "/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            28,
+            36
+          ],
+          "popularity": 10.0124,
+          "release_date": "2019-11-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.006,
+          "vote_count": 8922
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

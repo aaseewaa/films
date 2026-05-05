@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "킹 비도르",
+    "킹 비도어"
+  ],
+  "biography": "",
+  "birthday": "1894-02-08",
+  "deathday": "1982-11-01",
+  "gender": 2,
+  "homepage": null,
+  "id": 29962,
+  "imdb_id": "nm0896542",
+  "known_for_department": "Directing",
+  "name": "Кинг Видор",
+  "place_of_birth": "Galveston, Texas, USA",
+  "popularity": 0.9247,
+  "profile_path": "/5Xv2yy6UN45uosfCQqWfOeCFL5N.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0htcn",
+    "freebase_id": "/en/king_vidor",
+    "imdb_id": "nm0896542",
+    "tvrage_id": 117230,
+    "wikidata_id": "Q51133",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

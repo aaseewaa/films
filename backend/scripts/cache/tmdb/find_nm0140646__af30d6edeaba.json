@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 550176,
+      "name": "Marcel Carrière",
+      "original_name": "Marcel Carrière",
+      "media_type": "person",
+      "popularity": 0.0831,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/pqhvzx4W5CQ7u6q8GkkGviupaHO.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/srXQYto4RjBneRuxyZXyq4Nls35.jpg",
+          "id": 67403,
+          "title": "Of Whales, the Moon, and Men",
+          "original_title": "Pour la suite du monde",
+          "overview": "At the instigation of the filmmakers, the young men of the Ile-aux-Coudres in the middle of the St-Lawrence River try as a memorial to their ancestors to revive the fishing of the belugas interrupted in 1924.",
+          "poster_path": "/zDFfPk7XoJoK5ldYXyX3RvxuVgp.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.1818,
+          "release_date": "1963-08-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.594,
+          "vote_count": 16
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rMMqWUShn98ADIeYft7tE310KEc.jpg",
+          "id": 233789,
+          "title": "Wrestling",
+          "original_title": "La lutte",
+          "overview": "A candid-camera view of professional wrestling as seen in the Montréal Forum, where some of the biggest bouts are staged, and in back-street wrestling parlours where the warriors practice their art.",
+          "poster_path": "/i6qcmAI7UP1q5TgDgtygjGy2Dmj.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0793,
+          "release_date": "1961-12-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.778,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1LsR3oSwXyWte1zb9T7uNGj51cx.jpg",
+          "id": 446757,
+          "title": "Games of the XXI Olympiad",
+          "original_title": "Jeux de la XXIème olympiade",
+          "overview": "Edited from almost 100 km of film footage shot during the Games, this feature documentary is a breathtaking portrait of the 1976 Montreal Olympics. Much more than a simple record of the Games, the film approaches each event with the intention of revealing the athlete - whether winner or loser - as a unique individual.",
+          "poster_path": "/xmz3etSLmqSANXqnuLTZhDzWwaH.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.6473,
+          "release_date": "1977-04-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.143,
+          "vote_count": 7
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jack Ford",
+    "Jack Francis"
+  ],
+  "biography": "",
+  "birthday": "1894-02-01",
+  "deathday": "1973-08-31",
+  "gender": 2,
+  "homepage": null,
+  "id": 8500,
+  "imdb_id": "nm0000406",
+  "known_for_department": "Directing",
+  "name": "Джон Форд",
+  "place_of_birth": "Cape Elizabeth, Maine, USA",
+  "popularity": 1.3073,
+  "profile_path": "/ffgVJWV8pDomSdTkjOqdrwMX9G6.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01pp3p",
+    "freebase_id": "/en/john_ford",
+    "imdb_id": "nm0000406",
+    "tvrage_id": 123300,
+    "wikidata_id": "Q51114",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

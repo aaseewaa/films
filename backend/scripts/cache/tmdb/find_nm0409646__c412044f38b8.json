@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 40260,
+      "name": "Otar Iosseliani",
+      "original_name": "Otar Iosseliani",
+      "media_type": "person",
+      "popularity": 0.1379,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/vPJoqbfaj9x9YiwyrMa8liLi7J9.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3e7gmIqphokqp0lagkKEpDybSFX.jpg",
+          "id": 83235,
+          "title": "There Once Was a Singing Blackbird",
+          "original_title": "იყო შაშვი მგალობელი",
+          "overview": "Gia is a carefree young percussionist who works at a theater in Tbilisi, capital of Georgia. He lives in a small apartment with his mother. Gia spends his days flitting from friend to friend, lover to lover, avoiding any responsibility, and never staying still for five minutes. However, he always manages to arrive at the theater just in time to play the drums at the end of the ballet.",
+          "poster_path": "/yK1xiOIcpJMcPNUXTjhf76ozxAi.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            18,
+            35,
+            10402
+          ],
+          "popularity": 0.9932,
+          "release_date": "1970-12-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.2,
+          "vote_count": 31
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xdQ7kt7oPNvskV2V4Whzw7RrjLW.jpg",
+          "id": 4962,
+          "title": "Farewell, Home Sweet Home",
+          "original_title": "Adieu, plancher des vaches !",
+          "overview": "Nicholas is the eldest son of a wealthy suburban family, whose businesswoman mother makes deals from a helicopter and has an affair with her business partner. His cheerful, alcoholic father, on the other hand, is reduced to a prisoner in his room with his devoted dog and electric train set. Unbeknownst to his parents, Nicholas works as a window cleaner and dish washer in a Parisian cafe. He is also in love with the daughter of another cafe's owner, who, however, has an abusive boyfriend. One night, Nicholas sneaks a few drunken drifters into his family wine cellar and his father unexpectedly takes a liking to the stranger.",
+          "poster_path": "/1ArZCnPS6TqmnkT3O8dhHKPUOBB.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            35,
+            10749
+          ],
+          "popularity": 0.5246,
+          "release_date": "1999-11-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.188,
+          "vote_count": 24
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5XnrnSVK1pPNmZKEQ2CfGXsDJ41.jpg",
+          "id": 128412,
+          "title": "Falling Leaves",
+          "original_title": "გიორგობისთვე",
+          "overview": "A young worker takes a job at a local state run winery only to discover and become disillusioned by the corruption of the Soviet State.",
+          "poster_path": "/tSJaQicHfHGxpWGCrgobCJIVWOu.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            10749,
+            18
+          ],
+          "popularity": 0.5728,
+          "release_date": "1966-01-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.413,
+          "vote_count": 23
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

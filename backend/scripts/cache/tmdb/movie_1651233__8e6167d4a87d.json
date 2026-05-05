@@ -1,0 +1,552 @@
+{
+  "adult": false,
+  "backdrop_path": "/hGgXH6s3klnWW3x2cbQYlrSVg0U.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 35,
+      "name": "комедия"
+    },
+    {
+      "id": 18,
+      "name": "драма"
+    }
+  ],
+  "homepage": "",
+  "id": 1651233,
+  "imdb_id": "tt40660080",
+  "origin_country": [
+    "MX"
+  ],
+  "original_language": "es",
+  "original_title": "El yerno",
+  "overview": "",
+  "popularity": 48.8658,
+  "poster_path": "/gVkNgA7K5dnv26X6PFK8TkY2kFD.jpg",
+  "production_companies": [
+    {
+      "id": 212251,
+      "logo_path": "/rdDld4SP7OwjES9SDICNdnYeg4D.png",
+      "name": "Fabula",
+      "origin_country": "MX"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "MX",
+      "name": "Mexico"
+    }
+  ],
+  "release_date": "2026-04-18",
+  "revenue": 0,
+  "runtime": 102,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "Spanish",
+      "iso_639_1": "es",
+      "name": "Español"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "El yerno",
+  "video": false,
+  "vote_average": 6.0,
+  "vote_count": 4,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1413394,
+        "known_for_department": "Acting",
+        "name": "Adrián Vázquez",
+        "original_name": "Adrián Vázquez",
+        "popularity": 1.3331,
+        "profile_path": "/cyhuSSuFA6DYKG3eI9w6VxPaUrs.jpg",
+        "cast_id": 2,
+        "character": "José Sánchez",
+        "credit_id": "69d4a00411de2167bdf65ba3",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 2558356,
+        "known_for_department": "Acting",
+        "name": "Jero Medina",
+        "original_name": "Jero Medina",
+        "popularity": 0.555,
+        "profile_path": "/A8FWB4dw7qVF4fOrRcbnZM7qgXG.jpg",
+        "cast_id": 3,
+        "character": "",
+        "credit_id": "69d4a051673554eb98cbfe0f",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1301519,
+        "known_for_department": "Acting",
+        "name": "David Gaitán",
+        "original_name": "David Gaitán",
+        "popularity": 0.0965,
+        "profile_path": null,
+        "cast_id": 4,
+        "character": "",
+        "credit_id": "69d4a099da9c98ca66ca7fd4",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 2448601,
+        "known_for_department": "Acting",
+        "name": "Verónica Bravo",
+        "original_name": "Verónica Bravo",
+        "popularity": 1.3683,
+        "profile_path": "/vwwlZuekgBFeUT1QXGnoSbq0tFD.jpg",
+        "cast_id": 5,
+        "character": "",
+        "credit_id": "69d4a0a5c715370b0ecbff40",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 590312,
+        "known_for_department": "Acting",
+        "name": "Eduardo España",
+        "original_name": "Eduardo España",
+        "popularity": 0.3514,
+        "profile_path": "/qdqwOCZ9WbIG0YcFoe6cBuguO4H.jpg",
+        "cast_id": 6,
+        "character": "",
+        "credit_id": "69d4a13e1edaba92f2cbff4e",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1318740,
+        "known_for_department": "Acting",
+        "name": "Rodrigo Virago",
+        "original_name": "Rodrigo Virago",
+        "popularity": 0.1699,
+        "profile_path": "/yNgoecTpJhjZYSeWjVx6Jh6LGyW.jpg",
+        "cast_id": 7,
+        "character": "",
+        "credit_id": "69d4fddf57330b903d6ae2a8",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 966683,
+        "known_for_department": "Acting",
+        "name": "Ianis Guerrero",
+        "original_name": "Ianis Guerrero",
+        "popularity": 0.9372,
+        "profile_path": "/rv0noqkG02l1TpaTRHgNDVjVa5E.jpg",
+        "cast_id": 8,
+        "character": "",
+        "credit_id": "69d4fdfc1edaba92f2cc00e2",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1659073,
+        "known_for_department": "Acting",
+        "name": "Mauro Sánchez Navarro",
+        "original_name": "Mauro Sánchez Navarro",
+        "popularity": 0.1157,
+        "profile_path": "/hZIgaYKSTl1HnxcyH3L4Ucm648t.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "69d4fe0e724520b3dd071474",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 7376,
+        "known_for_department": "Acting",
+        "name": "Jorge Zárate",
+        "original_name": "Jorge Zárate",
+        "popularity": 0.9754,
+        "profile_path": "/jLUr9TFdVfDgNqF83jbgA6cXsNe.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "69d4fe24c11a12fc4407137b",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 5844905,
+        "known_for_department": "Acting",
+        "name": "Ian Scott Castillo",
+        "original_name": "Ian Scott Castillo",
+        "popularity": 0.0261,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "69d4ffe389be767b7cf8a4a4",
+        "order": 9
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1617,
+        "known_for_department": "Production",
+        "name": "Джеймс Шеймус",
+        "original_name": "James Schamus",
+        "popularity": 1.1323,
+        "profile_path": "/a19sHOYYuXMJQPryiX0AKCPTXaR.jpg",
+        "credit_id": "69d500fd52859cbc9ef8a594",
+        "department": "Production",
+        "job": "Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1299680,
+        "known_for_department": "Directing",
+        "name": "Carlos Hernández",
+        "original_name": "Carlos Hernández",
+        "popularity": 0.1184,
+        "profile_path": "/h8hC24azHXyK0UTAJgnweR4Dt5T.jpg",
+        "credit_id": "69d50377a038905e67f65d97",
+        "department": "Production",
+        "job": "Co-Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1372631,
+        "known_for_department": "Camera",
+        "name": "Diego Tenorio",
+        "original_name": "Diego Tenorio",
+        "popularity": 0.1664,
+        "profile_path": null,
+        "credit_id": "69d503ad8b3de88a633e3f6c",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1621749,
+        "known_for_department": "Sound",
+        "name": "Alex de Icaza",
+        "original_name": "Alex de Icaza",
+        "popularity": 0.0214,
+        "profile_path": null,
+        "credit_id": "69d504564466e8a407f8a550",
+        "department": "Sound",
+        "job": "Sound"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1727329,
+        "known_for_department": "Art",
+        "name": "Julieta Jiménez",
+        "original_name": "Julieta Jiménez",
+        "popularity": 0.0831,
+        "profile_path": null,
+        "credit_id": "69d504e768286090c36ae348",
+        "department": "Art",
+        "job": "Art Direction"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 72814,
+        "known_for_department": "Editing",
+        "name": "Soledad Salfate",
+        "original_name": "Soledad Salfate",
+        "popularity": 0.0942,
+        "profile_path": null,
+        "credit_id": "69d505924342be1c736ae3ff",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 238137,
+        "known_for_department": "Writing",
+        "name": "Gerardo Naranjo",
+        "original_name": "Gerardo Naranjo",
+        "popularity": 0.6921,
+        "profile_path": "/fooyffeUYCTxdt7p9GfJuXsiW5k.jpg",
+        "credit_id": "69d8ab62588831dc527f2618",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1319045,
+        "known_for_department": "Production",
+        "name": "Alexandro Aldrete",
+        "original_name": "Alexandro Aldrete",
+        "popularity": 0.2518,
+        "profile_path": null,
+        "credit_id": "69f610ac4c23c0f7b3a1cb1e",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1617,
+        "known_for_department": "Production",
+        "name": "Джеймс Шеймус",
+        "original_name": "James Schamus",
+        "popularity": 1.1323,
+        "profile_path": "/a19sHOYYuXMJQPryiX0AKCPTXaR.jpg",
+        "credit_id": "69f610c2f8408de005d4ae04",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1184845,
+        "known_for_department": "Writing",
+        "name": "Габриэль Нунсио",
+        "original_name": "Gabriel Nuncio",
+        "popularity": 0.5062,
+        "profile_path": null,
+        "credit_id": "69f610d5f8408de005d4ae09",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1184845,
+        "known_for_department": "Writing",
+        "name": "Габриэль Нунсио",
+        "original_name": "Gabriel Nuncio",
+        "popularity": 0.5062,
+        "profile_path": null,
+        "credit_id": "69f6112af44c934288a1cb7c",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1319045,
+        "known_for_department": "Production",
+        "name": "Alexandro Aldrete",
+        "original_name": "Alexandro Aldrete",
+        "popularity": 0.2518,
+        "profile_path": null,
+        "credit_id": "69f6113b459cfab15ba1c9ea",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 4157921,
+        "known_for_department": "Production",
+        "name": "Virginia González Brusco",
+        "original_name": "Virginia González Brusco",
+        "popularity": 0.0,
+        "profile_path": null,
+        "credit_id": "69f6115724f3120b11421ff6",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 3671018,
+        "known_for_department": "Production",
+        "name": "Adán Pérez",
+        "original_name": "Adán Pérez",
+        "popularity": 0.0071,
+        "profile_path": "/eE07hcysJuz0RFBthJEj8oea9BH.jpg",
+        "credit_id": "69f6116c4b40dca57d2a461a",
+        "department": "Production",
+        "job": "Associate Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 81733,
+        "known_for_department": "Production",
+        "name": "Eduardo Castro",
+        "original_name": "Eduardo Castro",
+        "popularity": 0.2487,
+        "profile_path": null,
+        "credit_id": "69f611a61c430cbaa62a4501",
+        "department": "Production",
+        "job": "Production Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2383353,
+        "known_for_department": "Production",
+        "name": "Isabel Cortázar",
+        "original_name": "Isabel Cortázar",
+        "popularity": 0.3801,
+        "profile_path": null,
+        "credit_id": "69f611f1cc6fdf0d454220a0",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 2383352,
+        "known_for_department": "Production",
+        "name": "Andrea Abbiati",
+        "original_name": "Andrea Abbiati",
+        "popularity": 0.3268,
+        "profile_path": null,
+        "credit_id": "69f6120be48213e0f9422118",
+        "department": "Production",
+        "job": "Casting Director"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1727329,
+        "known_for_department": "Art",
+        "name": "Julieta Jiménez",
+        "original_name": "Julieta Jiménez",
+        "popularity": 0.0831,
+        "profile_path": null,
+        "credit_id": "69f612434b40dca57d2a461e",
+        "department": "Art",
+        "job": "Production Design"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 983834,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Josefina Echeverría",
+        "original_name": "Josefina Echeverría",
+        "popularity": 0.0637,
+        "profile_path": null,
+        "credit_id": "69f6126ea50d5d13c9a1cc40",
+        "department": "Costume & Make-Up",
+        "job": "Costume Design"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1526329,
+        "known_for_department": "Costume & Make-Up",
+        "name": "Karina Rodríguez",
+        "original_name": "Karina Rodríguez",
+        "popularity": 0.0482,
+        "profile_path": null,
+        "credit_id": "69f612aa78de8e45f02a4656",
+        "department": "Costume & Make-Up",
+        "job": "Makeup Designer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1153234,
+        "known_for_department": "Sound",
+        "name": "Tomás Barreiro",
+        "original_name": "Tomás Barreiro",
+        "popularity": 0.1678,
+        "profile_path": "/ufLQjCd9arjUlORliYB6sqx78Dw.jpg",
+        "credit_id": "69f64651946521a81460a90d",
+        "department": "Sound",
+        "job": "Original Music Composer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1731655,
+        "known_for_department": "Production",
+        "name": "Joe Pirro",
+        "original_name": "Joe Pirro",
+        "popularity": 0.1737,
+        "profile_path": null,
+        "credit_id": "69f6465a175222ad1a3a4574",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1075100,
+        "known_for_department": "Production",
+        "name": "Juan de Dios Larraín",
+        "original_name": "Juan de Dios Larraín",
+        "popularity": 0.6226,
+        "profile_path": null,
+        "credit_id": "69f6465ca790c9be5a38d330",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 225009,
+        "known_for_department": "Directing",
+        "name": "Пабло Ларраин",
+        "original_name": "Pablo Larraín",
+        "popularity": 1.3185,
+        "profile_path": "/4vP5MatNdE6Ku1iJbboWZPya18b.jpg",
+        "credit_id": "69f6465de2e444c38ddb3d67",
+        "department": "Production",
+        "job": "Executive Producer"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1663922,
+        "known_for_department": "Production",
+        "name": "Rocío Jadue",
+        "original_name": "Rocío Jadue",
+        "popularity": 0.1637,
+        "profile_path": null,
+        "credit_id": "69f6465ecd81ced6c938d335",
+        "department": "Production",
+        "job": "Executive Producer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt40660080",
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 6078,
+        "name": "politics"
+      },
+      {
+        "id": 290159,
+        "name": "tragicomedy"
+      },
+      {
+        "id": 360073,
+        "name": "méxico"
+      }
+    ]
+  }
+}

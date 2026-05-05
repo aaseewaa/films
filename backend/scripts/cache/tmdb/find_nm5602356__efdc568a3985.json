@@ -1,0 +1,80 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2151890,
+      "name": "Adrià Guxens",
+      "original_name": "Adrià Guxens",
+      "media_type": "person",
+      "popularity": 0.0071,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/slvjW496dJrXiSz3h9dklaINN53.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/ulsFK6XNrdAkk4Rl743OshboIOe.jpg",
+          "id": 554392,
+          "title": "An Instant",
+          "original_title": "Un instante",
+          "overview": "Hugo is a boy who lives anchored in the routine, focused on his tasks and responsibilities. Unable to look forward, he lets opportunities pass, stalling in the past. On the contrary, Cosmo is a free soul that lives without looking back, always going from one place to another no matter where. One summer afternoon their gazes cross by chance. It is only an instant, but it will be the birth of a relationship that will make them stop for the first time to live the present.",
+          "poster_path": "/o4DTNbTEIcGNfuKi1cQiK9AJ7vc.jpg",
+          "media_type": "movie",
+          "original_language": "es",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.0872,
+          "release_date": "2017-11-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 7
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vP7Wnjx4NbFAS3TSEMQghkLzwyZ.jpg",
+          "id": 767043,
+          "title": "Bittersweet Memories",
+          "original_title": "Bittersweet Memories",
+          "overview": "Two lovers want to meet again after years without seeing each other. Love, time and space in a tribute to the cinema of Wong Kar-wai.",
+          "poster_path": "/reh44PJNThxdJUk8p5HuVpPuyqf.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10749,
+            28
+          ],
+          "popularity": 0.0338,
+          "release_date": "2016-12-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.3,
+          "vote_count": 3
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 743195,
+          "title": "Sombras",
+          "original_title": "Sombras",
+          "overview": "",
+          "poster_path": "/zT7xogC8yq9L1fgD6JURGzijvQd.jpg",
+          "media_type": "movie",
+          "original_language": "es",
+          "genre_ids": [],
+          "popularity": 0.0286,
+          "release_date": "",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 1
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

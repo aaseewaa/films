@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 30249,
+      "name": "Preston Sturges",
+      "original_name": "Preston Sturges",
+      "media_type": "person",
+      "popularity": 0.7244,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/bnJQaN0KONTCmSGvCNuI2HGtmxm.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/7E4b9mXU9psvGbqCbI0aGEGI1oO.jpg",
+          "id": 16305,
+          "title": "Sullivan's Travels",
+          "original_title": "Sullivan's Travels",
+          "overview": "Successful movie director John L. Sullivan, convinced he won't be able to film his ambitious masterpiece until he has suffered, dons a hobo disguise and sets off on a journey, aiming to \"know trouble\" first-hand. When all he finds is a train ride back to Hollywood and a beautiful blonde companion, he redoubles his efforts, managing to land himself in more trouble than he bargained for when he loses his memory and ends up a prisoner on a chain gang.",
+          "poster_path": "/z5cqIM0ysVjkCmaDfyTQnlozdIp.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749,
+            12
+          ],
+          "popularity": 1.6137,
+          "release_date": "1941-11-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 508
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7nL4SLErtTIU9lO1ZZMNIJYH0XD.jpg",
+          "id": 3086,
+          "title": "The Lady Eve",
+          "original_title": "The Lady Eve",
+          "overview": "It's no accident when wealthy Charles falls for Jean. Jean is a con artist with her sights set on Charles' fortune. Matters complicate when Jean starts falling for her mark. When Charles suspects Jean is a gold digger, he dumps her. Jean, fixated on revenge and still pining for the millionaire, devises a plan to get back in Charles' life. With love and payback on her mind, she re-introduces herself to Charles, this time as an aristocrat named Lady Eve Sidwich.",
+          "poster_path": "/lJYD3CMgKtv12hazSHc7xt3i2uq.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 1.6412,
+          "release_date": "1941-02-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.249,
+          "vote_count": 394
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2b999zCG0DGjePd9fpA2keMspey.jpg",
+          "id": 32255,
+          "title": "The Palm Beach Story",
+          "original_title": "The Palm Beach Story",
+          "overview": "A New York inventor, Tom Jeffers, needs cash to develop his big idea, so his adoring wife, Gerry, decides to raise it by divorcing him and marrying an eccentric Florida millionaire, J. D. Hackensacker III.",
+          "poster_path": "/vl3MVnrUsCa0wRsFTVU0ohbtWy6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 1.5895,
+          "release_date": "1942-08-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 209
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

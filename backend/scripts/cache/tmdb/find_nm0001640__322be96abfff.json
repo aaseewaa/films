@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 9309,
+      "name": "Richard Pryor",
+      "original_name": "Richard Pryor",
+      "media_type": "person",
+      "popularity": 1.8572,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/jiZvAiCEcqYSiqdNYzVbHBqbc3B.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/e39yv0bmJMt8w0nD0hMGdZuTjkn.jpg",
+          "id": 11185,
+          "title": "See No Evil, Hear No Evil",
+          "original_title": "See No Evil, Hear No Evil",
+          "overview": "A murder takes place in the shop of David Lyons, a deaf man who fails to hear the gunshot being fired. Outside, blind man Wally Karue hears the shot, but cannot see the perpetrator. Both are arrested, but escape to form an unlikely partnership. Being chased by both the law AND the original killers, can the pair work together to outwit them all?",
+          "poster_path": "/e9JrnUotqhKTUQEgg2UzDQ7nME2.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            80
+          ],
+          "popularity": 2.7854,
+          "release_date": "1989-05-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.764,
+          "vote_count": 1067
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ui3oiC5mdwxTPZSLBvqoBqckTQ4.jpg",
+          "id": 9531,
+          "title": "Superman III",
+          "original_title": "Superman III",
+          "overview": "Aiming to defeat the Man of Steel, wealthy executive Ross Webster hires bumbling but brilliant Gus Gorman to develop synthetic kryptonite, which yields some unexpected psychological effects. Between rekindling romance with his high school sweetheart and saving himself, Superman must contend with a powerful supercomputer.",
+          "poster_path": "/icE00hFNg86z3OrWyyRop7khwii.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            878,
+            28,
+            12
+          ],
+          "popularity": 3.7081,
+          "release_date": "1983-06-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.507,
+          "vote_count": 1865
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8GpgULyRKKeL3UuTi3NudqTazQy.jpg",
+          "id": 11064,
+          "title": "Brewster's Millions",
+          "original_title": "Brewster's Millions",
+          "overview": "Monty Brewster, an aging minor-league baseball player, stands to inherit $300 million if he can successfully spend $30 million in 30 days without anything to show for it, and without telling anyone what he's up to... A task that's a lot harder than it sounds!",
+          "poster_path": "/t4p8r8kfB2jHiK8J36XnfSP8cRO.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 2.583,
+          "release_date": "1985-05-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.6,
+          "vote_count": 655
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

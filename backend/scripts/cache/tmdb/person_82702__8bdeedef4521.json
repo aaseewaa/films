@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "King of Pop",
+    "El Rey del Pop",
+    "Michael Joseph Jackson"
+  ],
+  "biography": "Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American recording artist, dancer, singer-songwriter, musician, and philanthropist. Referred to as the King of Pop, Jackson is recognized as the most successful entertainer of all time by Guinness World Records. His contribution to music, dance, and fashion, along with a much-publicized personal life, made him a global figure in popular culture for over four decades.\n\nDescription above from the Wikipedia article Michael Jackson, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+  "birthday": "1958-08-29",
+  "deathday": "2009-06-25",
+  "gender": 2,
+  "homepage": "https://www.michaeljackson.com",
+  "id": 82702,
+  "imdb_id": "nm0001391",
+  "known_for_department": "Acting",
+  "name": "Michael Jackson",
+  "place_of_birth": "Gary, Indiana, USA",
+  "popularity": 4.0228,
+  "profile_path": "/oc5FWwO5VYBjkKkIHTxoCtFXJ1G.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/09889g",
+    "freebase_id": "/en/michael_jackson",
+    "imdb_id": "nm0001391",
+    "tvrage_id": 73033,
+    "wikidata_id": "Q2831",
+    "facebook_id": "michaeljackson",
+    "instagram_id": "michaeljackson",
+    "tiktok_id": null,
+    "twitter_id": "michaeljackson",
+    "youtube_id": "MichaelJackson"
+  }
+}

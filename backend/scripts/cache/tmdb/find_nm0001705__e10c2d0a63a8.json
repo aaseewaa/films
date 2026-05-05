@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 60949,
+      "name": "Rob Schneider",
+      "original_name": "Rob Schneider",
+      "media_type": "person",
+      "popularity": 2.691,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/kVHNFDOGDrC3LjDyYf5RaCd6auK.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gHmR2WIqPqrFzPxqknlOEOgbrrl.jpg",
+          "id": 1824,
+          "title": "50 First Dates",
+          "original_title": "50 First Dates",
+          "overview": "Henry is a player skilled at seducing women. But when this veterinarian meets Lucy, a girl with a quirky problem when it comes to total recall, he realizes it's possible to fall in love all over again…and again, and again. That's because the delightful Lucy has no short-term memory, so Henry must woo her day after day until he finally sweeps her off her feet.",
+          "poster_path": "/lzUI2Cg7OMfcUNv3f7MywYNBjs6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 8.5102,
+          "release_date": "2004-02-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.872,
+          "vote_count": 7686
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vK8uTRjiNkJ7P2VINNLxYWiiw0z.jpg",
+          "id": 11852,
+          "title": "The Hot Chick",
+          "original_title": "The Hot Chick",
+          "overview": "Not only is Jessica Spencer the most popular girl in school -- she is also the meanest. But things change for the attractive teen when a freak accident involving a cursed pair of earrings and a chance encounter at a gas station causes her to switch bodies with Clive, a sleazy crook. Jessica, in the form of the repulsive Clive, struggles to adjust to this radical alteration and sets out to get her own body back before the upcoming prom.",
+          "poster_path": "/lnnGE4TKa05t20SZ2batuAhXCp4.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            14
+          ],
+          "popularity": 7.1917,
+          "release_date": "2002-12-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.359,
+          "vote_count": 2158
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/per5h5iqTtwQ27nrk6YF2Hwe39T.jpg",
+          "id": 10402,
+          "title": "Deuce Bigalow: Male Gigolo",
+          "original_title": "Deuce Bigalow: Male Gigolo",
+          "overview": "Deuce Bigalow is a less than attractive, down on his luck aquarium cleaner. One day he wrecks the house of a gigolo and needs quick money to repair it. The only way he can make it is to become a gigolo himself, taking on an unusual mix of female clients. He encounters a couple of problems, though. He falls in love with one of his unusual clients, and a sleazy police officer is hot on his trail.",
+          "poster_path": "/w0UKAcY4fAPuQW2GhAoIMwutIA5.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 5.1843,
+          "release_date": "1999-12-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.978,
+          "vote_count": 1532
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

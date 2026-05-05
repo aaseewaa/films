@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "William Charles Merrick"
+  ],
+  "biography": "",
+  "birthday": "1993-04-09",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1221073,
+  "imdb_id": "nm4465864",
+  "known_for_department": "Acting",
+  "name": "Уилл Меррик",
+  "place_of_birth": "Ledbury, Herefordshire, England, UK",
+  "popularity": 0.6479,
+  "profile_path": "/3IVuzHqE8FIBV679o4VGrZInpsE.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0h_bh5r",
+    "freebase_id": null,
+    "imdb_id": "nm4465864",
+    "tvrage_id": null,
+    "wikidata_id": "Q1059231",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "will_merrick",
+    "youtube_id": null
+  }
+}

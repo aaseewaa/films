@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    " Neal Bhattacharya",
+    "Aarya Bhatta"
+  ],
+  "biography": "",
+  "birthday": "1970-10-14",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1252557,
+  "imdb_id": null,
+  "known_for_department": "Acting",
+  "name": "Indraneel Bhattacharya",
+  "place_of_birth": "Bombay, Maharashtra, India",
+  "popularity": 0.2139,
+  "profile_path": null,
+  "external_ids": {
+    "freebase_mid": "/m/0n9pr32",
+    "freebase_id": null,
+    "imdb_id": null,
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Bob Zemeckis",
+    "Robert Lee Zemeckis"
+  ],
+  "biography": "Роберт Земекис\n\nАмериканский кинорежиссёр, сценарист и продюсер. Лауреат премии «Оскар» в категории «Лучший режиссёр». Постановщик знаковых картин: «Форрест Гамп», «Контакт», «Изгой», «Кто подставил кролика Роджера», «Прогулка» и трилогии «Назад в будущее»",
+  "birthday": "1951-05-14",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 24,
+  "imdb_id": "nm0000709",
+  "known_for_department": "Directing",
+  "name": "Роберт Земекис",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 2.7294,
+  "profile_path": "/lPYDQ5LYNJ12rJZENtyASmVZ1Ql.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01f7j9",
+    "freebase_id": "/en/robert_zemeckis",
+    "imdb_id": "nm0000709",
+    "tvrage_id": 10788,
+    "wikidata_id": "Q187364",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

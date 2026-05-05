@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1044515,
+      "name": "Regina Spektor",
+      "original_name": "Regina Spektor",
+      "media_type": "person",
+      "popularity": 0.6599,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/ztA4wbKIUdVgMDzBOYxBhXa6mOU.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gWsseHW73OOKvmZFoAff91xgj09.jpg",
+          "id": 549551,
+          "title": "Echo in the Canyon",
+          "original_title": "Echo in the Canyon",
+          "overview": "A look at the roots of the historic music scene in L.A.'s Laurel Canyon featuring the music of iconic music groups such as The Byrds, The Beach Boys, Buffalo Springfield, and The Mamas and the Papas.",
+          "poster_path": "/58ppMUxWFKHnGXfZUoWhhi8CVMR.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99,
+            10402
+          ],
+          "popularity": 0.9318,
+          "release_date": "2019-05-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 44
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 52554,
+          "title": "Regina Spektor: Live in London",
+          "original_title": "Regina Spektor: Live in London",
+          "overview": "“Regina Spektor: Live in London” — that’s what it’s called, and that’s what you get. Eighteen songs, performed in December 2009 at the Hammersmith Apollo, with an absolute minimum of onstage chatter and dollops of stylishly grainy, MTV-like filler: Ms. Spektor on the plane from New York, driving through London, applying makeup before the show. It’s perfectly tasteful, a fine showcase for her music and, more important, a fine promotional tool for the accompanying CD and DVD (which — surprise — contain four additional songs).",
+          "poster_path": "/aHUr6IWmalVNr8tAYmCxOfHekim.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10402
+          ],
+          "popularity": 0.0793,
+          "release_date": "2010-11-22",
+          "softcore": false,
+          "video": true,
+          "vote_average": 7.1,
+          "vote_count": 4
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8zVq7TvUQ58U7qXuatvsK99MELL.jpg",
+          "id": 595890,
+          "title": "Other Music",
+          "original_title": "Other Music",
+          "overview": "A documentary highlighting the 20 year history of influential indie record store Other Music in Manhattan's East Village.",
+          "poster_path": "/dFQnkjAQSJ4TJkxm5YC20QvdggX.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.094,
+          "release_date": "2019-04-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.7,
+          "vote_count": 15
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

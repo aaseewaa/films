@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Piya"
+  ],
+  "biography": "",
+  "birthday": "1961-08-16",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 1102,
+  "imdb_id": "nm0001990",
+  "known_for_department": "Acting",
+  "name": "Эльпидия Каррильо",
+  "place_of_birth": "Paracuaro, Michoacan, Mexico",
+  "popularity": 1.5523,
+  "profile_path": "/u8ZEUAUdVjUE8DTddv81rE1Qer7.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0432lv",
+    "freebase_id": "/en/elpidia_carrillo",
+    "imdb_id": "nm0001990",
+    "tvrage_id": 634,
+    "wikidata_id": "Q455010",
+    "facebook_id": null,
+    "instagram_id": "elpidiacarrillo",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

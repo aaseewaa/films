@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2662,
+      "name": "Frank Capra",
+      "original_name": "Frank Capra",
+      "media_type": "person",
+      "popularity": 0.9087,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/1OTZ7CEdEawDgA4qiBidpWTKE2x.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3q35nBLCIdEbxYfsr7D5ocYQXKz.jpg",
+          "id": 1585,
+          "title": "It's a Wonderful Life",
+          "original_title": "It's a Wonderful Life",
+          "overview": "George Bailey has spent his entire life giving to the people of Bedford Falls.  All that prevents rich skinflint Mr. Potter from taking over the entire town is George's modest building and loan company.  But on Christmas Eve the business's $8,000 is lost and George's troubles begin.",
+          "poster_path": "/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10751,
+            14
+          ],
+          "popularity": 9.948,
+          "release_date": "1946-12-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.3,
+          "vote_count": 4869
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hmiC0MsI0PDd1TJXC62xyw0tX0s.jpg",
+          "id": 3078,
+          "title": "It Happened One Night",
+          "original_title": "It Happened One Night",
+          "overview": "A runaway heiress makes a deal with the rogue reporter trailing her but the mismatched pair end up stuck with each other when their bus leaves them behind.",
+          "poster_path": "/2PNUGWAflH6UUumas0POMmokHlc.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 2.7071,
+          "release_date": "1934-02-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.8,
+          "vote_count": 1394
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4HagjGPF6dMGYlmx7mEfjLV2kQ0.jpg",
+          "id": 3083,
+          "title": "Mr. Smith Goes to Washington",
+          "original_title": "Mr. Smith Goes to Washington",
+          "overview": "After the death of a United States Senator, idealistic Jefferson Smith is appointed as his replacement in Washington. Soon, the naive and earnest new senator has to battle political corruption.",
+          "poster_path": "/nDjg1fbNyq15excNDl3acd2IqAk.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 2.3613,
+          "release_date": "1939-10-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.828,
+          "vote_count": 1187
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

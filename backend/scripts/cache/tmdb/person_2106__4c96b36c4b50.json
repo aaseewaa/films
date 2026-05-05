@@ -1,0 +1,35 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Walter Elias Disney",
+    "Retlaw Elias Yensid",
+    "Retlaw Yensid",
+    "วอลเตอร์ อีเลียส ดิสนีย์",
+    "วอลต์ ดิสนีย์",
+    "والت دیزنی"
+  ],
+  "biography": "",
+  "birthday": "1901-12-05",
+  "deathday": "1966-12-15",
+  "gender": 2,
+  "homepage": null,
+  "id": 2106,
+  "imdb_id": "nm0000370",
+  "known_for_department": "Production",
+  "name": "Уолт Дисней",
+  "place_of_birth": "Hermosa, Chicago, Illinois, USA",
+  "popularity": 2.1617,
+  "profile_path": "/fnB3Yt4dPiVODHzfLwntISAvbhw.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/081nh",
+    "freebase_id": "/en/walt_disney",
+    "imdb_id": "nm0000370",
+    "tvrage_id": 29090,
+    "wikidata_id": "Q8704",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

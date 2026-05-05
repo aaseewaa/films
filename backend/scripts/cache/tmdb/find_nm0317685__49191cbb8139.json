@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1296915,
+      "name": "Serge Giguère",
+      "original_name": "Serge Giguère",
+      "media_type": "person",
+      "popularity": 0.0544,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/jXhnhtYOEGVOd3uvRxRBCKH2o9R.jpg",
+          "id": 512281,
+          "title": "My Mother's Letters",
+          "original_title": "Les lettres de ma mère",
+          "overview": "In this very personal and poetic film, veteran documentarian Serge Giguère pores through 100 letters written by his late mother to him and his 15 siblings. In them, she details the trials and tribulations of raising 16 children in rural Quebec, while helping to run a family carpentry business.",
+          "poster_path": "/kiJ5p4d14JA3aQD6WBFjjnYYZxO.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.1059,
+          "release_date": "2018-03-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 3
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 314668,
+          "title": "Finding Macpherson",
+          "original_title": "Le Mystère de Macpherson",
+          "overview": "Years after first being inspired by a Félix Leclerc song, Martine Chartrand directed the film MACPHERSON. Ten years in the making, it features animated painting on glass and draws on her extensive research on the title character. Filmmaker Serge Giguère was there from the start, carefully and sympathetically chronicling this exceptional creative process.",
+          "poster_path": "/gVByc41NvenmEpl1h6tbsrfUvnT.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.1481,
+          "release_date": "2014-09-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 952916,
+          "title": "Oscar Thiffault",
+          "original_title": "Oscar Thiffault",
+          "overview": "A documentary about the folk country musician Oscar Thiffault, the famous songwriter of Le Rapide blanc.",
+          "poster_path": "/fb1aNPcOcXTP6vVIEIGDDzcdJ21.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0786,
+          "release_date": "1987-06-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 1
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

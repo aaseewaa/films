@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "تیلور جیمز"
+  ],
+  "biography": "Taylor James (born 26 January 1980) is a British actor.",
+  "birthday": "1980-01-26",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://waringandmckenna.com/clients/taylor-james/",
+  "id": 1497913,
+  "imdb_id": "nm2837751",
+  "known_for_department": "Acting",
+  "name": "Taylor James",
+  "place_of_birth": "Sevenoaks, Kent, England, UK",
+  "popularity": 1.1996,
+  "profile_path": "/sMMCf0O7GcbJZoxmyWAbU6CsN6B.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2837751",
+    "tvrage_id": null,
+    "wikidata_id": "Q65168792",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

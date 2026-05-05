@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "אליין מוסי"
+  ],
+  "biography": "",
+  "birthday": "1981-03-29",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1427888,
+  "imdb_id": "nm3857692",
+  "known_for_department": "Crew",
+  "name": "Ален Мусси",
+  "place_of_birth": "Libreville, Estuaire, Gabon",
+  "popularity": 1.0071,
+  "profile_path": "/cIpMdm0ggxVmZIBVj7vz8Q8nPLT.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3857692",
+    "tvrage_id": null,
+    "wikidata_id": "Q19394566",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

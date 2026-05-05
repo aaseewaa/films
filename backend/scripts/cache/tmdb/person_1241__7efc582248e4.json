@@ -1,0 +1,35 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Michael Turturro",
+    "约翰·特托罗",
+    "Джон Туртурро",
+    "존 터투로",
+    "約翰·特托羅",
+    "جان تورتورو"
+  ],
+  "biography": "",
+  "birthday": "1957-02-28",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1241,
+  "imdb_id": "nm0001806",
+  "known_for_department": "Acting",
+  "name": "Джон Туртурро",
+  "place_of_birth": "Brooklyn, New York City, New York, USA",
+  "popularity": 2.5769,
+  "profile_path": "/63zA58rSyJxBMLBdgeMjjETmpDQ.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01swck",
+    "freebase_id": "/en/john_turturro",
+    "imdb_id": "nm0001806",
+    "tvrage_id": 64764,
+    "wikidata_id": "Q244234",
+    "facebook_id": null,
+    "instagram_id": "john_turturro",
+    "tiktok_id": null,
+    "twitter_id": "Johnturturro28",
+    "youtube_id": null
+  }
+}

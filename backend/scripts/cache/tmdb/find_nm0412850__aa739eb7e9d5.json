@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1926,
+      "name": "Suzy Eddie Izzard",
+      "original_name": "Suzy Eddie Izzard",
+      "media_type": "person",
+      "popularity": 3.0051,
+      "gender": 3,
+      "known_for_department": "Acting",
+      "profile_path": "/6mUPuQt6ofMBHxHJQmF3Dj1nYmH.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/4BS8tgBNWg2jPiDlBwM2iJe1xB7.jpg",
+          "id": 49013,
+          "title": "Cars 2",
+          "original_title": "Cars 2",
+          "overview": "Star race car Lightning McQueen and his pal Mater head overseas to compete in the World Grand Prix race. But the road to the championship becomes rocky as Mater gets caught up in an intriguing adventure of his own: international espionage.",
+          "poster_path": "/okIz1HyxeVOMzYwwHUjH2pHi74I.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            12,
+            35
+          ],
+          "popularity": 17.5324,
+          "release_date": "2011-06-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.176,
+          "vote_count": 8434
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/9pBv1BOSloAUgAkF0meJWdnbV4Q.jpg",
+          "id": 2454,
+          "title": "The Chronicles of Narnia: Prince Caspian",
+          "original_title": "The Chronicles of Narnia: Prince Caspian",
+          "overview": "One year after their incredible adventures in the Lion, the Witch and the Wardrobe, Peter, Edmund, Lucy and Susan Pevensie return to Narnia to aid a young prince whose life has been threatened by the evil King Miraz. Now, with the help of a colorful cast of new characters, including Trufflehunter the badger and Nikabrik the dwarf, the Pevensie clan embarks on an incredible quest to ensure that Narnia is returned to its rightful heir.",
+          "poster_path": "/qxz3WIyjZiSKUhaTIEJ3c1GcC9z.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            10751,
+            14
+          ],
+          "popularity": 6.9342,
+          "release_date": "2008-05-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.629,
+          "vote_count": 6736
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jXk3ZMq7n4ugOqKYq0CtMn3gia8.jpg",
+          "id": 431580,
+          "title": "Abominable",
+          "original_title": "Abominable",
+          "overview": "A group of misfits encounter a young Yeti named Everest, and they set off to reunite the magical creature with his family on the mountain of his namesake.",
+          "poster_path": "/20djTLqppfBx5WYA67Y300S6aPD.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            16,
+            12,
+            35,
+            14
+          ],
+          "popularity": 4.1821,
+          "release_date": "2019-09-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 2168
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

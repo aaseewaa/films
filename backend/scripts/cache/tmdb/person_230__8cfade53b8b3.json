@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Steven McHattie",
+    "Steve McHattie",
+    "Stephen McHattie Smith"
+  ],
+  "biography": "",
+  "birthday": "1947-02-03",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 230,
+  "imdb_id": "nm0565569",
+  "known_for_department": "Acting",
+  "name": "Стивен МакХэтти",
+  "place_of_birth": " Antigonish, Nova Scotia, Canada",
+  "popularity": 2.036,
+  "profile_path": "/zqOwiEDXYM9AKQgHGJGeIp7QkPh.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0fs9jn",
+    "freebase_id": "/en/stephen_mchattie",
+    "imdb_id": "nm0565569",
+    "tvrage_id": 16715,
+    "wikidata_id": "Q1321265",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

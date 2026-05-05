@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Elizabeth Ann Perkins"
+  ],
+  "biography": "",
+  "birthday": "1960-11-18",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 20,
+  "imdb_id": "nm0001610",
+  "known_for_department": "Acting",
+  "name": "Элизабет Перкинс",
+  "place_of_birth": "Queens, New York USA",
+  "popularity": 3.5272,
+  "profile_path": "/vTWYllD9V76rgv9XAbtkkjjeunG.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01x6jd",
+    "freebase_id": "/en/elizabeth_perkins",
+    "imdb_id": "nm0001610",
+    "tvrage_id": 48852,
+    "wikidata_id": "Q232047",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

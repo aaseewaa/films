@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 141559,
+      "name": "Enrico Caria",
+      "original_name": "Enrico Caria",
+      "media_type": "person",
+      "popularity": 0.0922,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/6qupvfKpIRYr8bJ5451yQzmhTXn.jpg",
+          "id": 114911,
+          "title": "Blek Giek",
+          "original_title": "Blek Giek",
+          "overview": "",
+          "poster_path": "/xseqfOl8SeTC29suqJpmLpPhEqY.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35,
+            80
+          ],
+          "popularity": 0.7681,
+          "release_date": "2002-09-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.053,
+          "vote_count": 19
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 414681,
+          "title": "The Man Who Didn't Change History",
+          "original_title": "L'uomo che non cambiò la storia",
+          "overview": "The \"man who didn't change history\" was a university professor: Ranuccio Bianchi Bandinelli, esteemed Italian scholar of Roman art and a founding father of modern archaeology. A figure that the Fascist regime could be proud of, in the 1930s, if it weren't for the fact that the professor was firmly anti-Fascist. Things came to a head over Hitler's famous journey to Italy in 1938, when Bandinelli was courteously invited to accompany Mussolini and the Führer, serving as tour guide and interpreter at the museums and archaeological sites. Now the dilemma arose: don the uniform and salute the two detested dictators, or compromise a lifetime of study, his career and even his personal safety? When the invitation turned into a peremptory order that Bandinelli couldn't refuse, he no longer had a choice.",
+          "poster_path": "/ge6kr16qCvj0n9HNjnp5rc8PsLp.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0416,
+          "release_date": "2016-09-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 1
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 48939,
+          "title": "Vedi Napoli e poi muori",
+          "original_title": "Vedi Napoli e poi muori",
+          "overview": "Taking inspiration from Michael Moore's Bowling for Columbine, Enrico Caria reflects at length on his native country—on the Camorra and the possible existence of the so-called \"two cities\"—giving life, color, and words to the documentary film Vedi Napoli e poi muori (See Naples and then die). The title is deliberately provocative because it uses the famous saying to denounce the countless murders committed by the Camorra, which reigns supreme in Naples and its surroundings.",
+          "poster_path": null,
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0143,
+          "release_date": "2006-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 1
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

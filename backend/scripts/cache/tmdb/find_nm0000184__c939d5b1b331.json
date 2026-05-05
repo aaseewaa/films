@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1,
+      "name": "George Lucas",
+      "original_name": "George Lucas",
+      "media_type": "person",
+      "popularity": 3.1942,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/mDLDvsx8PaZoEThkBdyaG1JxPdf.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+          "id": 11,
+          "title": "Star Wars",
+          "original_title": "Star Wars",
+          "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+          "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "popularity": 30.5056,
+          "release_date": "1977-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.203,
+          "vote_count": 22226
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ziECpBRIyclmBNaFSWlvCfsKbMD.jpg",
+          "id": 1892,
+          "title": "Return of the Jedi",
+          "original_title": "Return of the Jedi",
+          "overview": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mounts a massive attack on the space station. Luke Skywalker confronts Darth Vader in a final climactic duel before the evil Emperor.",
+          "poster_path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "popularity": 9.3058,
+          "release_date": "1983-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.907,
+          "vote_count": 16860
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3TeGmKJfkik1D1rIoqGb1aR4k9c.jpg",
+          "id": 1893,
+          "title": "Star Wars: Episode I - The Phantom Menace",
+          "original_title": "Star Wars: Episode I - The Phantom Menace",
+          "overview": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+          "poster_path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "popularity": 12.2949,
+          "release_date": "1999-05-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.573,
+          "vote_count": 15755
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

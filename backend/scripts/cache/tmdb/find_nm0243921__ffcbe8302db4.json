@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 29905,
+      "name": "Marguerite Duras",
+      "original_name": "Marguerite Duras",
+      "media_type": "person",
+      "popularity": 0.5758,
+      "gender": 1,
+      "known_for_department": "Directing",
+      "profile_path": "/3VxhnVjV5G86aIOhqFrTHC3aGXL.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/fBh1T0i1ODGiD8BNcQ4VGfdfTeN.jpg",
+          "id": 85927,
+          "title": "India Song",
+          "original_title": "India Song",
+          "overview": "Anne-Marie Stretter, the wife of a French diplomat in 1930s India, takes many lovers to relieve the boredom in her life.",
+          "poster_path": "/kCAla6EHtwymFS73o0Gu3lRbGMl.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.9198,
+          "release_date": "1975-06-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.354,
+          "vote_count": 89
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wMX6vBbg45NsRnT4Vx4MS1eQofq.jpg",
+          "id": 65719,
+          "title": "Baxter, Vera Baxter",
+          "original_title": "Baxter, Vera Baxter",
+          "overview": "In an empty villa, Vera Baxter sits and contemplates her life, as she recounts to a woman who was drawn to the villa when she heard the name Vera Baxter pronounced. Vera tells her about her no-good husband, who has been using her to keep his failing business afloat, up to her present love affair.",
+          "poster_path": "/xaLdvNsiYZAfCv9S6ocFETE4X1f.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            9648,
+            18
+          ],
+          "popularity": 0.3318,
+          "release_date": "1977-06-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.672,
+          "vote_count": 32
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/r8xJMWhI1Yr55x7ibHSLBwOtVkP.jpg",
+          "id": 4747,
+          "title": "Nathalie Granger",
+          "original_title": "Nathalie Granger",
+          "overview": "With little or no embellishment, filmmaker Marguerite Duras offers a simple, often wordless chronicle of a woman's day. She and her friend are seen doing yard work, talking about their families and receiving the occasional visitor. The brightest spot in the day is when a washing machine salesman comes to call.",
+          "poster_path": "/c5yrKbNHG67C0HggbcJw0OMIhAH.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.4213,
+          "release_date": "1973-09-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.125,
+          "vote_count": 28
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

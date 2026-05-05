@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 19303,
+      "name": "Kevin Smith",
+      "original_name": "Kevin Smith",
+      "media_type": "person",
+      "popularity": 2.5561,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/g8sC36zUTkSTh7y9HjWa4Rbr0JP.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gFkHcIh7iE5G0oVOgpmY8ONQjhl.jpg",
+          "id": 60735,
+          "name": "The Flash",
+          "original_name": "The Flash",
+          "overview": "After being struck by lightning, CSI investigator Barry Allen awakens from a nine-month coma to discover he has been  granted the gift of super speed.  Teaming up with S.T.A.R. Labs, Barry takes on the persona of The Flash, the Fastest  Man Alive, to protect his city.",
+          "poster_path": "/yZevl2vHQgmosfwUdVNzviIfaWS.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10765
+          ],
+          "popularity": 99.4332,
+          "first_air_date": "2014-10-07",
+          "softcore": false,
+          "vote_average": 7.759,
+          "vote_count": 11573,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hTnMOqUxYWSXqggzlY13NATnuTv.jpg",
+          "id": 62688,
+          "name": "Supergirl",
+          "original_name": "Supergirl",
+          "overview": "Twenty-four-year-old Kara Zor-El, who was taken in by the Danvers family when she was 13 after being sent away from Krypton, must learn to embrace her powers after previously hiding them. The Danvers teach her to be careful with her powers, until she has to reveal them during an unexpected disaster, setting her on her journey of heroism.",
+          "poster_path": "/cFO65xb0xiXKqk5BmgHawCXB1i0.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10765,
+            10759
+          ],
+          "popularity": 46.0664,
+          "first_air_date": "2015-10-26",
+          "softcore": false,
+          "vote_average": 7.281,
+          "vote_count": 4364,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nljRWpjfmqh5qYxcblFoazU5eYY.jpg",
+          "id": 1832,
+          "title": "Dogma",
+          "original_title": "Dogma",
+          "overview": "An abortion clinic worker with a special heritage is called upon to save the existence of humanity from being negated by two renegade angels trying to exploit a loophole and reenter Heaven.",
+          "poster_path": "/oxhHl2YokTqcP44QK5tiTgjgLgk.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            35,
+            12
+          ],
+          "popularity": 5.0683,
+          "release_date": "1999-10-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.931,
+          "vote_count": 2825
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

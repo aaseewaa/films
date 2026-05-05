@@ -1,0 +1,88 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 14520,
+      "name": "John Sturges",
+      "original_name": "John Sturges",
+      "media_type": "person",
+      "popularity": 1.1142,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/bV2L3Mk9VGbZzBT3zEoL3C7PV82.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3K0jhgkLebbkf5ANbfkplu1SmhU.jpg",
+          "id": 5925,
+          "title": "The Great Escape",
+          "original_title": "The Great Escape",
+          "overview": "The Nazis, exasperated at the number of escapes from their prison camps by a relatively small number of Allied prisoners, relocate them to a high-security 'escape-proof' camp to sit out the remainder of the war. Undaunted, the prisoners plan one of the most ambitious escape attempts of World War II. Based on a true story.",
+          "poster_path": "/gBH4H8UMFxl139HaLz6lRuvsel8.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            18,
+            10752
+          ],
+          "popularity": 5.8327,
+          "release_date": "1963-07-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.927,
+          "vote_count": 2826
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2aC3284N1p86o6S4Uyj9AaryYeR.jpg",
+          "id": 966,
+          "title": "The Magnificent Seven",
+          "original_title": "The Magnificent Seven",
+          "overview": "An oppressed Mexican peasant village hires seven gunfighters to help defend their homes.",
+          "poster_path": "/e5ToxOyJwuZD4VOfI0qEn5uIjeJ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            37,
+            28,
+            12
+          ],
+          "popularity": 6.6388,
+          "release_date": "1960-10-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.5,
+          "vote_count": 1972
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/Z5vgrbNhMBVsBnm8EUqSfCVHbW.jpg",
+          "id": 14554,
+          "title": "Bad Day at Black Rock",
+          "original_title": "Bad Day at Black Rock",
+          "overview": "One-armed war veteran John J. Macreedy steps off a train at the sleepy little town of Black Rock.  Once there, he begins to unravel a web of lies, secrecy, and murder.",
+          "poster_path": "/8EnhHjU0DyCckmZRtn46s3WXeEf.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            53,
+            9648,
+            37,
+            18
+          ],
+          "popularity": 1.9297,
+          "release_date": "1955-01-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.315,
+          "vote_count": 418
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

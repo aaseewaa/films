@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Ethan Samuel Slater"
+  ],
+  "biography": "",
+  "birthday": "1992-06-02",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2271410,
+  "imdb_id": "nm5724788",
+  "known_for_department": "Acting",
+  "name": "Итан Слейтер",
+  "place_of_birth": "Washington, D.C., USA",
+  "popularity": 1.455,
+  "profile_path": "/xIgqyrM78FPt7Pb2Vv3IvJcnOWS.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm5724788",
+    "tvrage_id": null,
+    "wikidata_id": "Q47493069",
+    "facebook_id": null,
+    "instagram_id": "ethanslater",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

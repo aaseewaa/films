@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Charlie Johns",
+    "جانکارلو جانینی"
+  ],
+  "biography": "",
+  "birthday": "1942-08-01",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 3753,
+  "imdb_id": "nm0316284",
+  "known_for_department": "Acting",
+  "name": "Джанкарло Джаннини",
+  "place_of_birth": "La Spezia, Liguria, Italy",
+  "popularity": 1.6666,
+  "profile_path": "/xsnoThKUjFlhmvXKS4ZqAx1x3zb.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/015qzv",
+    "freebase_id": "/en/giancarlo_giannini",
+    "imdb_id": "nm0316284",
+    "tvrage_id": 116437,
+    "wikidata_id": "Q315258",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

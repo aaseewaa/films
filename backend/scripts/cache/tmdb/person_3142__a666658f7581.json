@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Marlieb",
+    "Mortimer Leon Marlieb"
+  ],
+  "biography": "",
+  "birthday": "1907-10-17",
+  "deathday": "1984-05-22",
+  "gender": 2,
+  "homepage": null,
+  "id": 3142,
+  "imdb_id": "nm0549134",
+  "known_for_department": "Acting",
+  "name": "Джон Марли",
+  "place_of_birth": "New York City, New York, USA",
+  "popularity": 1.2997,
+  "profile_path": "/xyzwd0CiBjXfowH3HcPhvuWcV5B.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/04yykq",
+    "freebase_id": "/en/john_marley",
+    "imdb_id": "nm0549134",
+    "tvrage_id": 14432,
+    "wikidata_id": "Q946196",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

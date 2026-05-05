@@ -1,0 +1,33 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Gir",
+    "Moebius",
+    "Jean 'Moebius' Giraud",
+    "Jean 'Moëbius' Giraud"
+  ],
+  "biography": "",
+  "birthday": "1938-05-08",
+  "deathday": "2012-03-10",
+  "gender": 2,
+  "homepage": null,
+  "id": 62460,
+  "imdb_id": "nm0320786",
+  "known_for_department": "Art",
+  "name": "Жан Жиро",
+  "place_of_birth": "Nogent, Haute-Marne, France",
+  "popularity": 0.648,
+  "profile_path": "/9tqxRHcABtTFvUnO1Djbu5WeC7f.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/015ty7",
+    "freebase_id": "/en/jean_giraud",
+    "imdb_id": "nm0320786",
+    "tvrage_id": 92360,
+    "wikidata_id": "Q309240",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

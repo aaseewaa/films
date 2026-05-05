@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1946-11-28",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 4600,
+  "imdb_id": "nm0001102",
+  "known_for_department": "Directing",
+  "name": "Джо Данте",
+  "place_of_birth": "Morristown, New Jersey, USA",
+  "popularity": 1.367,
+  "profile_path": "/2Aev68oWboAC31dj8eJnEUzH41x.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/05dhxs",
+    "freebase_id": "/en/joe_dante",
+    "imdb_id": "nm0001102",
+    "tvrage_id": 10702,
+    "wikidata_id": "Q455279",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

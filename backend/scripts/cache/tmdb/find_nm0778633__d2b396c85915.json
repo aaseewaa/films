@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 31894,
+      "name": "Ettore Scola",
+      "original_name": "Ettore Scola",
+      "media_type": "person",
+      "popularity": 0.8927,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/f4Y5YwFwgvTSGHuYqiAKuvCapI8.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/6d7ymk1OWX6AkfkhOnSEfwiqo2y.jpg",
+          "id": 42229,
+          "title": "A Special Day",
+          "original_title": "Una giornata particolare",
+          "overview": "Two neighbours — a persecuted journalist and a resigned housewife — forge a strong bond on the day of Adolf Hitler's historic 1938 visit to Rome.",
+          "poster_path": "/jzRn7N1mFowkQ5IkUkfWoxXJtYU.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.9945,
+          "release_date": "1977-08-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.05,
+          "vote_count": 760
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2Kkqmy3EpXqBDqv1vvsNXX3pwww.jpg",
+          "id": 42269,
+          "title": "We All Loved Each Other So Much",
+          "original_title": "C'eravamo tanto amati",
+          "overview": "Three partisans bound by a strong friendship return home after the war, but the clash with everyday reality puts a strain on their bond.",
+          "poster_path": "/zGGWYpiKNwjpKxelPxOMqJnUgDs.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "popularity": 4.1567,
+          "release_date": "1974-12-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.287,
+          "vote_count": 644
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lZzW1Y6sDGhbnOh8NuMwUlOVVVe.jpg",
+          "id": 19413,
+          "title": "Ugly, Dirty and Bad",
+          "original_title": "Brutti, sporchi e cattivi",
+          "overview": "Giacinto lives with his wife, their ten children and various other family members in a shack on the hills of Rome. Some time ago he has lost his left eye while at work, and got a consistent sum of money from the insurance company, which he keeps hidden from the rest of the family. His whole life is now based on defending the money he sees as his own, while the rest of the family tries to kill him.",
+          "poster_path": "/cn2OXjLPL6m5aj2W26hkkc1GyXm.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 1.2468,
+          "release_date": "1976-09-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.516,
+          "vote_count": 343
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

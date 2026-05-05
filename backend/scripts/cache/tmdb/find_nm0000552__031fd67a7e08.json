@@ -1,0 +1,91 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 776,
+      "name": "Eddie Murphy",
+      "original_name": "Eddie Murphy",
+      "media_type": "person",
+      "popularity": 5.1103,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/qgjMfefsKwSYsyCaIX46uyOXIpy.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/40Wtp7kMG6mZ4d5T1jfrd8qrvD4.jpg",
+          "id": 808,
+          "title": "Shrek",
+          "original_title": "Shrek",
+          "overview": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
+          "poster_path": "/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            14,
+            12,
+            10751
+          ],
+          "popularity": 25.1055,
+          "release_date": "2001-05-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.759,
+          "vote_count": 18645
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8ohobj5lAIbl5XWw11FywS3IRrS.jpg",
+          "id": 809,
+          "title": "Shrek 2",
+          "original_title": "Shrek 2",
+          "overview": "Happily ever after never seemed so far far away when a trip to meet the in-laws turns into a hilariously twisted adventure for Shrek and Fiona. With the help of his faithful Donkey, Shrek takes on a potion-brewing Fairy Godmother, the pompous Prince Charming, and the ogre-killer, Puss In Boots.",
+          "poster_path": "/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            35,
+            14,
+            10749
+          ],
+          "popularity": 11.9717,
+          "release_date": "2004-05-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.311,
+          "vote_count": 13362
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mUYV0ZdsDEliGaQahcQH1F3grsP.jpg",
+          "id": 10674,
+          "title": "Mulan",
+          "original_title": "Mulan",
+          "overview": "When Imperial China calls one man from every family to defend the empire from invading Huns, a young woman disguises herself as a soldier to take her ailing father’s place. Facing ruthless invaders, brutal training, and the risk of execution if discovered, she must decide who she truly is— and what she’s willing to fight for.",
+          "poster_path": "/jAbexAtB0aSfP5Ay4TpWHARyVnG.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            12
+          ],
+          "popularity": 14.1178,
+          "release_date": "1998-06-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.901,
+          "vote_count": 10366
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

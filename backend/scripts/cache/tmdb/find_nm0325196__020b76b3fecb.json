@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 65531,
+      "name": "Eric Goldberg",
+      "original_name": "Eric Goldberg",
+      "media_type": "person",
+      "popularity": 0.8193,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/pqulcFpHW4dBLNUeflN5BY21yTA.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/n92EzFFg2cMkJiEhnMfD5sKHSH3.jpg",
+          "id": 49948,
+          "title": "Fantasia 2000",
+          "original_title": "Fantasia 2000",
+          "overview": "Blending lively music and brilliant animation, this sequel to the original 'Fantasia' restores 'The Sorcerer's Apprentice' and adds seven new shorts.",
+          "poster_path": "/5rwAtUaKEK48CPUijVfVU0IPKPZ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            10402
+          ],
+          "popularity": 3.7653,
+          "release_date": "2000-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.973,
+          "vote_count": 1367
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/iZiYzix7sMS0NEWsHURSzHF1wxt.jpg",
+          "id": 10715,
+          "title": "Looney Tunes: Back in Action",
+          "original_title": "Looney Tunes: Back in Action",
+          "overview": "Fed up with all the attention going to Bugs Bunny, Daffy Duck quits Hollywood, teams up with recently-fired stuntman Damien Drake Jr. and embarks on a round-the-world adventure, along with Bugs and The VP of Warner Bros. Their mission? Find Damien's father, and the missing blue diamond... and stay one step ahead of The Acme Corp., who wants the diamond for their own purposes.",
+          "poster_path": "/q0kntpdsHA0QdYjpQdNBqrVTdQq.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            10751
+          ],
+          "popularity": 3.8632,
+          "release_date": "2003-11-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.357,
+          "vote_count": 1595
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/sTQw7EpiMtyFOopwTLV7DjsNbOx.jpg",
+          "id": 934323,
+          "title": "Mickey: The Story of a Mouse",
+          "original_title": "Mickey: The Story of a Mouse",
+          "overview": "Mickey Mouse is one of the most enduring symbols in our history. Those three simple circles take on meaning for virtually everyone on the planet. So ubiquitous in our lives that he can seem invisible, Mickey is something we all share, with unique memories and feelings. Over the course of his nearly century-long history, Mickey functions like a mirror, reflecting our personal and cultural values back at us. \"Mickey: The Story of a Mouse\" explores Mickey's significance, getting to the core of what Mickey's cultural impact says about each of us and about our world.",
+          "poster_path": "/cYHE9FdgXBFUWvWaIKsDHODDOTS.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.273,
+          "release_date": "2022-03-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.0,
+          "vote_count": 88
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

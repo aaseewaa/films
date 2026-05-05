@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 6648,
+      "name": "Ingmar Bergman",
+      "original_name": "Ingmar Bergman",
+      "media_type": "person",
+      "popularity": 1.4042,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/nkmOaXNRoioViN9OQf2n9Iu6akA.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/6s2BqtDvp1BMiP70zCDU5OW6hMy.jpg",
+          "id": 490,
+          "title": "The Seventh Seal",
+          "original_title": "Det sjunde inseglet",
+          "overview": "When disillusioned Swedish knight Antonius Block returns home from the Crusades to find his country in the grips of the Black Death, he challenges Death to a chess match for his life. Tormented by the belief that God does not exist, Block sets off on a journey, meeting up with traveling players Jof and his wife, Mia, and becoming determined to evade Death long enough to commit one redemptive act while he still lives.",
+          "poster_path": "/wcZ21zrOsy0b52AfAF50XpTiv75.jpg",
+          "media_type": "movie",
+          "original_language": "sv",
+          "genre_ids": [
+            14,
+            18
+          ],
+          "popularity": 4.1377,
+          "release_date": "1957-02-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.157,
+          "vote_count": 3325
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/amr72SENYz7AM4Hq5WBXxFBJEY6.jpg",
+          "id": 797,
+          "title": "Persona",
+          "original_title": "Persona",
+          "overview": "A young nurse, Alma, is put in charge of Elisabeth Vogler: an actress who is seemingly healthy in all respects, but will not talk. As they spend time together, Alma speaks to Elisabeth constantly, never receiving any answer.",
+          "poster_path": "/yPTntWP9Wvew8vHN0jB7Z1EvEUN.jpg",
+          "media_type": "movie",
+          "original_language": "sv",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 3.2552,
+          "release_date": "1966-10-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.133,
+          "vote_count": 2395
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/BBVAUchYvkmPThVIqipgAfabfl.jpg",
+          "id": 614,
+          "title": "Wild Strawberries",
+          "original_title": "Smultronstället",
+          "overview": "Crotchety retired doctor Isak Borg travels from Stockholm to Lund, Sweden, with his pregnant and unhappy daughter-in-law, Marianne, in order to receive an honorary degree from his alma mater. Along the way, they encounter a series of hitchhikers, each of whom causes the elderly doctor to muse upon the pleasures and failures of his own life. These include the vivacious young Sara, a dead ringer for the doctor's own first love.",
+          "poster_path": "/iyTD2QnySNMPUPE3IedZQipSWfz.jpg",
+          "media_type": "movie",
+          "original_language": "sv",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 3.3396,
+          "release_date": "1957-08-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.08,
+          "vote_count": 1798
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

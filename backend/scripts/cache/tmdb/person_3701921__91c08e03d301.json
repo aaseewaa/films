@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Austin Ball",
+    "Austin Bell"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 3701921,
+  "imdb_id": "nm3231817",
+  "known_for_department": "Acting",
+  "name": "R Austin Ball",
+  "place_of_birth": null,
+  "popularity": 0.1566,
+  "profile_path": "/mOJ21pdMtbN2jyw6MbspITvgmnj.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3231817",
+    "tvrage_id": null,
+    "wikidata_id": "Q129993325",
+    "facebook_id": null,
+    "instagram_id": "raustinball",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

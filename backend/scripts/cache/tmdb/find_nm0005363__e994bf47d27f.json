@@ -1,0 +1,88 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 956,
+      "name": "Guy Ritchie",
+      "original_name": "Guy Ritchie",
+      "media_type": "person",
+      "popularity": 3.5556,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/9pLUnjMgIEWXi0mlHYzie9cKUTD.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/85g84VtSf9tu1A9JqqruXEHspb7.jpg",
+          "id": 10528,
+          "title": "Sherlock Holmes",
+          "original_title": "Sherlock Holmes",
+          "overview": "Eccentric consulting detective Sherlock Holmes and Doctor John Watson battle to bring down a new nemesis and unravel a deadly plot that could destroy England.",
+          "poster_path": "/momkKuWburNTqKBF6ez7rvhYVhE.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            80,
+            9648
+          ],
+          "popularity": 8.3578,
+          "release_date": "2009-12-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.218,
+          "vote_count": 14724
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/lWNASscWXn32Asr9vkB1wq6cKvD.jpg",
+          "id": 58574,
+          "title": "Sherlock Holmes: A Game of Shadows",
+          "original_title": "Sherlock Holmes: A Game of Shadows",
+          "overview": "There is a new criminal mastermind at large (Professor Moriarty) and not only is he Holmes’ intellectual equal, but his capacity for evil and lack of conscience may give him an advantage over the detective.",
+          "poster_path": "/y1MYZkwhZK6L0Jy4YMuPktzDOfn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            9648,
+            28
+          ],
+          "popularity": 4.9092,
+          "release_date": "2011-11-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.144,
+          "vote_count": 10898
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/yJyZRrXaYUjhOrJGga8awbw4Rud.jpg",
+          "id": 420817,
+          "title": "Aladdin",
+          "original_title": "Aladdin",
+          "overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.",
+          "poster_path": "/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            14,
+            10749,
+            10751
+          ],
+          "popularity": 10.8423,
+          "release_date": "2019-05-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.085,
+          "vote_count": 10586
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

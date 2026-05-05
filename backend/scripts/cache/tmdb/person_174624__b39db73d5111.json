@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Берни Хэмилтон",
+    "Берни Гамильтон"
+  ],
+  "biography": "",
+  "birthday": "1928-06-12",
+  "deathday": "2008-12-30",
+  "gender": 2,
+  "homepage": null,
+  "id": 174624,
+  "imdb_id": "nm0357745",
+  "known_for_department": "Acting",
+  "name": "Bernie Hamilton",
+  "place_of_birth": "East Los Angeles, California, USA",
+  "popularity": 0.8338,
+  "profile_path": "/Lz9W5WIlyPOvwWdc4MWX6USsr.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0crc74",
+    "freebase_id": "/en/bernie_hamilton",
+    "imdb_id": "nm0357745",
+    "tvrage_id": 7296,
+    "wikidata_id": "Q282820",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

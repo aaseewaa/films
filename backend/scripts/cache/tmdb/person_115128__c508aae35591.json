@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Robert Burnham",
+    "Robert Pickering Burnham"
+  ],
+  "biography": "",
+  "birthday": "1990-08-21",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.boburnham.com/",
+  "id": 115128,
+  "imdb_id": "nm3102998",
+  "known_for_department": "Acting",
+  "name": "Бо Бёрнэм",
+  "place_of_birth": "Hamilton, Massachusetts, USA",
+  "popularity": 1.3838,
+  "profile_path": "/xMAatohXadCfz9ipvqvIaTLwOmV.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/04cvmzk",
+    "freebase_id": "/en/bo_burnham",
+    "imdb_id": "nm3102998",
+    "tvrage_id": 331882,
+    "wikidata_id": "Q887347",
+    "facebook_id": "100044289496442",
+    "instagram_id": "boburnham",
+    "tiktok_id": null,
+    "twitter_id": "boburnham",
+    "youtube_id": "boburnham"
+  }
+}

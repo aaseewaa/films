@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 550476,
+      "name": "Yuri Norstein",
+      "original_name": "Юрий Норштейн",
+      "media_type": "person",
+      "popularity": 0.4184,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/jXZxyCwla3vfHs1nS6w5EZz8oi1.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/zde8UggZGhR9LTYwZVxeMGGQ5dj.jpg",
+          "id": 36129,
+          "title": "Hedgehog in the Fog",
+          "original_title": "Ёжик в тумане",
+          "overview": "A little hedgehog, on the way to visit his friend the bear, gets lost in thick fog, where horses, dogs and even falling leaves take on a terrifying new aspect...",
+          "poster_path": "/4sMh4bpyy5zhOS7G48WOsOBIhIH.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            16,
+            12,
+            9648,
+            10751
+          ],
+          "popularity": 1.4056,
+          "release_date": "1975-10-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.416,
+          "vote_count": 261
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xeZmlPCQs8tNH5CAoznrNUb492L.jpg",
+          "id": 36079,
+          "title": "Tale of Tales",
+          "original_title": "Сказка сказок",
+          "overview": "Distant, well-worn memories of childhood are inhabited by a little gray wolf. Through astonishing imagery, the memory of all of Russia is depicted.",
+          "poster_path": "/7gWBy9z4JrkDPSfG5VbjWbbgvxk.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.577,
+          "release_date": "1979-01-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.3,
+          "vote_count": 146
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5A5GStZUDnxBWg6DI0yn4Ke3EGO.jpg",
+          "id": 89905,
+          "title": "The Heron and the Crane",
+          "original_title": "Цапля и журавль",
+          "overview": "Animated short about a love between a heron and a crane.",
+          "poster_path": "/exczBuiSq7FTMtvfdIzmBHwXUK1.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.6667,
+          "release_date": "1974-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.91,
+          "vote_count": 39
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

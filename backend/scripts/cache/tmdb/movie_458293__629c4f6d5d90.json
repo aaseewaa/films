@@ -1,0 +1,339 @@
+{
+  "adult": false,
+  "backdrop_path": "/ecksst0Cb1AO1CZwmGjJu11bfUo.jpg",
+  "belongs_to_collection": null,
+  "budget": 2000000,
+  "genres": [
+    {
+      "id": 18,
+      "name": "драма"
+    },
+    {
+      "id": 10770,
+      "name": "телевизионный фильм"
+    }
+  ],
+  "homepage": "",
+  "id": 458293,
+  "imdb_id": "tt6428912",
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_title": "Michael Jackson: Searching for Neverland",
+  "overview": "",
+  "popularity": 65.8733,
+  "poster_path": "/mRZIiG4vJiCgJh4v2EPUVVTznC8.jpg",
+  "production_companies": [
+    {
+      "id": 3431,
+      "logo_path": "/6LVLYfZAEQfhJey0MGvhFXdDEK1.png",
+      "name": "Lifetime",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2017-05-29",
+  "revenue": 0,
+  "runtime": 102,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Michael Jackson: Searching for Neverland",
+  "video": false,
+  "vote_average": 6.5,
+  "vote_count": 111,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1819793,
+        "known_for_department": "Acting",
+        "name": "Navi",
+        "original_name": "Navi",
+        "popularity": 0.8362,
+        "profile_path": "/kYOAsEk1GT0vmgGRyGUfEcxF6vG.jpg",
+        "cast_id": 1,
+        "character": "Michael Jackson",
+        "credit_id": "591f1c60c3a368799b033734",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 124645,
+        "known_for_department": "Acting",
+        "name": "Чад Л. Коулмэн",
+        "original_name": "Chad L. Coleman",
+        "popularity": 1.9723,
+        "profile_path": "/lXcBz0qt4L767WqkTxl96RFTZvz.jpg",
+        "cast_id": 2,
+        "character": "Bill Whitfield",
+        "credit_id": "591f1c7e925141485e0379e2",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1772766,
+        "known_for_department": "Acting",
+        "name": "Sam Adegoke",
+        "original_name": "Sam Adegoke",
+        "popularity": 0.4246,
+        "profile_path": "/d8INOeZ4UqcrtOPpdEQ3R7EZVI8.jpg",
+        "cast_id": 4,
+        "character": "Javon Beard",
+        "credit_id": "591f1cbfc3a3687912031555",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1819795,
+        "known_for_department": "Acting",
+        "name": "Aidan Hanlon Smith",
+        "original_name": "Aidan Hanlon Smith",
+        "popularity": 0.0661,
+        "profile_path": "/t7rga5Zu0r03IZaLNs7Lws6Uouf.jpg",
+        "cast_id": 5,
+        "character": "Prince Jackson",
+        "credit_id": "591f1ccec3a3687a4b033165",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1819796,
+        "known_for_department": "Acting",
+        "name": "Taegen Burns",
+        "original_name": "Taegen Burns",
+        "popularity": 1.1419,
+        "profile_path": "/q76Ee8hVgC0jw6vxLMi5gBjOg0x.jpg",
+        "cast_id": 6,
+        "character": "Paris Jackson",
+        "credit_id": "591f1cdfc3a368774e03762b",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1819798,
+        "known_for_department": "Acting",
+        "name": "Michael Mourra",
+        "original_name": "Michael Mourra",
+        "popularity": 0.1618,
+        "profile_path": "/yTnhoIjuYyF4EkYWtvYRf4NGvIg.jpg",
+        "cast_id": 7,
+        "character": "Blanket Jackson",
+        "credit_id": "591f1cf1c3a3687a8e033c49",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1094471,
+        "known_for_department": "Acting",
+        "name": "Ken Colquitt",
+        "original_name": "Ken Colquitt",
+        "popularity": 0.6019,
+        "profile_path": "/b57nOViXBMMLDHsH28hRx6P4zyx.jpg",
+        "cast_id": 8,
+        "character": "Dr. Conrad Murray",
+        "credit_id": "591f1d069251414990035432",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1215657,
+        "known_for_department": "Acting",
+        "name": "A. Russell Andrews",
+        "original_name": "A. Russell Andrews",
+        "popularity": 0.8107,
+        "profile_path": "/t78R2krL2pfV0un2j2DafjcXa7x.jpg",
+        "cast_id": 9,
+        "character": "Attorney Davis",
+        "credit_id": "591f1d1b9251414a7b035b01",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 108213,
+        "known_for_department": "Acting",
+        "name": "Isabella Hofmann",
+        "original_name": "Isabella Hofmann",
+        "popularity": 1.6411,
+        "profile_path": "/vPRXu2u0vewF6dRJLZ2p8rhrIou.jpg",
+        "cast_id": 10,
+        "character": "Attorney Green",
+        "credit_id": "591f1d35c3a36879120315aa",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1223877,
+        "known_for_department": "Acting",
+        "name": "Vincent M. Ward",
+        "original_name": "Vincent M. Ward",
+        "popularity": 0.967,
+        "profile_path": "/wA7wu8SPn9xue8BzmHIXmYXmTo3.jpg",
+        "cast_id": 11,
+        "character": "Jeff Adams",
+        "credit_id": "591f1d459251414a57033751",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1371108,
+        "known_for_department": "Acting",
+        "name": "Kyla-Drew",
+        "original_name": "Kyla-Drew",
+        "popularity": 1.1424,
+        "profile_path": "/q45XSpE8FIiCMLJd2Af7f5wJ94k.jpg",
+        "cast_id": 12,
+        "character": "Aleiya Whitfield",
+        "credit_id": "591f1d5d9251414add034325",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1367843,
+        "known_for_department": "Acting",
+        "name": "Нондумисо Тембе",
+        "original_name": "Nondumiso Tembe",
+        "popularity": 0.2474,
+        "profile_path": "/fGsRGfY4Vf0d1y51cbIgz2zicNE.jpg",
+        "cast_id": 13,
+        "character": "Grace Rwaramba",
+        "credit_id": "591f1d6dc3a3687a4b0331d6",
+        "order": 11
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1444795,
+        "known_for_department": "Acting",
+        "name": "Susan Wilder",
+        "original_name": "Susan Wilder",
+        "popularity": 0.1272,
+        "profile_path": "/yx7FrvDdJeZcferCBUtezDxd2kk.jpg",
+        "cast_id": 14,
+        "character": "Real Estate Agent",
+        "credit_id": "5a02d80bc3a36863a20125c2",
+        "order": 12
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 61856,
+        "known_for_department": "Acting",
+        "name": "Mykel Shannon Jenkins",
+        "original_name": "Mykel Shannon Jenkins",
+        "popularity": 1.154,
+        "profile_path": "/byIXjhCcP9D854m5NoFYydW6uLC.jpg",
+        "cast_id": 15,
+        "character": "Michael Amir Williams",
+        "credit_id": "5a3bbc90925141032c229f90",
+        "order": 13
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1023503,
+        "known_for_department": "Art",
+        "name": "Aaron A. Goffman",
+        "original_name": "Aaron A. Goffman",
+        "popularity": 0.543,
+        "profile_path": null,
+        "credit_id": "6604853cfcec2e0186c3e628",
+        "department": "Art",
+        "job": "Property Master"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 60025,
+        "known_for_department": "Writing",
+        "name": "Dianne Houston",
+        "original_name": "Dianne Houston",
+        "popularity": 0.7565,
+        "profile_path": null,
+        "credit_id": "591f1c4ec3a3687a64035476",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1223083,
+        "known_for_department": "Writing",
+        "name": "Elizabeth Hunter",
+        "original_name": "Elizabeth Hunter",
+        "popularity": 0.3809,
+        "profile_path": null,
+        "credit_id": "591f1ca6925141485e037a0f",
+        "department": "Writing",
+        "job": "Writer"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1341812,
+        "known_for_department": "Crew",
+        "name": "William Washington",
+        "original_name": "William Washington",
+        "popularity": 0.7317,
+        "profile_path": "/jcbNLmQAdEhN6Fgdt9BSAcNE56M.jpg",
+        "credit_id": "678d1a065add61273d652601",
+        "department": "Crew",
+        "job": "Stunt Coordinator"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt6428912",
+    "wikidata_id": "Q29982158",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 4232,
+        "name": "melancholy"
+      },
+      {
+        "id": 208251,
+        "name": "nervous"
+      },
+      {
+        "id": 325762,
+        "name": "adoring"
+      },
+      {
+        "id": 325817,
+        "name": "foreboding"
+      }
+    ]
+  }
+}

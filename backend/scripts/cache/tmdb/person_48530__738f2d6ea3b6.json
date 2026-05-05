@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "모리스 콤프테",
+    "موریس کومپت"
+  ],
+  "biography": "",
+  "birthday": "1972-04-18",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 48530,
+  "imdb_id": "nm0173997",
+  "known_for_department": "Acting",
+  "name": "Морис Комт",
+  "place_of_birth": "New Orleans, Louisiana, USA",
+  "popularity": 1.6959,
+  "profile_path": "/9PFInf2I0kqjAU0CmZhdDWmHfwT.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0bjc9jv",
+    "freebase_id": "/en/maurice_compte",
+    "imdb_id": "nm0173997",
+    "tvrage_id": 1257,
+    "wikidata_id": "Q20894978",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

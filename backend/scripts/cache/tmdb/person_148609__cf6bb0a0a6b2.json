@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1906-04-13",
+  "deathday": "1989-12-22",
+  "gender": 2,
+  "homepage": null,
+  "id": 148609,
+  "imdb_id": "nm0065716",
+  "known_for_department": "Writing",
+  "name": "Samuel Beckett",
+  "place_of_birth": "Foxrock, Dublin, Ireland",
+  "popularity": 0.6109,
+  "profile_path": "/amgs7BEV47uIqCyhd6eJkFY0DcN.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/06whf",
+    "freebase_id": null,
+    "imdb_id": "nm0065716",
+    "tvrage_id": null,
+    "wikidata_id": "Q37327",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

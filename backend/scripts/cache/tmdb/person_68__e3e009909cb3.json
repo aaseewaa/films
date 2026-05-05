@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1890-12-05",
+  "deathday": "1976-08-02",
+  "gender": 2,
+  "homepage": null,
+  "id": 68,
+  "imdb_id": "nm0000485",
+  "known_for_department": "Directing",
+  "name": "Fritz Lang",
+  "place_of_birth": " Vienna, Austria",
+  "popularity": 1.0253,
+  "profile_path": "/9dz4PmFzlSyexldWrOXBLLpkBqB.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/032md",
+    "freebase_id": null,
+    "imdb_id": "nm0000485",
+    "tvrage_id": null,
+    "wikidata_id": "Q19504",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

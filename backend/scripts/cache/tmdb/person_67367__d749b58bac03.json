@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Rian Craig Johnson"
+  ],
+  "biography": "",
+  "birthday": "1973-12-17",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://www.rian-johnson.com/",
+  "id": 67367,
+  "imdb_id": "nm0426059",
+  "known_for_department": "Directing",
+  "name": "Райан Джонсон",
+  "place_of_birth": "Silver Spring, Maryland, USA",
+  "popularity": 1.6328,
+  "profile_path": "/uPWwvdppeZVKPbYcjXKU8zyuAVh.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/080myz",
+    "freebase_id": "/en/rian_johnson",
+    "imdb_id": "nm0426059",
+    "tvrage_id": 336708,
+    "wikidata_id": "Q621818",
+    "facebook_id": null,
+    "instagram_id": "riancjohnson",
+    "tiktok_id": null,
+    "twitter_id": "rianjohnson",
+    "youtube_id": null
+  }
+}

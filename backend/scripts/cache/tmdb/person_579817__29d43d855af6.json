@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Baby Sara"
+  ],
+  "biography": "",
+  "birthday": "2005-06-15",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 579817,
+  "imdb_id": "nm4271961",
+  "known_for_department": "Acting",
+  "name": "Sara Arjun",
+  "place_of_birth": " Mumbai, Maharashtra, India",
+  "popularity": 1.2832,
+  "profile_path": "/uyZIlCL6xwWlor6JYSmIYUiPE7M.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm4271961",
+    "tvrage_id": null,
+    "wikidata_id": "Q7421553",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

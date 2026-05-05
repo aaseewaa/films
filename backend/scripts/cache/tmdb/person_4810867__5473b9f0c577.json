@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "2000-03-03",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 4810867,
+  "imdb_id": "nm16992342",
+  "known_for_department": "Acting",
+  "name": "Elisabeth Martínez",
+  "place_of_birth": "Alicante, Spain",
+  "popularity": 0.4221,
+  "profile_path": null,
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm16992342",
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

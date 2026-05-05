@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 0,
+  "homepage": null,
+  "id": 5062343,
+  "imdb_id": null,
+  "known_for_department": "Acting",
+  "name": "Francisca Cromwell",
+  "place_of_birth": null,
+  "popularity": 0.0071,
+  "profile_path": "/2IFc5MbvlT3EVXZ7oQVcChFFm0A.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": null,
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

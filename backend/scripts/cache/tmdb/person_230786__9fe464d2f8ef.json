@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jacques Cousteau",
+    "J.Y. Cousteau"
+  ],
+  "biography": "Jacques-Yves Cousteau, AC (11 June 1910 – 25 June 1997) was a French naval officer, oceanographer, scientist, inventor, filmmaker, photographer, innovator, conservationist, author, and researcher who studied the sea and all forms of life in water. He co-invented the first successful open-circuit self-contained underwater breathing apparatus, (\"SCUBA\"), called the Aqua-Lung, which assisted him in producing some of the first underwater documentaries. He also pioneered marine conservation and was a member of the Académie française.\n\nFrom 1966 to 1976, he hosted The Undersea World of Jacques Cousteau, a documentary television series, presented on American commercial television stations. A second documentary series, The Cousteau Odyssey, ran from 1977 to 1982 on public television stations.\n\nIn his first book, The Silent World: A Story of Undersea Discovery and Adventure, he surmised the existence of the echolocation abilities of porpoises. The book was adapted into an underwater documentary called The Silent World. Co-directed by Cousteau and Louis Malle, it was one of the first films to use underwater cinematography to document the ocean depths in color. The film won the 1956 Palme d'Or at the Cannes Film Festival and remained the only documentary to do so until 2004 (when Fahrenheit 9/11 received the award). It was also awarded the Academy Award for Best Documentary in 1957.\n\n​From Wikipedia, the free encyclopedia",
+  "birthday": "1910-06-11",
+  "deathday": "1997-06-25",
+  "gender": 2,
+  "homepage": "https://www.cousteau.org/",
+  "id": 230786,
+  "imdb_id": "nm0184150",
+  "known_for_department": "Acting",
+  "name": "Jacques-Yves Cousteau",
+  "place_of_birth": "Saint-André-de-Cubzac, Gironde, France",
+  "popularity": 0.2189,
+  "profile_path": "/vpsua5AW1EVEmsCRFPabjaUY7Zx.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/044lg",
+    "freebase_id": "/en/jacques-yves_cousteau",
+    "imdb_id": "nm0184150",
+    "tvrage_id": 183211,
+    "wikidata_id": "Q83233",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

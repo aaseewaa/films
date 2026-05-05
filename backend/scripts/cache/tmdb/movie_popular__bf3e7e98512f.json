@@ -1,0 +1,413 @@
+{
+  "page": 5,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/e9UvRjJAqn2hLXDfMHU1LFMEKGv.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1430077,
+      "title": "Hokum",
+      "original_language": "en",
+      "original_title": "Hokum",
+      "overview": "When novelist Ohm Bauman retreats to a remote inn to scatter his parents' ashes, he is consumed by tales of a witch haunting the honeymoon suite. Disturbing visions and a shocking disappearance forces him to confront dark corners of his past.",
+      "popularity": 45.8069,
+      "poster_path": "/jKPWwsbAM6HKURPYQ1eG8DmKMKn.jpg",
+      "release_date": "2026-04-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.2,
+      "vote_count": 15
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7TJjD2X9GTEqyLVIJKLS85J2V47.jpg",
+      "genre_ids": [
+        53,
+        28,
+        80
+      ],
+      "id": 28322,
+      "title": "Madness",
+      "original_language": "it",
+      "original_title": "Vacanze per un massacro",
+      "overview": "An escaped convicted murderer invades the cottage of a man, his wife and the wife's sister, whereupon he proceeds to torment this already dysfunctional trio with rape and violence.",
+      "popularity": 44.6223,
+      "poster_path": "/gV0J0Fqw2mYMtQbzb0ruxv9MAeZ.jpg",
+      "release_date": "1980-03-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.0,
+      "vote_count": 29
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 278,
+      "title": "The Shawshank Redemption",
+      "original_language": "en",
+      "original_title": "The Shawshank Redemption",
+      "overview": "Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+      "popularity": 48.1974,
+      "poster_path": "/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+      "release_date": "1994-09-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.719,
+      "vote_count": 30237
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/dHSz0tSFuO2CsXJ1CApSauP9Ncl.jpg",
+      "genre_ids": [
+        80,
+        53
+      ],
+      "id": 425274,
+      "title": "Now You See Me: Now You Don't",
+      "original_language": "en",
+      "original_title": "Now You See Me: Now You Don't",
+      "overview": "The original Four Horsemen reunite with a new generation of illusionists to take on powerful diamond heiress Veronika Vanderberg, who leads a criminal empire built on money laundering and trafficking. The new and old magicians must overcome their differences to work together on their most ambitious heist yet.",
+      "popularity": 44.9834,
+      "poster_path": "/oD3Eey4e4Z259XLm3eD3WGcoJAh.jpg",
+      "release_date": "2025-11-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.518,
+      "vote_count": 1442
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/oz4U9eA6ilYf1tyiVuGmkftdLac.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        53
+      ],
+      "id": 1010581,
+      "title": "My Fault",
+      "original_language": "es",
+      "original_title": "Culpa mía",
+      "overview": "Noah must leave her city, boyfriend, and friends to move into William Leister's mansion, the flashy and wealthy husband of her mother Rafaela. As a proud and independent 17 year old, Noah resists living in a mansion surrounded by luxury. However, it is there where she meets Nick, her new stepbrother, and the clash of their strong personalities becomes evident from the very beginning.",
+      "popularity": 36.4354,
+      "poster_path": "/w46Vw536HwNnEzOa7J24YH9DPRS.jpg",
+      "release_date": "2023-06-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.744,
+      "vote_count": 4042
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5TO9LeUAdilHgq50veWqBpDejaU.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 58008,
+      "title": "Night Nurse",
+      "original_language": "it",
+      "original_title": "L'infermiera di notte",
+      "overview": "A dentist invites a elderly patient to stay at his home to recover, unaware that he is a jewel thief. He plans to steal a valuable diamond but then runs into a beautiful nurse who, aside from constantly stripping nude, has plans of her own.",
+      "popularity": 35.8387,
+      "poster_path": "/tzhBAhN35YjobVG3Ubm3ERnzhBL.jpg",
+      "release_date": "1979-02-07",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.217,
+      "vote_count": 53
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/A3XP3vGg4DGDhEH75GnyyjsDDm1.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 829487,
+      "title": "Je m'appelle Agneta",
+      "original_language": "sv",
+      "original_title": "Je m'appelle Agneta",
+      "overview": "Craving a fresh start, recently unemployed Agneta accepts an au pair gig in Provence that turns into an indulgent escape — and an unexpected awakening.",
+      "popularity": 41.682,
+      "poster_path": "/nrwtoBNGgbFz3iiCx43TLHoBBPq.jpg",
+      "release_date": "2026-04-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.3,
+      "vote_count": 10
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/rZWkXnIyTLzUJpHSUpOb7vgB0BL.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 911430,
+      "title": "F1",
+      "original_language": "en",
+      "original_title": "F1",
+      "overview": "Racing legend Sonny Hayes is coaxed out of retirement to lead a struggling Formula 1 team—and mentor a young hotshot driver—while chasing one more chance at glory.",
+      "popularity": 44.9599,
+      "poster_path": "/vqBmyAj0Xm9LnS1xe1MSlMAJyHq.jpg",
+      "release_date": "2025-06-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.748,
+      "vote_count": 3808
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8Ebtc10VNLnX3xAYgkk7Ao3NrNh.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 16423,
+      "title": "Love and Magnets",
+      "original_language": "fr",
+      "original_title": "Les aimants",
+      "overview": "Back in Montréal after spending five years in Guatemala, Julie moves in with her elder sister, Jeanne, a chronic liar and woman of rather loose sexual morals... Disillusioned with love, Jeanne is nevertheless engaged to Noël. However, Jeanne and Noël lead separate lives, and only communicate by leaving each other messages on the fridge.Everything suddenly becomes very complicated. Jeanne compels Julie to take up with Noël so she can have a fling with a passionate musician. Noël, meanwhile, sets Julie up with Michel -- without Jeanne's knowledge.  Julie mixes things up even further. Egged on by her friend Marie-Ève, she alters the contents of the messages on the fridge in an attempt to breathe new life into Jeanne and Noël's relationship. Along the way, she also begins to fall for the seductive Michel. The tables are turned on everyone... In the game of love and truth, illusion leads to betrayal, but love conquers all.",
+      "popularity": 32.6713,
+      "poster_path": "/bfrAPx5MlLlx5DmOAquiaLBJ1Io.jpg",
+      "release_date": "2004-10-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.353,
+      "vote_count": 17
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zNriRTr0kWwyaXPzdg1EIxf0BWk.jpg",
+      "genre_ids": [
+        878,
+        12,
+        28
+      ],
+      "id": 1234821,
+      "title": "Jurassic World Rebirth",
+      "original_language": "en",
+      "original_title": "Jurassic World Rebirth",
+      "overview": "Five years after the events of Jurassic World Dominion, covert operations expert Zora Bennett is contracted to lead a skilled team on a top-secret mission to secure genetic material from the world's three most massive dinosaurs. When Zora's operation intersects with a civilian family whose boating expedition was capsized, they all find themselves stranded on an island where they come face-to-face with a sinister, shocking discovery that's been hidden from the world for decades.",
+      "popularity": 39.1343,
+      "poster_path": "/1RICxzeoNCAO5NpcRMIgg1XT6fm.jpg",
+      "release_date": "2025-07-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.268,
+      "vote_count": 3263
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/4EAAwpylq313qrDqpCxulUrXBNF.jpg",
+      "genre_ids": [
+        28,
+        14,
+        12
+      ],
+      "id": 931285,
+      "title": "Mortal Kombat II",
+      "original_language": "en",
+      "original_title": "Mortal Kombat II",
+      "overview": "The fan favorite champions—now joined by Johnny Cage himself—are pitted against one another in the ultimate, no-holds barred, gory battle to defeat the dark rule of Shao Kahn that threatens the very existence of the Earthrealm and its defenders.",
+      "popularity": 43.6162,
+      "poster_path": "/lIsMeDbwntNXSUVHmWMMRXEZOVc.jpg",
+      "release_date": "2026-05-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/s8QGlg2rnVlYkUl4qBHatkZgnJs.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 545339,
+      "title": "Kranti",
+      "original_language": "hi",
+      "original_title": "Kranti",
+      "overview": "Inspector Abhay Pratap Singh is a young, honest and diligent police inspector, serving with Bombay Police, and comes from a respectable family, which consists of sister Anu; mom Sushma; and dad, Awadesh, who is also the Commissioner of Police. Abhay has long suspected Mahendra Pratap Rana of being a criminal don, who also has links with terrorists, but thus far has been unable to gather any material evidence for the police to lay charges. The Commissioner is unable to accept his son's word, as Mahendra is well-known, influential, and wealthy. Abhay continues to pursue his investigation despite of warnings from his superiors, and is ultimately suspended from duty. Now even after suspension, Abhay has come to know that the life of Coloney Krishnakanth is threatened by Mahendra, and reaches out to his dad, who will not have anything to do with him anymore. It will upto Abhay to save the life of Krishnakanth, against all odds that are stacked up against him.",
+      "popularity": 32.1565,
+      "poster_path": "/dH9jHruCCwPHEdNq6KY5iL6hdA4.jpg",
+      "release_date": "2002-03-27",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.0,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qXxFWyur7jFkg2aQgENcXuyYeHF.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1480387,
+      "title": "undertone",
+      "original_language": "en",
+      "original_title": "undertone",
+      "overview": "The host of a popular paranormal podcast becomes haunted by terrifying recordings mysteriously sent her way.",
+      "popularity": 35.472,
+      "poster_path": "/2PFgFMnrdCPXWiZl1PUvky7Mo9D.jpg",
+      "release_date": "2026-03-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.426,
+      "vote_count": 129
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+      "genre_ids": [
+        18,
+        80
+      ],
+      "id": 238,
+      "title": "The Godfather",
+      "original_language": "en",
+      "original_title": "The Godfather",
+      "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+      "popularity": 39.9109,
+      "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "release_date": "1972-03-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.686,
+      "vote_count": 22833
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/cz4vLJrmaV1zJlRYbxqtvLzeLWB.jpg",
+      "genre_ids": [
+        28,
+        35,
+        80,
+        9648
+      ],
+      "id": 1168190,
+      "title": "The Wrecking Crew",
+      "original_language": "en",
+      "original_title": "The Wrecking Crew",
+      "overview": "Estranged half-brothers Jonny and James reunite after their father's mysterious death. As they search for the truth, buried secrets reveal a conspiracy threatening to tear their family apart.",
+      "popularity": 40.0808,
+      "poster_path": "/gbVwHl4YPSq6BcC92TQpe7qUTh6.jpg",
+      "release_date": "2026-01-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.875,
+      "vote_count": 938
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wF8GgOCnkHRYJJcEM79KYVYKIf6.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 419858,
+      "title": "Captain Kate",
+      "original_language": "en",
+      "original_title": "Captain Kate",
+      "overview": "Two caravans meet on the desert, one headed by Howell and Clancy, two New York men, who are gathering animals for circus purposes, the other is led by an old animal tamer named Desmond and his beautiful daughter, whom the natives have nicknamed Capt. Kate. After exchanging cards, the caravans go their separate ways. Desmond is stricken and dies, leaving Kate alone. She assumes her father's perilous business, leading her party of native hunters after big game. Later, one of the hunters is stricken and the superstitious followers of Capt. Kate, recognizing the nature of the disease, abandon the hunt and their leader, one servant alone remaining faithful to his mistress. Kate, realizing that she can go no further without assistance, calls a halt and they erect a crude hut in which she is to live, while the servant goes in search of Clancy. Scene of Kate's isolated life and her dangers follow. She is besieged by wild animals, who make her life a long nightmare of peril.",
+      "popularity": 34.0195,
+      "poster_path": "/aK4oZ7AhiTZd7L5gidMyATIpEfh.jpg",
+      "release_date": "1911-07-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 4.0,
+      "vote_count": 1
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3F2EXWF1thX0BdrVaKvnm6mAhqh.jpg",
+      "genre_ids": [
+        28,
+        53,
+        80
+      ],
+      "id": 1306368,
+      "title": "The Rip",
+      "original_language": "en",
+      "original_title": "The Rip",
+      "overview": "Trust frays when a team of Miami cops discovers millions in cash inside a run-down stash house, calling everyone — and everything — into question.",
+      "popularity": 39.4168,
+      "poster_path": "/eZo31Dhl5BQ6GfbMNf3oU0tUvPZ.jpg",
+      "release_date": "2026-01-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.055,
+      "vote_count": 1553
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/qo2VoL7vyDWKvUejikxrdIFUDIa.jpg",
+      "genre_ids": [
+        35,
+        10751,
+        12
+      ],
+      "id": 1472638,
+      "title": "Buen Camino",
+      "original_language": "it",
+      "original_title": "Buen Camino",
+      "overview": "Checco's life is a comfortable and luxurious one, and it couldn't be otherwise, considering he's the only son of Eugenio Zalone, a wealthy sofa manufacturer. Stranded by the pool in his luxurious villas, with an unspecified number of Filipinos serving him, a very young Mexican model as a girlfriend, and vacationing on his yacht with friends who share his passion for not wanting to work; it seems like a truly enviable life, considering he lacks nothing, absolutely nothing. Actually, no. Something is missing. It's his underage daughter, Cristal, named after the famous French sparkling wine, who has suddenly disappeared without a trace. Urgently summoned to Rome by his ex-wife, Linda, he finds himself facing the responsibilities of fatherhood for the first time, trying to find the girl—a very complicated task, considering he knows absolutely nothing about Cristal and her life.",
+      "popularity": 41.7881,
+      "poster_path": "/4buulRVfRJcqgkR3AF6ln23TqR6.jpg",
+      "release_date": "2025-12-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.322,
+      "vote_count": 452
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5UxASgNjx4vK91LJDWq90BTnRMQ.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1371534,
+      "title": "He Sees You When You're Sleeping",
+      "original_language": "en",
+      "original_title": "He Sees You When You're Sleeping",
+      "overview": "Chester returns to the home of his estranged and hideously over-privileged family at Christmas, only to find an unknown killer disguised in a Santa outfit is stalking and killing family members one by one, in order to claim the huge family fortune. Which one of them is the killer?",
+      "popularity": 32.5633,
+      "poster_path": "/z3eKq2GqVnqZCK0j1gnHQ8GbK7k.jpg",
+      "release_date": "2024-11-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.273,
+      "vote_count": 11
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+      "genre_ids": [
+        12,
+        14,
+        28
+      ],
+      "id": 122,
+      "title": "The Lord of the Rings: The Return of the King",
+      "original_language": "en",
+      "original_title": "The Lord of the Rings: The Return of the King",
+      "overview": "As armies mass for a final battle that will decide the fate of the world--and powerful, ancient forces of Light and Dark compete to determine the outcome--one member of the Fellowship of the Ring is revealed as the noble heir to the throne of the Kings of Men. Yet, the sole hope for triumph over evil lies with a brave hobbit, Frodo, who, accompanied by his loyal friend Sam and the hideous, wretched Gollum, ventures deep into the very dark heart of Mordor on his seemingly impossible quest to destroy the Ring of Power.​",
+      "popularity": 34.5875,
+      "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+      "release_date": "2003-12-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.5,
+      "vote_count": 26404
+    }
+  ],
+  "total_pages": 56569,
+  "total_results": 1131372
+}

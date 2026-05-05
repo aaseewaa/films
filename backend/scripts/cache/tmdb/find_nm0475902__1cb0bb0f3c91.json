@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 72609,
+      "name": "Hisao Kurosawa",
+      "original_name": "黒澤久雄",
+      "media_type": "person",
+      "popularity": 0.4364,
+      "gender": 2,
+      "known_for_department": "Production",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3ssNAWypRl47iriwBFNx7RUEUub.jpg",
+          "id": 11645,
+          "title": "Ran",
+          "original_title": "乱",
+          "overview": "Shakespeare's King Lear is reimagined as a singular historical epic set in sixteenth-century Japan where an aging warlord divides his kingdom between his three sons.",
+          "poster_path": "/1gKWXRVgesduqHDfR8siXppfELO.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            28,
+            18,
+            36
+          ],
+          "popularity": 8.3926,
+          "release_date": "1985-06-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 1799
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/g2Y4A9qgkHhecPBnYMaAIzTlmcN.jpg",
+          "id": 12516,
+          "title": "Dreams",
+          "original_title": "夢",
+          "overview": "Eight visually rich vignettes drawn from Kurosawa’s own dreams—fox weddings and vanished orchards, a soldier’s ghosts, a walk through Van Gogh’s canvases, nuclear nightmares, and a water-mill utopia—meditate on childhood, art, mortality, and humanity’s uneasy bond with nature.",
+          "poster_path": "/ua17wrOrUjyqxuYmnUrmOVBMf4G.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            14,
+            18
+          ],
+          "popularity": 3.9324,
+          "release_date": "1990-05-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.749,
+          "vote_count": 552
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/e5HYzlk7MwfB3Xp2AUbiYnJDZL5.jpg",
+          "id": 20645,
+          "title": "Rhapsody in August",
+          "original_title": "八月の狂詩曲",
+          "overview": "An elderly Nagasaki hibakusha spends a summer caring for her four grandchildren, whose curiosity about the 1945 bombing stirs buried memories and moral questions. When an American nephew from Hawaii visits, the family confronts grief, guilt, and the possibility of reconciliation across generations.",
+          "poster_path": "/413NqJ8Oz5hTNzz2APjHQxFEw6.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 2.3131,
+          "release_date": "1991-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.16,
+          "vote_count": 152
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

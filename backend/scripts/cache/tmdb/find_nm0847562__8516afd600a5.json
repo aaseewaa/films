@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 68704,
+      "name": "Naoto Takenaka",
+      "original_name": "竹中直人",
+      "media_type": "person",
+      "popularity": 2.4914,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/4adcQdMnaqOnl1rtOVUqGp1flvo.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/7JubXPFBKGpJ7mvpMJQ7M0s8DG7.jpg",
+          "id": 20083,
+          "title": "Shinjuku Incident",
+          "original_title": "新宿事件",
+          "overview": "A simple Chinese immigrant wages a perilous war against one of the most powerful criminal organizations on the planet.",
+          "poster_path": "/8zWliijoTsk3kUdUJpbjqWgV617.jpg",
+          "media_type": "movie",
+          "original_language": "cn",
+          "genre_ids": [
+            18,
+            28,
+            53,
+            80
+          ],
+          "popularity": 3.5615,
+          "release_date": "2009-03-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.673,
+          "vote_count": 321
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/4HZhuejCRFqQo7tz9niFlOPsRUS.jpg",
+          "id": 270413,
+          "title": "One Piece: Strong World Episode 0",
+          "original_title": "ワンピース ストロングワールド Episode 0",
+          "overview": "The introductory chapter to the movie, Strong World, which depicts the events surrounding Gold Roger's execution.",
+          "poster_path": "/5m0FhjQdWhBS3nkRFKIfkwFt1Zc.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            28,
+            16,
+            35
+          ],
+          "popularity": 2.4535,
+          "release_date": "2010-04-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 88
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/dLGQo5Xq6H18vPx00Czot8VHi3K.jpg",
+          "id": 10991,
+          "title": "Pokémon 3: The Movie",
+          "original_title": "劇場版ポケットモンスター 結晶塔の帝王 ENTEI",
+          "overview": "When the sadness of her father's disappearance gets to Molly Hale, she unknowingly uses the Unown to create her own dream world along with Entei, who she believes to be her father. When Entei kidnaps Ash's mother, Ash — alongside Misty and Brock — invade the mansion looking for his mom and trying to stop the mysteries of Molly's Dream World and Entei!",
+          "poster_path": "/hrBWiMWnD7mheMx846ycUWA3ohs.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            12,
+            14,
+            16,
+            28,
+            10751
+          ],
+          "popularity": 4.1073,
+          "release_date": "2000-07-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.54,
+          "vote_count": 681
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

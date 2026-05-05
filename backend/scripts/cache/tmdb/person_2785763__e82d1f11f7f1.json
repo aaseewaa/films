@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2785763,
+  "imdb_id": null,
+  "known_for_department": "Acting",
+  "name": "Javier Morgade",
+  "place_of_birth": null,
+  "popularity": 0.4002,
+  "profile_path": "/hcDV10bTZlm1rTi0NRhoGIpdicw.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": null,
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

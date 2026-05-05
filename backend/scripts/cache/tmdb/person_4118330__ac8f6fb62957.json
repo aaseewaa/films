@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Isis Gaston",
+    "Isis Naija Gaston",
+    "Isis 'Ice Spice' Gaston"
+  ],
+  "biography": "",
+  "birthday": "2000-01-01",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.icespicemusic.com/",
+  "id": 4118330,
+  "imdb_id": "nm14039339",
+  "known_for_department": "Acting",
+  "name": "Ice Spice",
+  "place_of_birth": "New York City, New York, USA",
+  "popularity": 0.7183,
+  "profile_path": "/q3O02uHVOWd6Qoa5uNQmXlpLEpj.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm14039339",
+    "tvrage_id": null,
+    "wikidata_id": "Q114114977",
+    "facebook_id": "icespicemusic1",
+    "instagram_id": "icespice",
+    "tiktok_id": "icespicee",
+    "twitter_id": "icespicee_",
+    "youtube_id": "IceSpice"
+  }
+}

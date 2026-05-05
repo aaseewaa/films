@@ -1,0 +1,33 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Terry C. Gilliamberg",
+    "테리 길리엄",
+    "Террі Гілліам",
+    "تری گیلیام"
+  ],
+  "biography": "",
+  "birthday": "1940-11-22",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://terrygilliamweb.com",
+  "id": 280,
+  "imdb_id": "nm0000416",
+  "known_for_department": "Directing",
+  "name": "Терри Гиллиам",
+  "place_of_birth": "Minneapolis, Minnesota, USA",
+  "popularity": 1.6109,
+  "profile_path": "/7qBkaXxANmnb6hqQCBc4iWqXEL6.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/07h5d",
+    "freebase_id": "/en/terry_gilliam",
+    "imdb_id": "nm0000416",
+    "tvrage_id": 35523,
+    "wikidata_id": "Q25078",
+    "facebook_id": "Terry.Gilliam",
+    "instagram_id": "terryvgilliam",
+    "tiktok_id": null,
+    "twitter_id": "TerryGilliam",
+    "youtube_id": null
+  }
+}

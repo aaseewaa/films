@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "\tRoberta Joan Anderson",
+    "Roberta Joan Mitchell Anderson"
+  ],
+  "biography": "",
+  "birthday": "1943-11-07",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 76138,
+  "imdb_id": "nm0593474",
+  "known_for_department": "Acting",
+  "name": "Joni Mitchell",
+  "place_of_birth": "Fort Macleod, Alberta, Canada",
+  "popularity": 0.3984,
+  "profile_path": "/NSdryvQJs9GfCgnEFRsSXp2bP3.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/045zr",
+    "freebase_id": "/en/joni_mitchell",
+    "imdb_id": "nm0593474",
+    "tvrage_id": 114617,
+    "wikidata_id": "Q205721",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

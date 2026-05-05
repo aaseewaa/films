@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2116130,
+      "name": "Vsevolod Meyerhold",
+      "original_name": "Всеволод Мейерхольд",
+      "media_type": "person",
+      "popularity": 0.0846,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/j0I6vfh9jEYRsGSSRkVSrPF8yIb.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/hoLTzlsOP1cUfxfx34CQoBgcHVs.jpg",
+          "id": 190061,
+          "title": "The White Eagle",
+          "original_title": "Белый орёл",
+          "overview": "The film is based on The Governor, a play by Leonid Andreyev. V.I. Kachalov plays the governor of a small Russian province who tries to treat the people under his authority with kindness and equanimity. But when a local factory goes on strike, the governor buckles under to pressure from the Tzar and orders the wholesale slaughter of the strikers. He pays for this betrayal of his trust with his life -- at the hands of a courageous Bolshevik spy.",
+          "poster_path": "/5YtVnl2CGi7Dt5Bc6lQue2IAmCh.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            18,
+            36
+          ],
+          "popularity": 0.3068,
+          "release_date": "1928-10-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.278,
+          "vote_count": 9
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/wBhyuTTtyyXUtgNh5wOGyyrKm0m.jpg",
+          "id": 415827,
+          "title": "The Picture of Dorian Grey",
+          "original_title": "Портрет Дориана Грея",
+          "overview": "A corrupt young man somehow keeps his youthful beauty, but a special painting gradually reveals his inner ugliness to all.",
+          "poster_path": "/dkqpLQ4LT6KkcgROuE9yRhCcooZ.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            18,
+            14,
+            27
+          ],
+          "popularity": 0.3872,
+          "release_date": "1915-12-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.2,
+          "vote_count": 4
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/xmghmTGSyLXjEQgYgcd4kepz1Ut.jpg",
+          "id": 544911,
+          "title": "Meyerhold's theatre and biomechanics",
+          "original_title": "Meyerholds Theater und die Biomechanik",
+          "overview": "Russian actor and pedagogue, Gennadi Bogdanov, presents the most important etudes and principles of Vsevolod Meyerhold's Biomechanics. Includes archival photographs and film of Meyerhold's original work and also recent scenic work from Europe and the U.S. developed on the principles of bio-mechanics.",
+          "poster_path": "/eOGxCfZOmr9bs1DkCXGn8mDTGP8.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.1427,
+          "release_date": "2003-02-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

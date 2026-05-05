@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1991-01-01",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 234783,
+  "imdb_id": "nm2072009",
+  "known_for_department": "Acting",
+  "name": "Mikkel Bratt Silset",
+  "place_of_birth": "Oslo, Norway",
+  "popularity": 0.8218,
+  "profile_path": "/ooFYSgaxUxZHIwh1dYjs6qVerDK.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2072009",
+    "tvrage_id": null,
+    "wikidata_id": "Q20049446",
+    "facebook_id": null,
+    "instagram_id": "mikkelbrattsilset",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

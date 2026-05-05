@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1995-07-20",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1903427,
+  "imdb_id": "nm7401653",
+  "known_for_department": "Acting",
+  "name": "Zak Steiner",
+  "place_of_birth": null,
+  "popularity": 0.5623,
+  "profile_path": "/kv2EAljlsru1XWF6uC4P9tRrNGc.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm7401653",
+    "tvrage_id": null,
+    "wikidata_id": "Q111261232",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

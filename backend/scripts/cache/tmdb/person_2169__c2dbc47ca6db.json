@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "مایکل جیتر"
+  ],
+  "biography": "",
+  "birthday": "1952-08-26",
+  "deathday": "2003-03-30",
+  "gender": 2,
+  "homepage": null,
+  "id": 2169,
+  "imdb_id": "nm0005052",
+  "known_for_department": "Acting",
+  "name": "Майкл Джитер",
+  "place_of_birth": "Lawrenceburg, Tennessee, USA",
+  "popularity": 2.5472,
+  "profile_path": "/pNBf8X56wCOHH7cArsMYJuke4fO.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01d0b1",
+    "freebase_id": "/en/michael_jeter",
+    "imdb_id": "nm0005052",
+    "tvrage_id": 29797,
+    "wikidata_id": "Q329716",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

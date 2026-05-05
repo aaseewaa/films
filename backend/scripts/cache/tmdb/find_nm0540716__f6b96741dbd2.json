@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1204877,
+      "name": "André Malraux",
+      "original_name": "André Malraux",
+      "media_type": "person",
+      "popularity": 0.1062,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/i6DpbO5L5CfAuUnFeqxgpk1CEQ4.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/15pjt21muCI87n5qbiyEjpURO0n.jpg",
+          "id": 219924,
+          "title": "Days of Hope",
+          "original_title": "Espoir - Sierra de Teruel",
+          "overview": "Spanish Civil War, 1937. A platoon of Republican soldiers plans to stop the advance of the rebel troops by bombing a bridge on the road to Zaragoza, near the city of Linás. With the close collaboration of the peasants of the area, the soldiers try to overcome the continuous bombardments and endure the harsh and tireless opposition of the powerful enemy…",
+          "poster_path": "/wedXLgoUdMoni4gwzQcqCgg92Mi.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "popularity": 0.5207,
+          "release_date": "1940-02-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.607,
+          "vote_count": 14
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/1krsnQP1xlqa28nIK1PgIowmzot.jpg",
+          "id": 300832,
+          "title": "Communists",
+          "original_title": "Kommunisten",
+          "overview": "Jean-Marie Straub pushes this musicality of blocks to a paroxysmal extreme, mixing blocks of time (40 years separate the various extracts that are going to be used, and what is to be filmed), blocks of text (Malraux, Fortini, Vittorini, Hölderlin) and blocks of language (French, Italian, German), and from this ruckus emerges the history of the world, yes, History with a capital H, and from the same movement, the political hope of its being overtaken. So this is an adventure film, about the Human adventure, still one that is always, in the end, overtaken by Nature.",
+          "poster_path": "/pdfwcViYbZGHcGltgN85ll0IicI.jpg",
+          "media_type": "movie",
+          "original_language": "de",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.1465,
+          "release_date": "2014-08-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.5,
+          "vote_count": 10
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/fWu6Ej1h4WteMLWOZif5xJV7DwY.jpg",
+          "id": 363228,
+          "title": "L’Aquarium et la Nation",
+          "original_title": "L’Aquarium et la Nation",
+          "overview": "A film in three parts: An aquarium, a man sitting at a table reading various text passages, and a sequence from Jean Renoir’s film LA MARSEILLAISE. This is all from a film by Jean-Marie Straub – about fate, the soul and the cosmos, about the evident nature in which man lives, just like in the aquarium surrounding him. And finally, there’s the nation as a symbol for the community of free people. A Straub film represents a gift that isn’t based on exchange, but rather the opposite of communication. And what could be more beautiful and liberating in life?",
+          "poster_path": "/jKJO4WHR3CYpy9CQyFWjvJlymmo.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.0363,
+          "release_date": "2015-10-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.3,
+          "vote_count": 3
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

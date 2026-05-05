@@ -1,0 +1,43 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Charles Spencer Chaplin",
+    "Charles Chaplin",
+    "Чарлз Спенсер Чаплін",
+    "Charlot",
+    "查理·卓别林",
+    "찰리 채플린",
+    "チャールズ・チャップリン",
+    "צ'ארלי צ'פלין",
+    "تشارلي تشابلن",
+    "چارلی چاپلین",
+    "찰스 스펜서 채플린",
+    "チャールズ・スペンサー・チャップリン",
+    "Чарльз Спенсер Чаплин",
+    "Чарльз Чаплин"
+  ],
+  "biography": "",
+  "birthday": "1889-04-16",
+  "deathday": "1977-12-25",
+  "gender": 2,
+  "homepage": "https://www.charliechaplin.com/",
+  "id": 13848,
+  "imdb_id": "nm0000122",
+  "known_for_department": "Acting",
+  "name": "Чарли Чаплин",
+  "place_of_birth": "Walworth, London, England, UK",
+  "popularity": 2.309,
+  "profile_path": "/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01lc5",
+    "freebase_id": "/en/charlie_chaplin",
+    "imdb_id": "nm0000122",
+    "tvrage_id": 81386,
+    "wikidata_id": "Q882",
+    "facebook_id": "CharlieChaplinOfficial",
+    "instagram_id": "CharlieChaplinOfficial",
+    "tiktok_id": null,
+    "twitter_id": "Chaplinofficial",
+    "youtube_id": "Thechaplinfilms"
+  }
+}

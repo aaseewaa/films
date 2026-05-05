@@ -1,0 +1,350 @@
+{
+  "adult": false,
+  "backdrop_path": "/240ZADOdI5WjD0eBFyiNh3KQl4m.jpg",
+  "belongs_to_collection": null,
+  "budget": 0,
+  "genres": [
+    {
+      "id": 18,
+      "name": "драма"
+    }
+  ],
+  "homepage": "",
+  "id": 412201,
+  "imdb_id": "tt4950192",
+  "origin_country": [
+    "FR",
+    "RO"
+  ],
+  "original_language": "ro",
+  "original_title": "Fixeur",
+  "overview": "",
+  "popularity": 45.1108,
+  "poster_path": "/aCTDG1kKROuCt3jnTkiFKmY3BHq.jpg",
+  "production_companies": [
+    {
+      "id": 75891,
+      "logo_path": "/7xISxdpoePsyJ0pYk32IkwtOE4L.png",
+      "name": "Petit Film",
+      "origin_country": "FR"
+    },
+    {
+      "id": 13408,
+      "logo_path": "/kqHRFionRMVuW31Rc8bfZZpKyIG.png",
+      "name": "4 Proof Film",
+      "origin_country": "RO"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "RO",
+      "name": "Romania"
+    },
+    {
+      "iso_3166_1": "FR",
+      "name": "France"
+    }
+  ],
+  "release_date": "2017-03-22",
+  "revenue": 0,
+  "runtime": 98,
+  "softcore": false,
+  "spoken_languages": [
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "French",
+      "iso_639_1": "fr",
+      "name": "Français"
+    },
+    {
+      "english_name": "Romanian",
+      "iso_639_1": "ro",
+      "name": "Română"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Fixeur",
+  "video": false,
+  "vote_average": 6.5,
+  "vote_count": 17,
+  "credits": {
+    "cast": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 85226,
+        "known_for_department": "Acting",
+        "name": "Tudor Aaron Istodor",
+        "original_name": "Tudor Aaron Istodor",
+        "popularity": 0.1742,
+        "profile_path": "/baUN9H4oLHCLuOhyIDJkI8LeTXO.jpg",
+        "cast_id": 5,
+        "character": "Radu",
+        "credit_id": "57c04759c3a36820f8004518",
+        "order": 0
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 43436,
+        "known_for_department": "Acting",
+        "name": "Мехди Неббу",
+        "original_name": "Mehdi Nebbou",
+        "popularity": 1.4863,
+        "profile_path": "/udhs2gJxR2CSZwrky6C6s8J0Cke.jpg",
+        "cast_id": 6,
+        "character": "Axel",
+        "credit_id": "57c047679251414b150033e9",
+        "order": 1
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1122960,
+        "known_for_department": "Acting",
+        "name": "Николас Ваншыцкий",
+        "original_name": "Nicolas Wanczycki",
+        "popularity": 0.6224,
+        "profile_path": "/xksvgEBrpOB26BCga8JDqHZRRqZ.jpg",
+        "cast_id": 7,
+        "character": "Serge",
+        "credit_id": "57c04777925141498f00087d",
+        "order": 2
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1113157,
+        "known_for_department": "Acting",
+        "name": "Adrian Titieni",
+        "original_name": "Adrian Titieni",
+        "popularity": 0.198,
+        "profile_path": "/cXTDbbmrPXvxrznP2ZAGYzVv1hn.jpg",
+        "cast_id": 12,
+        "character": "",
+        "credit_id": "57e12145c3a36853fb005129",
+        "order": 3
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1670527,
+        "known_for_department": "Acting",
+        "name": "Diana Spatarescu",
+        "original_name": "Diana Spatarescu",
+        "popularity": 0.0143,
+        "profile_path": null,
+        "cast_id": 8,
+        "character": "Anca",
+        "credit_id": "57c047849251414b5f0031cc",
+        "order": 4
+      },
+      {
+        "adult": false,
+        "gender": 1,
+        "id": 1161505,
+        "known_for_department": "Acting",
+        "name": "Andreea Vasile",
+        "original_name": "Andreea Vasile",
+        "popularity": 0.1843,
+        "profile_path": "/8loy544vaVdQ0Oimc4cKqZUDCVp.jpg",
+        "cast_id": 9,
+        "character": "",
+        "credit_id": "57e12126c3a36853f2005190",
+        "order": 5
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1163895,
+        "known_for_department": "Acting",
+        "name": "Sorin Cociș",
+        "original_name": "Sorin Cociș",
+        "popularity": 0.1494,
+        "profile_path": "/a380Yld3okUV5ZqKc6zccU4jb79.jpg",
+        "cast_id": 10,
+        "character": "",
+        "credit_id": "57e1212d92514104570055d0",
+        "order": 6
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1682534,
+        "known_for_department": "Acting",
+        "name": "Andrei Gajzago",
+        "original_name": "Andrei Gajzago",
+        "popularity": 0.0379,
+        "profile_path": null,
+        "cast_id": 11,
+        "character": "",
+        "credit_id": "57e1213492514104570055d6",
+        "order": 7
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1886446,
+        "known_for_department": "Acting",
+        "name": "Ionut Andrei Chereches",
+        "original_name": "Ionut Andrei Chereches",
+        "popularity": 0.0239,
+        "profile_path": null,
+        "cast_id": 13,
+        "character": "Bully",
+        "credit_id": "59b71196c3a368158b001c2c",
+        "order": 8
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 587476,
+        "known_for_department": "Acting",
+        "name": "Пую Мирча Ласкус",
+        "original_name": "Puiu-Mircea Lăscuș",
+        "popularity": 0.3252,
+        "profile_path": "/ba6AN8dZvd4YEA9yZjAtOvrktnL.jpg",
+        "cast_id": 14,
+        "character": "Bodyguard",
+        "credit_id": "59b711a8c3a368157b001ac7",
+        "order": 9
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1886447,
+        "known_for_department": "Acting",
+        "name": "Emilian Barnea",
+        "original_name": "Emilian Barnea",
+        "popularity": 0.0286,
+        "profile_path": null,
+        "cast_id": 15,
+        "character": "Bully",
+        "credit_id": "59b711b99251416787001cb7",
+        "order": 10
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 60418,
+        "known_for_department": "Acting",
+        "name": "Emanuel Pârvu",
+        "original_name": "Emanuel Pârvu",
+        "popularity": 0.2072,
+        "profile_path": "/4akFz7FoaouqRrToSvtMNlWh5oq.jpg",
+        "cast_id": 17,
+        "character": "",
+        "credit_id": "664392a16b59cb499369467c",
+        "order": 11
+      }
+    ],
+    "crew": [
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1666019,
+        "known_for_department": "Camera",
+        "name": "Adrian Silișteanu",
+        "original_name": "Adrian Silișteanu",
+        "popularity": 0.1379,
+        "profile_path": "/nUQ5sS7sNwyfpmfWRBXhUkOkh0N.jpg",
+        "credit_id": "57c047189251414b150033ca",
+        "department": "Camera",
+        "job": "Director of Photography"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1547389,
+        "known_for_department": "Editing",
+        "name": "Mircea Olteanu",
+        "original_name": "Mircea Olteanu",
+        "popularity": 0.0352,
+        "profile_path": null,
+        "credit_id": "57c047419251414b5f0031a9",
+        "department": "Editing",
+        "job": "Editor"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1670526,
+        "known_for_department": "Writing",
+        "name": "Claudia Silisteanu",
+        "original_name": "Claudia Silisteanu",
+        "popularity": 0.0936,
+        "profile_path": null,
+        "credit_id": "57c0472f9251414ab80032e6",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1666019,
+        "known_for_department": "Camera",
+        "name": "Adrian Silișteanu",
+        "original_name": "Adrian Silișteanu",
+        "popularity": 0.1379,
+        "profile_path": "/nUQ5sS7sNwyfpmfWRBXhUkOkh0N.jpg",
+        "credit_id": "57c04721c3a3682134004b7d",
+        "department": "Writing",
+        "job": "Screenplay"
+      },
+      {
+        "adult": false,
+        "gender": 0,
+        "id": 1081061,
+        "known_for_department": "Directing",
+        "name": "Adrian Sitaru",
+        "original_name": "Adrian Sitaru",
+        "popularity": 0.128,
+        "profile_path": null,
+        "credit_id": "57b96b9292514141e3004b0b",
+        "department": "Directing",
+        "job": "Director"
+      },
+      {
+        "adult": false,
+        "gender": 2,
+        "id": 1618051,
+        "known_for_department": "Production",
+        "name": "Jean des Forêts",
+        "original_name": "Jean des Forêts",
+        "popularity": 0.3735,
+        "profile_path": "/wPJVyr0dI15HYwBaoHDEuxIBgK5.jpg",
+        "credit_id": "6424216e37b3a900b6bbac07",
+        "department": "Production",
+        "job": "Co-Producer"
+      }
+    ]
+  },
+  "external_ids": {
+    "imdb_id": "tt4950192",
+    "wikidata_id": "Q27959201",
+    "facebook_id": null,
+    "instagram_id": null,
+    "twitter_id": null
+  },
+  "keywords": {
+    "keywords": [
+      {
+        "id": 917,
+        "name": "journalism"
+      },
+      {
+        "id": 1900,
+        "name": "immigration"
+      },
+      {
+        "id": 13059,
+        "name": "prostitution"
+      }
+    ]
+  }
+}

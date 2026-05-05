@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "James Maury Henson"
+  ],
+  "biography": "",
+  "birthday": "1936-09-24",
+  "deathday": "1990-05-16",
+  "gender": 2,
+  "homepage": "https://www.henson.com/",
+  "id": 55983,
+  "imdb_id": "nm0001345",
+  "known_for_department": "Directing",
+  "name": "Джим Хенсон",
+  "place_of_birth": "Greenville, Mississippi, USA",
+  "popularity": 1.0878,
+  "profile_path": "/93vzGW2kWwmAJ8HpbErzKMHXDME.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/044f7",
+    "freebase_id": "/en/jim_henson",
+    "imdb_id": "nm0001345",
+    "tvrage_id": 30479,
+    "wikidata_id": "Q191037",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

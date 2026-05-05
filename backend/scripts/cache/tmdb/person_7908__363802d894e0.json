@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Фрэнк Оз",
+    "فرانک اوز",
+    "Richard Frank Oznowicz"
+  ],
+  "biography": "",
+  "birthday": "1944-05-25",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 7908,
+  "imdb_id": "nm0000568",
+  "known_for_department": "Acting",
+  "name": "Фрэнк Оз",
+  "place_of_birth": "Hereford, Herefordshire, England, UK",
+  "popularity": 1.8013,
+  "profile_path": "/mb2JbT8s6LIgaxj6QTph0NW1pmI.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01vy_v8",
+    "freebase_id": "/en/frank_oz",
+    "imdb_id": "nm0000568",
+    "tvrage_id": 35567,
+    "wikidata_id": "Q311319",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

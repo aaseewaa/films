@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1650,
+      "name": "François Truffaut",
+      "original_name": "François Truffaut",
+      "media_type": "person",
+      "popularity": 1.1863,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/3bXLtipaybsje01LlQvHvuUAZNq.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/cy7ymUaMEWRoig7LWXpfzaaw2vv.jpg",
+          "id": 147,
+          "title": "The 400 Blows",
+          "original_title": "Les Quatre Cents Coups",
+          "overview": "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend, Rene, trying to plan for a better life. When one of their schemes goes awry, Antoine ends up in trouble with the law, leading to even more conflicts with unsympathetic authority figures.",
+          "poster_path": "/12PuU23kkDLvTd0nb8hMlE3oShB.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 3.6421,
+          "release_date": "1959-06-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 2323
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/gyC9u8GOeNwyKzvXHAOhTsfps5u.jpg",
+          "id": 1714,
+          "title": "Fahrenheit 451",
+          "original_title": "Fahrenheit 451",
+          "overview": "In the future, the government maintains control of public opinion by outlawing literature and maintaining a group of enforcers, known as “firemen,” to perform the necessary book burnings. Fireman Montag begins to question the morality of his vocation…",
+          "poster_path": "/k2CTpexoS9MO9lKVFfnzwVdJuM.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            878
+          ],
+          "popularity": 2.6567,
+          "release_date": "1966-09-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.113,
+          "vote_count": 1067
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/o3GSSYr7AzrdcukNpQrqFEJNOjk.jpg",
+          "id": 1628,
+          "title": "Jules and Jim",
+          "original_title": "Jules et Jim",
+          "overview": "In the carefree days before World War I, introverted Austrian author Jules strikes up a friendship with the exuberant Frenchman Jim and both men fall for the impulsive and beautiful Catherine.",
+          "poster_path": "/kuFjZlcZhQFDtIjuI3GQJjsQG03.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.8153,
+          "release_date": "1962-01-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.548,
+          "vote_count": 1048
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

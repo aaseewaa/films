@@ -1,0 +1,427 @@
+{
+  "page": 10,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/b6HWTOxn1xevvyHU2K9ICvaRU6g.jpg",
+      "genre_ids": [
+        14,
+        18,
+        80
+      ],
+      "id": 497,
+      "title": "The Green Mile",
+      "original_language": "en",
+      "original_title": "The Green Mile",
+      "overview": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cell block's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.",
+      "popularity": 28.0945,
+      "poster_path": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg",
+      "release_date": "1999-12-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.504,
+      "vote_count": 19163
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9xfDWXAUbFXQK585JvByT5pEAhe.jpg",
+      "genre_ids": [
+        16,
+        28,
+        12,
+        878
+      ],
+      "id": 569094,
+      "title": "Spider-Man: Across the Spider-Verse",
+      "original_language": "en",
+      "original_title": "Spider-Man: Across the Spider-Verse",
+      "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+      "popularity": 28.7769,
+      "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "release_date": "2023-05-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.3,
+      "vote_count": 8511
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/twsxsfao6ZOVvT8LfudH603MMi6.jpg",
+      "genre_ids": [
+        28,
+        16,
+        35,
+        10751,
+        878
+      ],
+      "id": 519182,
+      "title": "Despicable Me 4",
+      "original_language": "en",
+      "original_title": "Despicable Me 4",
+      "overview": "Gru and Lucy and their girls—Margo, Edith and Agnes—welcome a new member to the Gru family, Gru Jr., who is intent on tormenting his dad. Gru also faces a new nemesis in Maxime Le Mal and his femme fatale girlfriend Valentina, forcing the family to go on the run.",
+      "popularity": 23.085,
+      "poster_path": "/wWba3TaojhK7NdycRhoQpsG0FaH.jpg",
+      "release_date": "2024-06-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.988,
+      "vote_count": 3168
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mQZJoIhTEkNhCYAqcHrQqhENLdu.jpg",
+      "genre_ids": [
+        10751,
+        16,
+        878,
+        12
+      ],
+      "id": 1184918,
+      "title": "The Wild Robot",
+      "original_language": "en",
+      "original_title": "The Wild Robot",
+      "overview": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+      "popularity": 25.8611,
+      "poster_path": "/eG9lz41mJqsI4J6ubMtVqD26q2J.jpg",
+      "release_date": "2024-09-12",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.304,
+      "vote_count": 5970
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8x9iKH8kWA0zdkgNdpAew7OstYe.jpg",
+      "genre_ids": [
+        16,
+        10749,
+        18
+      ],
+      "id": 372058,
+      "title": "Your Name.",
+      "original_language": "ja",
+      "original_title": "君の名は。",
+      "overview": "High schoolers Mitsuha and Taki are complete strangers living separate lives. But one night, they suddenly switch places. Mitsuha wakes up in Taki’s body, and he in hers. This bizarre occurrence continues to happen randomly, and the two must adjust their lives around each other.",
+      "popularity": 27.6868,
+      "poster_path": "/q719jXXEzOoYaps6babgKnONONX.jpg",
+      "release_date": "2016-08-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.476,
+      "vote_count": 12463
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5R22ALClltFkQD5supuGSThX5kW.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 22512,
+      "title": "Sex, Shame & Tears",
+      "original_language": "es",
+      "original_title": "Sexo, pudor y lágrimas",
+      "overview": "A comedic drama featuring two couples and two old friends in Mexico City. Tomas visits Carlos and Ana, while Miguel and Andrea are joined by Maria. The presence of guests triggers lust, rejection, infidelities, reconciliation and other consequences.",
+      "popularity": 28.9146,
+      "poster_path": "/1j3TiCXSguHi3IGumXKpQymvUKH.jpg",
+      "release_date": "1999-06-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.592,
+      "vote_count": 146
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 11,
+      "title": "Star Wars",
+      "original_language": "en",
+      "original_title": "Star Wars",
+      "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "popularity": 26.3686,
+      "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+      "release_date": "1977-05-25",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.2,
+      "vote_count": 22219
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/kJsPVzdyBrYHLomuNv5SJDXUQ2f.jpg",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "id": 76600,
+      "title": "Avatar: The Way of Water",
+      "original_language": "en",
+      "original_title": "Avatar: The Way of Water",
+      "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+      "popularity": 26.1734,
+      "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+      "release_date": "2022-12-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.592,
+      "vote_count": 14028
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+      "genre_ids": [
+        18,
+        53
+      ],
+      "id": 550,
+      "title": "Fight Club",
+      "original_language": "en",
+      "original_title": "Fight Club",
+      "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+      "popularity": 26.1601,
+      "poster_path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+      "release_date": "1999-10-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.4,
+      "vote_count": 31901
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/95T3fvgaZzSalrw7yVjsE8bSymB.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 352707,
+      "title": "Possessed",
+      "original_language": "en",
+      "original_title": "Possessed",
+      "overview": "Forbidden Worlds establishes itself as the premier purveyor of Horror and Mayhem with a trilogy of gothic tales of demonic possession.  (1). The Devil's Spell:  Bodies drop in a night of terror as an evil witch comes back to kill the descendants of the witch hunters who burned her...300 years earlier!  (2). Witches' Dolls:  A literal demon disguised as a sweet little old lady is hell-bent on capturing the souls of unsuspecting boarders and imprisoning them in her hideous book of paper dolls.  (3). Resurrection of The Damned:  A man haunted by the ghost of his dead father and enticed by black magic enters a world that goes beyond the wildest imagination.  (1). \"The Devil's Spell\" segment begins: (at 0:44) and is an excerpt from the film: \"Witchouse (1999)\"  (2). \"Witches Dolls\" segment begins: (at 30:42) and is an excerpt from the film: \"Stitches (2001)\"  (3). \"Resurrection of The Damned\" segment begins: (at 58:07)  and is an excerpt from the film: \"Netherworld (1992)\"",
+      "popularity": 23.1019,
+      "poster_path": "/GCVQL9UDTxs72qiDV1lSa4WL6M.jpg",
+      "release_date": "2005-02-08",
+      "softcore": false,
+      "video": false,
+      "vote_average": 3.5,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r7K6Xt0RX4Mw0cAbZVw5cyb1Tux.jpg",
+      "genre_ids": [
+        28,
+        12,
+        14
+      ],
+      "id": 566525,
+      "title": "Shang-Chi and the Legend of the Ten Rings",
+      "original_language": "en",
+      "original_title": "Shang-Chi and the Legend of the Ten Rings",
+      "overview": "Shang-Chi must confront the past he thought he left behind when he is drawn into the web of the mysterious Ten Rings organization.",
+      "popularity": 25.2418,
+      "poster_path": "/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+      "release_date": "2021-09-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.494,
+      "vote_count": 10319
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/W1ffLQGHoxfAOq0ZYdPtJlvAdb.jpg",
+      "genre_ids": [
+        878,
+        18,
+        10749
+      ],
+      "id": 38,
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "original_language": "en",
+      "original_title": "Eternal Sunshine of the Spotless Mind",
+      "overview": "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.",
+      "popularity": 23.8908,
+      "poster_path": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+      "release_date": "2004-03-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.09,
+      "vote_count": 16260
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/eJ0HooOOD1uzI39CfOQNWIiWKlJ.jpg",
+      "genre_ids": [
+        28,
+        18,
+        53
+      ],
+      "id": 1387382,
+      "title": "Hunting Season",
+      "original_language": "en",
+      "original_title": "Hunting Season",
+      "overview": "When a reclusive survivalist and his daughter rescue a mysterious, wounded woman from a river, they become entangled in a deadly web of violence and revenge, forcing them to confront a brutal criminal to survive.",
+      "popularity": 27.5923,
+      "poster_path": "/cbryTyaWdqrKpQCw6K7zm2jrB5v.jpg",
+      "release_date": "2025-12-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.867,
+      "vote_count": 199
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3cVrg7tzSf5AgEecYWDOSAzXAeX.jpg",
+      "genre_ids": [
+        27,
+        9648
+      ],
+      "id": 1408208,
+      "title": "Exit 8",
+      "original_language": "ja",
+      "original_title": "８番出口",
+      "overview": "A man trapped in an endless sterile subway passageway sets out to find Exit 8. The rules of his quest are simple: do not overlook anything out of the ordinary. If you discover an anomaly, turn back immediately. If you don’t, carry on. Then leave from Exit 8. But even a single oversight will send him back to the beginning. Will he ever reach his goal and escape this infinite corridor?",
+      "popularity": 27.7013,
+      "poster_path": "/nQXYTvm6AY4WmtcPskroqC7Skh.jpg",
+      "release_date": "2025-08-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.639,
+      "vote_count": 342
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7QirCB1o80NEFpQGlQRZerZbQEp.jpg",
+      "genre_ids": [
+        10749,
+        18
+      ],
+      "id": 1156594,
+      "title": "Our Fault",
+      "original_language": "es",
+      "original_title": "Culpa nuestra",
+      "overview": "Jenna and Lion's wedding brings about the long-awaited reunion between Noah and Nick after their breakup. Nick's inability to forgive Noah stands as an insurmountable barrier. He, heir to his grandfather's businesses, and she, starting her professional life, resist fueling a flame that's still alive. But now that their paths have crossed again, will love be stronger than resentment?",
+      "popularity": 25.0101,
+      "poster_path": "/yzqHt4m1SeY9FbPrfZ0C2Hi9x1s.jpg",
+      "release_date": "2025-10-15",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.352,
+      "vote_count": 648
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/mbYTRO33LJAgpCMrIn9ibiWHbMH.jpg",
+      "genre_ids": [
+        35,
+        12,
+        14
+      ],
+      "id": 346698,
+      "title": "Barbie",
+      "original_language": "en",
+      "original_title": "Barbie",
+      "overview": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
+      "popularity": 23.2876,
+      "poster_path": "/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+      "release_date": "2023-07-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.927,
+      "vote_count": 11020
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/avwIERZtWiWa34qShf5biDzAVaF.jpg",
+      "genre_ids": [
+        35,
+        18
+      ],
+      "id": 1049471,
+      "title": "Outcome",
+      "original_language": "en",
+      "original_title": "Outcome",
+      "overview": "Reef Hawk, Hollywood's poster child since age six, is not okay. When he learns about an extortion plot tied to a mysterious video, Reef preemptively sets out on a redemption tour to make amends, confront his demons, and avoid getting canceled.",
+      "popularity": 26.2176,
+      "poster_path": "/kSzcpfbTy2pXHGvrVU2WhQTo6oU.jpg",
+      "release_date": "2026-04-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.4,
+      "vote_count": 161
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/hpXBJxLD2SEf8l2CspmSeiHrBKX.jpg",
+      "genre_ids": [
+        18,
+        14,
+        27
+      ],
+      "id": 1062722,
+      "title": "Frankenstein",
+      "original_language": "en",
+      "original_title": "Frankenstein",
+      "overview": "Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.",
+      "popularity": 25.1995,
+      "poster_path": "/g4JtvGlQO7DByTI6frUobqvSL3R.jpg",
+      "release_date": "2025-10-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.645,
+      "vote_count": 3374
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7lmBufEG7P7Y1HClYK3gCxYrkgS.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 10138,
+      "title": "Iron Man 2",
+      "original_language": "en",
+      "original_title": "Iron Man 2",
+      "overview": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Stark, with Pepper Potts and James 'Rhodey' Rhodes at his side, must forge new alliances – and confront powerful enemies.",
+      "popularity": 26.4834,
+      "poster_path": "/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+      "release_date": "2010-04-28",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.851,
+      "vote_count": 22292
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/zo8CIjJ2nfNOevqNajwMRO6Hwka.jpg",
+      "genre_ids": [
+        12,
+        16,
+        35,
+        10751,
+        14
+      ],
+      "id": 1241982,
+      "title": "Moana 2",
+      "original_language": "en",
+      "original_title": "Moana 2",
+      "overview": "After receiving an unexpected call from her wayfinding ancestors, Moana journeys alongside Maui and a new crew to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
+      "popularity": 25.6213,
+      "poster_path": "/aLVkiINlIeCkcZIzb7XHzPYgO6L.jpg",
+      "release_date": "2024-11-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.997,
+      "vote_count": 3041
+    }
+  ],
+  "total_pages": 56567,
+  "total_results": 1131322
+}

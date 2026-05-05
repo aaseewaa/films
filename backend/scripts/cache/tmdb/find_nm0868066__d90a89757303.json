@@ -1,0 +1,93 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 78322,
+      "name": "Akira Toriyama",
+      "original_name": "鳥山明",
+      "media_type": "person",
+      "popularity": 2.0508,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/9YorJMvF6DgfJcpATHbGyivZpS5.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/yJAOi2n0VYBEXdPI1NXv5FiOcBX.jpg",
+          "id": 62715,
+          "name": "Dragon Ball Super",
+          "original_name": "ドラゴンボール超（スーパー）",
+          "overview": "With Majin Buu defeated half-a-year prior, peace returns to Earth, where Son Goku (now a radish farmer) and his friends now live peaceful lives. However, a new threat appears in the form of Beerus, the God of Destruction. Considered the most terrifying being in the entire universe, Beerus is eager to fight the legendary warrior seen in a prophecy foretold decades ago known as the Super Saiyan God. The series retells the events from the two Dragon Ball Z films, Battle of Gods and Resurrection 'F' before proceeding to an original story about the exploration of alternate universes.",
+          "poster_path": "/qEUrbXJ2qt4Rg84Btlx4STOhgte.jpg",
+          "media_type": "tv",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            10759,
+            10765
+          ],
+          "popularity": 15.1644,
+          "first_air_date": "2015-07-05",
+          "softcore": false,
+          "vote_average": 8.2,
+          "vote_count": 5226,
+          "origin_country": [
+            "JP"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ydf1CeiBLfdxiyNTpskM0802TKl.jpg",
+          "id": 12971,
+          "name": "Dragon Ball Z",
+          "original_name": "ドラゴンボールゼット",
+          "overview": "Now happily married and with a son, martial arts champion Goku must defend Earth from a series of extraterrestrial invaders bent on destruction.",
+          "poster_path": "/yfyToia25GnvjY7FPAGaCm3lKRc.jpg",
+          "media_type": "tv",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            10765,
+            10759
+          ],
+          "popularity": 64.5161,
+          "first_air_date": "1989-04-26",
+          "softcore": false,
+          "vote_average": 8.356,
+          "vote_count": 4803,
+          "origin_country": [
+            "JP"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/30L49n4Dhn7dzuGG50GV3ybMhC3.jpg",
+          "id": 12609,
+          "name": "Dragon Ball",
+          "original_name": "ドラゴンボール",
+          "overview": "Young Goku sets off on a quest with his teenage friend Bulma to find the seven Dragon Balls, which grant whoever possesses them a single wish.",
+          "poster_path": "/onCLyCOgszTIyyVs2XKYSkKPOPG.jpg",
+          "media_type": "tv",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            10759,
+            10765
+          ],
+          "popularity": 3.4364,
+          "first_air_date": "1986-02-26",
+          "softcore": false,
+          "vote_average": 8.264,
+          "vote_count": 3348,
+          "origin_country": [
+            "JP"
+          ]
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

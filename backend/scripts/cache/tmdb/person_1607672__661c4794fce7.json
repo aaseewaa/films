@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "مايكل تشافيز",
+    "マイケル チャベス"
+  ],
+  "biography": "",
+  "birthday": "1984-11-03",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://www.michael-chaves.com/",
+  "id": 1607672,
+  "imdb_id": "nm1980431",
+  "known_for_department": "Directing",
+  "name": "Майкл Чавес",
+  "place_of_birth": "Los Angeles, California, U.S",
+  "popularity": 0.5752,
+  "profile_path": "/kdY5UWdsLQvlBBkzuiR8upujNtn.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1980431",
+    "tvrage_id": null,
+    "wikidata_id": "Q60351348",
+    "facebook_id": null,
+    "instagram_id": "michaelchaves",
+    "tiktok_id": null,
+    "twitter_id": "@michaelchaves",
+    "youtube_id": null
+  }
+}

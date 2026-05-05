@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "프랑수아 트뤼포",
+    "弗朗索瓦·特吕弗",
+    "프랑소와 트뤼포"
+  ],
+  "biography": "",
+  "birthday": "1932-02-06",
+  "deathday": "1984-10-21",
+  "gender": 2,
+  "homepage": null,
+  "id": 1650,
+  "imdb_id": "nm0000076",
+  "known_for_department": "Directing",
+  "name": "François Truffaut",
+  "place_of_birth": "Paris, France",
+  "popularity": 1.1863,
+  "profile_path": "/3bXLtipaybsje01LlQvHvuUAZNq.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/02x5h",
+    "freebase_id": null,
+    "imdb_id": "nm0000076",
+    "tvrage_id": null,
+    "wikidata_id": "Q53002",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

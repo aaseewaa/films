@@ -1,0 +1,413 @@
+{
+  "page": 13,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/85k0kaoRgGmF6ACq0M61AFxhjLN.jpg",
+      "genre_ids": [
+        35,
+        80
+      ],
+      "id": 12153,
+      "title": "White Chicks",
+      "original_language": "en",
+      "original_title": "White Chicks",
+      "overview": "Two FBI agent brothers, Marcus and Kevin Copeland, accidentally foil a drug bust. To avoid being fired they accept a mission escorting a pair of socialites to the Hamptons--but when the girls are disfigured in a car accident, they refuse to go. Left without options, Marcus and Kevin decide to pose as the sisters, transforming themselves from black men into rich European-American women.",
+      "popularity": 23.4596,
+      "poster_path": "/aHTUpo45qy9QYIOnVITGGqLoVcA.jpg",
+      "release_date": "2004-06-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.931,
+      "vote_count": 4491
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8mnXR9rey5uQ08rZAvzojKWbDQS.jpg",
+      "genre_ids": [
+        16,
+        28,
+        12,
+        878
+      ],
+      "id": 324857,
+      "title": "Spider-Man: Into the Spider-Verse",
+      "original_language": "en",
+      "original_title": "Spider-Man: Into the Spider-Verse",
+      "overview": "Struggling to find his place in the world while juggling school and family, Brooklyn teenager Miles Morales is unexpectedly bitten by a radioactive spider and develops unfathomable powers just like the one and only Spider-Man. While wrestling with the implications of his new abilities, Miles discovers a super collider created by the madman Wilson \"Kingpin\" Fisk, causing others from across the Spider-Verse to be inadvertently transported to his dimension.",
+      "popularity": 23.3738,
+      "poster_path": "/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+      "release_date": "2018-12-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.392,
+      "vote_count": 17131
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9tOkjBEiiGcaClgJFtwocStZvIT.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "id": 269149,
+      "title": "Zootopia",
+      "original_language": "en",
+      "original_title": "Zootopia",
+      "overview": "Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery.",
+      "popularity": 22.7252,
+      "poster_path": "/hlK0e0wAQ3VLuJcsfIYPvb4JVud.jpg",
+      "release_date": "2016-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.8,
+      "vote_count": 17993
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/ru0r5MYhIwcU0IddhRLqJpIPkiV.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 1191876,
+      "title": "From the Ashes",
+      "original_language": "en",
+      "original_title": "From the Ashes",
+      "overview": "Jailed for her husband's crime, a woman discovers that her only way out is to solve riddles from her mysterious past.",
+      "popularity": 24.2034,
+      "poster_path": "/aEUH2ECoZHvSmoMzJpca0STF2CZ.jpg",
+      "release_date": "2027-06-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wD95UmpUazo9820qnbbjRtbQ884.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 1412,
+      "title": "sex, lies, and videotape",
+      "original_language": "en",
+      "original_title": "sex, lies, and videotape",
+      "overview": "Ann, a frustrated wife, enters into counseling due to a troubled marriage. Unbeknownst to her, her husband John has begun an affair with her sister. When John’s best friend Graham arrives, his penchant for interviewing women about their sex lives forever changes John and Ann’s rocky marriage.",
+      "popularity": 24.2163,
+      "poster_path": "/pj1uKm07svgXZDHbYE8AzRfNHcu.jpg",
+      "release_date": "1989-08-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.94,
+      "vote_count": 1024
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+      "genre_ids": [
+        18,
+        10402,
+        53
+      ],
+      "id": 244786,
+      "title": "Whiplash",
+      "original_language": "en",
+      "original_title": "Whiplash",
+      "overview": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
+      "popularity": 22.6028,
+      "poster_path": "/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+      "release_date": "2014-10-10",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.4,
+      "vote_count": 16542
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/79PNOxNXSe5e0bhEj11QJPlsdCN.jpg",
+      "genre_ids": [
+        14,
+        10751,
+        28,
+        12
+      ],
+      "id": 1087192,
+      "title": "How to Train Your Dragon",
+      "original_language": "en",
+      "original_title": "How to Train Your Dragon",
+      "overview": "On the rugged isle of Berk, where Vikings and dragons have been bitter enemies for generations, Hiccup stands apart, defying centuries of tradition when he befriends Toothless, a feared Night Fury dragon. Their unlikely bond reveals the true nature of dragons, challenging the very foundations of Viking society.",
+      "popularity": 22.3474,
+      "poster_path": "/41dfWUWtg1kUZcJYe6Zk6ewxzMu.jpg",
+      "release_date": "2025-06-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.919,
+      "vote_count": 2746
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/Adrip2Jqzw56KeuV2nAxucKMNXA.jpg",
+      "genre_ids": [
+        37
+      ],
+      "id": 429,
+      "title": "The Good, the Bad and the Ugly",
+      "original_language": "it",
+      "original_title": "Il buono, il brutto, il cattivo",
+      "overview": "While the Civil War rages on between the Union and the Confederacy, three men – a quiet loner, a ruthless hitman, and a Mexican bandit – comb the American Southwest in search of a strongbox containing $200,000 in stolen gold.",
+      "popularity": 21.7382,
+      "poster_path": "/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+      "release_date": "1966-12-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.468,
+      "vote_count": 9584
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bBK5j3FUk2qy5KtHXMJDLdKH7Ba.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 35030,
+      "title": "The Young One",
+      "original_language": "en",
+      "original_title": "La joven",
+      "overview": "A jazz musician seeks refuge from a lynch mob on a remote island, where he meets a hostile game warden and the young object of his attentions.",
+      "popularity": 19.9943,
+      "poster_path": "/vgqmNCe9PKibdGpdWuhA6Ozuso.jpg",
+      "release_date": "1960-09-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.949,
+      "vote_count": 59
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/sDTnMOJ3H5wI38OxObmCtK7wfd5.jpg",
+      "genre_ids": [
+        16,
+        35,
+        10751
+      ],
+      "id": 585,
+      "title": "Monsters, Inc.",
+      "original_language": "en",
+      "original_title": "Monsters, Inc.",
+      "overview": "Lovable Sulley and his wisecracking sidekick Mike Wazowski are the top scare team at Monsters, Inc., the scream-processing factory in Monstropolis. When a little girl named Boo wanders into their world, it's the monsters who are scared silly, and it's up to Sulley and Mike to keep her out of sight and get her back home.",
+      "popularity": 23.4682,
+      "poster_path": "/wFSpyMsp7H0ttERbxY7Trlv8xry.jpg",
+      "release_date": "2001-11-01",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.848,
+      "vote_count": 19684
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+      "genre_ids": [
+        28,
+        18,
+        12
+      ],
+      "id": 98,
+      "title": "Gladiator",
+      "original_language": "en",
+      "original_title": "Gladiator",
+      "overview": "After the death of Emperor Marcus Aurelius, his devious son takes power and demotes Maximus, one of Rome's most capable generals who Marcus preferred. Eventually, Maximus is forced to become a gladiator and battle to the death against other men for the amusement of paying audiences.",
+      "popularity": 21.1175,
+      "poster_path": "/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+      "release_date": "2000-05-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.225,
+      "vote_count": 20787
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5P6hWD4zxAMntRuRnB4MmPLijNw.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 22881,
+      "title": "The Blind Side",
+      "original_language": "en",
+      "original_title": "The Blind Side",
+      "overview": "The story of Michael Oher, a homeless and traumatized boy who became an All American football player and first round NFL draft pick with the help of a caring woman and her family.",
+      "popularity": 18.9675,
+      "poster_path": "/bMgq7VBriuBFknXEe9E9pVBYGZq.jpg",
+      "release_date": "2009-11-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.665,
+      "vote_count": 6808
+    },
+    {
+      "adult": false,
+      "backdrop_path": null,
+      "genre_ids": [
+        53,
+        878
+      ],
+      "id": 1388696,
+      "title": "Broken Time",
+      "original_language": "en",
+      "original_title": "Broken Time",
+      "overview": "Dereck, a quiet physicist from a small town, plans a trip with his girlfriend, Erica, across the state to meet her family. When the couple’s car suddenly stops working, they encounter strange phenomena from what appears to be the aftermath of a lab experiment--from Dereck’s lab--gone wrong. After encountering a reckless criminal with his hostage in tow, and a father searching for his family, the group of strangers search for answers and uncover dangerous truths about their world, time, and life itself.",
+      "popularity": 17.8094,
+      "poster_path": null,
+      "release_date": "2024-11-09",
+      "softcore": false,
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 1197306,
+      "title": "A Working Man",
+      "original_language": "en",
+      "original_title": "A Working Man",
+      "overview": "Levon Cade left behind a decorated military career in the black ops to live a simple life working construction. But when his boss's daughter, who is like family to him, is taken by human traffickers, his search to bring her home uncovers a world of corruption far greater than he ever could have imagined.",
+      "popularity": 23.3934,
+      "poster_path": "/6FRFIogh3zFnVWn7Z6zcYnIbRcX.jpg",
+      "release_date": "2025-03-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.676,
+      "vote_count": 1867
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/i2GPnSwsdxHtI19e7gZwFVndpqg.jpg",
+      "genre_ids": [
+        28,
+        18
+      ],
+      "id": 1511417,
+      "title": "Bāhubali: The Epic",
+      "original_language": "te",
+      "original_title": "Bāhubali: The Epic",
+      "overview": "When a mysterious child is found by a tribal couple near a roaring waterfall, they raise him as their own. As he grows, Sivudu is drawn to the world beyond the cliffs, where he discovers the ancient kingdom of Mahishmati, ruled by a cruel tyrant, haunted by rebellion, and bound to his past. What begins as a quest for love soon unravels a legacy of betrayal, sacrifice, and a forgotten prince.",
+      "popularity": 23.4744,
+      "poster_path": "/z9YIo2qscyaXYgRqIdRJtND3bw8.jpg",
+      "release_date": "2025-10-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.095,
+      "vote_count": 37
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/yzIjyPtwvyjHelxqIRXGpiaucPG.jpg",
+      "genre_ids": [
+        27
+      ],
+      "id": 1572073,
+      "title": "The Deadly Little Mermaid",
+      "original_language": "en",
+      "original_title": "The Deadly Little Mermaid",
+      "overview": "Some secrets are better left at the bottom of the ocean. Once she's in your house, there is no escape. When a struggling artist pulls a beautiful, unconscious woman from the freezing coastal waters, he thinks he’s performed a miracle. But as she recovers within the walls of his secluded home, a series of unsettling events leads him to a terrifying realization: her presence is no coincidence. She is inextricably linked to the same watery grave that claimed his family years ago.",
+      "popularity": 22.2373,
+      "poster_path": "/uye25uG7k8r3NNPLyPiKOiRnFRF.jpg",
+      "release_date": "2026-03-06",
+      "softcore": false,
+      "video": false,
+      "vote_average": 4.717,
+      "vote_count": 23
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+      "genre_ids": [
+        12,
+        35,
+        878
+      ],
+      "id": 105,
+      "title": "Back to the Future",
+      "original_language": "en",
+      "original_title": "Back to the Future",
+      "overview": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+      "popularity": 21.3315,
+      "poster_path": "/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+      "release_date": "1985-07-03",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.325,
+      "vote_count": 21691
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/owQeDouUZ6wI6f1aTOYEFd511zn.jpg",
+      "genre_ids": [
+        28,
+        80,
+        53
+      ],
+      "id": 1582770,
+      "title": "Dhurandhar: The Revenge",
+      "original_language": "hi",
+      "original_title": "धुरंधर: द रिवेंज",
+      "overview": "As rival gangs, corrupt officials and a ruthless Major Iqbal close in, Hamza's mission for his country spirals into a bloody personal war where the line between patriot and monster disappears in the streets of Lyari.",
+      "popularity": 21.2881,
+      "poster_path": "/ov8vrRLZGoXHpYjSY9Vpv1tHJX7.jpg",
+      "release_date": "2026-03-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.6,
+      "vote_count": 66
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/2KeKfZBlezSHqTsuOjofoa9IrnS.jpg",
+      "genre_ids": [
+        99
+      ],
+      "id": 1493352,
+      "title": "Inside Time",
+      "original_language": "en",
+      "original_title": "Inside Time",
+      "overview": "This short documentary is a portrait of Stephen Reid, a man sentenced for 18 years for bank robbery. A notorious member of the \"Stopwatch Gang,\" Reid who once lived out the crazy, frantic life of the outlaw bandit. Now confined to a prison cell, he has a lot of time to reflect on the journey that brought him to this moment, something that has made him acutely conscious of the here and now.",
+      "popularity": 17.7797,
+      "poster_path": null,
+      "release_date": "2007-08-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 0.0,
+      "vote_count": 0
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/7IGKrY1f1KfwMipx9wZC4NRgIdF.jpg",
+      "genre_ids": [
+        18,
+        10749,
+        53
+      ],
+      "id": 216015,
+      "title": "Fifty Shades of Grey",
+      "original_language": "en",
+      "original_title": "Fifty Shades of Grey",
+      "overview": "When college senior Anastasia Steele steps in for her sick roommate to interview prominent businessman Christian Grey for their campus paper, little does she realize the path her life will take. Christian, as enigmatic as he is rich and powerful, finds himself strangely drawn to Ana, and she to him. Though sexually inexperienced, Ana plunges headlong into an affair -- and learns that Christian's true sexual proclivities push the boundaries of pain and pleasure.",
+      "popularity": 22.2664,
+      "poster_path": "/63kGofUkt1Mx0SIL4XI4Z5AoSgt.jpg",
+      "release_date": "2015-02-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.869,
+      "vote_count": 12349
+    }
+  ],
+  "total_pages": 56569,
+  "total_results": 1131373
+}

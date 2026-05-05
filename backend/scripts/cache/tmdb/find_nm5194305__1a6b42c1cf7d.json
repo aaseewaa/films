@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1985098,
+      "name": "Rachel Mason",
+      "original_name": "Rachel Mason",
+      "media_type": "person",
+      "popularity": 0.3351,
+      "gender": 1,
+      "known_for_department": "Directing",
+      "profile_path": "/4UtY5Ur9wYK4AVWMO73ioEmlOtE.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/oLxuAGR58NMBYRiMtaXRnkWY4c2.jpg",
+          "id": 597594,
+          "title": "Circus of Books",
+          "original_title": "Circus of Books",
+          "overview": "For decades, a nice Jewish couple ran Circus of Books, a porn shop and epicenter for gay LA. Their director daughter documents their life and times.",
+          "poster_path": "/y19U39IccjFpn70UmYIET9B3dBV.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99,
+            36
+          ],
+          "popularity": 1.3265,
+          "release_date": "2019-04-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.8,
+          "vote_count": 101
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/86MpZEwuDxfYulOv1KiiWDEFF7F.jpg",
+          "id": 252174,
+          "name": "An Update on Our Family",
+          "original_name": "An Update on Our Family",
+          "overview": "Myka and James Stauffer were the picture of the 21st century American Dream: happy marriage, beautiful kids, and a self-built YouTube vlogging empire. At the center of it all was Huxley, an adorable young boy they adopted from China. Huxley was more than just their star — he was their son. Until one day, he wasn’t.",
+          "poster_path": "/eWnju8bJhB6peZgDdGCLGjCPvrq.jpg",
+          "media_type": "tv",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 1.6536,
+          "first_air_date": "2025-01-15",
+          "softcore": false,
+          "vote_average": 6.2,
+          "vote_count": 5,
+          "origin_country": [
+            "US"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/bgnwFfesHO6iXhcIgUoilNwLqP3.jpg",
+          "id": 1309027,
+          "title": "Last Take: Rust and the Story of Halyna",
+          "original_title": "Last Take: Rust and the Story of Halyna",
+          "overview": "A personal look at the life, work and untimely death of celebrated indie cinematographer Halyna Hutchins, who was shot and killed in a tragic accident on the set of the film Rust in 2021.",
+          "poster_path": "/77YIxbYk11PzXazjEw8VylLDDad.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.6829,
+          "release_date": "2025-03-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 10.0,
+          "vote_count": 1
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

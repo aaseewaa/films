@@ -1,0 +1,419 @@
+{
+  "page": 8,
+  "results": [
+    {
+      "adult": false,
+      "backdrop_path": "/mZ6J2g6HCV2gj3iuCdSxcyBXq9c.jpg",
+      "genre_ids": [
+        16,
+        18,
+        10751,
+        36
+      ],
+      "id": 1167307,
+      "title": "David",
+      "original_language": "en",
+      "original_title": "David",
+      "overview": "From the songs of his mother’s heart to the whispers of a faithful God, David’s story begins in quiet devotion. When the giant Goliath rises to terrorize a nation, a young shepherd armed with only a sling, a few stones, and unshakable faith steps forward. Pursued by power and driven by purpose, his journey tests the limits of loyalty, love, and courage—culminating in a battle not just for a crown, but for the soul of a kingdom.",
+      "popularity": 31.0877,
+      "poster_path": "/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
+      "release_date": "2025-12-14",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.0,
+      "vote_count": 133
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/r5IbY1krzmv3YqW1DKzru9BJIjI.jpg",
+      "genre_ids": [
+        35,
+        12,
+        18
+      ],
+      "id": 1231695,
+      "title": "A Few Feet Away",
+      "original_language": "es",
+      "original_title": "A metros de distancia",
+      "overview": "Santiago, a 20 year-old twink shaped by the anonymity of the virtual world, becomes frustrated with gay dating apps and starts obsessively looking for a real experience in the Buenos Aires nightlife.",
+      "popularity": 31.0787,
+      "poster_path": "/19QllNLkhssxz2ow5coWV6nOPZM.jpg",
+      "release_date": "2025-03-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.333,
+      "vote_count": 3
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/67HggiWaP9ZLv5sPYmyRV37yAJM.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 13,
+      "title": "Forrest Gump",
+      "original_language": "en",
+      "original_title": "Forrest Gump",
+      "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+      "popularity": 30.8685,
+      "poster_path": "/Cw4hIUIAmSYfK9QfaUW5igp9La.jpg",
+      "release_date": "1994-06-23",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.464,
+      "vote_count": 29628
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/aouxo2EaR7QSGBBUNTITuW0lj4z.jpg",
+      "genre_ids": [
+        80,
+        18
+      ],
+      "id": 875828,
+      "title": "Peaky Blinders: The Immortal Man",
+      "original_language": "en",
+      "original_title": "Peaky Blinders: The Immortal Man",
+      "overview": "After his estranged son gets embroiled in a Nazi plot, self-exiled gangster Tommy Shelby must return to Birmingham to save his family — and his nation.",
+      "popularity": 30.4438,
+      "poster_path": "/gRMalasZEzsZi4w2VFuYusfSfqf.jpg",
+      "release_date": "2026-03-05",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.229,
+      "vote_count": 865
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/8btfz81bOJ2lC7cujYBTw03wzg3.jpg",
+      "genre_ids": [
+        16,
+        28,
+        14,
+        12
+      ],
+      "id": 980477,
+      "title": "Ne Zha 2",
+      "original_language": "zh",
+      "original_title": "哪吒之魔童闹海",
+      "overview": "After a catastrophic event leaves their bodies destroyed, Ne Zha and Ao Bing are granted a fragile second chance at life. As tensions rise between the dragon clans and celestial forces, the two must undergo a series of perilous trials that will test their bond, challenge their identities, and decide the fate of both mortals and immortals.",
+      "popularity": 30.3905,
+      "poster_path": "/cb5NyNrqiCNNoDkA8FfxHAtypdG.jpg",
+      "release_date": "2025-01-29",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.122,
+      "vote_count": 660
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/nyW8YdrnSYtmTE9hgrpmGqkKw5b.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 1658216,
+      "title": "Stepdaddy",
+      "original_language": "tl",
+      "original_title": "Stepdaddy",
+      "overview": "Emotions and intrigue run high in this titillating taboo family affair. Chloe and Nica are sisters who both find themselves in their own passionate love affairs with their stepdad Carl.",
+      "popularity": 30.2366,
+      "poster_path": "/oZxNblisKuDzSUW5g18FERjyJs9.jpg",
+      "release_date": "2026-04-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.0,
+      "vote_count": 2
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/acx2qYDXfkrSdSgWwr2kpA5F2BW.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 300090,
+      "title": "White Rabbit",
+      "original_language": "en",
+      "original_title": "White Rabbit",
+      "overview": "A bullied student sees visions of a rabbit he was forced to kill as a child, and those visions propel him into a state where his imagination causes him to carry out violent acts.",
+      "popularity": 30.1778,
+      "poster_path": "/n9iPAVxdqoYbmTeogiXwyQbLHQz.jpg",
+      "release_date": "2013-09-20",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.1,
+      "vote_count": 46
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/a0lfia8tk8ifkrve0Tn8wkISUvs.jpg",
+      "genre_ids": [
+        12,
+        14,
+        28
+      ],
+      "id": 120,
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "original_language": "en",
+      "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+      "overview": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+      "popularity": 30.1269,
+      "poster_path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+      "release_date": "2001-12-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.433,
+      "vote_count": 27404
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/c36BHbbUyhR8kswIMyuCbANGY3l.jpg",
+      "genre_ids": [
+        35
+      ],
+      "id": 1511057,
+      "title": "Roommates",
+      "original_language": "en",
+      "original_title": "Roommates",
+      "overview": "When shy college freshman Devon asks cool-girl Celeste to be her roommate, a blossoming friendship quickly spirals into a war of passive aggression.",
+      "popularity": 30.1237,
+      "poster_path": "/eW1s6omXIfVkTlmKVe9y9Dwwt4u.jpg",
+      "release_date": "2026-04-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.6,
+      "vote_count": 94
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/l8rKKMU2M9dDULO9CEtDNdWAEUJ.jpg",
+      "genre_ids": [
+        878,
+        27,
+        14
+      ],
+      "id": 1159831,
+      "title": "The Bride!",
+      "original_language": "en",
+      "original_title": "The Bride!",
+      "overview": "A lonely Frankenstein travels to 1930s Chicago to ask groundbreaking scientist Dr. Euphronious to create a companion for him. The two revive a murdered young woman and The Bride is born. But what ensues is beyond what either of them imagined.",
+      "popularity": 29.9698,
+      "poster_path": "/lV8YHwGkYZsm6EfIqnhaSz2avKt.jpg",
+      "release_date": "2026-03-04",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.2,
+      "vote_count": 384
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/jSxeFrFCajefwka3TTRY4k8XVEX.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 1266127,
+      "title": "Ready or Not 2: Here I Come",
+      "original_language": "en",
+      "original_title": "Ready or Not 2: Here I Come",
+      "overview": "Moments after surviving an all-out attack from the Le Domas family, Grace discovers she’s reached the next level of the nightmarish game — and this time with her estranged sister Faith at her side. Grace has one chance to survive, keep her sister alive, and claim the High Seat of the Council that controls the world. Four rival families are hunting her for the throne, and whoever wins rules it all.",
+      "popularity": 29.8879,
+      "poster_path": "/jRf89HVEtBZiSnOXXWDhZOfuTwW.jpg",
+      "release_date": "2026-03-19",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.0,
+      "vote_count": 310
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/uIJzvhI9yzsOh7mFAXQQXf2I3Wp.jpg",
+      "genre_ids": [
+        27,
+        35
+      ],
+      "id": 1450527,
+      "title": "Forbidden Fruits",
+      "original_language": "en",
+      "original_title": "Forbidden Fruits",
+      "overview": "Free Eden employee Apple secretly runs a witchy femme cult in the basement of the mall store after hours - with fellow fruits Cherry and Fig. But when new hire Pumpkin challenges their performative sisterhood, the women are forced to face their own poisons or succumb to a bloody fate.",
+      "popularity": 29.8224,
+      "poster_path": "/nSlKzxvXWOeDC9qZiwkhGuTAKkq.jpg",
+      "release_date": "2026-03-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.7,
+      "vote_count": 37
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/p5ozvmdgsmbWe0H8Xk7Rc8SCwAB.jpg",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "id": 1022789,
+      "title": "Inside Out 2",
+      "original_language": "en",
+      "original_title": "Inside Out 2",
+      "overview": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
+      "popularity": 29.6771,
+      "poster_path": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+      "release_date": "2024-06-11",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.544,
+      "vote_count": 6626
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/1oKLEA9JOhvaBwLpqjROisvWMy7.jpg",
+      "genre_ids": [
+        10749,
+        35,
+        18
+      ],
+      "id": 1325734,
+      "title": "The Drama",
+      "original_language": "en",
+      "original_title": "The Drama",
+      "overview": "A happily engaged couple is put to the test when an unexpected turn sends their wedding week off the rails.",
+      "popularity": 29.6682,
+      "poster_path": "/ikcNOWB6Qo1ER1H1BJL6Vf0W22s.jpg",
+      "release_date": "2026-03-26",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.028,
+      "vote_count": 588
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/6NQqojkmxGe3sxs9bNx6Mi9BuOd.jpg",
+      "genre_ids": [
+        18
+      ],
+      "id": 184314,
+      "title": "Young & Beautiful",
+      "original_language": "fr",
+      "original_title": "Jeune & Jolie",
+      "overview": "Isabelle, a 17-year-old student, loses her virginity during a quick holiday romance. When she returns home, she begins a secret life as a prostitute for a year.",
+      "popularity": 29.6072,
+      "poster_path": "/4RSjzqKIqL5g2OxVIEZQ6ksP1MW.jpg",
+      "release_date": "2013-08-21",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.504,
+      "vote_count": 1314
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/u0FLlb0vKQLvKmiGE6nyhHODFWH.jpg",
+      "genre_ids": [
+        18,
+        10749
+      ],
+      "id": 1239198,
+      "title": "My Dearest Señorita",
+      "original_language": "es",
+      "original_title": "Mi querida señorita",
+      "overview": "A young woman from a traditional family learns she's intersex, sparking a journey of self-discovery, gender identity and love found in unexpected places.",
+      "popularity": 28.9356,
+      "poster_path": "/cTcJs2bEsJDhQEpeYSOZD3yayZI.jpg",
+      "release_date": "2026-04-17",
+      "softcore": false,
+      "video": false,
+      "vote_average": 5.25,
+      "vote_count": 14
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/5R22ALClltFkQD5supuGSThX5kW.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 22512,
+      "title": "Sex, Shame & Tears",
+      "original_language": "es",
+      "original_title": "Sexo, pudor y lágrimas",
+      "overview": "A comedic drama featuring two couples and two old friends in Mexico City. Tomas visits Carlos and Ana, while Miguel and Andrea are joined by Maria. The presence of guests triggers lust, rejection, infidelities, reconciliation and other consequences.",
+      "popularity": 28.9146,
+      "poster_path": "/1j3TiCXSguHi3IGumXKpQymvUKH.jpg",
+      "release_date": "1999-06-18",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.592,
+      "vote_count": 146
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+      "genre_ids": [
+        878,
+        28,
+        12
+      ],
+      "id": 19995,
+      "title": "Avatar",
+      "original_language": "en",
+      "original_title": "Avatar",
+      "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+      "popularity": 28.7787,
+      "poster_path": "/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
+      "release_date": "2009-12-16",
+      "softcore": false,
+      "video": false,
+      "vote_average": 7.602,
+      "vote_count": 33857
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/9xfDWXAUbFXQK585JvByT5pEAhe.jpg",
+      "genre_ids": [
+        16,
+        28,
+        12,
+        878
+      ],
+      "id": 569094,
+      "title": "Spider-Man: Across the Spider-Verse",
+      "original_language": "en",
+      "original_title": "Spider-Man: Across the Spider-Verse",
+      "overview": "After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse's very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.",
+      "popularity": 28.7769,
+      "poster_path": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      "release_date": "2023-05-31",
+      "softcore": false,
+      "video": false,
+      "vote_average": 8.332,
+      "vote_count": 8511
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/bIUaCtWaRgd78SnoHJDI8TNf7Sd.jpg",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "id": 181808,
+      "title": "Star Wars: The Last Jedi",
+      "original_language": "en",
+      "original_title": "Star Wars: The Last Jedi",
+      "overview": "Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.",
+      "popularity": 28.5736,
+      "poster_path": "/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg",
+      "release_date": "2017-12-13",
+      "softcore": false,
+      "video": false,
+      "vote_average": 6.754,
+      "vote_count": 16266
+    }
+  ],
+  "total_pages": 56571,
+  "total_results": 1131419
+}

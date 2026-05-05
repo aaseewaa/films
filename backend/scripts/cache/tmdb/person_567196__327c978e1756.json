@@ -1,0 +1,33 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Catherine Bush",
+    "Кейт Буш",
+    "Кэтрин Буш",
+    "Κέιτ Μπους"
+  ],
+  "biography": "",
+  "birthday": "1958-07-30",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "http://www.katebush.com/",
+  "id": 567196,
+  "imdb_id": "nm0124165",
+  "known_for_department": "Sound",
+  "name": "Kate Bush",
+  "place_of_birth": "Bexleyheath, Kent, UK",
+  "popularity": 0.2266,
+  "profile_path": "/fIjVXwfe9lBNs8AfgCZbNWfs5dX.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01w3lzq",
+    "freebase_id": null,
+    "imdb_id": "nm0124165",
+    "tvrage_id": null,
+    "wikidata_id": "Q636",
+    "facebook_id": "katebush",
+    "instagram_id": "katebushmusic",
+    "tiktok_id": null,
+    "twitter_id": "katebushmusic",
+    "youtube_id": "KateBushMusic"
+  }
+}

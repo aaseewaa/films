@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "롤라 로드리게스"
+  ],
+  "biography": "",
+  "birthday": "1998-11-26",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 1655012,
+  "imdb_id": "nm11205691",
+  "known_for_department": "Acting",
+  "name": "Lola Rodríguez",
+  "place_of_birth": "Las Palmas de Gran Canaria, Gran Canaria, Canary Islands, Spain",
+  "popularity": 0.5296,
+  "profile_path": "/ffSpfKPAE1VA6mwEMNoUlnHR43M.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm11205691",
+    "tvrage_id": null,
+    "wikidata_id": "Q89247401",
+    "facebook_id": null,
+    "instagram_id": "lolarodriguez",
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

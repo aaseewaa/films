@@ -1,0 +1,33 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Rhino",
+    "Mark Ferrol Smith",
+    "Mark 'Rhino' Smith",
+    "Mark Smith"
+  ],
+  "biography": "",
+  "birthday": "1969-09-30",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.markrhinosmith.com",
+  "id": 1214974,
+  "imdb_id": "nm1183986",
+  "known_for_department": "Acting",
+  "name": "Марк Смит",
+  "place_of_birth": "London, England",
+  "popularity": 0.8355,
+  "profile_path": "/cp06Vtw9yNgexpQVoHsoMJkTRlL.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0dzckj",
+    "freebase_id": null,
+    "imdb_id": "nm1183986",
+    "tvrage_id": 154834,
+    "wikidata_id": "Q6769765",
+    "facebook_id": null,
+    "instagram_id": "markrhinosmith",
+    "tiktok_id": null,
+    "twitter_id": "markrhinosmith",
+    "youtube_id": null
+  }
+}

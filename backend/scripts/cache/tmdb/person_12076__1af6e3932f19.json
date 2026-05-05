@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.clivepearse.com/",
+  "id": 12076,
+  "imdb_id": "nm0971140",
+  "known_for_department": "Acting",
+  "name": "Клайв Пирс",
+  "place_of_birth": null,
+  "popularity": 0.2103,
+  "profile_path": "/aRwEqA2YmmymjuJ0lheFKLE6gwU.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0g9y_ty",
+    "freebase_id": null,
+    "imdb_id": "nm0971140",
+    "tvrage_id": null,
+    "wikidata_id": "Q5134646",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

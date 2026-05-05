@@ -1,0 +1,90 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 5726,
+      "name": "Cedric the Entertainer",
+      "original_name": "Cedric the Entertainer",
+      "media_type": "person",
+      "popularity": 2.5227,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/s6UrY5uofyxXsU5PydWBoLFReK0.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/8pwIhymsxfAVjrAE7syDjQULn37.jpg",
+          "id": 425,
+          "title": "Ice Age",
+          "original_title": "Ice Age",
+          "overview": "Manny the mammoth, Sid the loquacious sloth, and Diego the sabre-toothed tiger go on a comical quest to return a human baby back to his father, across a world on the brink of an ice age.",
+          "poster_path": "/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            35,
+            10751,
+            12
+          ],
+          "popularity": 16.384,
+          "release_date": "2002-03-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.37,
+          "vote_count": 14221
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tPaurpIUskVji5vwV0dhy9pq4Vs.jpg",
+          "id": 953,
+          "title": "Madagascar",
+          "original_title": "Madagascar",
+          "overview": "Four animal friends get a taste of the wild life when they break out of captivity at the Central Park Zoo and wash ashore on the island of Madagascar.",
+          "poster_path": "/zMpJY5CJKUufG9OTw0In4eAFqPX.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            10751
+          ],
+          "popularity": 14.996,
+          "release_date": "2005-05-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.922,
+          "vote_count": 11677
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/r2M9ElkHxEJP7riCFbT5N0uXZTc.jpg",
+          "id": 10527,
+          "title": "Madagascar: Escape 2 Africa",
+          "original_title": "Madagascar: Escape 2 Africa",
+          "overview": "Alex, Marty, and other zoo animals find a way to escape from Madagascar when the penguins reassemble a wrecked airplane. The precariously repaired craft stays airborne just long enough to make it to the African continent. There the New Yorkers encounter members of their own species for the first time. Africa proves to be a wild place, but Alex and company wonder if it is better than their Central Park home.",
+          "poster_path": "/agRbLOHgN46TQO4YdKR462iR7To.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            16,
+            35,
+            10751
+          ],
+          "popularity": 8.7463,
+          "release_date": "2008-10-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.524,
+          "vote_count": 7396
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

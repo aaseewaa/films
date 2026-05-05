@@ -1,0 +1,77 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1521530,
+      "name": "Jerzy Grotowski",
+      "original_name": "Jerzy Grotowski",
+      "media_type": "person",
+      "popularity": 0.0662,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/gT1IXIXcc0HHhKjLZrOCtwZbGwe.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 363497,
+          "title": "Akropolis",
+          "original_title": "Akropolis",
+          "overview": "A performance based on Stanisław Wyspiański’s dramatic epic poem, first presented at  Teatr Laboratorium, Wrocław, Poland,  October 10,  1962. Filmed in 1968.",
+          "poster_path": "/wOFDNmr4PvoEBSdYfCHCp5HNriL.jpg",
+          "media_type": "movie",
+          "original_language": "pl",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.1126,
+          "release_date": "1968-11-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 836852,
+          "title": "Apocalypsis cum figuris",
+          "original_title": "Apocalypsis cum figuris",
+          "overview": "Apocalypsis cum figuris by Jerzy Grotowski.",
+          "poster_path": "/zv6VDXkKVtuF31orpFPSrbHUPl1.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.0478,
+          "release_date": "1969-06-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        },
+        {
+          "adult": false,
+          "backdrop_path": null,
+          "id": 967534,
+          "title": "Książę Niezłomny",
+          "original_title": "Książę Niezłomny",
+          "overview": "Theatrical release by one of the most influencive polish theatre directors; Jerzy Grotowski. Based on a drama \"Pedra Calderona de la Barca\" paraphrased by Juliusz Słowacki",
+          "poster_path": "/3fdpqaKkymscjpHNEtdpELF19CB.jpg",
+          "media_type": "movie",
+          "original_language": "pl",
+          "genre_ids": [],
+          "popularity": 0.0143,
+          "release_date": "1967-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 0.0,
+          "vote_count": 0
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "David Keith Lynch",
+    "DKL"
+  ],
+  "biography": "",
+  "birthday": "1946-01-20",
+  "deathday": "2025-01-16",
+  "gender": 2,
+  "homepage": null,
+  "id": 5602,
+  "imdb_id": "nm0000186",
+  "known_for_department": "Directing",
+  "name": "Дэвид Линч",
+  "place_of_birth": "Missoula, Montana, USA",
+  "popularity": 2.4179,
+  "profile_path": "/wwBzRDoIW6Ld64h6OkQ6ImCZKsR.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/026dx",
+    "freebase_id": "/en/david_lynch",
+    "imdb_id": "nm0000186",
+    "tvrage_id": 58928,
+    "wikidata_id": "Q2071",
+    "facebook_id": "davidlynchofficial",
+    "instagram_id": "davidlynchfoundation",
+    "tiktok_id": null,
+    "twitter_id": "DAVID_LYNCH",
+    "youtube_id": "@DAVIDLYNCHTHEATER"
+  }
+}

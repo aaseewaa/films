@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1346732,
+      "name": "Akaki Khorava",
+      "original_name": "აკაკი ხორავა",
+      "media_type": "person",
+      "popularity": 0.3863,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/yPUswzOP6HI7cbEbONmzscZ5bCF.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/rvNl108gQ44GMlRzwF9A1EDxqGj.jpg",
+          "id": 199460,
+          "title": "The Great Warrior Skanderbeg",
+          "original_title": "Velikiy voin Albanii Skanderbeg",
+          "overview": "A biography of George Kastriot Skanderbeg widely known as Skanderbeg, a 15th-century Albanian lord who defended his land against the Ottoman Empire for more than two decades.",
+          "poster_path": "/guZE57QZI0s5ZyD8U4ptWbwsbUE.jpg",
+          "media_type": "movie",
+          "original_language": "sq",
+          "genre_ids": [
+            28,
+            36,
+            18
+          ],
+          "popularity": 0.6551,
+          "release_date": "1953-11-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.389,
+          "vote_count": 18
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7zqOTKi8QNc7DyNEBM9SbNJaL8D.jpg",
+          "id": 283968,
+          "title": "George Saakadze",
+          "original_title": "გიორგი სააკაძე",
+          "overview": "The film tells about the struggle of the Georgian people under the leadership of the great commander George Saakadze for a centralized state.",
+          "poster_path": "/ox5kxbcj2A8DXQVa8u32gLu0SEt.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            36,
+            10752
+          ],
+          "popularity": 0.3999,
+          "release_date": "1942-11-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.0,
+          "vote_count": 10
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/6eeh1OeFeJZkk080Nys9M4r08lx.jpg",
+          "id": 173494,
+          "title": "My Grandmother",
+          "original_title": "ნათლიმამა (ჩემი ბებია)",
+          "overview": "The protagonist, a lazy pen-pusher, gets the sack for his bureaucratic idleness, and learns that the way back into the job market depends on getting a letter of recommendation from a \"grandmother\"",
+          "poster_path": "/i6eLdAUXA6EgmZKUhb7DiP5cuLD.jpg",
+          "media_type": "movie",
+          "original_language": "ka",
+          "genre_ids": [
+            35,
+            18
+          ],
+          "popularity": 0.7377,
+          "release_date": "1929-12-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.6,
+          "vote_count": 23
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 27614,
+      "name": "Régis Wargnier",
+      "original_name": "Régis Wargnier",
+      "media_type": "person",
+      "popularity": 0.4459,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/ka0En8NabCQKOD25hfgLVccluzi.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/sk5YqvIl4jd7xgw7lcoUMYOLjKt.jpg",
+          "id": 2731,
+          "title": "Indochine",
+          "original_title": "Indochine",
+          "overview": "In colonial Vietnam, dashing French naval captain Jean-Baptiste, wealthy plantation owner Éliane Devries, and her adopted Vietnamese daughter Camillevare the three points of a cross-cultural romantic triangle. As the struggle against European imperialism sweeps Indochina, Jean-Baptiste and Camille have to choose sides and Éliane faces the emotionally difficult challenge of raising the child of her daughter and ex-lover.",
+          "poster_path": "/sAemRfr6mOSwtQ76e4yUQVImo8B.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 2.1126,
+          "release_date": "1992-04-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.991,
+          "vote_count": 235
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/no4PRDyy60XM9d6HAAZO4WwYojK.jpg",
+          "id": 14649,
+          "title": "Have Mercy on Us All",
+          "original_title": "Pars vite et reviens tard",
+          "overview": "In Paris, many citizens go to the precinct after the doors of their apartments have been sprayed with a 4 and the letters \"clt\". When a dweller is found mysteriously dead in his apartment, Detective Jean-Baptiste Adamsberg and his partner Danglard investigate...",
+          "poster_path": "/juriLa1l5xh9TOpaTaikXCYOTpO.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            53,
+            80,
+            18
+          ],
+          "popularity": 0.727,
+          "release_date": "2007-01-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.946,
+          "vote_count": 83
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hBexByVqQYAkgihzsKSVBTtDlwO.jpg",
+          "id": 28463,
+          "title": "East/West",
+          "original_title": "Est-Ouest",
+          "overview": "June 1946: Stalin invites Russian emigres to return to the motherland. It's a trap: when a ship-load from France arrives in Odessa, only a physician and his family are spared execution or prison. He and his French wife (her passport ripped up) are sent to Kiev. She wants to return to France immediately; he knows that they are captives and must watch every step.",
+          "poster_path": "/c1Uf4HC5WEcssVoOm48Bfzn7Wmk.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.3125,
+          "release_date": "1999-09-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.421,
+          "vote_count": 70
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

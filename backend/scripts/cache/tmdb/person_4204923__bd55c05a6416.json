@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 0,
+  "homepage": null,
+  "id": 4204923,
+  "imdb_id": null,
+  "known_for_department": "Acting",
+  "name": "Fabian Novell",
+  "place_of_birth": null,
+  "popularity": 0.0261,
+  "profile_path": "/aQrQzI0IwogaHnmSAzsbUUnOiGH.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": null,
+    "tvrage_id": null,
+    "wikidata_id": null,
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

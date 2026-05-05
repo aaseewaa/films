@@ -1,0 +1,88 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 510,
+      "name": "Tim Burton",
+      "original_name": "Tim Burton",
+      "media_type": "person",
+      "popularity": 2.9761,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/wcjuY5vD1nlfwWNbvvTGg5dGoRR.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/atoIgfAk2Ig2HFJLD0VUnjiPWEz.jpg",
+          "id": 118,
+          "title": "Charlie and the Chocolate Factory",
+          "original_title": "Charlie and the Chocolate Factory",
+          "overview": "A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.",
+          "poster_path": "/iKP6wg3c6COUe8gYutoGG7qcPnO.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            35,
+            10751,
+            14
+          ],
+          "popularity": 11.2095,
+          "release_date": "2005-07-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.038,
+          "vote_count": 16062
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ocOWbTzHcJVTw9Tz173KPeskDOP.jpg",
+          "id": 12155,
+          "title": "Alice in Wonderland",
+          "original_title": "Alice in Wonderland",
+          "overview": "Alice, now 19 years old, returns to the whimsical world she first entered as a child and embarks on a journey to discover her true destiny.",
+          "poster_path": "/o0kre9wRCZz3jjSjaru7QU0UtFz.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            14,
+            12
+          ],
+          "popularity": 12.4587,
+          "release_date": "2010-03-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.639,
+          "vote_count": 14742
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uNLIMPxknsV4n3IAEDpS1iqF5dm.jpg",
+          "id": 162,
+          "title": "Edward Scissorhands",
+          "original_title": "Edward Scissorhands",
+          "overview": "A small suburban town receives a visit from a castaway unfinished science experiment named Edward.",
+          "poster_path": "/e0FqKFvGPdQNWG8tF9cZBtev9Em.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            18,
+            10749
+          ],
+          "popularity": 10.0161,
+          "release_date": "1990-12-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.72,
+          "vote_count": 13719
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

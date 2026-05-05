@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1491629,
+  "imdb_id": "nm3054305",
+  "known_for_department": "Acting",
+  "name": "Клейтон Эвертсон",
+  "place_of_birth": null,
+  "popularity": 0.4868,
+  "profile_path": "/2kp5998NZrsL1FxuZgy2IEYPe4V.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm3054305",
+    "tvrage_id": null,
+    "wikidata_id": "Q69978414",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

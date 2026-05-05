@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "کلارک باکو"
+  ],
+  "biography": "",
+  "birthday": "1993-09-05",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 1861573,
+  "imdb_id": "nm5318871",
+  "known_for_department": "Acting",
+  "name": "Clark Backo",
+  "place_of_birth": "Montréal, Québec, Canada",
+  "popularity": 0.9071,
+  "profile_path": "/d24KKFxfoql6PBsBPsejFgzhSlH.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm5318871",
+    "tvrage_id": null,
+    "wikidata_id": "Q64869409",
+    "facebook_id": "clark.backo",
+    "instagram_id": "clarkb",
+    "tiktok_id": "clarkib",
+    "twitter_id": "",
+    "youtube_id": null
+  }
+}

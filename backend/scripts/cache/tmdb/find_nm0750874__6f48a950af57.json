@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1158359,
+      "name": "Dado Ruspoli",
+      "original_name": "Dado Ruspoli",
+      "media_type": "person",
+      "popularity": 0.0322,
+      "gender": 0,
+      "known_for_department": "Acting",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/8zhviPFJx25k8PbUOUL5sLOy9XE.jpg",
+          "id": 242,
+          "title": "The Godfather Part III",
+          "original_title": "The Godfather Part III",
+          "overview": "In the midst of trying to legitimize his business dealings in 1979 New York and Italy, aging mafia don, Michael Corleone seeks forgiveness for his sins while taking a young protege under his wing.",
+          "poster_path": "/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            80,
+            18,
+            53
+          ],
+          "popularity": 10.39,
+          "release_date": "1990-12-25",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.42,
+          "vote_count": 6820
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/rjFsp7jU1VJ9rOIdh8xaQCYJEAA.jpg",
+          "id": 148757,
+          "title": "The House of Smiles",
+          "original_title": "La casa del sorriso",
+          "overview": "A septuagenarian couple are attracted to each other in a retirement home but find the institution and their fellow patients frown on their relationship.",
+          "poster_path": "/cBhYGT6qFEDZAtB8hEjPb1hzJAC.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.5083,
+          "release_date": "1991-03-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.406,
+          "vote_count": 16
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5PGYrcGvhVux8Qhg8vWifuIDA8h.jpg",
+          "id": 222040,
+          "title": "The Adventures of Young Indiana Jones: The Perils of Cupid",
+          "original_title": "The Adventures of Young Indiana Jones: The Perils of Cupid",
+          "overview": "First love - or first infatuation - overwhelms Indy in Vienna, where he is smitten with the daughter of Archduke Francis Ferdinand. Needing emotional guidance, Indy consults Sigmund Freud and Carl Jung to discover what love is all about. In Florence, when Indy's mother is equally smitten with Giacomo Puccini, composer of Romantic operas La Boheme and Tosca, Indy must guide his parent safely back to her spouse.",
+          "poster_path": "/vyskiTyiDU5RT1MAb2Zwexl6IJ7.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            10751,
+            10770
+          ],
+          "popularity": 0.6147,
+          "release_date": "2000-09-19",
+          "softcore": false,
+          "video": true,
+          "vote_average": 5.7,
+          "vote_count": 21
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

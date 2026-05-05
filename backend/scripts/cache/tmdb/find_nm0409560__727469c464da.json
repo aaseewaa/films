@@ -1,0 +1,81 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1092207,
+      "name": "Eugène Ionesco",
+      "original_name": "Eugène Ionesco",
+      "media_type": "person",
+      "popularity": 0.0966,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/djuhQohFEw9RGO19Xf6PN7ewc8m.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/oIk31jAIz6f3pjpagyd6PtNxXe7.jpg",
+          "id": 49685,
+          "title": "I’m Going Home",
+          "original_title": "Je rentre à la maison",
+          "overview": "The comfortable daily routines of aging Parisian actor Gilbert Valence, 76, are suddenly shaken when he learns that his wife, daughter, and son-in-law have been killed in a car crash. Having to take care of his now-orphaned grandson, he struggles to go on with his lifelong acting career like he's used to. But the roles he is offered -- a flashy TV show and a hectic last-minute replacement in an English-language film of Joyce's Ulysses -- finally convince him that it's time to retire.",
+          "poster_path": "/sh0VEL1VyTsSMJpw8yFBbugQ9BF.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.8453,
+          "release_date": "2001-05-13",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.772,
+          "vote_count": 46
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ePCC2YuU2UlaqcOUUX9ReWnIusZ.jpg",
+          "id": 72898,
+          "title": "The Seven Deadly Sins",
+          "original_title": "Les Sept Péchés capitaux",
+          "overview": "Seven directors each dramatize one of the seven deadly sins in a short film. In \"Anger,\" a domestic argument over a fly in the Sunday soup escalates into nuclear war. In \"Sloth,\" a movie star would rather pay someone to tie his shoe than bend over to do it himself, and he can't be bothered to accept a starlet's sexual favors. In \"Gluttony,\" a peasant family on its way to the funeral of a relative who died from indigestion stops regularly to eat and drink en route, arriving in time to eat some more. In \"Greed,\" a high-class prostitute refunds the price of a cadet's lottery ticket. In \"Pride,\" an unfaithful wife finds reason to reform. And so on through lust and envy.",
+          "poster_path": "/rhU348zOhyu3FPTqnlli1FaU41B.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35
+          ],
+          "popularity": 1.5265,
+          "release_date": "1962-03-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.868,
+          "vote_count": 19
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/f8Zf9P0GufIaCHcLQBz6oeyKyb1.jpg",
+          "id": 313051,
+          "title": "Monsieur Tête",
+          "original_title": "Monsieur Tête",
+          "overview": "Monsieur Tête, an ordinary bureaucrat, rebels against the world and the ideas of the people around him. Because of his marginal behavior, his head is broken, like everyone else.",
+          "poster_path": "/gnyFoIIL9NvXvBy34KK1bqUaElO.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            16
+          ],
+          "popularity": 0.0636,
+          "release_date": "1959-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.1,
+          "vote_count": 15
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

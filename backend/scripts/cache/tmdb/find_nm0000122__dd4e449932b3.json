@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 13848,
+      "name": "Charlie Chaplin",
+      "original_name": "Charlie Chaplin",
+      "media_type": "person",
+      "popularity": 2.309,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/lRI9Ky1SMOehn04OqhYJ5hQfgIK.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+          "id": 3082,
+          "title": "Modern Times",
+          "original_title": "Modern Times",
+          "overview": "A bumbling tramp desires to build a home with a young woman, yet is thwarted time and time again by his lack of experience and habit of being in the wrong place at the wrong time..",
+          "poster_path": "/7uoiKOEjxBBW0AgDGQWrlfGQ90w.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18,
+            10749
+          ],
+          "popularity": 5.9696,
+          "release_date": "1936-02-05",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.28,
+          "vote_count": 4064
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/c8Pi8F1FzpNebtgXcSjC9nWCdSW.jpg",
+          "id": 914,
+          "title": "The Great Dictator",
+          "original_title": "The Great Dictator",
+          "overview": "Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber tries to avoid persecution from Hynkel's regime.",
+          "poster_path": "/1QpO9wo7JWecZ4NiBuu625FiY1j.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10752
+          ],
+          "popularity": 6.205,
+          "release_date": "1940-10-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.3,
+          "vote_count": 3682
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qhKMAWxuu4TXCJCWVMqfveqanMP.jpg",
+          "id": 901,
+          "title": "City Lights",
+          "original_title": "City Lights",
+          "overview": "A tramp falls in love with a beautiful blind flower girl. His on-and-off friendship with a wealthy man allows him to be the girl's benefactor and suitor.",
+          "poster_path": "/bXNvzjULc9jrOVhGfjcc64uKZmZ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18,
+            10749
+          ],
+          "popularity": 5.2116,
+          "release_date": "1931-02-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.252,
+          "vote_count": 2440
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

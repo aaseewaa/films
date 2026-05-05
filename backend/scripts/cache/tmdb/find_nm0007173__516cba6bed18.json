@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1172911,
+      "name": "Rabindranath Tagore",
+      "original_name": "Rabindranath Tagore",
+      "media_type": "person",
+      "popularity": 0.1849,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/6vS2zz3GlPktPh7iGSgkNca5GS0.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/hXYf2k0igWcfReM98949EVTfSgP.jpg",
+          "id": 35790,
+          "title": "Charulata",
+          "original_title": "চারুলতা",
+          "overview": "In 1870s India, Charulata is an isolated, artistically inclined woman who sees little of her busy journalist husband, Bhupati. Realizing that his wife is alienated and unhappy, he convinces his cousin, Amal, to spend time with Charulata and nourish her creative impulses. Amal is a fledgling poet himself, and he and Charulata bond over their shared love of art.",
+          "poster_path": "/uy1x7AFgcurs9twcEw0p0FOVQnx.jpg",
+          "media_type": "movie",
+          "original_language": "bn",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.8485,
+          "release_date": "1964-04-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.503,
+          "vote_count": 150
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/k2985gSbHlV4DqWokzjOB8wsUt8.jpg",
+          "id": 41781,
+          "title": "The Stranger",
+          "original_title": "আগন্তুক",
+          "overview": "A well-off family is paid an unexpected, and rather unwanted, visit by a man claiming to be the woman's long lost uncle. The initial suspicion with which they greet the man slowly dissolves as he regales them with stories of his travels, tales that are at odds with their conventional middle class perspective on the world.",
+          "poster_path": "/uNYlRzs8PBGCvJO5O9NO3Hx7L3x.jpg",
+          "media_type": "movie",
+          "original_language": "bn",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.5221,
+          "release_date": "1991-05-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.566,
+          "vote_count": 62
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/Zr6SIvP7yAgOBC5nsgRD8qAlnR.jpg",
+          "id": 64765,
+          "title": "Could One Imagine?",
+          "original_title": "Вам и не снилось",
+          "overview": "Two high school kids meet in class and fall madly in love with each other. Unfortunately, His father and her mother had a history of their own between them which creates uneasiness in both of them. Also because of that, the boy's mother is very jealous and tries to separate them. The only person that tries to help them is their teacher who has relationship problems of her own.",
+          "poster_path": "/oy1hrn0Ck5jaKD5wpBXIo0UZAjx.jpg",
+          "media_type": "movie",
+          "original_language": "ru",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.0224,
+          "release_date": "1981-03-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.091,
+          "vote_count": 55
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

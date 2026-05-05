@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "سيد بدرية"
+  ],
+  "biography": "",
+  "birthday": "1957-05-01",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.sayedbadreya.com/",
+  "id": 173810,
+  "imdb_id": "nm0046223",
+  "known_for_department": "Acting",
+  "name": "Саид Бадрея",
+  "place_of_birth": "Port Said, Egypt",
+  "popularity": 0.9703,
+  "profile_path": "/sVvwmMsjXd5YqyZEfWcWQEkBScu.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/09gr1tm",
+    "freebase_id": "/en/sayed_badreya",
+    "imdb_id": "nm0046223",
+    "tvrage_id": 8046,
+    "wikidata_id": "Q1429065",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

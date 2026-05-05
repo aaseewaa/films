@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "John Roger Stephens",
+    "John Stephens",
+    "约翰·传奇"
+  ],
+  "biography": "John Legend is an American singer, songwriter, musician, actor, and producer.  He was born John Roger Stephens on December 28, 1978 in Springfield, Ohio.  As of 2017, he has won ten Grammy Awards, one Golden Globe Award, and one Academy Award.  He is married to model Chrissy Teigen, and they have a daughter - Luna Simone Stephens - born in 2016. The couple's second child is due in 2018.",
+  "birthday": "1978-12-28",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://johnlegend.com",
+  "id": 113461,
+  "imdb_id": "nm1775466",
+  "known_for_department": "Acting",
+  "name": "John Legend",
+  "place_of_birth": "Springfield, Ohio, USA",
+  "popularity": 1.6658,
+  "profile_path": "/cCv0YBy2YFFWp9h3kvNPmwWwrCD.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01wcp_g",
+    "freebase_id": "/en/john_legend",
+    "imdb_id": "nm1775466",
+    "tvrage_id": 11252,
+    "wikidata_id": "Q44857",
+    "facebook_id": "johnlegend",
+    "instagram_id": "johnlegend",
+    "tiktok_id": "johnlegend",
+    "twitter_id": "johnlegend",
+    "youtube_id": "johnlegend"
+  }
+}

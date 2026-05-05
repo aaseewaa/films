@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Terence Howard",
+    "Terrence Dashon Howard"
+  ],
+  "biography": "",
+  "birthday": "1969-03-11",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 18288,
+  "imdb_id": "nm0005024",
+  "known_for_department": "Acting",
+  "name": "Терренс Ховард",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 5.7654,
+  "profile_path": "/wXWt2NSY23v7DHe2yZQ1C8TikBp.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/06g2d1",
+    "freebase_id": "/en/terrence_howard",
+    "imdb_id": "nm0005024",
+    "tvrage_id": 59344,
+    "wikidata_id": "Q296500",
+    "facebook_id": "terrencehoward",
+    "instagram_id": "theterrencehoward",
+    "tiktok_id": null,
+    "twitter_id": "terrencehoward",
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 105154,
+      "name": "Joaquín Jordá",
+      "original_name": "Joaquim Jordà",
+      "media_type": "person",
+      "popularity": 0.3784,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/9hhiyJCSJqGmLEvkDiNwHNAHUFQ.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/mzKFq3rbDr2K39MaGhLMnsuDJOq.jpg",
+          "id": 25911,
+          "title": "Carmen",
+          "original_title": "Carmen",
+          "overview": "A French writer documents the seductive power of the beautiful Carmen, who has enchanted José, a young soldier, awakening his most fervent passions leading to tragedy. A path chained to obsession, jealousy, betrayal, and blood.",
+          "poster_path": "/6lmfWnwLE66sKWTgaxkpEIO3hw5.jpg",
+          "media_type": "movie",
+          "original_language": "es",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 1.3829,
+          "release_date": "2003-05-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.256,
+          "vote_count": 45
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/z4WOWDfdw0qxJzfGNyZT0oVBYvN.jpg",
+          "id": 115693,
+          "title": "Lute: Forge On or Die",
+          "original_title": "El Lute: camina o revienta",
+          "overview": "In Spain of the 1960s, a poor family of quinquis - a nomadic ethnic group with a tradition as old as that of the gypsises of Spain but with even more obscure origins - have a nomadic life marked by poverty. The son, Eleuterio Sánchez Rodriguez, nicknamed \"El Lute\", steals some chickens and is condemned to six months in jail.  El Lute moves to the slum outskirts of Madrid with his common law wife, Chelo, starting an itinerant life as a peddler of pots and pans and living in a quinqui shantytown. He gradually embarks upon as life of petty criminality, eventually participating in the theft of a jewelry store during which a bystander is killed.",
+          "poster_path": "/oONiv6etDkhjPfmzPjHInEDPg8p.jpg",
+          "media_type": "movie",
+          "original_language": "es",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.9681,
+          "release_date": "1987-09-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.744,
+          "vote_count": 39
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/h1de3BjtvBY7RRGrr2GAlHPIf2W.jpg",
+          "id": 115695,
+          "title": "El Lute II: Tomorrow I'll Be Free",
+          "original_title": "El Lute II: mañana seré libre",
+          "overview": "This is the story of a man fighting with all his might for his life and his freedom. Eleuterio (”El Lute”) embarks upon an action-packed future, fuelled by the notions of freedom and dreams of living just as his countrymen, ever-growing in his mind. Nothing and no-one can stop him. After escaping the Puerto de Santa María prison, the reunion with his family is just the beginning of what will become an endless escape.",
+          "poster_path": "/eNLpsvvfrxQ924cpGFguN5ejTH6.jpg",
+          "media_type": "movie",
+          "original_language": "es",
+          "genre_ids": [
+            18,
+            80
+          ],
+          "popularity": 0.623,
+          "release_date": "1988-04-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.759,
+          "vote_count": 29
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

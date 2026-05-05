@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1985-08-09",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://www.kristofferborgli.com/",
+  "id": 1280021,
+  "imdb_id": "nm5589501",
+  "known_for_department": "Directing",
+  "name": "Кристоффер Боргли",
+  "place_of_birth": "Oslo, Norway",
+  "popularity": 0.6993,
+  "profile_path": "/ftLljVAuKvECl8rAG7JbiGANy8P.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0j8k1hb",
+    "freebase_id": null,
+    "imdb_id": "nm5589501",
+    "tvrage_id": null,
+    "wikidata_id": "Q118504431",
+    "facebook_id": "kristofferborgli",
+    "instagram_id": "kristogger",
+    "tiktok_id": null,
+    "twitter_id": "",
+    "youtube_id": null
+  }
+}

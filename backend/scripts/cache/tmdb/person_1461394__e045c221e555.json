@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jason Hand",
+    "جايسون هاند"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1461394,
+  "imdb_id": "nm2911364",
+  "known_for_department": "Directing",
+  "name": "Jason Hand",
+  "place_of_birth": null,
+  "popularity": 0.6389,
+  "profile_path": "/gepbkgavGdDXdNbQzdFaxayTpoH.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2911364",
+    "tvrage_id": null,
+    "wikidata_id": "Q29000781",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

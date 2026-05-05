@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Alex Béjar "
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 3904252,
+  "imdb_id": "nm10968722",
+  "known_for_department": "Acting",
+  "name": "Alex Bejar",
+  "place_of_birth": "Madrid, España",
+  "popularity": 0.2581,
+  "profile_path": "/kPeFa6xX57IyhAfoT8dtgfPMgmX.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm10968722",
+    "tvrage_id": null,
+    "wikidata_id": "Q136652416",
+    "facebook_id": null,
+    "instagram_id": "alexbejaar",
+    "tiktok_id": "alexbejaar",
+    "twitter_id": null,
+    "youtube_id": "alexbejaar"
+  }
+}

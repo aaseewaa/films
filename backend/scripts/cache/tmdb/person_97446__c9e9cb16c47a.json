@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Jimmy Dime",
+    "James Dumont"
+  ],
+  "biography": "",
+  "birthday": "1965-08-12",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 97446,
+  "imdb_id": "nm0003069",
+  "known_for_department": "Acting",
+  "name": "Джеймс ДюМонт",
+  "place_of_birth": "Chicago, Illinois, USA",
+  "popularity": 1.0831,
+  "profile_path": "/8DLNFj3a4SJWdtw5daPBQm0qrOO.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0408yvx",
+    "freebase_id": "/en/james_dumont",
+    "imdb_id": "nm0003069",
+    "tvrage_id": 16892,
+    "wikidata_id": "Q6132861",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Robert Brydon Jones",
+    "راب برایدن"
+  ],
+  "biography": "",
+  "birthday": "1965-05-03",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 47632,
+  "imdb_id": "nm0117339",
+  "known_for_department": "Acting",
+  "name": "Роб Брайдон",
+  "place_of_birth": "Swansea, Wales, UK",
+  "popularity": 1.2212,
+  "profile_path": "/xoKLZVwzaUgTUEvPX4vymXpC1fU.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/02ylyg",
+    "freebase_id": "/en/rob_brydon",
+    "imdb_id": "nm0117339",
+    "tvrage_id": 12352,
+    "wikidata_id": "Q2322261",
+    "facebook_id": null,
+    "instagram_id": "brydon_rob",
+    "tiktok_id": null,
+    "twitter_id": "RobBrydon",
+    "youtube_id": null
+  }
+}

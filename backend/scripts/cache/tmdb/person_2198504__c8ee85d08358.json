@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Sarah Squirm"
+  ],
+  "biography": "",
+  "birthday": "1993-03-07",
+  "deathday": null,
+  "gender": 1,
+  "homepage": "https://www.sarahsquirm.com/",
+  "id": 2198504,
+  "imdb_id": "nm7567645",
+  "known_for_department": "Acting",
+  "name": "Сара Шерман",
+  "place_of_birth": "Long Island, New York, USA",
+  "popularity": 1.3093,
+  "profile_path": "/5BwGUREK2H6acSH5Inqmy2hFpGY.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm7567645",
+    "tvrage_id": null,
+    "wikidata_id": "Q108739322",
+    "facebook_id": null,
+    "instagram_id": "sarahsquirm",
+    "tiktok_id": null,
+    "twitter_id": "SarahSquirm",
+    "youtube_id": null
+  }
+}

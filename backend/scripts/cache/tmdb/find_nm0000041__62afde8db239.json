@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 5026,
+      "name": "Akira Kurosawa",
+      "original_name": "黒澤明",
+      "media_type": "person",
+      "popularity": 3.7888,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/ca8fRqLDfTJTCamLKHp70up23ET.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+          "id": 346,
+          "title": "Seven Samurai",
+          "original_title": "七人の侍",
+          "overview": "A samurai answers a village's request for protection after he falls on hard times. The town needs protection from bandits, so the samurai gathers six others to help him teach the people how to defend themselves, and the villagers provide the soldiers with food.",
+          "poster_path": "/lOMGc8bnSwQhS4XyE1S99uH8NXf.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            28,
+            18
+          ],
+          "popularity": 20.5832,
+          "release_date": "1954-04-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.4,
+          "vote_count": 4207
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tDn1dA52bQH9B85vilHeU7C83W1.jpg",
+          "id": 548,
+          "title": "Rashomon",
+          "original_title": "羅生門",
+          "overview": "Four people recount different versions of the story of a man's murder and the rape of his wife.",
+          "poster_path": "/vL7Xw04nFMHwnvXRFCmYYAzMUvY.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            80,
+            18,
+            9648
+          ],
+          "popularity": 5.9814,
+          "release_date": "1950-08-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.041,
+          "vote_count": 2503
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3ssNAWypRl47iriwBFNx7RUEUub.jpg",
+          "id": 11645,
+          "title": "Ran",
+          "original_title": "乱",
+          "overview": "Shakespeare's King Lear is reimagined as a singular historical epic set in sixteenth-century Japan where an aging warlord divides his kingdom between his three sons.",
+          "poster_path": "/1gKWXRVgesduqHDfR8siXppfELO.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            28,
+            18,
+            36
+          ],
+          "popularity": 8.3926,
+          "release_date": "1985-06-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.0,
+          "vote_count": 1799
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

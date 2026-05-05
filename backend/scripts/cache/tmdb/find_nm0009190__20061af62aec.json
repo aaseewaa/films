@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 15344,
+      "name": "J.J. Abrams",
+      "original_name": "J.J. Abrams",
+      "media_type": "person",
+      "popularity": 2.2154,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/uiEVOx3QclxnN76t8PU6v5IcUUP.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/8BTsTfln4jlQrLXUBquXJ0ASQy9.jpg",
+          "id": 140607,
+          "title": "Star Wars: The Force Awakens",
+          "original_title": "Star Wars: The Force Awakens",
+          "overview": "Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
+          "poster_path": "/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "popularity": 13.8271,
+          "release_date": "2015-12-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.25,
+          "vote_count": 20471
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/jOzrELAzFxtMx2I4uDGHOotdfsS.jpg",
+          "id": 181812,
+          "title": "Star Wars: The Rise of Skywalker",
+          "original_title": "Star Wars: The Rise of Skywalker",
+          "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
+          "poster_path": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            28,
+            878
+          ],
+          "popularity": 14.2174,
+          "release_date": "2019-12-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.272,
+          "vote_count": 10782
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/cqXEwYFcwyKPZCKl1jAPaG3cMsl.jpg",
+          "id": 13475,
+          "title": "Star Trek",
+          "original_title": "Star Trek",
+          "overview": "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion. As fiery instinct clashes with calm reason, their unlikely but powerful partnership is the only thing capable of leading their crew through unimaginable danger, boldly going where no one has gone before. The human adventure has begun again.",
+          "poster_path": "/hN2ZtF3Uw6mhIHZiqL0SKzELtKn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            878,
+            28,
+            12
+          ],
+          "popularity": 7.5495,
+          "release_date": "2009-05-06",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.43,
+          "vote_count": 10448
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

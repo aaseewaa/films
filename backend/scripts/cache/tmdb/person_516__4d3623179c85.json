@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Annette Carol Bening"
+  ],
+  "biography": "",
+  "birthday": "1958-05-29",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 516,
+  "imdb_id": "nm0000906",
+  "known_for_department": "Acting",
+  "name": "Аннетт Бенинг",
+  "place_of_birth": "Topeka, Kansas, USA",
+  "popularity": 2.5826,
+  "profile_path": "/kGslMAWcpv8MKzODhDRDkFE0uX7.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/028knk",
+    "freebase_id": "/en/annette_bening",
+    "imdb_id": "nm0000906",
+    "tvrage_id": 53175,
+    "wikidata_id": "Q190602",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

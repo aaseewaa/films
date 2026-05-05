@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1100340,
+  "imdb_id": "nm1508445",
+  "known_for_department": "Directing",
+  "name": "Tommy Wiklund",
+  "place_of_birth": null,
+  "popularity": 0.3061,
+  "profile_path": "/nvUj3NGHC3G0kmEjDtrXIo4Kg1D.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1508445",
+    "tvrage_id": null,
+    "wikidata_id": "Q113471487",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

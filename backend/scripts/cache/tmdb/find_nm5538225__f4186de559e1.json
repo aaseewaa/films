@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1805350,
+      "name": "Ibai Abad",
+      "original_name": "Ibai Abad",
+      "media_type": "person",
+      "popularity": 0.0689,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/gU3ISD7jdGPBAt078e6eaysTLJ9.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/fWOagGfFtMm70U8BtWPlVRW6efu.jpg",
+          "id": 259669,
+          "name": "Olympo",
+          "original_name": "Olympo",
+          "overview": "When a swimmer collapses at a high-performance sports center, Amaia investigates the extreme risks her fellow athletes are taking to feed their ambition.",
+          "poster_path": "/2X06R82PG2HVZl6h7YeXXT11EEP.jpg",
+          "media_type": "tv",
+          "original_language": "es",
+          "genre_ids": [
+            18,
+            9648
+          ],
+          "popularity": 4.6372,
+          "first_air_date": "2025-06-20",
+          "softcore": false,
+          "vote_average": 7.705,
+          "vote_count": 149,
+          "origin_country": [
+            "ES"
+          ]
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ujQjmIsBCAl7d64umOIDPDW1NL2.jpg",
+          "id": 454774,
+          "title": "The Girl from the Song",
+          "original_title": "The Girl from the Song",
+          "overview": "A young musician travels to Burning Man, a psychedelic festival in the middle of the Nevada desert, in an attempt to get the impetuous girl he has fallen in love with.",
+          "poster_path": "/pkPhyfQzfKvQcEokZAyhYoQCC9o.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.5918,
+          "release_date": "2017-04-24",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.0,
+          "vote_count": 112
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/mW1X4mCy6kLSt1L0NBkQJ4Qrn9t.jpg",
+          "id": 1174487,
+          "title": "Gold Lust",
+          "original_title": "Escanyapobres",
+          "overview": "Late 1800s. The arrival of the railroad to an isolated town brings the long-awaited progress, but also Oleguer, a dark loan shark with shady dealings. When he seizes and stays at Cileta and her family's farmhouse, the young peasant will do anything possible to get her house back. Even if that means following in the dark footsteps of the money-lender.",
+          "poster_path": "/p0GMoTnEr8bwwy6ieDPlLXvVRa.jpg",
+          "media_type": "movie",
+          "original_language": "ca",
+          "genre_ids": [
+            37
+          ],
+          "popularity": 0.411,
+          "release_date": "2024-11-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.5,
+          "vote_count": 4
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

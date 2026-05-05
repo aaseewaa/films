@@ -1,0 +1,61 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 92013,
+      "name": "Edward Burtynsky",
+      "original_name": "Edward Burtynsky",
+      "media_type": "person",
+      "popularity": 0.0214,
+      "gender": 2,
+      "known_for_department": "Production",
+      "profile_path": "/qgHBKql8H1JQJYUZ5kqJE6nmh8F.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/oa3c6xhLVB612dfD5rD4s5CJ8x8.jpg",
+          "id": 539757,
+          "title": "Anthropocene: The Human Epoch",
+          "original_title": "Anthropocene: The Human Epoch",
+          "overview": "Documentary on psychedelic potash mines, expansive concrete seawalls, mammoth industrial machines, and other examples of humanity’s massive, destructive reengineering of the planet.",
+          "poster_path": "/1jkKn1lMLjAIYwYh9QKWgnmje2Y.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.8404,
+          "release_date": "2018-09-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.9,
+          "vote_count": 70
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2rpnT0V7oMDuxldpYqrFD9DUzRg.jpg",
+          "id": 215032,
+          "title": "Watermark",
+          "original_title": "Watermark",
+          "overview": "Following their triumph with Manufactured Landscapes, photographer Edward Burtynsky and filmmaker Jennifer Baichwal reunite to explore the ways in which humanity has shaped, manipulated and depleted one of its most vital and compromised resources: water.",
+          "poster_path": "/ggHgV6OfSAkCZeUbQtMK1sNWq9G.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.1682,
+          "release_date": "2013-10-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.5,
+          "vote_count": 28
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

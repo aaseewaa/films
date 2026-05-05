@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Richard Lee"
+  ],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://richlee.com",
+  "id": 1634181,
+  "imdb_id": "nm1184240",
+  "known_for_department": "Directing",
+  "name": "Рич Ли",
+  "place_of_birth": "Reno, Nevada, USA",
+  "popularity": 0.256,
+  "profile_path": "/r7WIjhtHWcnRJO3nlao6jwsrWG6.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1184240",
+    "tvrage_id": null,
+    "wikidata_id": "Q7323333",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

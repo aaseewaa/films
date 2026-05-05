@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Τζέσικα Μπαρθ",
+    "جسیکا بارت"
+  ],
+  "biography": "",
+  "birthday": "1980-07-12",
+  "deathday": null,
+  "gender": 1,
+  "homepage": null,
+  "id": 207150,
+  "imdb_id": "nm1274797",
+  "known_for_department": "Acting",
+  "name": "Джессика Барт",
+  "place_of_birth": "Philadelphia, Pennsylvania, USA",
+  "popularity": 1.0485,
+  "profile_path": "/vQBxmLtlGqT8CuOnBwtzIWdwnNH.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm1274797",
+    "tvrage_id": null,
+    "wikidata_id": "Q4172513",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "_jessicabarth_",
+    "youtube_id": null
+  }
+}

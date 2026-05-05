@@ -1,0 +1,87 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 24882,
+      "name": "Jacques Demy",
+      "original_name": "Jacques Demy",
+      "media_type": "person",
+      "popularity": 0.6238,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/5EzvVqngdfzhZCMb8m2EvAsrTj2.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/m1Gei9O5GfLoJHQjBaxWBSkXX2y.jpg",
+          "id": 5967,
+          "title": "The Umbrellas of Cherbourg",
+          "original_title": "Les Parapluies de Cherbourg",
+          "overview": "This simple romantic tragedy begins in 1957. Guy Foucher, a 20-year-old French auto mechanic, has fallen in love with 17-year-old Geneviève Emery, an employee in her widowed mother's chic but financially embattled umbrella shop. On the evening before Guy is to leave for a two-year tour of combat in Algeria, he and Geneviève make love. She becomes pregnant and must choose between waiting for Guy's return or accepting an offer of marriage from a wealthy diamond merchant.",
+          "poster_path": "/tAgTf64XKK5ir7w5C7dnB53jWWG.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 2.7876,
+          "release_date": "1964-02-19",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.389,
+          "vote_count": 881
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8m7qOKlsdnxt4335vpFzpffuIVu.jpg",
+          "id": 2433,
+          "title": "The Young Girls of Rochefort",
+          "original_title": "Les Demoiselles de Rochefort",
+          "overview": "In the seaside town of Rochefort, twin sisters Delphine and Solange dream of love and artistic fulfillment beyond their quiet lives. As sailors, artists, musicians, and chance visitors pass through town during a weekend fair, a web of near-misses and romantic longing brings ideal partners tantalizingly close—without their realizing it.",
+          "poster_path": "/jtxhyGaYhurH6KsjvP1jV3dDypz.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            10749,
+            35,
+            18
+          ],
+          "popularity": 1.9341,
+          "release_date": "1967-03-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.673,
+          "vote_count": 654
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/3yZva3ONs7C1kKJ6IVvrZQJCUIj.jpg",
+          "id": 5590,
+          "title": "Donkey Skin",
+          "original_title": "Peau d'âne",
+          "overview": "A fairy godmother helps a princess disguise herself so she won't have to marry her father.",
+          "poster_path": "/kSODEFNpTBCOJNHhsbwrwvH0Uvd.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            14,
+            35,
+            10402,
+            10749
+          ],
+          "popularity": 2.8138,
+          "release_date": "1970-12-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.213,
+          "vote_count": 551
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

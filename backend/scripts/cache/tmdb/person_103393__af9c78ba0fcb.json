@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "ジャック・ベッケル"
+  ],
+  "biography": "",
+  "birthday": "1906-09-15",
+  "deathday": "1960-02-21",
+  "gender": 2,
+  "homepage": null,
+  "id": 103393,
+  "imdb_id": "nm0065442",
+  "known_for_department": "Directing",
+  "name": "Jacques Becker",
+  "place_of_birth": "Paris, France",
+  "popularity": 0.6007,
+  "profile_path": "/wamZsli0mJPyWeZ6bwSgdzsvHyi.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/08l71r",
+    "freebase_id": null,
+    "imdb_id": "nm0065442",
+    "tvrage_id": null,
+    "wikidata_id": "Q55381",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

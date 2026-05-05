@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 38225,
+      "name": "Cher",
+      "original_name": "Cher",
+      "media_type": "person",
+      "popularity": 1.7167,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/yDglV70XMu2cBWZigp5Jxd4etfv.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/56H7AtJ5GK4UxFoHuw9QDwI7wzD.jpg",
+          "id": 42297,
+          "title": "Burlesque",
+          "original_title": "Burlesque",
+          "overview": "Ali leaves behind a troubled life and follows her dreams to Los Angeles, where she lands a job as a cocktail waitress at the Burlesque Lounge, a once-majestic theater that houses an inspired musical revue. Vowing to perform there, she makes the leap from bar to stage, helping restore the club's former glory.",
+          "poster_path": "/3U9zBIibERQZqYKM3N1a4MYgBsN.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 4.8481,
+          "release_date": "2010-11-23",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.206,
+          "vote_count": 2365
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5RQ5SIcrtKeUYeYeJLRTljR8LcN.jpg",
+          "id": 2039,
+          "title": "Moonstruck",
+          "original_title": "Moonstruck",
+          "overview": "37-year-old Italian-American widow Loretta Castorini believes she is unlucky in love, and so accepts a marriage proposal from her boyfriend Johnny, even though she doesn't love him. When she meets his estranged younger brother Ronny, an emotional and passionate man, she finds herself drawn to him. She tries to resist, but Ronny, who blames his brother for the loss of his hand, has no scruples about aggressively pursuing her while Johnny is out of the country. As Loretta falls for Ronny, she learns that she's not the only one in her family with a secret romance.",
+          "poster_path": "/2mnVWpvsHEHHnfvLn1NXYVvBGl5.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            18,
+            10749
+          ],
+          "popularity": 4.6021,
+          "release_date": "1987-12-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.853,
+          "vote_count": 1088
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/5xgtdWDqBhc2nD5e6zlgyjeQ6XD.jpg",
+          "id": 6069,
+          "title": "The Witches of Eastwick",
+          "original_title": "The Witches of Eastwick",
+          "overview": "Three single women in a picturesque village have their wishes granted, at a cost, when a mysterious and flamboyant man arrives in their lives.",
+          "poster_path": "/p5OivnZuXfy5E3BKKFIeSidmwys.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            14,
+            27
+          ],
+          "popularity": 5.3094,
+          "release_date": "1987-06-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.5,
+          "vote_count": 1543
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

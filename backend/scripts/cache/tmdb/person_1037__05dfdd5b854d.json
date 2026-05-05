@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "\t Harvey Johannes Keitel"
+  ],
+  "biography": "",
+  "birthday": "1939-05-13",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1037,
+  "imdb_id": "nm0000172",
+  "known_for_department": "Acting",
+  "name": "Харви Кейтель",
+  "place_of_birth": "Brooklyn, New York City, New York, USA",
+  "popularity": 3.1071,
+  "profile_path": "/7P30hza1neYWW3r7rSQOC736K2Z.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0klh7",
+    "freebase_id": "/en/harvey_keitel",
+    "imdb_id": "nm0000172",
+    "tvrage_id": 64719,
+    "wikidata_id": "Q191132",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

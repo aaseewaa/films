@@ -1,0 +1,36 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Hitch",
+    "The Master of Suspense",
+    "Sir Alfred Hitchcock",
+    "Sir Alfred Joseph Hitchcock",
+    "Alfred Joseph Hitchcock",
+    "앨프리드 히치콕",
+    "Альфред Хічкок"
+  ],
+  "biography": "",
+  "birthday": "1899-08-13",
+  "deathday": "1980-04-29",
+  "gender": 2,
+  "homepage": "http://www.alfredhitchcock.com",
+  "id": 2636,
+  "imdb_id": "nm0000033",
+  "known_for_department": "Directing",
+  "name": "Альфред Хичкок",
+  "place_of_birth": "Leytonstone, London, England, UK",
+  "popularity": 2.9533,
+  "profile_path": "/108fiNM6poRieMg7RIqLJRxdAwG.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0j_c",
+    "freebase_id": "/en/alfred_hitchcock",
+    "imdb_id": "nm0000033",
+    "tvrage_id": 6669,
+    "wikidata_id": "Q7374",
+    "facebook_id": "AlfredHitchcockOfficial",
+    "instagram_id": "alfredhitchcockofficial",
+    "tiktok_id": null,
+    "twitter_id": "AlfredHitchcock",
+    "youtube_id": null
+  }
+}

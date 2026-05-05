@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Bill Crystal",
+    "Γουίλιαμ Έντουαρντ Κρίσταλ",
+    "بیلی کریستال"
+  ],
+  "biography": "",
+  "birthday": "1948-03-14",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 7904,
+  "imdb_id": "nm0000345",
+  "known_for_department": "Acting",
+  "name": "Билли Кристал",
+  "place_of_birth": "Long Beach, Long Island, New York, USA",
+  "popularity": 2.2176,
+  "profile_path": "/jfcCceTnP7rrHz1pSjCxiqRosw3.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01h1b",
+    "freebase_id": "/en/billy_crystal",
+    "imdb_id": "nm0000345",
+    "tvrage_id": null,
+    "wikidata_id": "Q186485",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": "BillyCrystal",
+    "youtube_id": null
+  }
+}

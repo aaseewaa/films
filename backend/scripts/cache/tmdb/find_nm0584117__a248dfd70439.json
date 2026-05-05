@@ -1,0 +1,82 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 81487,
+      "name": "George Michael",
+      "original_name": "George Michael",
+      "media_type": "person",
+      "popularity": 0.9805,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/97ZAoQtREhnQJ7VM5013SAAhOXu.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/3OYdLI1I8lZKkzu3AgEm3iHyvip.jpg",
+          "id": 1134865,
+          "title": "WHAM!",
+          "original_title": "WHAM!",
+          "overview": "Through archival interviews and footage, George Michael and Andrew Ridgeley relive the arc of their Wham! career, from 70s best buds to 80s pop icons.",
+          "poster_path": "/mQbva3zRZz2f6Vuov0RmevYsolj.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99,
+            10402
+          ],
+          "popularity": 1.4469,
+          "release_date": "2023-06-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.351,
+          "vote_count": 87
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/2dxL3lq5lTJyYPouO3OCD2gCYwW.jpg",
+          "id": 476517,
+          "title": "George Michael: Freedom",
+          "original_title": "George Michael: Freedom",
+          "overview": "This documentary covers the span of George Michael's entire career, concentrating on the formative period in the late Grammy® Award winner’s life and career, leading up to and following the making of his acclaimed, best-selling album “Listen Without Prejudice Vol. 1” and his subsequent, infamous High Court battle with his record label that followed, while also becoming poignantly personal about the death of his late partner and first love, Anselmo Feleppa.",
+          "poster_path": "/bqtlxKX8T9nlu99W4KzMPMlrrUs.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            99
+          ],
+          "popularity": 0.704,
+          "release_date": "2017-10-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.2,
+          "vote_count": 31
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/abJnmkvQfzCxMODN0qmigcZnyfJ.jpg",
+          "id": 26695,
+          "title": "George Michael: Live in London",
+          "original_title": "George Michael: Live in London",
+          "overview": "Live in London is a live concert recording of George Michael's final two concerts in London's Earl's Court arena on 24th and 25th August 2008 as part of his 25 Live tour. It features a career-spanning set that includes Wham! classics and his solo hits. This is the first live DVD of George Michael's career.",
+          "poster_path": "/tTyfHtiEEIkZ2FUf0tk9sqUywiM.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10402
+          ],
+          "popularity": 0.2902,
+          "release_date": "2009-12-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.9,
+          "vote_count": 21
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

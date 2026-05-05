@@ -1,0 +1,32 @@
+{
+  "adult": false,
+  "also_known_as": [
+    " Whitney Elizabeth Houston",
+    "The Prom Queen of Soul",
+    "Nippy"
+  ],
+  "biography": "",
+  "birthday": "1963-08-09",
+  "deathday": "2012-02-11",
+  "gender": 1,
+  "homepage": "http://www.whitneyhouston.com",
+  "id": 8851,
+  "imdb_id": "nm0001365",
+  "known_for_department": "Acting",
+  "name": "Уитни Хьюстон",
+  "place_of_birth": "Newark, New Jersey, USA ",
+  "popularity": 1.3004,
+  "profile_path": "/kOUbjET0IbUcMbFbajHfFiSy4gK.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/086qd",
+    "freebase_id": "/en/whitney_houston",
+    "imdb_id": "nm0001365",
+    "tvrage_id": 17512,
+    "wikidata_id": "Q34389",
+    "facebook_id": "WhitneyHouston",
+    "instagram_id": "whitneyhouston",
+    "tiktok_id": "whitneyhouston",
+    "twitter_id": null,
+    "youtube_id": "whitneyhoustonmusic"
+  }
+}

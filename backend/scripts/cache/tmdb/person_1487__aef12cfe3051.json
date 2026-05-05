@@ -1,0 +1,41 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Robert Allen Zimmerman",
+    "Blind Boy Grunt",
+    "The Bard",
+    "The Voice of a Generation",
+    "The Voice of Protest",
+    "Zimbo",
+    "Zimmy",
+    "Sergei Petrov",
+    "Lucky Wilbury",
+    "Robert Zimmerman",
+    "Traveling Wilburys",
+    "Boo Wilbury"
+  ],
+  "biography": "",
+  "birthday": "1941-05-24",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://www.bobdylan.com",
+  "id": 1487,
+  "imdb_id": "nm0001168",
+  "known_for_department": "Acting",
+  "name": "Боб Дилан",
+  "place_of_birth": "Duluth, Minnesota, USA",
+  "popularity": 0.8364,
+  "profile_path": "/pMGkRge9jE0TRgENbUYt3N5qDPl.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01vrncs",
+    "freebase_id": "/en/bob_dylan",
+    "imdb_id": "nm0001168",
+    "tvrage_id": 64382,
+    "wikidata_id": "Q392",
+    "facebook_id": "bobdylan",
+    "instagram_id": "bobdylan",
+    "tiktok_id": "bobdylan",
+    "twitter_id": "bobdylan",
+    "youtube_id": "@BobDylan"
+  }
+}

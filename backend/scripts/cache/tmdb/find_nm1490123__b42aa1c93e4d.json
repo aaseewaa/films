@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 2127,
+      "name": "James Wan",
+      "original_name": "James Wan",
+      "media_type": "person",
+      "popularity": 3.2313,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/bNJccMIKzCtYnndcOKniSKCzo5Y.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+          "id": 297802,
+          "title": "Aquaman",
+          "original_title": "Aquaman",
+          "overview": "Half-human, half-Atlantean Arthur Curry is taken on the journey of his lifetime to discover if he is worth of being a king.",
+          "poster_path": "/ufl63EFcc5XpByEV2Ecdw6WJZAI.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            12,
+            14
+          ],
+          "popularity": 10.8508,
+          "release_date": "2018-12-07",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.867,
+          "vote_count": 14865
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+          "id": 138843,
+          "title": "The Conjuring",
+          "original_title": "The Conjuring",
+          "overview": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the most terrifying case of their lives.",
+          "poster_path": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            27,
+            53
+          ],
+          "popularity": 19.7172,
+          "release_date": "2013-07-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.536,
+          "vote_count": 12647
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/ehzI1mVcnHqB58NqPyQwpMqcVoz.jpg",
+          "id": 168259,
+          "title": "Furious 7",
+          "original_title": "Furious 7",
+          "overview": "Deckard Shaw seeks revenge against Dominic Toretto and his family for his comatose brother.",
+          "poster_path": "/ktofZ9Htrjiy0P6LEowsDaxd3Ri.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            28,
+            80,
+            53
+          ],
+          "popularity": 13.2126,
+          "release_date": "2015-04-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.217,
+          "vote_count": 11242
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

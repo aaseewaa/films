@@ -1,0 +1,30 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "피에르 페리펠"
+  ],
+  "biography": "",
+  "birthday": "1980-03-19",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1261455,
+  "imdb_id": "nm2010048",
+  "known_for_department": "Directing",
+  "name": "Пьер Перифел",
+  "place_of_birth": "Lyon, Rhône, France",
+  "popularity": 0.8558,
+  "profile_path": "/wNKzhbKZxbO7ODIP9TW6x7T4M1k.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm2010048",
+    "tvrage_id": null,
+    "wikidata_id": "Q33044548",
+    "facebook_id": null,
+    "instagram_id": "pierreperifel",
+    "tiktok_id": null,
+    "twitter_id": "",
+    "youtube_id": null
+  }
+}

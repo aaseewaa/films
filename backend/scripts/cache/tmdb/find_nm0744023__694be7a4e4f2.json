@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 4410,
+      "name": "Roberto Rossellini",
+      "original_name": "Roberto Rossellini",
+      "media_type": "person",
+      "popularity": 1.1089,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/dEfCuU0CoIqhgoEDtHZpIoNWNVj.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/cztYhbawTjK9m8lFBd97Yl5Zd8r.jpg",
+          "id": 307,
+          "title": "Rome, Open City",
+          "original_title": "Roma città aperta",
+          "overview": "During the Nazi occupation of 1944 Rome, Resistance leader Giorgio Manfredi is pursued by the Nazis as he seeks refuge and a means of escape.",
+          "poster_path": "/ijGV4v8JxgbNzgEhqKdzHdaZn8a.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "popularity": 2.5686,
+          "release_date": "1945-10-08",
+          "softcore": false,
+          "video": false,
+          "vote_average": 8.014,
+          "vote_count": 975
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vblx2TkQFrBrEORsEssizgEqakT.jpg",
+          "id": 8016,
+          "title": "Germany, Year Zero",
+          "original_title": "Germania anno zero",
+          "overview": "In the ruins of post-WWII Berlin, a twelve-year-old boy is left to his own devices in order to help provide for his family.",
+          "poster_path": "/sdxegsjrrvujXvv2GLPENyDlWDI.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 1.312,
+          "release_date": "1948-07-11",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.618,
+          "vote_count": 423
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zNjp6eolIcpGx11tDbE5eekeHEG.jpg",
+          "id": 8429,
+          "title": "Paisan",
+          "original_title": "Paisà",
+          "overview": "Six stories unfold in various regions, from Sicily to the northern Po Valley as American military personnel interact with a variety of Italian locals over eighteen months in the push north during the Italian Campaign of WWII as German forces retreat.",
+          "poster_path": "/r5IGAFASCXmp8m51vUbER3WwVcB.jpg",
+          "media_type": "movie",
+          "original_language": "it",
+          "genre_ids": [
+            18,
+            10752
+          ],
+          "popularity": 1.272,
+          "release_date": "1946-12-10",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.504,
+          "vote_count": 353
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

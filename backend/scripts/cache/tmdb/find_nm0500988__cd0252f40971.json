@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 16862,
+      "name": "Claude Lelouch",
+      "original_name": "Claude Lelouch",
+      "media_type": "person",
+      "popularity": 1.3793,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/d7s7Ifc2JS0Hzm31YAgVtK5vuKc.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/le6I7w3QnNAzPn9MCVHzJuBZxXt.jpg",
+          "id": 42726,
+          "title": "A Man and a Woman",
+          "original_title": "Un homme et une femme",
+          "overview": "A man and a woman meet by accident on a Sunday evening at their childrens' boarding school. Slowly, they reveal themselves to each other, finding that they have something deeply in common.",
+          "poster_path": "/boDZQiubhyhksN8fcgM4sXZ2btW.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 2.5852,
+          "release_date": "1966-05-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.4,
+          "vote_count": 311
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/g1xaIqVQuE1DILjnfrT3Lm6FXxH.jpg",
+          "id": 38198,
+          "title": "Itinerary of a Spoiled Child",
+          "original_title": "Itinéraire d'un enfant gâté",
+          "overview": "A foundling, raised in the circus, Sam Lion becomes a businessman after a trapeze accident. However, when he reaches fifty and becomes tired of his responsibilities and of his son Jean-Philippe, he decides to disappear at sea. However, he runs into Albert Duvivier, one of his former employees. He comes to realise that he has ignored the important things in his life.",
+          "poster_path": "/9yZaH3bmvrN5EQktVZouaRTGKgQ.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            18,
+            12
+          ],
+          "popularity": 1.1632,
+          "release_date": "1988-11-30",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.229,
+          "vote_count": 223
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/hpg9P374zpTPqEdQ7157Hj1JL6t.jpg",
+          "id": 352025,
+          "title": "Un + une",
+          "original_title": "Un + une",
+          "overview": "A successful film composer falls in love when he travels to India to work on a Bollywood retelling of Romeo and Juliet.",
+          "poster_path": "/1FAZpAfBsBtkAxUGkskXf4pTEUu.jpg",
+          "media_type": "movie",
+          "original_language": "fr",
+          "genre_ids": [
+            35,
+            10749,
+            18
+          ],
+          "popularity": 1.1711,
+          "release_date": "2015-12-09",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.795,
+          "vote_count": 198
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

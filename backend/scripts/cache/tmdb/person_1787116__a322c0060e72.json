@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1968-10-25",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 1787116,
+  "imdb_id": "nm5588727",
+  "known_for_department": "Acting",
+  "name": "Fred Aaron Blake",
+  "place_of_birth": "Essen, Germany",
+  "popularity": 0.1625,
+  "profile_path": null,
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm5588727",
+    "tvrage_id": null,
+    "wikidata_id": "Q117246306",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

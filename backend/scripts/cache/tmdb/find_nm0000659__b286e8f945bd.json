@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 10400,
+      "name": "Barbra Streisand",
+      "original_name": "Barbra Streisand",
+      "media_type": "person",
+      "popularity": 1.717,
+      "gender": 1,
+      "known_for_department": "Acting",
+      "profile_path": "/6YD223jsdZX7VnWSjGjP1S7Xj6X.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/porZOny3iVvs5LK0osW1b52wWik.jpg",
+          "id": 693,
+          "title": "Meet the Fockers",
+          "original_title": "Meet the Fockers",
+          "overview": "Hard-to-crack ex-CIA man Jack Byrnes and his wife Dina head for the warmer climes of Florida to meet the parents of their son-in-law-to-be, Greg Focker. Unlike their happily matched offspring, the future in-laws find themselves in a situation of opposites that definitely do not attract.",
+          "poster_path": "/59fXm6N2x7QSbvt6BaBxTNBXGL8.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 7.1475,
+          "release_date": "2004-12-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.253,
+          "vote_count": 5132
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/sLDoVwrzmKNdiBmykPSxaJA7uQh.jpg",
+          "id": 39451,
+          "title": "Little Fockers",
+          "original_title": "Little Fockers",
+          "overview": "It has taken 10 years, two little Fockers with wife Pam and countless hurdles for Greg to finally get in with his tightly wound father-in-law, Jack. After the cash-strapped dad takes a job moonlighting for a drug company, Jack's suspicions about his favorite male nurse come roaring back. When Greg and Pam's entire clan descends for the twins' birthday party, Greg must prove to the skeptical Jack that he's fully capable as the man of the house.",
+          "poster_path": "/90mwPRNMmX9RUGVgKMJMJNQnYX8.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10749
+          ],
+          "popularity": 4.1828,
+          "release_date": "2010-12-21",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.653,
+          "vote_count": 3434
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7mRpaVetpIde0f3Ebk2ipCAqDls.jpg",
+          "id": 10236,
+          "title": "The Way We Were",
+          "original_title": "The Way We Were",
+          "overview": "Opposites attract when, during their college days, Katie Morosky, a politically active Jew, meets Hubbell Gardiner, a feckless WASP. Years later, in the wake of World War II, they meet once again and, despite their obvious differences, attempt to make their love for each other work.",
+          "poster_path": "/o5x563ze56iI4iNsCBxTnDkt28i.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 3.1517,
+          "release_date": "1973-10-17",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.999,
+          "vote_count": 509
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

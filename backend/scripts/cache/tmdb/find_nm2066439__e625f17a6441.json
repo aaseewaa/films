@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1414,
+      "name": "Goro Miyazaki",
+      "original_name": "宮崎吾朗",
+      "media_type": "person",
+      "popularity": 1.2095,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/9NapAMlmo6weZKW56KfkgzXrQZt.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/v3bVN8SjeA9O0nUBtMfRcE0fJpR.jpg",
+          "id": 83389,
+          "title": "From Up on Poppy Hill",
+          "original_title": "コクリコ坂から",
+          "overview": "Yokohama, 1963. Japan is picking itself up from the devastation of World War II and preparing to host the 1964 Olympics—and the mood is one of both optimism and conflict as the young generation struggles to throw off the shackles of a troubled past. Against this backdrop of hope and change, a friendship begins to blossom between high school students Umi and Shun—but a buried secret from their past emerges to cast a shadow on the future and pull them apart.",
+          "poster_path": "/rRLYX4RZIyloHSJwvZKAhphAjiB.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            18
+          ],
+          "popularity": 4.8261,
+          "release_date": "2011-07-16",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.524,
+          "vote_count": 1930
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/x5ufEAM7bS7DVXaovApamQh5BNE.jpg",
+          "id": 37933,
+          "title": "Tales from Earthsea",
+          "original_title": "ゲド戦記",
+          "overview": "Something bizarre has come over the land. The kingdom is deteriorating. People are beginning to act strange... What's even more strange is that people are beginning to see dragons, which shouldn't enter the world of humans. Due to all these bizarre events, Ged, a wandering wizard, is investigating the cause. During his journey, he meets Prince Arren, a young distraught teenage boy. While Arren may look like a shy young teen, he has a severe dark side, which grants him strength, hatred, ruthlessness and has no mercy, especially when it comes to protecting Teru. For the witch Kumo this is a perfect opportunity. She can use the boy's \"fears\" against the very one who would help him, Ged.",
+          "poster_path": "/y0VnJt4eRPMjA1hpJ8f1EFoVaSf.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            14,
+            12
+          ],
+          "popularity": 5.3716,
+          "release_date": "2006-07-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.53,
+          "vote_count": 1480
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/qMxpGzmmnY1jLd4p7EhhoW43wWF.jpg",
+          "id": 683127,
+          "title": "Earwig and the Witch",
+          "original_title": "アーヤと魔女",
+          "overview": "A headstrong orphan discovers a world of spells and potions while living with a selfish witch.",
+          "poster_path": "/9oK820JieICOcfUhI6mkpFrcA9m.jpg",
+          "media_type": "movie",
+          "original_language": "ja",
+          "genre_ids": [
+            16,
+            14,
+            10751
+          ],
+          "popularity": 2.1564,
+          "release_date": "2021-02-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.887,
+          "vote_count": 292
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

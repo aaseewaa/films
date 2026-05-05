@@ -1,0 +1,79 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 105055,
+      "name": "Jack Smith",
+      "original_name": "Jack Smith",
+      "media_type": "person",
+      "popularity": 0.132,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/wmcKDsXdH6MunekpYt5TnxM1RXE.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/bscqiQRZJqRpnX5aD79H0MNLro6.jpg",
+          "id": 47122,
+          "title": "Flaming Creatures",
+          "original_title": "Flaming Creatures",
+          "overview": "Filmmaker and artist Jack Smith described his own film as a “comedy set in a haunted movie studio.” Flaming Creatures begins humorously enough with several men and women, mostly of indeterminate gender, vamping it up in front of the camera and participating in a mock advertisement for an indelible, heart-shaped brand of lipstick. However, things take a dark, nightmarish turn when a transvestite chases, catches and begins molesting a woman. Soon, all of the titular “creatures” participate in a (mostly clothed) orgy that causes a massive earthquake. After the creatures are killed in the resulting chaos, a vampire dressed like an old Hollywood starlet rises from her coffin to resurrect the dead. All ends happily enough when the now undead creatures dance with each other, even though another orgy and earthquake loom over the end title card.",
+          "poster_path": "/agXfZnar50z6v1DrGdzjgssuth7.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            27,
+            14
+          ],
+          "popularity": 0.3214,
+          "release_date": "1963-04-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.721,
+          "vote_count": 61
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/nfUcfKnUlPhNOo2r1ItG7zyCBl7.jpg",
+          "id": 47229,
+          "title": "Scotch Tape",
+          "original_title": "Scotch Tape",
+          "overview": "Shot in 1959, Scotch Tape is Jack Smith's first film -- a joyous, three-minute romp, in color, using Peter Duchin's rhumba \"Carinhoso\" for its soundtrack. Three young men merrily bop through the wreckage of razed buildings at the site of what would become Lincoln Center. Apparently, Scotch Tape was never edited and, instead, was cut in the camera by Smith, combining long shots and close-ups while filming mostly from overhead. The title comes from a small strip of scotch tape that was accidentally stuck on the camera and so is visible in the lower-right corner of the frame throughout the film.",
+          "poster_path": "/7VlSbuz1ada1H5brMynHMz7QluQ.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.0926,
+          "release_date": "1962-01-01",
+          "softcore": false,
+          "video": false,
+          "vote_average": 4.405,
+          "vote_count": 21
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/zPO2gc7YgoRXiUN3i6vThHQl3N2.jpg",
+          "id": 126372,
+          "title": "Normal Love",
+          "original_title": "Normal Love",
+          "overview": "A follow-up to now legendary film Flaming Creatures. This vivid, full-color homage to B-movies is a dizzying display of camp that clearly affirms Smith’s role as the driving force behind underground cinema and performance art of the post-war era. The director was known to constantly re-edit the film, often during screenings as it was still unspooling from the projector.",
+          "poster_path": "/oNWsaxmaPFWzOIi6FCHn6rNdXZA.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [],
+          "popularity": 0.2458,
+          "release_date": "1965-10-31",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.182,
+          "vote_count": 11
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

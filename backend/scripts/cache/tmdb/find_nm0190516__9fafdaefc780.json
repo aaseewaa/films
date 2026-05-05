@@ -1,0 +1,86 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 94305,
+      "name": "James Cruze",
+      "original_name": "James Cruze",
+      "media_type": "person",
+      "popularity": 1.0073,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/rTDilm5WrU4I8n4abBUucJGoAkY.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/gKgDAN2cmA1KqS0rdeDra7tJnkR.jpg",
+          "id": 121238,
+          "title": "If I Had a Million",
+          "original_title": "If I Had a Million",
+          "overview": "An elderly business tycoon, believed to be dying, decides to give a million dollars each to eight strangers chosen at random from the phone directory.",
+          "poster_path": "/qHFusV8b94ayRPrEEfWKuo3jNCE.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            35
+          ],
+          "popularity": 1.4885,
+          "release_date": "1932-11-18",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.609,
+          "vote_count": 46
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/n4S7YLep1RvLTAZBFkavVCVivUS.jpg",
+          "id": 117531,
+          "title": "The Great Gabbo",
+          "original_title": "The Great Gabbo",
+          "overview": "For the ventriloquist Gabbo his wooden dummy Otto is the only means of expression. When he starts relying more and more on Otto, he starts going mad.",
+          "poster_path": "/pnEXHaii4Kw7RmY0irO0FhcF4ua.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10402,
+            18,
+            10749
+          ],
+          "popularity": 0.7749,
+          "release_date": "1929-09-12",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.667,
+          "vote_count": 24
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/eHvKjojDP3cSxMJu4lrjr5Z6cVJ.jpg",
+          "id": 110341,
+          "title": "The Covered Wagon",
+          "original_title": "The Covered Wagon",
+          "overview": "Two wagon caravans converge at what is now Kansas City, and combine for the westward push to Oregon. On their quest the pilgrims will experience desert heat, mountain snow, hunger, and Indian attack. To complicate matters further, a love triangle develops, as pretty Molly must chose between Sam, a brute, and Will, the dashing captain of the other caravan. Can Will overcome the skeleton in his closet and win Molly's heart?",
+          "poster_path": "/t6aJMPTCXnHh5CDvaI9hnZX2e3O.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            12,
+            37,
+            10749
+          ],
+          "popularity": 0.7486,
+          "release_date": "1923-03-15",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.353,
+          "vote_count": 17
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

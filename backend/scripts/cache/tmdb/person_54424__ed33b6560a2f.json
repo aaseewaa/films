@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1928-04-04",
+  "deathday": "2014-05-28",
+  "gender": 1,
+  "homepage": null,
+  "id": 54424,
+  "imdb_id": "nm0029723",
+  "known_for_department": "Acting",
+  "name": "Maya Angelou",
+  "place_of_birth": "St. Louis, Missouri, USA",
+  "popularity": 0.6622,
+  "profile_path": "/9dDY1bDRF7GnGlOEY5t9LrAdzw8.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/01q9b9",
+    "freebase_id": "/en/maya_angelou",
+    "imdb_id": "nm0029723",
+    "tvrage_id": 94469,
+    "wikidata_id": "Q19526",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

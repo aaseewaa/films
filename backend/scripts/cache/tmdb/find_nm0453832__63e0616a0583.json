@@ -1,0 +1,89 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 109453,
+      "name": "Ward Kimball",
+      "original_name": "Ward Kimball",
+      "media_type": "person",
+      "popularity": 0.456,
+      "gender": 2,
+      "known_for_department": "Visual Effects",
+      "profile_path": null,
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/4yWayBvwl9gHXaWrDrAslxjL7mh.jpg",
+          "id": 408,
+          "title": "Snow White and the Seven Dwarfs",
+          "original_title": "Snow White and the Seven Dwarfs",
+          "overview": "A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen. The Queen is jealous because she wants to be known as \"the fairest in the land,\" and Snow White's beauty surpasses her own.",
+          "poster_path": "/3VAHfuNb6Z7UiW12iYKANSPBl8m.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            14,
+            16,
+            10751
+          ],
+          "popularity": 9.9786,
+          "release_date": "1938-01-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.123,
+          "vote_count": 7961
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/puJKgNcWaGgMk5VHanSSomUTpmw.jpg",
+          "id": 11224,
+          "title": "Cinderella",
+          "original_title": "Cinderella",
+          "overview": "Cinderella has faith her dreams of a better life will come true. With help from her loyal mice friends and a wave of her Fairy Godmother's wand, Cinderella's rags are magically turned into a glorious gown and off she goes to the Royal Ball. But when the clock strikes midnight, the spell is broken, leaving a single glass slipper... the only key to the ultimate fairy-tale ending!",
+          "poster_path": "/ug3ndicuPM1V07vhVFGLMsd4AZl.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10751,
+            14,
+            16,
+            10749
+          ],
+          "popularity": 10.7472,
+          "release_date": "1950-02-22",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.042,
+          "vote_count": 7123
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/tyj0QztA0PkYo6XauifWjkx7UVi.jpg",
+          "id": 12092,
+          "title": "Alice in Wonderland",
+          "original_title": "Alice in Wonderland",
+          "overview": "On a golden afternoon, wildly curious young Alice tumbles into the burrow and enters the merry, madcap world of Wonderland full of whimsical escapades.",
+          "poster_path": "/20cvfwfaFqNbe9Fc3VEHJuPRxmn.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            16,
+            10751,
+            14,
+            12
+          ],
+          "popularity": 10.0086,
+          "release_date": "1951-07-28",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.187,
+          "vote_count": 6249
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

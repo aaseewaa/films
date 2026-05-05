@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": "1964-08-29",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "https://agencemva.com/fr/artistes/emmanuel-bilodeau/",
+  "id": 123926,
+  "imdb_id": "nm0082636",
+  "known_for_department": "Acting",
+  "name": "Emmanuel Bilodeau",
+  "place_of_birth": "Hull, Québec, Canada",
+  "popularity": 0.6465,
+  "profile_path": "/5HaKiUCi2SJXUVpsILpaC7nCp4m.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm0082636",
+    "tvrage_id": null,
+    "wikidata_id": "Q3052583",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

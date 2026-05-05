@@ -1,0 +1,85 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 21037,
+      "name": "Prince",
+      "original_name": "Prince",
+      "media_type": "person",
+      "popularity": 1.2391,
+      "gender": 2,
+      "known_for_department": "Acting",
+      "profile_path": "/5HPqjSXEQukk6ta8v1i9mPHUeqk.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/s3WFrpZV1QIo8Aao2TaAI5ERUTO.jpg",
+          "id": 13763,
+          "title": "Purple Rain",
+          "original_title": "Purple Rain",
+          "overview": "A victim of his own anger, the Kid is a Minneapolis musician on the rise with his band, the Revolution, escaping a tumultuous home life through music. While trying to avoid making the same mistakes as his truculent father, the Kid navigates the club scene and a rocky relationship with a captivating singer, Apollonia. But another musician, Morris, looks to steal the Kid's spotlight -- and his girl.",
+          "poster_path": "/vkQmzaSuDj8QyXmwNhCceCAmwUe.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            10402,
+            10749
+          ],
+          "popularity": 2.6638,
+          "release_date": "1984-07-27",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.7,
+          "vote_count": 411
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/vxaZqjhz0bcRBtCot3totwZ3NnR.jpg",
+          "id": 33345,
+          "title": "Under the Cherry Moon",
+          "original_title": "Under the Cherry Moon",
+          "overview": "Two friends from Miami are in the French Riviera enjoying life by scamming money off of rich women. One day, they read about a young woman set to inherit $50 million from her father. At first, Tricky has Christopher Tracy talked into romancing her for her money, but in getting to know her, Christopher falls in love with her. This love comes between the brothers, and Tricky tells about the plan.",
+          "poster_path": "/82EvqDBW6CCQLt0hRyOQ7UI3ua3.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            35,
+            10402,
+            10749
+          ],
+          "popularity": 1.2357,
+          "release_date": "1986-07-02",
+          "softcore": false,
+          "video": false,
+          "vote_average": 5.444,
+          "vote_count": 63
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/sYMeZNB33cKS8bQql85Lf0ZBBPT.jpg",
+          "id": 38178,
+          "title": "Prince: Sign 'o' the Times",
+          "original_title": "Prince: Sign 'o' the Times",
+          "overview": "In 1987, to capitalize on his growing success in Europe, Prince toured extensively to promote the album of the same name and sales increased accordingly. However, the United States remained resistant to his latest album, and sales began to drop; it was at this point that Prince decided to film a live concert promoting the new material, for eventual distribution to theaters in America.  Featuring the band that accompanied Prince on his 1987 Sign o' the Times Tour, including dancer Cat Glover, keyboardist Boni Boyer, bassist Levi Seacer, Jr., guitarist Miko Weaver, drummer Sheila E. and former member of The Revolution keyboardist Dr. Fink, the film sees the group perform live on stage (although \"U Got the Look\" is represented by its promotional music video).",
+          "poster_path": "/zk0C7KOk30M2Awr3vecEUKB2JPP.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            10402
+          ],
+          "popularity": 0.6966,
+          "release_date": "1987-11-20",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.352,
+          "vote_count": 54
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

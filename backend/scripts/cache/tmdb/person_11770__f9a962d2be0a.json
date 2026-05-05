@@ -1,0 +1,38 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "Martin Quatermass",
+    "Frank Armitage",
+    "John T. Chance",
+    "Rip Haight",
+    "John Howard Carpenter",
+    "ジョン・カーペンター",
+    "ジョン・ハワード・カーペンター",
+    "존 카펜터",
+    "约翰·卡朋特"
+  ],
+  "biography": "",
+  "birthday": "1948-01-16",
+  "deathday": null,
+  "gender": 2,
+  "homepage": "http://www.theofficialjohncarpenter.com/",
+  "id": 11770,
+  "imdb_id": "nm0000118",
+  "known_for_department": "Directing",
+  "name": "Джон Карпентер",
+  "place_of_birth": "Carthage, New York, USA",
+  "popularity": 2.341,
+  "profile_path": "/3Qp0mg61u1qSZNJh30BFEUZrIMG.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/0dr5y",
+    "freebase_id": "/en/john_carpenter",
+    "imdb_id": "nm0000118",
+    "tvrage_id": 51451,
+    "wikidata_id": "Q95008",
+    "facebook_id": "directorjohncarpenter",
+    "instagram_id": "JohnCarpenterOfficial",
+    "tiktok_id": null,
+    "twitter_id": "TheHorrorMaster",
+    "youtube_id": null
+  }
+}

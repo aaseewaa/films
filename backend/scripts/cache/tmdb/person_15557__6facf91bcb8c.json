@@ -1,0 +1,31 @@
+{
+  "adult": false,
+  "also_known_as": [
+    "William Condon",
+    "빌 콘돈"
+  ],
+  "biography": "",
+  "birthday": "1955-10-22",
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 15557,
+  "imdb_id": "nm0174374",
+  "known_for_department": "Directing",
+  "name": "Билл Кондон",
+  "place_of_birth": "New York City, New York, USA",
+  "popularity": 1.2912,
+  "profile_path": "/dk7EK0mbUxgoDr7ki9kgYHu4cZs.jpg",
+  "external_ids": {
+    "freebase_mid": "/m/04xn2m",
+    "freebase_id": "/en/bill_condon",
+    "imdb_id": "nm0174374",
+    "tvrage_id": 327268,
+    "wikidata_id": "Q361336",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 148609,
+      "name": "Samuel Beckett",
+      "original_name": "Samuel Beckett",
+      "media_type": "person",
+      "popularity": 0.6109,
+      "gender": 2,
+      "known_for_department": "Writing",
+      "profile_path": "/amgs7BEV47uIqCyhd6eJkFY0DcN.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/aNm87wyNv3h0PjZmUQ7SNJG0OYH.jpg",
+          "id": 45592,
+          "title": "Film",
+          "original_title": "Film",
+          "overview": "A man attempts to evade observation by an all-seeing eye.",
+          "poster_path": "/2o6ybhhxfhY40afRNKUNHICZsTr.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.5354,
+          "release_date": "1965-09-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.98,
+          "vote_count": 74
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/7dTEbDVesZN6Ua28nEgoJKfcVRF.jpg",
+          "id": 40373,
+          "title": "Waiting for Godot",
+          "original_title": "Waiting for Godot",
+          "overview": "Two tramps wait for a man named Godot, but instead meet a pompous man and his stooped-over slave.",
+          "poster_path": "/tbplaDEDebpazYDX5zBg0Diyhtm.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            35,
+            10770
+          ],
+          "popularity": 0.3775,
+          "release_date": "2001-02-04",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.16,
+          "vote_count": 25
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/t5cWdU07g2wjUXOKdzRoKNjg39h.jpg",
+          "id": 114452,
+          "title": "Play",
+          "original_title": "Play",
+          "overview": "The land is filled with people in urns chattering at top speed, but only to themselves, not to one another. The focus goes to three people: a man, his mistress and his wife.",
+          "poster_path": "/omSQ4PAkMTsVOF2NenIpju3He9o.jpg",
+          "media_type": "movie",
+          "original_language": "en",
+          "genre_ids": [
+            18,
+            14
+          ],
+          "popularity": 0.7429,
+          "release_date": "2001-07-14",
+          "softcore": false,
+          "video": false,
+          "vote_average": 7.139,
+          "vote_count": 18
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}

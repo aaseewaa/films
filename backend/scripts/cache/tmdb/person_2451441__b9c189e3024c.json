@@ -1,0 +1,28 @@
+{
+  "adult": false,
+  "also_known_as": [],
+  "biography": "",
+  "birthday": null,
+  "deathday": null,
+  "gender": 2,
+  "homepage": null,
+  "id": 2451441,
+  "imdb_id": "nm6544326",
+  "known_for_department": "Acting",
+  "name": "Elliot Warren",
+  "place_of_birth": null,
+  "popularity": 0.1817,
+  "profile_path": "/fwLxAK6VgKjVi9wdL4lLhev6lJ0.jpg",
+  "external_ids": {
+    "freebase_mid": null,
+    "freebase_id": null,
+    "imdb_id": "nm6544326",
+    "tvrage_id": null,
+    "wikidata_id": "Q110634974",
+    "facebook_id": null,
+    "instagram_id": null,
+    "tiktok_id": null,
+    "twitter_id": null,
+    "youtube_id": null
+  }
+}

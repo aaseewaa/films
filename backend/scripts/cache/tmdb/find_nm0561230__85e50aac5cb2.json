@@ -1,0 +1,83 @@
+{
+  "movie_results": [],
+  "person_results": [
+    {
+      "adult": false,
+      "id": 1088239,
+      "name": "Humberto Mauro",
+      "original_name": "Humberto Mauro",
+      "media_type": "person",
+      "popularity": 0.1123,
+      "gender": 2,
+      "known_for_department": "Directing",
+      "profile_path": "/lPgeWkbKid3n7xVPCNbQCIfipiY.jpg",
+      "known_for": [
+        {
+          "adult": false,
+          "backdrop_path": "/cfJ73yZIQjrOw0zKFJdDoaN4RUV.jpg",
+          "id": 188346,
+          "title": "Rough Gang",
+          "original_title": "Ganga Bruta",
+          "overview": "A man kills his wife on their wedding night, after discovering she had been unfaithful. After being acquitted, he moves to the country, where he becomes part of a love triangle.",
+          "poster_path": "/xCMztPgcuHLWqe1mdZk2gxcQBrO.jpg",
+          "media_type": "movie",
+          "original_language": "pt",
+          "genre_ids": [
+            18
+          ],
+          "popularity": 0.1779,
+          "release_date": "1933-05-29",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.813,
+          "vote_count": 16
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/uaxdNCUYb7UarzjOq8yTe7GcPMy.jpg",
+          "id": 329583,
+          "title": "A Velha a Fiar",
+          "original_title": "Brasilianas 8 A Velha a Fiar",
+          "overview": "A Velha a Fiar illustrates a Brazilian folk song in which a being or entity is always predating another being, but is in its turn predated by some other animal, until the circle closes. It begins like this: an old woman is quietly weaving and a fly disturbs her; a spider eats the fly; a mouse eats the spider; a cat chases the mouse and so on...",
+          "poster_path": "/a6dx0WO3tVVhLAYfnuZBVLObNVq.jpg",
+          "media_type": "movie",
+          "original_language": "pt",
+          "genre_ids": [
+            35,
+            10402
+          ],
+          "popularity": 0.1404,
+          "release_date": "1964-12-03",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.9,
+          "vote_count": 14
+        },
+        {
+          "adult": false,
+          "backdrop_path": "/8DvVmQXLy9BM6DdG6Hq5W9ei5pw.jpg",
+          "id": 194674,
+          "title": "Dormant Embers",
+          "original_title": "Brasa Dormida",
+          "overview": "A young man from Rio who, down on his luck in the capital, takes a job as manager of a sugar mill in the country, where he finds love with the mill owner’s daughter. The former manager, who had been demoted for incompetence, becomes jealous and tries to sabotage the mill.",
+          "poster_path": "/sQ4IE9oeNGCl4vyA7YLi2fndPxi.jpg",
+          "media_type": "movie",
+          "original_language": "pt",
+          "genre_ids": [
+            18,
+            10749
+          ],
+          "popularity": 0.0489,
+          "release_date": "1928-10-26",
+          "softcore": false,
+          "video": false,
+          "vote_average": 6.929,
+          "vote_count": 7
+        }
+      ]
+    }
+  ],
+  "tv_results": [],
+  "tv_episode_results": [],
+  "tv_season_results": []
+}
