@@ -1,0 +1,23 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Секреты
+.env
+*.key
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+
+# OS
+.DS_Store
+
+# Кэш скриптов (большие JSON-файлы)
+backend/scripts/cache/
+
+# Логи
+*.log
