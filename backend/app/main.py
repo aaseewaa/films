@@ -14,7 +14,7 @@ import structlog
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import health
+from app.api import catalog, entities, health, search
 from app.config import settings
 from app.database import engine
 
@@ -52,7 +52,7 @@ app = FastAPI(
 )
 
 
-# ─── CORS (чтобы фронт мог обращаться к API) ─────────────────────
+# ─── CORS ────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
     allow_origins=settings.cors_origins_list,
@@ -64,7 +64,9 @@ app.add_middleware(
 
 # ─── Подключение роутеров ────────────────────────────────────────
 app.include_router(health.router)
-# Дальше будут: search, entities, graph, recommendations, favorites, history
+app.include_router(search.router)
+app.include_router(entities.router)
+app.include_router(catalog.router)  # день 5: каталоги, popular, genres
 
 
 @app.get("/", tags=["root"])
@@ -74,5 +76,13 @@ async def root() -> dict:
         "app": settings.app_name,
         "version": settings.app_version,
         "docs": "/docs",
-        "health": "/health/db",
+        "endpoints": {
+            "health": "/health/db",
+            "search": "/api/search?q=...",
+            "entity": "/api/entity/{id}?lang=ru",
+            "films": "/api/films?genre=drama&year_from=2000",
+            "persons": "/api/persons?is_director=true",
+            "genres": "/api/genres",
+            "popular": "/api/popular",
+        },
     }

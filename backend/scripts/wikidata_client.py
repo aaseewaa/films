@@ -98,7 +98,7 @@ class WikidataClient:
         assert self._client is not None
         log.info("wikidata: running SPARQL query (this may take 30-60s)")
 
-        for attempt in range(3):
+        for attempt in range(5):
             try:
                 resp = await self._client.post(
                     WDQS_ENDPOINT,
@@ -111,10 +111,10 @@ class WikidataClient:
                         encoding="utf-8",
                     )
                     return data.get("results", {}).get("bindings", [])
-                elif resp.status_code in (429, 503):
-                    wait = 5 * (attempt + 1)
+                elif resp.status_code in (429, 502, 503, 504):
+                    wait = 10 * (attempt + 1)
                     log.warning(
-                        "wikidata: rate-limit/overload (%s), wait %ss",
+                        "wikidata: server error (%s), wait %ss",
                         resp.status_code, wait,
                     )
                     await asyncio.sleep(wait)
@@ -125,8 +125,9 @@ class WikidataClient:
                 log.warning("wikidata: network error %s, attempt %s", exc, attempt + 1)
                 await asyncio.sleep(5)
 
-        raise RuntimeError("Wikidata query failed after 3 retries")
+        raise RuntimeError("Wikidata query failed after 5 retries")
 
+        
     async def director_influences(self) -> list[dict[str, str]]:
         """
         Возвращает список словарей вида:

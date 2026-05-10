@@ -209,7 +209,6 @@ async def upsert_person(
         EntityTranslation(
             entity_id=entity.id,
             language_id=languages["en"],
-            search_config="english",
             slug=make_slug(name_en, tmdb_id),
             title=name_en,
             summary=biography_en[:500] if biography_en else None,
@@ -221,7 +220,6 @@ async def upsert_person(
             EntityTranslation(
                 entity_id=entity.id,
                 language_id=languages["ru"],
-                search_config="russian",
                 slug=make_slug(name_ru, tmdb_id),
                 title=name_ru,
                 summary=biography_ru[:500] if biography_ru else None,
@@ -300,7 +298,6 @@ async def load_film(
         EntityTranslation(
             entity_id=entity.id,
             language_id=languages["en"],
-            search_config="english",
             slug=make_slug(title_en, tmdb_id),
             title=title_en,
             summary=overview_en[:500] if overview_en else None,
@@ -312,7 +309,6 @@ async def load_film(
             EntityTranslation(
                 entity_id=entity.id,
                 language_id=languages["ru"],
-                search_config="russian",
                 slug=make_slug(title_ru, tmdb_id),
                 title=title_ru,
                 summary=overview_ru[:500] if overview_ru else None,
@@ -403,17 +399,21 @@ async def load_film(
 
 
 # ─── main ──────────────────────────────────────────────────────────
-async def main(*, pages: int, top_actors: int) -> None:
+async def main(*, pages: int, top_actors: int, source: str) -> None:
     if not settings.tmdb_api_key:
         raise SystemExit("TMDB_API_KEY не задан в .env")
 
     log.info("─── TMDB loader ───")
-    log.info("pages=%d, top-actors-per-film=%d", pages, top_actors)
+    log.info("source=%s, pages=%d, top-actors-per-film=%d", source, pages, top_actors)
 
     async with TmdbClient(api_key=settings.tmdb_api_key) as tmdb:
-        # 1) Получаем список популярных фильмов (на английском, для устойчивости)
-        popular = await tmdb.popular_movies(pages=pages, language=LANG_EN)
-        log.info("got %d popular film ids from TMDB", len(popular))
+        # 1) Получаем список фильмов (popular = современные хиты, top_rated = классика)
+        if source == "top_rated":
+            popular = await tmdb.top_rated_movies(pages=pages, language=LANG_EN)
+            log.info("got %d top-rated film ids from TMDB (классика)", len(popular))
+        else:
+            popular = await tmdb.popular_movies(pages=pages, language=LANG_EN)
+            log.info("got %d popular film ids from TMDB", len(popular))
 
         # 2) Загружаем каждый фильм в БД
         async with AsyncSessionLocal() as db:
@@ -457,14 +457,18 @@ def cli() -> None:
     parser = argparse.ArgumentParser(description="Загрузчик TMDB → БД")
     parser.add_argument(
         "--pages", type=int, default=10,
-        help="Сколько страниц популярных фильмов TMDB загрузить (1 страница = 20 фильмов)",
+        help="Сколько страниц фильмов TMDB загрузить (1 страница = 20 фильмов)",
     )
     parser.add_argument(
         "--top-actors", type=int, default=10,
         help="Сколько актёров (по billing order) брать на каждый фильм",
     )
+    parser.add_argument(
+        "--source", choices=["popular", "top_rated"], default="popular",
+        help="Источник списка: popular (современные хиты) или top_rated (классика, аналог IMDb Top 250)",
+    )
     args = parser.parse_args()
-    asyncio.run(main(pages=args.pages, top_actors=args.top_actors))
+    asyncio.run(main(pages=args.pages, top_actors=args.top_actors, source=args.source))
 
 
 if __name__ == "__main__":
