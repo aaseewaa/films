@@ -10,6 +10,8 @@
 Использование:
     async with TmdbClient(api_key=..., cache_dir=...) as tmdb:
         films = await tmdb.popular_movies(pages=15)
+        # или
+        films = await tmdb.top_rated_movies(pages=15)
         full = await tmdb.movie_full(film_id=27205)  # 'Inception'
 """
 from __future__ import annotations
@@ -133,6 +135,23 @@ class TmdbClient:
         for page in range(1, pages + 1):
             data = await self._get(
                 "/movie/popular", {"language": language, "page": page}
+            )
+            results.extend(data.get("results", []))
+        return results
+
+    async def top_rated_movies(self, *, pages: int = 15, language: str = "en-US") -> list[dict]:
+        """
+        Топ-рейтинг фильмов TMDB (аналог IMDb Top 250).
+
+        Это классика: Хичкок, Кубрик, Куросава, Бергман, Феллини, Скорсезе,
+        Тарантино, Нолан, Финчер. Идеально дополняет popular_movies.
+
+        Каждая страница = 20 фильмов. 15 страниц = 300 классических фильмов.
+        """
+        results: list[dict] = []
+        for page in range(1, pages + 1):
+            data = await self._get(
+                "/movie/top_rated", {"language": language, "page": page}
             )
             results.extend(data.get("results", []))
         return results
