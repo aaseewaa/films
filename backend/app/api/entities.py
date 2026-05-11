@@ -7,6 +7,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, Request, status
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.deps import CurrentUser, get_current_user
 from app.database import get_db
 from app.schemas.entity import FilmRead, PersonRead
 from app.services.entity_service import EntityService
@@ -26,13 +27,12 @@ async def get_entity(
     entity_id: int,
     lang: Annotated[Literal["ru", "en"], Query(description="Язык переводов")] = "ru",
     db: AsyncSession = Depends(get_db),
+    current_user: CurrentUser | None = Depends(get_current_user),
 ) -> FilmRead | PersonRead:
     """
     Универсальная карточка сущности.
 
-    Автоматически определяет тип (film / person) и возвращает соответствующую
-    структуру со всеми связями: жанры, режиссёры, актёры, фильмография,
-    граф влияний (для режиссёров).
+    Если пользователь авторизован — просмотр привязывается к его истории.
     """
     service = EntityService(db)
     data = await service.get_entity(entity_id, lang=lang)
@@ -47,6 +47,7 @@ async def get_entity(
     try:
         await _log_view(
             db,
+            user_id=current_user.id if current_user else None,
             entity_id=entity_id,
             ip=str(request.client.host) if request.client else None,
             session_id=request.client.host if request.client else "anon",
@@ -59,7 +60,6 @@ async def get_entity(
     elif data["entity_type"] == "person":
         return PersonRead(**data)
     else:
-        # Защита на будущее, пока не должно срабатывать
         raise HTTPException(
             status_code=501,
             detail=f"Entity type '{data['entity_type']}' not supported yet",
@@ -67,13 +67,27 @@ async def get_entity(
 
 
 async def _log_view(
-    db: AsyncSession, *, entity_id: int, ip: str | None, session_id: str
+    db: AsyncSession,
+    *,
+    user_id: int | None,
+    entity_id: int,
+    ip: str | None,
+    session_id: str,
 ) -> None:
-    """Пишет в view_history. Использует session_id (CHECK требует user_id или session_id)."""
+    """
+    Пишет в view_history.
+    CHECK-constraint требует user_id или session_id — поэтому если юзера
+    нет, передаём session_id (IP-адрес).
+    """
     sql = text("""
         INSERT INTO view_history
             (user_id, session_id, entity_id, viewed_at, ip_address)
-        VALUES (NULL, :sid, :eid, now(), CAST(:ip AS inet))
+        VALUES (:uid, :sid, :eid, now(), CAST(:ip AS inet))
     """)
-    await db.execute(sql, {"eid": entity_id, "ip": ip, "sid": session_id[:64]})
+    await db.execute(sql, {
+        "uid": user_id,
+        "eid": entity_id,
+        "ip": ip,
+        "sid": session_id[:64] if user_id is None else None,
+    })
     await db.commit()

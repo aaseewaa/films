@@ -1,13 +1,13 @@
 """
 GET /api/search — гибридный поиск по сущностям.
 """
-from datetime import datetime
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.deps import CurrentUser, get_current_user
 from app.database import get_db
 from app.schemas.search import SearchResponse
 from app.services.search_service import SearchService
@@ -27,6 +27,7 @@ async def search(
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
     offset: Annotated[int, Query(ge=0, le=10_000)] = 0,
     db: AsyncSession = Depends(get_db),
+    current_user: CurrentUser | None = Depends(get_current_user),
 ) -> SearchResponse:
     """
     Гибридный поиск: полнотекстовый (с морфологией) + нечёткий (опечатки).
@@ -35,6 +36,9 @@ async def search(
     - Сначала полнотекстовый поиск через tsvector
     - Если результатов мало — добавляется нечёткий через pg_trgm
     - Возвращается ranked-список с meta-полем `match_type`
+
+    Если пользователь авторизован — поисковый запрос пишется в его историю.
+    Иначе — пишется анонимно с session_id (IP-адрес).
     """
     service = SearchService(db)
     result = await service.hybrid_search(
@@ -52,6 +56,7 @@ async def search(
     try:
         await _log_search(
             db,
+            user_id=current_user.id if current_user else None,
             query_text=q,
             normalized=q.lower().strip(),
             language_code=result["detected_language"],
@@ -60,7 +65,7 @@ async def search(
             session_id=request.client.host if request.client else "anon",
         )
     except Exception:
-        pass  # тихо игнорируем — поиск важнее истории
+        pass
 
     return SearchResponse(**result)
 
@@ -68,6 +73,7 @@ async def search(
 async def _log_search(
     db: AsyncSession,
     *,
+    user_id: int | None,
     query_text: str,
     normalized: str,
     language_code: str,
@@ -75,24 +81,25 @@ async def _log_search(
     ip: str | None,
     session_id: str,
 ) -> None:
-    """Пишет запись в search_history. Использует session_id если нет user."""
-    # search_type должен быть из enum public.search_type
-    # Используем 'fulltext' как наиболее общее значение — точный тип
-    # детектится в сервисе и сохраняется в filters для будущей аналитики
+    """
+    Пишет запись в search_history.
+    Если есть user_id — привязывает к пользователю, иначе использует session_id.
+    """
     sql = text("""
         INSERT INTO search_history
             (user_id, session_id, search_type, query_text, normalized_query,
              language_id, results_count, ip_address, searched_at)
-        VALUES (NULL, :sid, 'fulltext', :q, :nq,
+        VALUES (:uid, :sid, 'fulltext', :q, :nq,
                 (SELECT id FROM language WHERE code = :lc),
                 :rc, CAST(:ip AS inet), now())
     """)
     await db.execute(sql, {
+        "uid": user_id,
         "q": query_text,
         "nq": normalized,
         "lc": language_code,
         "rc": results_count,
         "ip": ip,
-        "sid": session_id[:64],
+        "sid": session_id[:64] if user_id is None else None,
     })
     await db.commit()
