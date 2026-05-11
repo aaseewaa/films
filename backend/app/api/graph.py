@@ -1,0 +1,82 @@
+"""
+Эндпоинты графа влияний для визуализации.
+
+GET /api/graph/director/{id}?depth=2
+GET /api/graph/full?limit=50
+"""
+from typing import Annotated, Literal
+
+from fastapi import APIRouter, Depends, HTTPException, Query, status
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from app.database import get_db
+from app.schemas.graph import GraphResponse
+from app.services.graph_service import GraphService
+
+router = APIRouter(prefix="/api/graph", tags=["graph"])
+
+
+@router.get(
+    "/director/{director_id}",
+    response_model=GraphResponse,
+    summary="Локальный граф вокруг режиссёра",
+)
+async def director_graph(
+    director_id: int,
+    depth: Annotated[
+        int,
+        Query(ge=1, le=3, description="Глубина обхода (1-3 шага)"),
+    ] = 2,
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    max_nodes: Annotated[
+        int,
+        Query(ge=10, le=200, description="Максимум узлов для визуализации"),
+    ] = 50,
+    db: AsyncSession = Depends(get_db),
+) -> GraphResponse:
+    """
+    Граф влияний вокруг конкретного режиссёра.
+
+    Возвращает данные в формате готовом для react-force-graph-2d:
+    - `nodes`: массив узлов с id, name, image, метриками
+    - `links`: массив рёбер source/target/weight/confidence
+
+    Использует рекурсивный CTE для обхода графа на N шагов в обе стороны.
+    """
+    service = GraphService(db)
+    result = await service.get_director_graph(
+        director_id=director_id,
+        depth=depth,
+        lang=lang,
+        max_nodes=max_nodes,
+    )
+    if result is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Режиссёр с id={director_id} не найден",
+        )
+    return GraphResponse(**result)
+
+
+@router.get(
+    "/full",
+    response_model=GraphResponse,
+    summary="Главный граф (топ N влиятельных + связи между ними)",
+)
+async def full_graph(
+    limit: Annotated[
+        int,
+        Query(ge=10, le=100, description="Сколько топ-режиссёров взять"),
+    ] = 50,
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    db: AsyncSession = Depends(get_db),
+) -> GraphResponse:
+    """
+    Глобальный граф для страницы 'Граф влияний'.
+
+    Берём топ-N самых упоминаемых режиссёров и все связи между ними.
+    Идеально для красивой главной визуализации.
+    """
+    service = GraphService(db)
+    result = await service.get_full_graph(limit=limit, lang=lang)
+    return GraphResponse(**result)
