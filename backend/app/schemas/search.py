@@ -16,6 +16,7 @@ class SearchHit(BaseModel):
     title: str
     summary: str | None = None
     images: ImageURLs = ImageURLs()
+    language_code: str | None = None  # на каком языке найдено (важно для semantic)
 
     # Метаданные специфичные для типа
     release_year: int | None = None  # для фильмов
@@ -24,7 +25,7 @@ class SearchHit(BaseModel):
 
     # Релевантность
     score: float = Field(..., description="Ранжирующий score [0-1]")
-    match_type: Literal["fulltext", "fuzzy", "exact"] = Field(
+    match_type: Literal["fulltext", "fuzzy", "exact", "semantic"] = Field(
         ..., description="Какой механизм нашёл результат"
     )
 
@@ -40,7 +41,8 @@ class SearchResponse(BaseModel):
     total: int
     limit: int
     offset: int
+    mode: Literal["hybrid", "semantic"] = "hybrid"
     used_strategies: list[str] = Field(
         default_factory=list,
-        description="Какие стратегии поиска применялись (fulltext / fuzzy / both)",
+        description="Какие стратегии поиска применялись",
     )
