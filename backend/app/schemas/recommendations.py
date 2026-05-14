@@ -30,4 +30,4 @@ class RecommendationsResponse(BaseModel):
     items: list[RecommendationItem]
     source_entity_id: int
     source_entity_type: str
-    algorithm: Literal["content_based", "graph_based", "hybrid"] = "content_based"
+    algorithm: Literal["content_based", "graph_based", "hybrid", "semantic"] = "content_based"

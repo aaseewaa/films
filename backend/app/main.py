@@ -10,6 +10,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.api import (
     auth, catalog, entities, graph, health, recommendations, search, user_data,
 )
+
+from app.api.collections import router as collections_router
+from app.api.articles import router as articles_router
+
 from app.config import settings
 from app.database import engine
 
@@ -59,6 +63,8 @@ app.include_router(auth.router)
 app.include_router(user_data.router)
 app.include_router(graph.router)              # день 7: граф для визуализации
 app.include_router(recommendations.router)    # день 7: рекомендации
+app.include_router(collections_router)
+app.include_router(articles_router)
 
 
 @app.get("/", tags=["root"])

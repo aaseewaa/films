@@ -1,8 +1,8 @@
 """
 Эндпоинты рекомендаций.
 
-GET /api/recommendations?for_film_id=N  — похожие фильмы
-GET /api/recommendations?for_person_id=N — похожие режиссёры
+GET /api/recommendations?for_film_id=N&mode=content   — content-based
+GET /api/recommendations?for_film_id=N&mode=semantic  — через эмбеддинги
 """
 from typing import Annotated, Literal
 
@@ -19,30 +19,47 @@ router = APIRouter(prefix="/api/recommendations", tags=["recommendations"])
 @router.get(
     "",
     response_model=RecommendationsResponse,
-    summary="Content-based рекомендации",
+    summary="Рекомендации (content-based или semantic)",
 )
 async def recommendations(
-    for_film_id: Annotated[int | None, Query(description="ID фильма для 'похожее'")] = None,
-    for_person_id: Annotated[int | None, Query(description="ID персоны для 'похожие режиссёры'")] = None,
+    for_film_id: Annotated[int | None, Query(description="ID фильма")] = None,
+    for_person_id: Annotated[int | None, Query(description="ID персоны")] = None,
+    mode: Annotated[
+        Literal["content", "semantic"],
+        Query(description=(
+            "Режим: 'content' — взвешенный score по атрибутам "
+            "(жанр, режиссёр, актёр, keyword, год); "
+            "'semantic' — близость векторов описаний через pgvector"
+        )),
+    ] = "content",
     lang: Annotated[Literal["ru", "en"], Query()] = "ru",
     limit: Annotated[int, Query(ge=1, le=30)] = 10,
     db: AsyncSession = Depends(get_db),
 ) -> RecommendationsResponse:
     """
-    Content-based рекомендации.
+    Рекомендации в двух режимах.
 
-    Для **фильма** (`for_film_id`): похожие фильмы по общим режиссёрам,
-    актёрам, жанрам, году. Алгоритм взвешенного score:
-    - общий режиссёр: +3
-    - общий актёр: +2
-    - общий жанр: +1
-    - близкий год (±5): +0.5
+    ## Content-based (mode=content, по умолчанию)
 
-    Для **персоны** (`for_person_id`): похожие режиссёры. Учитывает прямые
-    связи в графе влияний (+5) и общие жанры режиссуры (+1).
+    Взвешенный score по совпадениям атрибутов:
+    - **общий режиссёр**: +3
+    - **общий актёр** (топ-5): +2 (кап 6)
+    - **общий жанр**: +1 (кап 3)
+    - **общий keyword** (атмосферный тег TMDB): +1.5 (кап 6) — НОВОЕ
+    - **близкий год** (±5): +0.5
 
-    Каждая рекомендация имеет поле `reasons` — список причин почему
-    рекомендуется (для UI: 'Потому что общий режиссёр').
+    ## Semantic (mode=semantic)
+
+    Близость векторов описаний через pgvector. Использует многоязычную модель
+    `paraphrase-multilingual-MiniLM-L12-v2` и косинусное расстояние.
+
+    Находит фильмы где **смысл описания близок**, даже если у них разные
+    жанры, актёры и режиссёры. Аналог подхода Letterboxd/Spotify.
+
+    ## Сравнение
+
+    На карточке фильма можно показать рекомендации в обоих режимах и
+    сравнить выдачу — это демонстрирует разницу подходов.
     """
     if not for_film_id and not for_person_id:
         raise HTTPException(
@@ -58,18 +75,22 @@ async def recommendations(
     service = RecommendationsService(db)
 
     if for_film_id:
-        result = await service.for_film(for_film_id, lang=lang, limit=limit)
-        if result is None:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Фильм {for_film_id} не найден",
+        try:
+            result = await service.for_film(
+                for_film_id, lang=lang, limit=limit, mode=mode,
             )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"Ошибка рекомендаций: {exc}")
+        if result is None:
+            raise HTTPException(status_code=404, detail=f"Фильм {for_film_id} не найден")
     else:
-        result = await service.for_person(for_person_id, lang=lang, limit=limit)
-        if result is None:
-            raise HTTPException(
-                status_code=404,
-                detail=f"Режиссёр {for_person_id} не найден",
+        try:
+            result = await service.for_person(
+                for_person_id, lang=lang, limit=limit, mode=mode,
             )
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"Ошибка рекомендаций: {exc}")
+        if result is None:
+            raise HTTPException(status_code=404, detail=f"Режиссёр {for_person_id} не найден")
 
     return RecommendationsResponse(**result)
