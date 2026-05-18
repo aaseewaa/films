@@ -156,6 +156,13 @@ class TmdbClient:
             results.extend(data.get("results", []))
         return results
 
+    async def movie_images(self, film_id: int) -> dict:
+        """Возвращает backdrops + posters фильма из TMDB."""
+        return await self._get(
+            f"/movie/{film_id}/images",
+            {"include_image_language": "en,null"},
+        )
+
     async def movie_full(self, film_id: int, *, language: str) -> dict:
         """
         Полная инфа о фильме на одном языке + credits + images + keywords.

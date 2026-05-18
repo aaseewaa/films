@@ -18,10 +18,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 # Белые списки сортировки — защита от SQL-инъекций.
 # Любые значения вне списка автоматически отбрасываются.
 FILM_SORT_COLUMNS = {
-    "popularity": "(e.extra_metadata->>'popularity')::float",
-    "vote_average": "(e.extra_metadata->>'vote_average')::float",
-    "year": "f.release_year",
-    "title": "et.title",
+    "popularity": "(e.extra_metadata->>'popularity')::float DESC NULLS LAST",
+    "vote_average": "(e.extra_metadata->>'vote_average')::float DESC NULLS LAST",
+    "year": "f.release_year DESC NULLS LAST",
+    "year_asc": "f.release_year ASC NULLS LAST",
+    "title": "COALESCE(et_lang.title, et_en.title) ASC NULLS LAST",
 }
 
 PERSON_SORT_COLUMNS = {
@@ -43,6 +44,7 @@ class CatalogService:
         *,
         lang: str = "ru",
         genre: str | None = None,
+        country: str | None = None,
         year_from: int | None = None,
         year_to: int | None = None,
         sort_by: str = "popularity",
@@ -74,6 +76,17 @@ class CatalogService:
                 )
             """)
             params["genre"] = genre
+        if country:
+            where_parts.append("""
+                EXISTS (
+                    SELECT 1
+                    FROM jsonb_array_elements(
+                        COALESCE(e.extra_metadata->'production_countries', '[]'::jsonb)
+                    ) pc
+                    WHERE pc->>'code' = :country
+                )
+            """)
+            params["country"] = country
 
         where_sql = " AND ".join(where_parts)
 
@@ -95,6 +108,7 @@ class CatalogService:
             SELECT
                 e.id,
                 COALESCE(et_lang.title, et_en.title, f.sort_title) AS title,
+                et_en.title AS original_title,
                 COALESCE(et_lang.summary, et_en.summary) AS summary,
                 f.release_year,
                 f.runtime_min,
@@ -118,7 +132,53 @@ class CatalogService:
                      WHERE ex.entity_id = e.id AND tt.term_type = 'genre'
                     ),
                     ARRAY[]::text[]
-                ) AS genres
+                ) AS genres,
+                (
+                    SELECT COALESCE(et_d.title, et_d_en.title)
+                    FROM film_person fp_d
+                    JOIN person p_d ON p_d.id = fp_d.person_id
+                    LEFT JOIN entity_translation et_d
+                        ON et_d.entity_id = p_d.id
+                        AND et_d.language_id = (SELECT id FROM language WHERE code = :lang)
+                    LEFT JOIN entity_translation et_d_en
+                        ON et_d_en.entity_id = p_d.id
+                        AND et_d_en.language_id = (SELECT id FROM language WHERE code = 'en')
+                    WHERE fp_d.film_id = f.id AND fp_d.role_type = 'director'
+                    ORDER BY fp_d.is_primary DESC NULLS LAST
+                    LIMIT 1
+                ) AS director,
+                COALESCE(
+                    (SELECT array_agg(names.n ORDER BY names.bo NULLS LAST)
+                     FROM (
+                         SELECT COALESCE(et_a.title, et_a_en.title) AS n,
+                                fp_a.billing_order AS bo
+                         FROM film_person fp_a
+                         JOIN person p_a ON p_a.id = fp_a.person_id
+                         LEFT JOIN entity_translation et_a
+                             ON et_a.entity_id = p_a.id
+                             AND et_a.language_id = (SELECT id FROM language WHERE code = :lang)
+                         LEFT JOIN entity_translation et_a_en
+                             ON et_a_en.entity_id = p_a.id
+                             AND et_a_en.language_id = (SELECT id FROM language WHERE code = 'en')
+                         WHERE fp_a.film_id = f.id AND fp_a.role_type = 'actor'
+                         ORDER BY fp_a.billing_order NULLS LAST, et_a.title
+                         LIMIT 3
+                     ) names),
+                    ARRAY[]::text[]
+                ) AS actors,
+                (
+                    SELECT string_agg(DISTINCT names.n, ', ')
+                    FROM (
+                        SELECT CASE
+                            WHEN :lang = 'ru' THEN COALESCE(pc->>'name_ru', pc->>'name_en')
+                            ELSE COALESCE(pc->>'name_en', pc->>'name_ru')
+                        END AS n
+                        FROM jsonb_array_elements(
+                            COALESCE(e.extra_metadata->'production_countries', '[]'::jsonb)
+                        ) pc
+                    ) names
+                    WHERE names.n IS NOT NULL AND names.n <> ''
+                ) AS country
             FROM entity e
             JOIN film f ON f.id = e.id
             LEFT JOIN entity_translation et_lang
@@ -128,7 +188,7 @@ class CatalogService:
                 ON et_en.entity_id = e.id
                 AND et_en.language_id = (SELECT id FROM language WHERE code = 'en')
             WHERE {where_sql}
-            ORDER BY {sort_col} DESC NULLS LAST
+            ORDER BY {sort_col}
             LIMIT :limit OFFSET :offset
         """
 
@@ -148,6 +208,7 @@ class CatalogService:
         return {
             "id": row["id"],
             "title": row["title"] or "Untitled",
+            "original_title": row["original_title"],
             "summary": row["summary"],
             "release_year": row["release_year"],
             "runtime_min": row["runtime_min"],
@@ -156,6 +217,9 @@ class CatalogService:
                 "thumbnail": row["img_thumb"],
             },
             "genres": list(row["genres"]) if row["genres"] else [],
+            "director": row["director"],
+            "actors": list(row["actors"]) if row["actors"] else [],
+            "country": row["country"],
             "vote_average": row["vote_average"],
             "popularity": row["popularity"],
         }
@@ -249,6 +313,34 @@ class CatalogService:
             "limit": limit,
             "offset": offset,
         }
+
+    # ─── Страны производства (из extra_metadata фильмов) ─────────
+    async def list_production_countries(self, lang: str = "ru") -> list[dict]:
+        """Страны, встречающиеся в production_countries, с числом фильмов."""
+
+        name_col = "name_ru" if lang == "ru" else "name_en"
+        sql = f"""
+            SELECT
+                pc->>'code' AS code,
+                COALESCE(max(pc->>'{name_col}'), max(pc->>'name_en'), pc->>'code') AS name,
+                count(DISTINCT e.id)::int AS films_count
+            FROM entity e
+            JOIN film f ON f.id = e.id
+            CROSS JOIN LATERAL jsonb_array_elements(
+                COALESCE(e.extra_metadata->'production_countries', '[]'::jsonb)
+            ) pc
+            WHERE e.entity_type = 'film'
+              AND e.status = 'published'
+              AND pc->>'code' IS NOT NULL
+            GROUP BY pc->>'code'
+            HAVING count(DISTINCT e.id) > 0
+            ORDER BY films_count DESC, name
+        """
+        rows = (await self.db.execute(text(sql))).mappings().all()
+        return [
+            {"id": i + 1, "code": r["code"], "name": r["name"], "films_count": r["films_count"]}
+            for i, r in enumerate(rows)
+        ]
 
     # ─── Жанры ──────────────────────────────────────────────────
     async def list_genres(self, lang: str = "ru") -> list[dict]:

@@ -33,26 +33,28 @@ WDQS_ENDPOINT = "https://query.wikidata.org/sparql"
 
 SPARQL_INFLUENCES = """
 SELECT DISTINCT ?source ?sourceLabel ?sourceImdb
-                ?target ?targetLabel ?targetImdb
+                ?target ?targetLabel ?targetImdb ?wikidataProp
 WHERE {
-  ?target wdt:P737 ?source .
+  {
+    ?target wdt:P737 ?source .
+    BIND("P737" AS ?wikidataProp)
+  } UNION {
+    ?target wdt:P941 ?source .
+    BIND("P941" AS ?wikidataProp)
+  }
 
-  # Оба должны быть кинорежиссёрами
   ?target wdt:P106 wd:Q2526255 .
   ?source wdt:P106 wd:Q2526255 .
 
-  # У обоих должен быть IMDb id — без него к нашей БД не привязать
   ?target wdt:P345 ?targetImdb .
   ?source wdt:P345 ?sourceImdb .
 
-  # Фильтр: имена должны начинаться с "nm" (это IMDb id персон,
-  # а не фильмов, у которых формат "tt0000000")
   FILTER(STRSTARTS(?targetImdb, "nm"))
   FILTER(STRSTARTS(?sourceImdb, "nm"))
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 5000
+LIMIT 8000
 """
 
 
@@ -63,7 +65,7 @@ class WikidataClient:
         self,
         *,
         cache_dir: Path | str = "scripts/cache/wikidata",
-        timeout: float = 90.0,
+        timeout: float = 120.0,
     ) -> None:
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
@@ -85,47 +87,72 @@ class WikidataClient:
         if self._client:
             await self._client.aclose()
 
-    async def _query(self, sparql: str) -> list[dict]:
+    async def _query(
+        self,
+        sparql: str,
+        *,
+        max_retries: int = 4,
+    ) -> list[dict]:
         """Выполнить SPARQL-запрос с кэшем. Возвращает bindings."""
         digest = hashlib.md5(sparql.encode()).hexdigest()[:12]
         cache_file = self.cache_dir / f"query_{digest}.json"
 
         if cache_file.exists():
-            log.info("wikidata: using cached result %s", cache_file.name)
+            log.info("wikidata: cache hit %s", cache_file.name)
             cached_data = json.loads(cache_file.read_text(encoding="utf-8"))
             return cached_data.get("results", {}).get("bindings", [])
 
         assert self._client is not None
-        log.info("wikidata: running SPARQL query (this may take 30-60s)")
+        log.info("wikidata: SPARQL запрос (до ~60 с, %d попыток)", max_retries)
 
-        for attempt in range(5):
+        last_status: int | None = None
+        for attempt in range(max_retries):
             try:
                 resp = await self._client.post(
                     WDQS_ENDPOINT,
                     data={"query": sparql, "format": "json"},
                 )
+                last_status = resp.status_code
                 if resp.status_code == 200:
                     data = resp.json()
                     cache_file.write_text(
                         json.dumps(data, ensure_ascii=False, indent=2),
                         encoding="utf-8",
                     )
+                    n = len(data.get("results", {}).get("bindings", []))
+                    log.info("wikidata: ok, %d строк", n)
                     return data.get("results", {}).get("bindings", [])
-                elif resp.status_code in (429, 502, 503, 504):
-                    wait = 10 * (attempt + 1)
+
+                if resp.status_code in (429, 502, 503, 504):
+                    wait = min(15 * (2 ** attempt), 45)
                     log.warning(
-                        "wikidata: server error (%s), wait %ss",
-                        resp.status_code, wait,
+                        "wikidata: %s, пауза %ss (%d/%d)",
+                        resp.status_code, wait, attempt + 1, max_retries,
                     )
                     await asyncio.sleep(wait)
-                else:
-                    log.error("wikidata: %s %s", resp.status_code, resp.text[:200])
-                    resp.raise_for_status()
-            except httpx.RequestError as exc:
-                log.warning("wikidata: network error %s, attempt %s", exc, attempt + 1)
-                await asyncio.sleep(5)
+                    continue
 
-        raise RuntimeError("Wikidata query failed after 5 retries")
+                log.error("wikidata: %s %s", resp.status_code, resp.text[:200])
+                resp.raise_for_status()
+            except httpx.TimeoutException:
+                wait = min(20 * (attempt + 1), 60)
+                log.warning(
+                    "wikidata: timeout, пауза %ss (%d/%d)",
+                    wait, attempt + 1, max_retries,
+                )
+                await asyncio.sleep(wait)
+            except httpx.RequestError as exc:
+                wait = min(10 * (attempt + 1), 30)
+                log.warning(
+                    "wikidata: сеть %s, пауза %ss (%d/%d)",
+                    exc, wait, attempt + 1, max_retries,
+                )
+                await asyncio.sleep(wait)
+
+        raise RuntimeError(
+            f"Wikidata query failed after {max_retries} retries"
+            + (f" (last HTTP {last_status})" if last_status else "")
+        )
 
         
     async def director_influences(self) -> list[dict[str, str]]:
