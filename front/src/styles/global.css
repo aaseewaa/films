@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── База ──────────────────────────────────────── */
+@layer base {
+  html {
+    @apply text-ink-300 antialiased;
+  }
+
+  body {
+    @apply bg-cream-100 font-sans;
+    /* Тонкая бумажная текстура — едва заметная */
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(52, 51, 45, 0.02) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* Журнальные заголовки */
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink-400;
+  }
+
+  /* Длинные эссе — оптимальная читабельность */
+  .prose-essay {
+    @apply max-w-reading text-lg leading-relaxed text-ink-300;
+  }
+
+  .prose-essay p {
+    @apply mb-6;
+  }
+
+  .prose-essay p + p {
+    @apply mt-0;
+  }
+
+  /* Выделение в эссе */
+  .prose-essay strong {
+    @apply text-ink-400 font-semibold;
+  }
+}
+
+/* ─── Утилиты ───────────────────────────────────── */
+@layer utilities {
+  /* Тонкая разделительная линия — журнальный приём */
+  .divider-thin {
+    @apply border-t border-ink-50/15;
+  }
+
+  /* Карточка с минимальным оформлением */
+  .card-paper {
+    @apply bg-cream-50 border border-ink-50/10 rounded-sm;
+  }
+
+  /* Только для страницы графа: тёмный фон */
+  .theme-dark {
+    @apply bg-graph-bg text-graph-text;
+  }
+}

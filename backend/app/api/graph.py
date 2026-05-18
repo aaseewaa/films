@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.schemas.graph import GraphResponse
 from app.services.graph_service import GraphService
+from app.services.radial_graph_service import RadialGraphService
 
 router = APIRouter(prefix="/api/graph", tags=["graph"])
 
@@ -80,3 +81,32 @@ async def full_graph(
     service = GraphService(db)
     result = await service.get_full_graph(limit=limit, lang=lang)
     return GraphResponse(**result)
+
+@router.get(
+    "/director/{center_id}/radial",
+    summary="Радиальная карточка: центр, учителя (кольцо 1) и их учителя (кольцо 2)",
+)
+async def director_radial(
+    center_id: int,
+    top_n: Annotated[int, Query(ge=1, le=8, description="Учителей вокруг центра")] = 4,
+    ring2_n: Annotated[
+        int, Query(ge=0, le=6, description="Учителей у каждого узла кольца 1"),
+    ] = 4,
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    db: AsyncSession = Depends(get_db),
+):
+    """
+  Возвращает центр и два кольца «учителей» (source → target).
+
+  Кольцо 1: кто повлиял на центр. Кольцо 2: кто повлиял на каждого из кольца 1.
+    """
+    service = RadialGraphService(db)
+    result = await service.get_radial(
+        center_id, top_n=top_n, ring2_n=ring2_n, lang=lang,
+    )
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Режиссёр {center_id} не найден или не помечен как is_director",
+        )
+    return result

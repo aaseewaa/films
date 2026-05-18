@@ -60,6 +60,7 @@ class FilmRead(BaseModel):
     entity_type: Literal["film"] = "film"
 
     title: str
+    original_title: str | None = None
     summary: str | None = None
     description: str | None = None
 
@@ -70,7 +71,13 @@ class FilmRead(BaseModel):
 
     images: ImageURLs = ImageURLs()
 
+    # ─── НОВЫЕ ПОЛЯ: backdrop (фоновый кадр) и кадры из фильма ───
+    backdrop_url: str | None = None      # большой широкий кадр, 1280×720
+    stills_urls: list[str] = []          # до 10 кадров для галереи, 780×x
+    # ────────────────────────────────────────────────────────────
+
     genres: list[TaxonomyTermRead] = []
+    production_countries: str | None = None
     directors: list[PersonRef] = []
     cast: list[PersonRef] = []  # актёры, отсортированы по billing_order
 

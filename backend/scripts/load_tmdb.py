@@ -45,6 +45,7 @@ from app.models import (
     TaxonomyTerm,
     TaxonomyTermTranslation,
 )
+from scripts.production_countries import build_production_countries
 from scripts.tmdb_client import TmdbClient
 
 # ─── Логгирование ──────────────────────────────────────────────────
@@ -167,8 +168,10 @@ async def upsert_person(
     is_director: bool = False,
     is_actor: bool = False,
     languages: dict[str, int],
+    imdb_id: str | None = None,
 ) -> Person:
     """Создаёт или обновляет персону."""
+    imdb_val = imdb_id if imdb_id and str(imdb_id).startswith("nm") else None
     existing = await find_entity_by_tmdb(db, entity_type="person", tmdb_id=tmdb_id)
     if existing:
         # Обновим флаги ролей если стало больше известно
@@ -179,7 +182,16 @@ async def upsert_person(
             person.is_director = True
         if is_actor:
             person.is_actor = True
+        if imdb_val and not (existing.external_ids or {}).get("imdb"):
+            existing.external_ids = {
+                **(existing.external_ids or {}),
+                "imdb": imdb_val,
+            }
         return person
+
+    ext_ids: dict[str, str] = {"tmdb": str(tmdb_id)}
+    if imdb_val:
+        ext_ids["imdb"] = imdb_val
 
     # Новая персона: сначала Entity, потом Person с тем же id, потом переводы
     entity = Entity(
@@ -187,7 +199,7 @@ async def upsert_person(
         status="published",
         primary_image_url=TmdbClient.image_url(profile_path, "w500"),
         thumbnail_url=TmdbClient.image_url(profile_path, "w185"),
-        external_ids={"tmdb": str(tmdb_id)},
+        external_ids=ext_ids,
     )
     db.add(entity)
     await db.flush()
@@ -277,6 +289,7 @@ async def load_film(
             "budget": en.get("budget"),
             "revenue": en.get("revenue"),
             "tagline": en.get("tagline"),
+            "production_countries": build_production_countries(en, ru),
         },
     )
     db.add(entity)
@@ -339,6 +352,9 @@ async def load_film(
     for d in directors:
         person_full_en = await tmdb.person_full(d["id"], language=LANG_EN)
         person_full_ru = await tmdb.person_full(d["id"], language=LANG_RU)
+        imdb_id = person_full_en.get("imdb_id") or (
+            (person_full_en.get("external_ids") or {}).get("imdb_id")
+        )
         person = await upsert_person(
             db,
             tmdb_id=d["id"],
@@ -352,6 +368,7 @@ async def load_film(
             profile_path=person_full_en.get("profile_path"),
             is_director=True,
             languages=languages,
+            imdb_id=imdb_id,
         )
         db.add(
             FilmPerson(
@@ -368,6 +385,9 @@ async def load_film(
     for c in cast_sorted[:top_actors_count]:
         person_full_en = await tmdb.person_full(c["id"], language=LANG_EN)
         person_full_ru = await tmdb.person_full(c["id"], language=LANG_RU)
+        imdb_id = person_full_en.get("imdb_id") or (
+            (person_full_en.get("external_ids") or {}).get("imdb_id")
+        )
         person = await upsert_person(
             db,
             tmdb_id=c["id"],
@@ -381,6 +401,7 @@ async def load_film(
             profile_path=person_full_en.get("profile_path"),
             is_actor=True,
             languages=languages,
+            imdb_id=imdb_id,
         )
         db.add(
             FilmPerson(

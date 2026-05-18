@@ -17,13 +17,17 @@ class FilmCard(BaseModel):
     id: int
     entity_type: Literal["film"] = "film"
     title: str
+    original_title: str | None = None  # en-перевод как оригинальное название
     summary: str | None = None
     release_year: int | None = None
     runtime_min: int | None = None
     images: ImageURLs = ImageURLs()
-    genres: list[str] = []  # имена жанров на запрошенном языке
-    vote_average: float | None = None  # из extra_metadata.vote_average
-    popularity: float | None = None     # из extra_metadata.popularity
+    genres: list[str] = []
+    director: str | None = None
+    actors: list[str] = []
+    country: str | None = None
+    vote_average: float | None = None
+    popularity: float | None = None
 
     model_config = ConfigDict(from_attributes=True)
 

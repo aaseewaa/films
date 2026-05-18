@@ -1,17 +1,3 @@
-"""
-Сервис получения полной карточки сущности (фильм или персона)
-со всеми связями.
-
-Делает несколько запросов:
-  - основные поля (entity + film/person + перевод на нужном языке)
-  - жанры (через entity_taxonomy + taxonomy_term_translation)
-  - крю (для фильма — режиссёры и актёры)
-  - фильмография (для персоны)
-  - граф влияний (для режиссёра — кто повлиял + на кого повлиял)
-
-Каждый запрос — компактный SQL через text(). ORM здесь избыточен:
-у нас сложные JOIN'ы с переводами, через ORM было бы 100 строк.
-"""
 from __future__ import annotations
 
 from sqlalchemy import text
@@ -30,9 +16,11 @@ class EntityService:
         Автоматически определяет тип (film/person) и подгружает связи.
         """
         # 1. Базовая информация: тип и есть ли вообще такая сущность
+        # ─── ИЗМЕНЕНИЕ: добавлен primary_backdrop_url ───
         base_sql = """
             SELECT e.id, e.entity_type::text AS entity_type, e.status,
                    e.primary_image_url, e.thumbnail_url,
+                   e.primary_backdrop_url,
                    e.external_ids, e.extra_metadata
             FROM entity e
             WHERE e.id = :eid AND e.status = 'published'
@@ -59,6 +47,17 @@ class EntityService:
             }
 
     # ─── Перевод ────────────────────────────────────────────────
+    async def _get_title_in_lang(self, entity_id: int, lang: str) -> str | None:
+        sql = """
+            SELECT et.title
+            FROM entity_translation et
+            JOIN language l ON l.id = et.language_id
+            WHERE et.entity_id = :eid AND l.code = :lang
+            LIMIT 1
+        """
+        row = (await self.db.execute(text(sql), {"eid": entity_id, "lang": lang})).first()
+        return row[0] if row else None
+
     async def _get_translation(self, entity_id: int, lang: str) -> dict:
         """Перевод на нужном языке + fallback на любой имеющийся."""
         sql = """
@@ -90,6 +89,27 @@ class EntityService:
         """
         result = await self.db.execute(text(sql), {"eid": entity_id, "lang": lang})
         return [dict(r) for r in result.mappings().all()]
+
+    # ─── Кадры из фильма (галерея) ──────────────────────────────
+    # ─── НОВЫЙ МЕТОД ───
+    async def _get_stills(self, entity_id: int, limit: int = 10) -> list[str]:
+        """
+        Возвращает до N URL-ов кадров из фильма (entity_media role='still').
+        Отсортированы по position (порядку как пришли из TMDB).
+        """
+        sql = """
+            SELECT ma.url
+            FROM entity_media em
+            JOIN media_asset ma ON ma.id = em.media_id
+            WHERE em.entity_id = :eid
+              AND em.role = 'still'
+            ORDER BY em.position
+            LIMIT :lim
+        """
+        rows = (await self.db.execute(
+            text(sql), {"eid": entity_id, "lim": limit}
+        )).all()
+        return [row[0] for row in rows]
 
     # ─── Карточка фильма ────────────────────────────────────────
     async def _build_film(self, base: dict, tr: dict, lang: str) -> dict:
@@ -146,11 +166,30 @@ class EntityService:
                 cast.append(person_ref)
 
         genres = await self._get_genres(base["id"], lang)
+        stills_urls = await self._get_stills(base["id"], limit=10)
+        original_title = await self._get_title_in_lang(base["id"], "en")
+        if original_title and original_title == tr.get("title"):
+            original_title = None
+
+        meta = base["extra_metadata"] or {}
+        pc_list = meta.get("production_countries") or []
+        if lang == "ru":
+            country_str = ", ".join(
+                c.get("name_ru") or c.get("name_en") or c.get("code", "")
+                for c in pc_list if isinstance(c, dict)
+            )
+        else:
+            country_str = ", ".join(
+                c.get("name_en") or c.get("code", "")
+                for c in pc_list if isinstance(c, dict)
+            )
+        production_countries = country_str or None
 
         return {
             "id": base["id"],
             "entity_type": "film",
             "title": tr.get("title", film_data.get("sort_title", "Untitled")),
+            "original_title": original_title,
             "summary": tr.get("summary"),
             "description": tr.get("description"),
             "release_year": film_data.get("release_year"),
@@ -161,7 +200,12 @@ class EntityService:
                 "primary": base["primary_image_url"],
                 "thumbnail": base["thumbnail_url"],
             },
+            # ─── НОВЫЕ ПОЛЯ ───
+            "backdrop_url": base["primary_backdrop_url"],
+            "stills_urls": stills_urls,
+            # ──────────────────
             "genres": genres,
+            "production_countries": production_countries,
             "directors": directors,
             "cast": cast,
             "extra_metadata": base["extra_metadata"] or {},

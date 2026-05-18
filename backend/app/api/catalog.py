@@ -29,11 +29,18 @@ async def list_films(
         str | None,
         Query(description="Код жанра (action, drama, comedy, ...)"),
     ] = None,
+    country: Annotated[
+        str | None,
+        Query(description="ISO-код страны производства (US, FR, ...)"),
+    ] = None,
     year_from: Annotated[int | None, Query(ge=1880, le=2100)] = None,
     year_to: Annotated[int | None, Query(ge=1880, le=2100)] = None,
     sort_by: Annotated[
-        Literal["popularity", "vote_average", "year", "title"],
-        Query(description="Сортировка: popularity (популярность), vote_average (рейтинг), year (год), title (название)"),
+        Literal["popularity", "vote_average", "year", "year_asc", "title"],
+        Query(
+            description="Сортировка: popularity, vote_average, year (новые), "
+            "year_asc (старые), title (А–Я)",
+        ),
     ] = "popularity",
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
     offset: Annotated[int, Query(ge=0, le=10_000)] = 0,
@@ -52,6 +59,7 @@ async def list_films(
     result = await service.list_films(
         lang=lang,
         genre=genre,
+        country=country,
         year_from=year_from,
         year_to=year_to,
         sort_by=sort_by,
@@ -59,6 +67,20 @@ async def list_films(
         offset=offset,
     )
     return FilmsResponse(**result)
+
+
+@router.get(
+    "/production-countries",
+    response_model=list[GenreItem],
+    summary="Страны производства для фильтра",
+)
+async def list_production_countries(
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    db: AsyncSession = Depends(get_db),
+) -> list[GenreItem]:
+    service = CatalogService(db)
+    items = await service.list_production_countries(lang=lang)
+    return [GenreItem(**item) for item in items]
 
 
 @router.get("/persons", response_model=PersonsResponse, summary="Каталог персон")

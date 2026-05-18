@@ -65,6 +65,12 @@ RESTART IDENTITY CASCADE;
 
 Когда фильмы загружены и проверены через `/health/db`, переходи к:
 - `load_omdb.py` — обогащение наградами и рейтингами IMDb (день 3)
-- `load_wikidata_influences.py` — граф влияний между режиссёрами (день 3)
+- `load_wikidata_influences_v2.py` — граф влияний: Wikidata **P737** (influenced by) + **P941** (inspired by)
+
+```bash
+python -m scripts.load_wikidata_influences_v2
+# P941: weight=2, confidence=0.60; P737: weight=3, confidence=0.70
+# повторный прогон не дублирует пары (source, target)
+```
 
 Их добавим позже.

@@ -27,10 +27,17 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 LANG_EN = "en-US"
 LANG_RU = "ru-RU"
-BATCH_SIZE = 30
+BATCH_SIZE = 10
+BATCH_PAUSE_SEC = 8
+PROP_PAUSE_SEC = 5
+WD_PROPS = ("P737", "P941")
 
 
-def build_sparql(imdb_ids: list[str]) -> str:
+def build_sparql(imdb_ids: list[str], prop: str) -> str:
+    """
+    Один Wikidata-property за запрос (легче для WDQS, чем 4 UNION сразу).
+    P737 — influenced by; P941 — inspired by.
+    """
     values_block = " ".join(f'"{imdb}"' for imdb in imdb_ids)
     return f"""
     SELECT DISTINCT ?source ?sourceLabel ?sourceImdb
@@ -40,24 +47,46 @@ def build_sparql(imdb_ids: list[str]) -> str:
 
       {{
         ?target wdt:P345 ?ourImdb .
-        ?target wdt:P737 ?source .
+        ?target wdt:{prop} ?source .
       }} UNION {{
         ?source wdt:P345 ?ourImdb .
-        ?target wdt:P737 ?source .
+        ?target wdt:{prop} ?source .
       }}
 
       ?source wdt:P345 ?sourceImdb .
       ?target wdt:P345 ?targetImdb .
       ?source wdt:P106 wd:Q2526255 .
       ?target wdt:P106 wd:Q2526255 .
-
       FILTER(STRSTARTS(?sourceImdb, "nm"))
       FILTER(STRSTARTS(?targetImdb, "nm"))
 
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
     }}
-    LIMIT 5000
+    LIMIT 2000
     """
+
+
+async def fetch_batch_from_wikidata(
+    wd: WikidataClient,
+    imdb_ids: list[str],
+    *,
+    props: tuple[str, ...] = WD_PROPS,
+) -> list[dict]:
+    """P737 и P941 — отдельными лёгкими запросами с паузой."""
+    all_rows: list[dict] = []
+    for prop in props:
+        log.info("  Wikidata %s (%d imdb)...", prop, len(imdb_ids))
+        try:
+            rows = await wd._query(build_sparql(imdb_ids, prop))
+            for row in rows:
+                row["_prop"] = prop
+            all_rows.extend(rows)
+            log.info("  %s → %d пар", prop, len(rows))
+        except Exception as exc:
+            log.warning("  %s пропущен: %s", prop, exc)
+        if prop != props[-1]:
+            await asyncio.sleep(PROP_PAUSE_SEC)
+    return all_rows
 
 
 async def get_languages(db: AsyncSession) -> dict[str, int]:
@@ -89,6 +118,12 @@ async def find_person_by_imdb(db: AsyncSession, imdb_id: str) -> int | None:
     return row["id"] if row else None
 
 
+_WD_PROP_META = {
+    "P737": ("influenced by", 3, 0.70),
+    "P941": ("inspired by", 2, 0.60),
+}
+
+
 async def upsert_influence_raw(
     db: AsyncSession,
     *,
@@ -97,6 +132,7 @@ async def upsert_influence_raw(
     source_label: str,
     target_label: str,
     source_qid: str,
+    wikidata_prop: str = "P737",
 ) -> bool:
     if source_id == target_id:
         return False
@@ -108,8 +144,11 @@ async def upsert_influence_raw(
     if check.first():
         return False
 
+    label, weight, confidence = _WD_PROP_META.get(
+        wikidata_prop, ("influence", 3, 0.65),
+    )
     note = (
-        f"Источник: Wikidata (P737 'influenced by'). "
+        f"Источник: Wikidata ({wikidata_prop} '{label}'). "
         f"{source_label} → {target_label}. Wikidata QID: {source_qid}"
     )
 
@@ -117,8 +156,10 @@ async def upsert_influence_raw(
         INSERT INTO director_influence
             (source_director_id, target_director_id, weight, confidence,
              relation_note, inferred_by_system)
-        VALUES (:s, :t, 3, 0.70, :note, true)
-    """), {"s": source_id, "t": target_id, "note": note})
+        VALUES (:s, :t, :w, :c, :note, true)
+    """), {
+        "s": source_id, "t": target_id, "w": weight, "c": confidence, "note": note,
+    })
     return True
 
 
@@ -264,11 +305,18 @@ async def load_person_via_tmdb(
     return new_id
 
 
-async def main(*, max_directors: int | None) -> None:
+async def main(
+    *,
+    max_directors: int | None,
+    batch_size: int = BATCH_SIZE,
+    batch_pause: float = BATCH_PAUSE_SEC,
+    props: tuple[str, ...] = WD_PROPS,
+    misses_file: str | None = None,
+) -> None:
     if not settings.tmdb_api_key:
         raise SystemExit("TMDB_API_KEY не задан")
 
-    log.info("─── Wikidata Influences Loader v2 (DEBUG) ───")
+    log.info("─── Wikidata Influences Loader v2 (%s) ───", " + ".join(props))
 
     async with AsyncSessionLocal() as db:
         languages = await get_languages(db)
@@ -283,38 +331,51 @@ async def main(*, max_directors: int | None) -> None:
         "batches": 0,
         "pairs_total": 0,
         "created": 0,
+        "created_p737": 0,
+        "created_p941": 0,
         "skipped_existing": 0,
         "loaded_new": 0,
         "errors": 0,
         "src_not_found": 0,
         "tgt_not_found": 0,
+        "sparql_failures": 0,
     }
+    tgt_miss_imdbs: set[str] = set()
+
+    total_batches = (len(directors) + batch_size - 1) // batch_size
+    log.info("батчей: %d по %d режиссёров, пауза %ss", total_batches, batch_size, batch_pause)
 
     async with WikidataClient() as wd:
         async with TmdbClient(api_key=settings.tmdb_api_key) as tmdb:
-            for i in range(0, len(directors), BATCH_SIZE):
-                batch = directors[i : i + BATCH_SIZE]
+            for i in range(0, len(directors), batch_size):
+                batch = directors[i : i + batch_size]
                 imdb_ids = [imdb for _, imdb in batch]
                 stats["batches"] += 1
 
-                log.info("batch %d (директоров: %d)", stats["batches"], len(batch))
+                log.info(
+                    "batch %d/%d (режиссёров: %d)",
+                    stats["batches"], total_batches, len(batch),
+                )
 
                 try:
-                    sparql = build_sparql(imdb_ids)
-                    pairs = await wd._query(sparql)
+                    pairs = await fetch_batch_from_wikidata(wd, imdb_ids, props=props)
                 except Exception as exc:
-                    log.exception("SPARQL для батча упал: %s", exc)
+                    stats["sparql_failures"] += 1
+                    log.exception("SPARQL батч полностью упал: %s", exc)
+                    await asyncio.sleep(batch_pause)
                     continue
 
                 clean_pairs = []
                 for p in pairs:
                     try:
+                        prop = p.get("_prop", "P737")
                         clean_pairs.append({
                             "source_qid": p["source"]["value"].rsplit("/", 1)[-1],
                             "source_label": p["sourceLabel"]["value"],
                             "source_imdb": p["sourceImdb"]["value"],
                             "target_label": p["targetLabel"]["value"],
                             "target_imdb": p["targetImdb"]["value"],
+                            "wikidata_prop": prop,
                         })
                     except KeyError:
                         continue
@@ -356,7 +417,11 @@ async def main(*, max_directors: int | None) -> None:
                                     stats["loaded_new"] += 1
                                 else:
                                     stats["tgt_not_found"] += 1
-                                    log.info("  [%d] tgt TMDB miss", idx)
+                                    tgt_miss_imdbs.add(pair["target_imdb"])
+                                    log.info(
+                                        "  [%d] tgt TMDB miss: %s (%s)",
+                                        idx, pair["target_label"], pair["target_imdb"],
+                                    )
                                     continue
 
                             await db.execute(text("""
@@ -370,12 +435,19 @@ async def main(*, max_directors: int | None) -> None:
                                 source_label=pair["source_label"],
                                 target_label=pair["target_label"],
                                 source_qid=pair["source_qid"],
+                                wikidata_prop=pair.get("wikidata_prop", "P737"),
                             )
                             if created:
                                 stats["created"] += 1
+                                prop = pair.get("wikidata_prop", "P737")
+                                if prop == "P941":
+                                    stats["created_p941"] += 1
+                                else:
+                                    stats["created_p737"] += 1
                                 log.info(
-                                    "  [%d] ✓ CREATED: %s → %s",
-                                    idx, pair["source_label"], pair["target_label"],
+                                    "  [%d] ✓ CREATED (%s): %s → %s",
+                                    idx, prop,
+                                    pair["source_label"], pair["target_label"],
                                 )
                             else:
                                 stats["skipped_existing"] += 1
@@ -396,22 +468,65 @@ async def main(*, max_directors: int | None) -> None:
                     stats["tgt_not_found"], stats["errors"],
                 )
 
+                if stats["batches"] < total_batches:
+                    log.info("  пауза %ss перед следующим батчем...", batch_pause)
+                    await asyncio.sleep(batch_pause)
+
     log.info("─── DONE ───")
     log.info("батчей:                  %(batches)d", stats)
     log.info("пар получено всего:      %(pairs_total)d", stats)
     log.info(" • создано связей:        %(created)d", stats)
+    log.info("   — P737 influenced by:  %(created_p737)d", stats)
+    log.info("   — P941 inspired by:    %(created_p941)d", stats)
     log.info(" • уже существовали:      %(skipped_existing)d", stats)
     log.info(" • новых персон:          %(loaded_new)d", stats)
     log.info(" • src не найден:         %(src_not_found)d", stats)
     log.info(" • tgt не найден:         %(tgt_not_found)d", stats)
     log.info(" • ошибок:                %(errors)d", stats)
 
+    if misses_file and tgt_miss_imdbs:
+        from pathlib import Path
+
+        path = Path(misses_file)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("\n".join(sorted(tgt_miss_imdbs)) + "\n", encoding="utf-8")
+        log.info("список tgt_miss (%d imdb) → %s", len(tgt_miss_imdbs), path)
+        log.info("  python -m scripts.retry_imdb_persons --file %s", path)
+
 
 def cli() -> None:
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(
+        description="Wikidata P737 + P941 → director_influence (лёгкие батчи)",
+    )
     parser.add_argument("--max-directors", type=int, default=None)
+    parser.add_argument(
+        "--batch-size", type=int, default=BATCH_SIZE,
+        help="IMDb id за один заход к WDQS (по умолчанию 10)",
+    )
+    parser.add_argument(
+        "--batch-pause", type=float, default=BATCH_PAUSE_SEC,
+        help="Секунд между батчами (по умолчанию 8)",
+    )
+    parser.add_argument(
+        "--only-p737", action="store_true",
+        help="Только P737, без P941 (быстрее)",
+    )
+    parser.add_argument(
+        "--misses-file",
+        type=str,
+        default="scripts/cache/wikidata_tgt_miss.txt",
+        help="Сохранить IMDb id с tgt_miss (пустая строка = не писать)",
+    )
     args = parser.parse_args()
-    asyncio.run(main(max_directors=args.max_directors))
+    props: tuple[str, ...] = ("P737",) if args.only_p737 else WD_PROPS
+    misses = args.misses_file.strip() or None
+    asyncio.run(main(
+        max_directors=args.max_directors,
+        batch_size=max(1, args.batch_size),
+        batch_pause=max(0.0, args.batch_pause),
+        props=props,
+        misses_file=misses,
+    ))
 
 
 if __name__ == "__main__":
