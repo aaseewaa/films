@@ -244,28 +244,28 @@ async def upsert_person(
 
 
 # ─── Загрузка фильма ───────────────────────────────────────────────
-async def load_film(
+async def upsert_film(
     db: AsyncSession,
-    tmdb: TmdbClient,
+    movie_ru: dict | None,
+    movie_en: dict,
     *,
-    tmdb_id: int,
+    tmdb: TmdbClient,
     languages: dict[str, int],
     top_actors_count: int,
 ) -> bool:
     """
-    Загружает один фильм со всеми связанными персонами и жанрами.
-    Возвращает True если фильм был создан, False если уже существовал.
+    Создаёт фильм в БД из уже загруженных TMDB movie_full (ru/en).
+    Используется load_tmdb и load_tmdb_extra.
     """
-    if await find_entity_by_tmdb(db, entity_type="film", tmdb_id=tmdb_id):
-        log.debug("film tmdb=%s already loaded, skip", tmdb_id)
+    if not movie_en:
         return False
 
-    # ─ полные данные фильма на двух языках ─
-    en = await tmdb.movie_full(tmdb_id, language=LANG_EN)
-    ru = await tmdb.movie_full(tmdb_id, language=LANG_RU)
-    if not en:
-        log.warning("film tmdb=%s not found", tmdb_id)
+    tmdb_id = movie_en.get("id")
+    if tmdb_id is None:
         return False
+
+    en = movie_en
+    ru = movie_ru or {}
 
     title_en = en.get("title") or en.get("original_title") or "Untitled"
     title_ru = ru.get("title") if ru else None
@@ -417,6 +417,38 @@ async def load_film(
     await db.flush()
     log.info("✓ film loaded: '%s' (%s)", title_en, release_date.year if release_date else "?")
     return True
+
+
+async def load_film(
+    db: AsyncSession,
+    tmdb: TmdbClient,
+    *,
+    tmdb_id: int,
+    languages: dict[str, int],
+    top_actors_count: int,
+) -> bool:
+    """
+    Загружает один фильм со всеми связанными персонами и жанрами.
+    Возвращает True если фильм был создан, False если уже существовал.
+    """
+    if await find_entity_by_tmdb(db, entity_type="film", tmdb_id=tmdb_id):
+        log.debug("film tmdb=%s already loaded, skip", tmdb_id)
+        return False
+
+    en = await tmdb.movie_full(tmdb_id, language=LANG_EN)
+    ru = await tmdb.movie_full(tmdb_id, language=LANG_RU)
+    if not en:
+        log.warning("film tmdb=%s not found", tmdb_id)
+        return False
+
+    return await upsert_film(
+        db,
+        ru,
+        en,
+        tmdb=tmdb,
+        languages=languages,
+        top_actors_count=top_actors_count,
+    )
 
 
 # ─── main ──────────────────────────────────────────────────────────

@@ -242,8 +242,12 @@ export interface User {
   id: number;
   email: string;
   display_name: string;
+  role?: string;
   avatar_url?: string | null;
+  city?: string | null;
   preferred_language?: string | null;
+  is_verified?: boolean;
+  registered_at?: string | null;
 }
 
 export interface AuthResponse {

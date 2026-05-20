@@ -40,7 +40,7 @@ class TmdbClient:
         *,
         cache_dir: Path | str = "scripts/cache/tmdb",
         rate_limit_per_sec: float = 25.0,
-        timeout: float = 20.0,
+        timeout: float = 30.0,
     ) -> None:
         if not api_key or len(api_key) < 10:
             raise ValueError("TMDB_API_KEY не задан или некорректен. Проверь .env")
@@ -185,6 +185,66 @@ class TmdbClient:
     async def genres(self, *, language: str = "en-US") -> list[dict]:
         data = await self._get("/genre/movie/list", {"language": language})
         return data.get("genres", [])
+
+    async def discover_movies_page(
+        self,
+        *,
+        page: int,
+        language: str = "en-US",
+        params: dict[str, Any] | None = None,
+    ) -> list[dict]:
+        """Одна страница /discover/movie (с retry и кэшем)."""
+        data = await self._get(
+            "/discover/movie",
+            {"language": language, "page": page, **(params or {})},
+        )
+        return data.get("results", [])
+
+    async def collection_parts(self, collection_id: int) -> list[dict]:
+        """Фильмы в TMDB-коллекции."""
+        data = await self._get(f"/collection/{collection_id}", {"language": "en-US"})
+        return data.get("parts", []) or []
+
+    async def now_playing(
+        self,
+        *,
+        region: str = "RU",
+        pages: int = 3,
+        language: str = "ru-RU",
+    ) -> list[dict]:
+        """Фильмы в прокате в регионе (для RU — российский прокат TMDB)."""
+        results: list[dict] = []
+        for page in range(1, pages + 1):
+            data = await self._get(
+                "/movie/now_playing",
+                {"language": language, "region": region, "page": page},
+            )
+            results.extend(data.get("results", []))
+        return results
+
+    async def upcoming(
+        self,
+        *,
+        region: str = "RU",
+        pages: int = 2,
+        language: str = "ru-RU",
+    ) -> list[dict]:
+        """Скоро в прокате в регионе."""
+        results: list[dict] = []
+        for page in range(1, pages + 1):
+            data = await self._get(
+                "/movie/upcoming",
+                {"language": language, "region": region, "page": page},
+            )
+            results.extend(data.get("results", []))
+        return results
+
+    async def find_by_imdb(self, imdb_id: str, *, language: str = "ru-RU") -> dict:
+        """Поиск фильма TMDB по IMDb id (tt1234567)."""
+        return await self._get(
+            f"/find/{imdb_id}",
+            {"external_source": "imdb_id", "language": language},
+        )
 
     # ─── Утилиты ───────────────────────────────────────────────────
     @staticmethod

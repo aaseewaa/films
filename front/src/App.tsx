@@ -7,12 +7,12 @@ import { ArticlesPage } from '@/pages/ArticlesPage';
 import { ArticlePage } from '@/pages/ArticlePage';
 import { CollectionsPage } from '@/pages/CollectionsPage';
 import { CollectionPage } from '@/pages/CollectionPage';
+import { LoginPage } from '@/pages/LoginPage';
+import { RegisterPage } from '@/pages/RegisterPage';
+import { NewsPage } from '@/pages/NewsPage';
+import { SearchPage } from '@/pages/SearchPage';
 import {
   DirectorPage,
-  SearchPage,
-  NewsPage,
-  LoginPage,
-  RegisterPage,
   ProfilePage,
   FavoritesPage,
   RatingsPage,

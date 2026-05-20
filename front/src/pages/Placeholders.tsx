@@ -72,22 +72,6 @@ export function DirectorPage() {
   );
 }
 
-export function SearchPage() {
-  return <Placeholder>Страница поиска — день 3 (16 мая)</Placeholder>;
-}
-
-export function NewsPage() {
-  return <Placeholder>Новинки — день 6</Placeholder>;
-}
-
-export function LoginPage() {
-  return <Placeholder>Логин — день 4 (17 мая)</Placeholder>;
-}
-
-export function RegisterPage() {
-  return <Placeholder>Регистрация — день 4 (17 мая)</Placeholder>;
-}
-
 export function ProfilePage() {
   return <Placeholder>Профиль — день 4</Placeholder>;
 }

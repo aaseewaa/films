@@ -1,74 +1,104 @@
 import type { ArticleSummary } from '@/api/types';
 
+export type ArticleCardVariant = 'stack' | 'overlay' | 'compact';
+
 export interface ArticleTheme {
   slug: string;
   bg: string;
   textLight: boolean;
-  /** 1 = узкая колонка, 2 = широкая (2 из 4) */
+  /** 1 или 2 из 3 колонок */
   colSpan: 1 | 2;
+  variant: ArticleCardVariant;
+  authorName?: string;
 }
 
-/**
- * Сетка 4 колонки (как на макете):
- * Ряд 1: [1 Хичкок ×2][2 Кубрик][3 Тарковский]
- * Ряд 2: [4 Бергман][6 Соррентино][5 Линч ×2]
- * Ряд 3: [7 Тарантино] …
- */
+/** Порядок и палитра карточек журнала (статьи из БД) */
 const THEMES: ArticleTheme[] = [
   {
-    slug: 'hitchcock-arhitektor-trevogi',
-    bg: '#C1121F',
+    slug: 'kino-poslednih-5-let-upadnichestvo',
+    bg: '#2D2926',
     textLight: true,
     colSpan: 2,
+    variant: 'stack',
+    authorName: 'Редакция FilmCine',
   },
   {
-    slug: 'kubrick-vremya-kak-material',
-    bg: '#2D6A4F',
-    textLight: true,
-    colSpan: 1,
-  },
-  {
-    slug: 'tarkovsky-poeziya-peizaja',
-    bg: '#E9C46A',
+    slug: 'secs-v-bolshom-gorode-pochemu-aktualen',
+    bg: '#9BB0A5',
     textLight: false,
     colSpan: 1,
+    variant: 'stack',
   },
   {
-    slug: 'bergman-lico-kak-peizaj',
-    bg: '#4895EF',
+    slug: 'kino-povernutoe-na-bok',
+    bg: '#3E54A3',
     textLight: true,
     colSpan: 1,
+    variant: 'compact',
   },
   {
-    slug: 'sorrentino-barokko-sovremennosti',
-    bg: '#70E000',
+    slug: 'kino-eto-iskusstvo',
+    bg: '#C4D67E',
     textLight: false,
     colSpan: 1,
+    variant: 'compact',
   },
   {
-    slug: 'lynch-zvuk-kak-geroi',
-    bg: '#5A189A',
-    textLight: true,
+    slug: 'klan-koppola',
+    bg: '#D1DCE2',
+    textLight: false,
     colSpan: 2,
+    variant: 'stack',
   },
   {
-    slug: 'tarantino-kinokukhnya-i-nasilie',
-    bg: '#FF5400',
+    slug: 'novye-lica-golivuda',
+    bg: '#2D2926',
     textLight: true,
     colSpan: 1,
+    variant: 'overlay',
+  },
+  {
+    slug: 'ave-mariya-toska-po-horoshemu-koncu',
+    bg: '#9BB0A5',
+    textLight: false,
+    colSpan: 1,
+    variant: 'stack',
+  },
+  {
+    slug: 'marvel-fastfud-ili-iskusstvo',
+    bg: '#3E54A3',
+    textLight: true,
+    colSpan: 1,
+    variant: 'compact',
+  },
+  {
+    slug: 'elena-prekrasnaya-tsvet-kozhi',
+    bg: '#C4D67E',
+    textLight: false,
+    colSpan: 1,
+    variant: 'compact',
+  },
+  {
+    slug: 'kanny-bez-illyuziy',
+    bg: '#D1DCE2',
+    textLight: false,
+    colSpan: 1,
+    variant: 'overlay',
   },
 ];
 
 const TYPE_LABELS: Record<string, string> = {
-  essay: 'ЭССЕ',
-  review: 'РЕЦЕНЗИЯ',
-  analysis: 'АНАЛИЗ',
-  interview: 'ИНТЕРВЬЮ',
-  editorial: 'РЕДАКЦИЯ',
+  essay: 'Эссе',
+  review: 'Рецензия',
+  analysis: 'Анализ',
+  interview: 'Интервью',
+  editorial: 'Редакция',
+  roundtable: 'Круглый стол',
 };
 
 export function articleTypeLabel(type: string): string {
-  return TYPE_LABELS[type.toLowerCase()] ?? type.toUpperCase();
+  const key = type.toLowerCase();
+  return TYPE_LABELS[key] ?? type;
 }
 
 export function formatArticleDate(iso: string | null | undefined): string {
@@ -97,22 +127,47 @@ export function themeForSlug(slug: string): ArticleTheme {
   return (
     THEMES.find((t) => t.slug === slug) ?? {
       slug,
-      bg: '#FFBE0B',
+      bg: '#D1DCE2',
       textLight: false,
       colSpan: 1,
+      variant: 'stack',
     }
   );
+}
+
+export function authorForArticle(
+  article: ArticleSummary,
+  theme: ArticleTheme,
+): string {
+  if (theme.authorName) return theme.authorName;
+  if (article.main_subject?.title) {
+    const t = article.main_subject.title;
+    return t.startsWith('О ') || t.startsWith('о ') ? t.slice(2) : t;
+  }
+  return 'Редакция FilmCine';
 }
 
 export function orderArticlesForJournal(items: ArticleSummary[]): ArticleSummary[] {
   const bySlug = new Map(items.map((a) => [a.slug, a]));
   const ordered: ArticleSummary[] = [];
+  const used = new Set<number>();
+
   for (const t of THEMES) {
     const a = bySlug.get(t.slug);
-    if (a) ordered.push(a);
+    if (a) {
+      ordered.push(a);
+      used.add(a.id);
+    }
   }
-  for (const a of items) {
-    if (!ordered.some((x) => x.id === a.id)) ordered.push(a);
-  }
-  return ordered;
+
+  const rest = items
+    .filter((a) => !used.has(a.id))
+    .sort((a, b) => {
+      const ta = a.published_at ? Date.parse(a.published_at) : 0;
+      const tb = b.published_at ? Date.parse(b.published_at) : 0;
+      if (tb !== ta) return tb - ta;
+      return b.id - a.id;
+    });
+
+  return [...ordered, ...rest];
 }

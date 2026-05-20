@@ -18,6 +18,7 @@ __pycache__/
 
 # Кэш скриптов (большие JSON-файлы)
 backend/scripts/cache/
+backend/app/cache/
 
 # Логи
 *.log
