@@ -27,7 +27,7 @@ apiClient.interceptors.response.use(
     if (error.response?.status === 401) {
       // Не логаут на /api/auth/login — там 401 это «не тот пароль»
       const url = error.config?.url ?? '';
-      if (!url.includes('/auth/login')) {
+      if (!url.includes('/auth/login') && !url.includes('/auth/register')) {
         useAuthStore.getState().logout();
       }
     }

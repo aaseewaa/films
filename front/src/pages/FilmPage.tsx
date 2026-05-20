@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getFilm } from '@/api/entity';
 import { getRecommendations } from '@/api/recommendations';
 import type { FilmDetail } from '@/api/types';
+import { FilmRatingBlock } from '@/components/film/FilmRatingBlock';
 import { cn } from '@/lib/utils';
 
 const TABS = [
@@ -39,7 +40,6 @@ export function FilmPage() {
   const { id } = useParams();
   const filmId = id ? parseInt(id, 10) : 0;
   const [activeTab, setActiveTab] = useState<TabId>('about');
-
   const sectionRefs = {
     about: useRef<HTMLElement>(null),
     creators: useRef<HTMLElement>(null),
@@ -164,19 +164,12 @@ export function FilmPage() {
       <div className="w-full px-5 sm:px-10 lg:px-16 xl:px-20 py-10 sm:py-14 lg:py-16 space-y-20 sm:space-y-24 max-w-[1920px] mx-auto">
         {/* О фильме */}
         <section ref={sectionRefs.about} id="about" className="scroll-mt-40">
-          <div className="grid lg:grid-cols-[1fr_280px] gap-10 lg:gap-16">
+          <div className="grid lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 max-w-5xl">
             <div>
               <h2 className="text-base sm:text-lg uppercase tracking-wider text-ink-50 mb-4">
                 Оценить фильм
               </h2>
-              <div className="flex gap-1 mb-8" aria-hidden>
-                {Array.from({ length: 10 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className="w-8 h-8 sm:w-9 sm:h-9 border border-ink-50/25 rounded-sm hover:bg-cream-200 cursor-pointer transition-colors"
-                  />
-                ))}
-              </div>
+              <FilmRatingBlock entityId={film.id} />
 
               {voteAvg && (
                 <p className="text-2xl font-bold text-ink-500 mb-6">

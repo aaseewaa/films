@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import { listFilms, listGenres, listProductionCountries } from '@/api/catalog';
 import type { FilmSortBy } from '@/api/types';
@@ -7,12 +7,11 @@ import {
   type FilmFiltersState,
 } from '@/components/films/FilmCatalogFilters';
 import { FilmCatalogCard } from '@/components/films/FilmCatalogCard';
-import { Button } from '@/components/ui/Button';
 
-const PAGE_SIZE = 20;
+const PAGE_SIZE = 50;
 
 const DEFAULT_FILTERS: FilmFiltersState = {
-  sortBy: 'vote_average',
+  sortBy: 'popularity',
 };
 
 function pluralFilms(n: number): string {
@@ -83,8 +82,15 @@ export function FilmsPage() {
     },
   });
 
+  useEffect(() => {
+    if (hasNextPage && !isFetchingNextPage) {
+      fetchNextPage();
+    }
+  }, [hasNextPage, isFetchingNextPage, fetchNextPage]);
+
   const films = data?.pages.flatMap((p) => p.items) ?? [];
   const total = data?.pages[0]?.total ?? 0;
+  const loadingAll = isLoading || (hasNextPage && isFetchingNextPage);
 
   return (
     <div className="bg-white min-h-[calc(100vh-4.75rem)] lg:min-h-[calc(100vh-5rem)]">
@@ -94,7 +100,7 @@ export function FilmsPage() {
             Все фильмы
           </h1>
           <p className="text-base text-ink-50">
-            {isLoading
+            {loadingAll
               ? 'Загружаем каталог…'
               : `${total.toLocaleString('ru-RU')} ${pluralFilms(total)} в коллекции`}
           </p>
@@ -110,7 +116,7 @@ export function FilmsPage() {
         />
 
         <section className="mt-10 sm:mt-12">
-          {isLoading && (
+          {loadingAll && films.length === 0 && (
             <p className="text-ink-50 py-16 text-center">Загрузка фильмов…</p>
           )}
 
@@ -120,7 +126,7 @@ export function FilmsPage() {
             </p>
           )}
 
-          {!isLoading && !isError && films.length === 0 && (
+          {!loadingAll && !isError && films.length === 0 && (
             <p className="text-ink-50 py-16 text-center">
               По выбранным фильтрам ничего не найдено.
             </p>
@@ -129,19 +135,6 @@ export function FilmsPage() {
           {films.map((film) => (
             <FilmCatalogCard key={film.id} film={film} />
           ))}
-
-          {hasNextPage && (
-            <div className="flex justify-center pt-8 pb-4">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => fetchNextPage()}
-                disabled={isFetchingNextPage}
-              >
-                {isFetchingNextPage ? 'Загрузка…' : 'Показать ещё 20'}
-              </Button>
-            </div>
-          )}
         </section>
       </div>
     </div>

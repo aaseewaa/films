@@ -96,9 +96,14 @@ export function UserMenu() {
                 </button>
               </>
             ) : (
-              <MenuLink to="/auth/login" icon={<LogIn size={16} />} onClick={() => setIsOpen(false)}>
-                Войти
-              </MenuLink>
+              <>
+                <MenuLink to="/auth/login" icon={<LogIn size={16} />} onClick={() => setIsOpen(false)}>
+                  Войти
+                </MenuLink>
+                <MenuLink to="/auth/register" onClick={() => setIsOpen(false)}>
+                  Регистрация
+                </MenuLink>
+              </>
             )}
           </div>
         </div>

@@ -8,7 +8,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api import (
-    auth, catalog, entities, graph, health, recommendations, search, user_data,
+    auth, catalog, entities, graph, health, news, recommendations, search, user_data,
 )
 
 from app.api.collections import router as collections_router
@@ -65,6 +65,7 @@ app.include_router(graph.router)              # день 7: граф для ви
 app.include_router(recommendations.router)    # день 7: рекомендации
 app.include_router(collections_router)
 app.include_router(articles_router)
+app.include_router(news.router)
 
 
 @app.get("/", tags=["root"])
@@ -87,5 +88,6 @@ async def root() -> dict:
             "graph_director": "/api/graph/director/{id}?depth=2",
             "graph_full": "/api/graph/full?limit=50",
             "recommendations": "/api/recommendations?for_film_id=...",
+            "news": "/api/news?city=...",
         },
     }

@@ -13,6 +13,7 @@ from app.database import get_db
 from app.schemas.graph import GraphResponse
 from app.services.graph_service import GraphService
 from app.services.radial_graph_service import RadialGraphService
+from app.services.semantic_radial_service import SemanticRadialService
 
 router = APIRouter(prefix="/api/graph", tags=["graph"])
 
@@ -104,6 +105,26 @@ async def director_radial(
     result = await service.get_radial(
         center_id, top_n=top_n, ring2_n=ring2_n, lang=lang,
     )
+    if result is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f"Режиссёр {center_id} не найден или не помечен как is_director",
+        )
+    return result
+
+
+@router.get(
+    "/director/{center_id}/semantic-radial",
+    summary="Гибридный радиальный граф (explicit + semantic neighbors)",
+)
+async def director_semantic_radial(
+    center_id: int,
+    top_n: Annotated[int, Query(ge=1, le=8, description="Сколько узлов вокруг центра")] = 4,
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    db: AsyncSession = Depends(get_db),
+):
+    service = SemanticRadialService(db)
+    result = await service.get_radial(center_id, top_n=top_n, lang=lang)
     if result is None:
         raise HTTPException(
             status_code=404,

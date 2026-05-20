@@ -31,8 +31,8 @@ const YEAR_OPTIONS: { label: string; from?: number; to?: number }[] = [
 ];
 
 const SORT_OPTIONS: { value: FilmSortBy; label: string }[] = [
-  { value: 'vote_average', label: 'По рейтингу' },
   { value: 'popularity', label: 'По популярности' },
+  { value: 'vote_average', label: 'По рейтингу' },
   { value: 'year', label: 'Сначала новые' },
   { value: 'year_asc', label: 'Сначала старые' },
   { value: 'title', label: 'По алфавиту' },
