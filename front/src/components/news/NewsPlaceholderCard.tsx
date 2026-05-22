@@ -28,7 +28,7 @@ export function NewsPlaceholderCard({
       >
         <p
           className={cn(
-            'text-[10px] sm:text-[11px] uppercase tracking-[0.18em] font-medium mb-2',
+            'text-[0.625rem] sm:text-[0.6875rem] uppercase tracking-[0.18em] font-medium mb-2',
             theme.textLight ? 'text-white/85' : 'text-ink-500/75',
           )}
         >

@@ -26,6 +26,10 @@ async def list_collections(
         Query(description="Фильтр по типу: editorial — редакционные, custom — пользовательские, auto — авто"),
     ] = None,
     only_featured: Annotated[bool, Query(description="Только избранные")] = False,
+    for_entity_id: Annotated[
+        int | None,
+        Query(description="Подборки, в которых есть эта сущность (фильм, персона)"),
+    ] = None,
     lang: Annotated[Literal["ru", "en"], Query()] = "ru",
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
     offset: Annotated[int, Query(ge=0, le=10_000)] = 0,
@@ -39,8 +43,12 @@ async def list_collections(
     """
     service = CollectionsService(db)
     result = await service.list_collections(
-        kind=kind, lang=lang, only_featured=only_featured,
-        limit=limit, offset=offset,
+        kind=kind,
+        lang=lang,
+        only_featured=only_featured,
+        for_entity_id=for_entity_id,
+        limit=limit,
+        offset=offset,
     )
     return CollectionsListResponse(**result)
 

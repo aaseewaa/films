@@ -9,20 +9,23 @@ import {
   themeForSlug,
 } from '@/lib/articleMosaic';
 import { paragraphToNodes, splitArticleParagraphs } from '@/lib/articleBody';
+import { PageContent } from '@/components/layout/PageContent';
+import { useSiteLang } from '@/lib/siteLang';
 import { cn } from '@/lib/utils';
 
 export function ArticlePage() {
+  const lang = useSiteLang();
   const { slug } = useParams<{ slug: string }>();
 
   const { data: article, isLoading, error } = useQuery({
-    queryKey: ['article', slug],
-    queryFn: () => getArticleBySlug(slug!, 'ru'),
+    queryKey: ['article', slug, lang],
+    queryFn: () => getArticleBySlug(slug!),
     enabled: !!slug,
   });
 
   if (isLoading) {
     return (
-      <div className="min-h-[50vh] flex items-center justify-center text-ink-50 bg-white">
+      <div className="min-h-[50vh] flex items-center justify-center text-ink-50 bg-site-bg">
         Загружаем статью…
       </div>
     );
@@ -30,12 +33,12 @@ export function ArticlePage() {
 
   if (error || !article) {
     return (
-      <div className="max-w-page mx-auto px-6 py-24 text-center text-ink-50 bg-white">
+      <PageContent className="py-24 text-center text-ink-50 bg-site-bg">
         Статья не найдена
         <Link to="/articles" className="block mt-4 text-wine-500 hover:underline">
           ← К журналу
         </Link>
-      </div>
+      </PageContent>
     );
   }
 
@@ -51,26 +54,26 @@ export function ArticlePage() {
   const frameBg = lightenFrame(theme.bg);
 
   return (
-    <div className="bg-white min-h-screen">
-      <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-8 sm:pt-12 pb-20 sm:pb-28 text-center">
-        <p className="text-left text-sm text-ink-50 mb-10 sm:mb-14">
+    <div className="bg-site-bg min-h-screen">
+      <PageContent className="pt-8 sm:pt-12 pb-20 sm:pb-28 text-center">
+        <p className="text-left text-base text-ink-50 mb-10 sm:mb-14">
           <Link to="/articles" className="hover:text-ink-300 transition-colors">
             ← Журнал
           </Link>
         </p>
 
-        <header className="mb-10 sm:mb-14">
-          <p className="font-sans text-[11px] sm:text-xs uppercase tracking-[0.22em] text-ink-50 mb-5">
+        <header className="mb-10 sm:mb-14 -mx-[max(1.25rem,6vw)] px-[max(1.25rem,6vw)]">
+          <p className="font-sans text-base sm:text-lg uppercase tracking-[0.22em] text-ink-50 mb-5">
             {typeLabel}
           </p>
-          <h1 className="font-sans text-3xl sm:text-4xl lg:text-[2.75rem] font-bold leading-snug text-ink-400 max-w-[min(100%,56rem)] mx-auto">
+          <h1 className="font-sans text-6xl sm:text-[4.5rem] lg:text-[5.5rem] font-bold leading-snug text-ink-400 w-full max-w-[min(100%,112rem)] mx-auto text-balance">
             {article.title}
           </h1>
-          <p className="font-sans text-lg sm:text-xl text-ink-300 mt-8 sm:mt-10">
+          <p className="font-sans text-2xl sm:text-[1.875rem] text-ink-300 mt-8 sm:mt-10">
             Автор: {author}
           </p>
           {dateStr && (
-            <p className="font-mono text-sm sm:text-base text-ink-50 mt-3 tracking-wide">
+            <p className="font-mono text-lg sm:text-xl text-ink-50 mt-3 tracking-wide">
               {dateStr}
             </p>
           )}
@@ -97,15 +100,24 @@ export function ArticlePage() {
 
         <article className="text-left w-full max-w-none mx-auto">
           {article.summary && (
-            <p className="font-serif text-xl sm:text-2xl text-ink-300 leading-relaxed mb-12 sm:mb-14 text-center">
-              {article.summary}
+            <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-ink-300 leading-relaxed mb-12 sm:mb-14 text-center">
+              {paragraphToNodes(article.summary, {
+                relatedEntities: article.related_entities,
+                articleSlug: article.slug,
+              })}
             </p>
           )}
 
           <div className="text-center sm:text-left space-y-8 sm:space-y-9">
             {paragraphs.map((para, idx) => (
-              <p key={idx} className="font-serif text-xl sm:text-[1.35rem] lg:text-[1.5rem] leading-[1.85] text-ink-300">
-                {paragraphToNodes(para)}
+              <p
+                key={idx}
+                className="font-serif text-2xl sm:text-[2rem] lg:text-[2.25rem] leading-[1.78] text-ink-300"
+              >
+                {paragraphToNodes(para, {
+                  relatedEntities: article.related_entities,
+                  articleSlug: article.slug,
+                })}
               </p>
             ))}
           </div>
@@ -132,7 +144,7 @@ export function ArticlePage() {
             className={cn(
               'inline-flex items-center justify-center px-8 py-3.5',
               'bg-ink-500 text-white text-sm font-medium uppercase tracking-wider',
-              'hover:bg-ink-300 transition-colors',
+              'hover:bg-site-hover transition-colors',
             )}
           >
             К журналу
@@ -144,7 +156,7 @@ export function ArticlePage() {
             На главную
           </Link>
         </footer>
-      </div>
+      </PageContent>
     </div>
   );
 }

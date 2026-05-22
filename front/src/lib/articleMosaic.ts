@@ -1,4 +1,5 @@
 import type { ArticleSummary } from '@/api/types';
+import { plateColorForIndex } from '@/lib/sitePalette';
 
 export type ArticleCardVariant = 'stack' | 'overlay' | 'compact';
 
@@ -12,80 +13,65 @@ export interface ArticleTheme {
   authorName?: string;
 }
 
-/** Порядок и палитра карточек журнала (статьи из БД) */
-const THEMES: ArticleTheme[] = [
+/** Порядок и раскладка карточек журнала (статьи из БД) */
+const THEMES: Omit<ArticleTheme, 'bg' | 'textLight'>[] = [
   {
     slug: 'kino-poslednih-5-let-upadnichestvo',
-    bg: '#2D2926',
-    textLight: true,
     colSpan: 2,
     variant: 'stack',
     authorName: 'Редакция FilmCine',
   },
   {
     slug: 'secs-v-bolshom-gorode-pochemu-aktualen',
-    bg: '#9BB0A5',
-    textLight: false,
     colSpan: 1,
     variant: 'stack',
   },
   {
     slug: 'kino-povernutoe-na-bok',
-    bg: '#3E54A3',
-    textLight: true,
-    colSpan: 1,
-    variant: 'compact',
-  },
-  {
-    slug: 'kino-eto-iskusstvo',
-    bg: '#C4D67E',
-    textLight: false,
     colSpan: 1,
     variant: 'compact',
   },
   {
     slug: 'klan-koppola',
-    bg: '#D1DCE2',
-    textLight: false,
-    colSpan: 2,
+    colSpan: 1,
     variant: 'stack',
   },
   {
     slug: 'novye-lica-golivuda',
-    bg: '#2D2926',
-    textLight: true,
     colSpan: 1,
     variant: 'overlay',
   },
   {
+    slug: 'kino-eto-iskusstvo',
+    colSpan: 2,
+    variant: 'compact',
+  },
+  {
     slug: 'ave-mariya-toska-po-horoshemu-koncu',
-    bg: '#9BB0A5',
-    textLight: false,
     colSpan: 1,
     variant: 'stack',
   },
   {
     slug: 'marvel-fastfud-ili-iskusstvo',
-    bg: '#3E54A3',
-    textLight: true,
     colSpan: 1,
     variant: 'compact',
   },
   {
     slug: 'elena-prekrasnaya-tsvet-kozhi',
-    bg: '#C4D67E',
-    textLight: false,
     colSpan: 1,
     variant: 'compact',
   },
   {
     slug: 'kanny-bez-illyuziy',
-    bg: '#D1DCE2',
-    textLight: false,
     colSpan: 1,
     variant: 'overlay',
   },
 ];
+
+const THEMES_WITH_COLORS: ArticleTheme[] = THEMES.map((theme, index) => {
+  const { bg, textLight } = plateColorForIndex(index);
+  return { ...theme, bg, textLight };
+});
 
 const TYPE_LABELS: Record<string, string> = {
   essay: 'Эссе',
@@ -124,15 +110,17 @@ export function resolveImage(article: ArticleSummary): string | null {
 }
 
 export function themeForSlug(slug: string): ArticleTheme {
-  return (
-    THEMES.find((t) => t.slug === slug) ?? {
-      slug,
-      bg: '#D1DCE2',
-      textLight: false,
-      colSpan: 1,
-      variant: 'stack',
-    }
-  );
+  const found = THEMES_WITH_COLORS.find((t) => t.slug === slug);
+  if (found) return found;
+
+  const { bg, textLight } = plateColorForIndex(slug.length);
+  return {
+    slug,
+    bg,
+    textLight,
+    colSpan: 1,
+    variant: 'stack',
+  };
 }
 
 export function authorForArticle(
@@ -152,7 +140,7 @@ export function orderArticlesForJournal(items: ArticleSummary[]): ArticleSummary
   const ordered: ArticleSummary[] = [];
   const used = new Set<number>();
 
-  for (const t of THEMES) {
+  for (const t of THEMES_WITH_COLORS) {
     const a = bySlug.get(t.slug);
     if (a) {
       ordered.push(a);

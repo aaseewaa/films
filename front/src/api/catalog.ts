@@ -6,8 +6,11 @@ import type {
   PaginatedResponse,
 } from './types';
 
+export type FilmCatalogType = 'films' | 'animation';
+
 export interface ListFilmsParams {
   lang?: 'ru' | 'en';
+  catalog?: FilmCatalogType;
   genre?: string;
   country?: string;
   year_from?: number;
@@ -27,18 +30,12 @@ export async function listFilms(
   return data;
 }
 
-export async function listGenres(lang: 'ru' | 'en' = 'ru'): Promise<GenreItem[]> {
-  const { data } = await apiClient.get<GenreItem[]>('/api/genres', {
-    params: { lang },
-  });
+export async function listGenres(): Promise<GenreItem[]> {
+  const { data } = await apiClient.get<GenreItem[]>('/api/genres');
   return data;
 }
 
-export async function listProductionCountries(
-  lang: 'ru' | 'en' = 'ru',
-): Promise<GenreItem[]> {
-  const { data } = await apiClient.get<GenreItem[]>('/api/production-countries', {
-    params: { lang },
-  });
+export async function listProductionCountries(): Promise<GenreItem[]> {
+  const { data } = await apiClient.get<GenreItem[]>('/api/production-countries');
   return data;
 }

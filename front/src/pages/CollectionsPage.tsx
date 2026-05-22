@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { listCollections } from '@/api/collections';
+import { useSiteLang } from '@/lib/siteLang';
 import type { CollectionSummary } from '@/api/types';
 import { CollectionCatalogCard } from '@/components/collections/CollectionCatalogCard';
+import { PageContent } from '@/components/layout/PageContent';
 import { CollectionCatalogSidebar } from '@/components/collections/CollectionCatalogSidebar';
 import {
   COLLECTION_TOPICS,
@@ -39,6 +41,7 @@ function filterAndSort(
 }
 
 export function CollectionsPage() {
+  const lang = useSiteLang();
   const [topicId, setTopicId] = useState('all');
   const [sort, setSort] = useState<CollectionSort>('popular');
 
@@ -46,11 +49,10 @@ export function CollectionsPage() {
   const featuredOnly = topic?.featuredOnly ?? false;
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['collections', 'editorial', featuredOnly],
+    queryKey: ['collections', 'editorial', featuredOnly, lang],
     queryFn: () =>
       listCollections({
         kind: 'editorial',
-        lang: 'ru',
         only_featured: featuredOnly,
         limit: 50,
       }),
@@ -62,10 +64,10 @@ export function CollectionsPage() {
   }, [data?.items, topicId, sort]);
 
   return (
-    <div className="bg-white min-h-[calc(100vh-4.75rem)] lg:min-h-[calc(100vh-5rem)]">
-      <div className="max-w-page w-full mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12">
+    <div className="bg-site-bg min-h-[calc(100vh-5.75rem)] sm:min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-6.5rem)]">
+      <PageContent className="py-8 sm:py-12">
         <header className="mb-8 lg:mb-10">
-          <h1 className="text-2xl sm:text-3xl font-bold text-ink-500 uppercase tracking-wide">
+          <h1 className="text-4xl sm:text-5xl font-bold text-ink-500 uppercase tracking-wide">
             Коллекции
           </h1>
         </header>
@@ -79,9 +81,9 @@ export function CollectionsPage() {
           />
         </div>
 
-        <div className="flex gap-10 xl:gap-16">
+        <div className="flex gap-6 lg:gap-8 xl:gap-10">
           <CollectionCatalogSidebar
-            className="hidden lg:flex w-[220px] xl:w-[260px] shrink-0"
+            className="hidden lg:flex w-[280px] xl:w-[320px] shrink-0"
             topicId={topicId}
             sort={sort}
             onTopicChange={setTopicId}
@@ -110,7 +112,7 @@ export function CollectionsPage() {
             ))}
           </section>
         </div>
-      </div>
+      </PageContent>
     </div>
   );
 }

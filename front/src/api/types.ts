@@ -72,6 +72,21 @@ export interface FilmShort {
   summary?: string | null;
 }
 
+/** Карточка фильма в фильмографии персоны (ответ /api/entity/{id}). */
+export interface PersonFilmographyItem {
+  id: number;
+  title: string;
+  original_title?: string | null;
+  release_year?: number | null;
+  images: ImageURLs;
+  role_type?: string | null;
+  media_kind?: string | null;
+  genres?: string[];
+  country?: string | null;
+  director?: string | null;
+  actors?: string[];
+}
+
 export interface PersonShort {
   entity_id: number;
   entity_type: 'person';
@@ -95,6 +110,10 @@ export interface PersonRef {
   role_type?: string | null;
   character_name?: string | null;
   billing_order?: number | null;
+  title_en?: string | null;
+  directed_count?: number | null;
+  acted_count?: number | null;
+  series_count?: number | null;
 }
 
 export interface FilmDetail {
@@ -119,6 +138,20 @@ export interface FilmDetail {
   external_ids?: Record<string, string>;
 }
 
+export interface PersonAwardItem {
+  status: 'won' | 'nominated';
+  year: number;
+  award_name: string;
+  category_name?: string | null;
+  film_title?: string | null;
+}
+
+export interface PersonAwardsBlock {
+  wins_count: number;
+  nominations_count: number;
+  items: PersonAwardItem[];
+}
+
 export interface EntityDetail {
   id: number;
   entity_type: EntityType;
@@ -134,12 +167,21 @@ export interface EntityDetail {
   rating_external?: number | null;
 
   // Поля персоны
+  title_en?: string | null;
   is_director?: boolean;
   is_actor?: boolean;
+  birth_date?: string | null;
+  death_date?: string | null;
+  birth_place?: string | null;
+  primary_profession?: string | null;
   birth_year?: number | null;
+  directed_count?: number | null;
+  acted_count?: number | null;
+  series_count?: number | null;
+  crew_roles?: string[] | null;
 
   // Связанные сущности (если есть)
-  filmography?: FilmShort[];
+  filmography?: PersonFilmographyItem[];
   crew?: PersonShort[];
   genres?: string[];
   keywords?: string[];
@@ -147,6 +189,8 @@ export interface EntityDetail {
   // Граф (только для персон)
   influenced_by?: PersonShort[];
   influenced?: PersonShort[];
+
+  awards?: PersonAwardsBlock | null;
 }
 
 // ─── Рекомендации ────────────────────────────────
@@ -195,6 +239,7 @@ export interface CollectionSummary {
 
 export interface CollectionDetail extends CollectionSummary {
   description?: string | null;
+  directors?: PersonRef[];
   items: CollectionItem[];
 }
 

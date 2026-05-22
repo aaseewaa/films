@@ -97,3 +97,49 @@ class HistoryResponse(BaseModel):
     """Универсальный ответ для истории — поиски ИЛИ просмотры."""
     searches: list[SearchHistoryItem] = []
     views: list[ViewHistoryItem] = []
+
+
+# ─── Профиль / сводка ────────────────────────────────────────────
+
+
+class RatedFilmItem(BaseModel):
+    """Оценённый фильм с данными сущности."""
+    entity_id: int
+    entity_type: str
+    title: str
+    images: ImageURLs = ImageURLs()
+    release_year: int | None = None
+    rating: int
+    would_recommend: bool | None = None
+    rated_at: datetime
+    updated_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class MyRatingsResponse(BaseModel):
+    items: list[RatedFilmItem]
+    total: int
+    limit: int
+    offset: int
+
+
+class RatingBucket(BaseModel):
+    rating: int = Field(..., ge=1, le=10)
+    count: int = 0
+
+
+class RatingDistributionResponse(BaseModel):
+    """Гистограмма оценок пользователя (1–10)."""
+    buckets: list[RatingBucket]
+    total: int
+    average: float | None = None
+
+
+class ProfileStatsResponse(BaseModel):
+    ratings_count: int = 0
+    favorites_count: int = 0
+    watched_count: int = 0
+    want_to_watch_count: int = 0
+    views_count: int = 0
+    searches_count: int = 0

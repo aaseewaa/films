@@ -24,7 +24,7 @@ router = APIRouter(prefix="/api/entity", tags=["entity"])
 )
 async def get_entity(
     request: Request,
-    entity_id: int,
+    entity_id: int, 
     lang: Annotated[Literal["ru", "en"], Query(description="Язык переводов")] = "ru",
     db: AsyncSession = Depends(get_db),
     current_user: CurrentUser | None = Depends(get_current_user),

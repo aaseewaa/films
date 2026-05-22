@@ -22,3 +22,11 @@ backend/app/cache/
 
 # Логи
 *.log
+
+# Загрузки пользователей (аватары)
+uploads/
+
+# Node / Vite (не коммитить — иначе git зависает)
+node_modules/
+front/.vite/
+front/dist/

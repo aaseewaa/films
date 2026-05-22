@@ -15,10 +15,35 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
+# Фильм упомянут в опубликованной статье или входит в опубликованную подборку.
+FILM_IN_EDITORIAL_SQL = """
+(
+    EXISTS (
+        SELECT 1 FROM article_entity_link ael
+        JOIN entity ea ON ea.id = ael.article_id AND ea.status = 'published'
+        WHERE ael.entity_id = e.id
+    )
+    OR EXISTS (
+        SELECT 1 FROM collection_item ci
+        JOIN entity ec ON ec.id = ci.collection_id AND ec.status = 'published'
+        WHERE ci.entity_id = e.id
+    )
+)
+"""
+
 # Белые списки сортировки — защита от SQL-инъекций.
 # Любые значения вне списка автоматически отбрасываются.
 FILM_SORT_COLUMNS = {
-    "popularity": "(e.extra_metadata->>'popularity')::float DESC NULLS LAST",
+    # По умолчанию: редакционные (статьи/подборки) → не свежие релизы → популярность.
+    "popularity": f"""
+        {FILM_IN_EDITORIAL_SQL} DESC,
+        CASE
+            WHEN f.release_year IS NULL THEN 0
+            WHEN f.release_year >= EXTRACT(YEAR FROM CURRENT_DATE)::int THEN 1
+            ELSE 0
+        END ASC,
+        (e.extra_metadata->>'popularity')::float DESC NULLS LAST
+    """,
     "vote_average": "(e.extra_metadata->>'vote_average')::float DESC NULLS LAST",
     "year": "f.release_year DESC NULLS LAST",
     "year_asc": "f.release_year ASC NULLS LAST",
@@ -30,6 +55,9 @@ PERSON_SORT_COLUMNS = {
     "name": "et.title",
     "birth_year": "EXTRACT(YEAR FROM p.birth_date)",
 }
+
+# TMDB genre 16 — мультфильмы скрыты из основного каталога (status=draft).
+ANIMATION_GENRE_CODE = "tmdb-16"
 
 
 class CatalogService:
@@ -43,6 +71,7 @@ class CatalogService:
         self,
         *,
         lang: str = "ru",
+        catalog: Literal["films", "animation"] = "films",
         genre: str | None = None,
         country: str | None = None,
         year_from: int | None = None,
@@ -56,9 +85,27 @@ class CatalogService:
         # Безопасная сортировка через белый список
         sort_col = FILM_SORT_COLUMNS.get(sort_by, FILM_SORT_COLUMNS["popularity"])
 
+        animation_exists = """
+            EXISTS (
+                SELECT 1 FROM entity_taxonomy ex_anim
+                JOIN taxonomy_term tt_anim ON tt_anim.id = ex_anim.term_id
+                WHERE ex_anim.entity_id = e.id
+                  AND tt_anim.code = :animation_genre
+                  AND tt_anim.term_type = 'genre'
+            )
+        """
+
         # Базовый WHERE одинаков для COUNT и SELECT — выносим в переменную
-        where_parts = ["e.entity_type = 'film'", "e.status = 'published'"]
-        params: dict = {"lang": lang}
+        where_parts = ["e.entity_type = 'film'"]
+        params: dict = {"lang": lang, "animation_genre": ANIMATION_GENRE_CODE}
+
+        if catalog == "animation":
+            where_parts.append(animation_exists)
+            # Мультфильмы могут быть в draft после hide_films_by_genre.
+            where_parts.append("e.status IN ('published', 'draft')")
+        else:
+            where_parts.append("e.status = 'published'")
+            where_parts.append(f"NOT ({animation_exists})")
 
         if year_from is not None:
             where_parts.append("f.release_year >= :year_from")

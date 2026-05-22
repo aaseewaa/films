@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
+import { LocaleSync } from '@/components/layout/LocaleSync';
 import { HomePage } from '@/pages/HomePage';
 import { FilmsPage } from '@/pages/FilmsPage';
 import { FilmPage } from '@/pages/FilmPage';
@@ -22,7 +23,8 @@ import {
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-site-bg">
+      <LocaleSync />
       <Header />
 
       <main className="flex-1">

@@ -29,7 +29,7 @@ export function UserMenu() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setIsOpen((v) => !v)}
-        className="flex items-center gap-2 h-10 px-3 rounded-sm text-ink-300 hover:bg-ink-50/10 transition-colors"
+        className="flex items-center gap-2 h-10 px-3 rounded-sm text-ink-300 hover:bg-site-hover transition-colors"
         aria-label="Меню"
       >
         <Menu size={18} />
@@ -40,7 +40,7 @@ export function UserMenu() {
         <div
           className={cn(
             'absolute right-0 top-full mt-2 w-72',
-            'bg-cream-50 border border-ink-50/15 rounded-sm shadow-lg',
+            'bg-site-bg border border-ink-50/15 rounded-sm shadow-lg',
             'animate-slide-up z-50'
           )}
         >
@@ -89,7 +89,7 @@ export function UserMenu() {
                 </MenuLink>
                 <button
                   onClick={() => { logout(); setIsOpen(false); }}
-                  className="w-full flex items-center gap-3 px-3 py-2 text-sm text-ink-300 hover:bg-ink-50/10 rounded-sm transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2 text-sm text-ink-300 hover:bg-site-hover rounded-sm transition-colors"
                 >
                   <LogOut size={16} />
                   Выйти
@@ -124,7 +124,7 @@ function MenuLink({ to, icon, children, onClick }: MenuLinkProps) {
     <Link
       to={to}
       onClick={onClick}
-      className="flex items-center gap-3 px-3 py-2 text-sm text-ink-300 hover:bg-ink-50/10 rounded-sm transition-colors"
+      className="flex items-center gap-3 px-3 py-2 text-sm text-ink-300 hover:bg-site-hover rounded-sm transition-colors"
     >
       {icon}
       {children}

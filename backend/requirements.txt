@@ -1,6 +1,7 @@
 # ─── FastAPI и сервер ─────────────────────────────────────────────
 fastapi==0.115.6
 uvicorn[standard]==0.34.0
+python-multipart==0.0.20
 
 # ─── База данных ──────────────────────────────────────────────────
 SQLAlchemy[asyncio]==2.0.36
@@ -12,6 +13,7 @@ pydantic-settings==2.7.0
 
 # ─── HTTP-клиент (для TMDB / OMDB / Wikidata) ─────────────────────
 httpx==0.28.1
+deep-translator==1.11.4  # scripts.backfill_person_bios_translate_en_ru
 beautifulsoup4==4.12.3
 lxml==5.3.0
 

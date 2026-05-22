@@ -28,7 +28,7 @@ export function FilmCityAfisha({ entityId, city }: FilmCityAfishaProps) {
   }
 
   return (
-    <aside className="lg:sticky lg:top-40 self-start border border-ink-50/15 bg-cream-50 p-5 sm:p-6 rounded-sm">
+    <aside className="lg:sticky lg:top-40 self-start border border-ink-50/15 bg-site-bg hover:bg-site-hover p-5 sm:p-6 rounded-sm transition-colors">
       <p className="text-xs uppercase tracking-[0.18em] text-ink-50 mb-1">
         Афиша
       </p>

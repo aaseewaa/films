@@ -35,11 +35,17 @@ async def list_films(
     ] = None,
     year_from: Annotated[int | None, Query(ge=1880, le=2100)] = None,
     year_to: Annotated[int | None, Query(ge=1880, le=2100)] = None,
+    catalog: Annotated[
+        Literal["films", "animation"],
+        Query(
+            description="films — без мультфильмов; animation — только анимация (tmdb-16)",
+        ),
+    ] = "films",
     sort_by: Annotated[
         Literal["popularity", "vote_average", "year", "year_asc", "title"],
         Query(
-            description="Сортировка: popularity, vote_average, year (новые), "
-            "year_asc (старые), title (А–Я)",
+            description="Сортировка: popularity (редакционные → популярность, без приоритета "
+            "свежих релизов), vote_average, year (новые), year_asc (старые), title (А–Я)",
         ),
     ] = "popularity",
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
@@ -58,6 +64,7 @@ async def list_films(
     service = CatalogService(db)
     result = await service.list_films(
         lang=lang,
+        catalog=catalog,
         genre=genre,
         country=country,
         year_from=year_from,

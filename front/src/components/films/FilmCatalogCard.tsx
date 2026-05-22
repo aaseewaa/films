@@ -39,9 +39,9 @@ export function FilmCatalogCard({ film }: FilmCatalogCardProps) {
     <article className="border-b border-ink-50/15 last:border-b-0">
       <Link
         to={`/film/${film.id}`}
-        className="flex items-center gap-8 sm:gap-10 lg:gap-12 py-10 sm:py-12 lg:py-14 group"
+        className="catalog-film-row flex items-center gap-8 sm:gap-10 lg:gap-12 py-10 sm:py-12 lg:py-14 group transition-colors"
       >
-        <div className="shrink-0 w-[160px] sm:w-[200px] lg:w-[250px]">
+        <div className="shrink-0 w-[200px] sm:w-[260px] lg:w-[320px]">
           {film.images.primary ? (
             <img
               src={film.images.primary}
@@ -55,7 +55,7 @@ export function FilmCatalogCard({ film }: FilmCatalogCardProps) {
         </div>
 
         <div className="min-w-0 flex-1 flex flex-col justify-center py-2">
-          <h2 className="text-2xl sm:text-[1.65rem] lg:text-[2rem] font-bold text-ink-500 leading-[1.15] mb-3 sm:mb-4 group-hover:text-ink-400 transition-colors">
+          <h2 className="catalog-film-title text-2xl sm:text-[1.65rem] lg:text-[2rem] font-bold text-ink-500 leading-[1.15] mb-3 sm:mb-4 transition-colors">
             {film.title}
           </h2>
 

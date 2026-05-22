@@ -1,137 +1,135 @@
 import type { ArticleSummary } from '@/api/types';
 import { ArticleCard } from '@/components/articles/ArticleCard';
+import { cn } from '@/lib/utils';
 
 interface ArticleJournalGridProps {
   articles: ArticleSummary[];
 }
 
-type JournalRowKind = 'featured-left' | 'featured-right' | 'quarters';
+/** 50% | 25% | 25% */
+const ROW_WIDE_LEFT = 'lg:grid-cols-[2fr_1fr_1fr]';
+/** 25% | 25% | 50% */
+const ROW_WIDE_RIGHT = 'lg:grid-cols-[1fr_1fr_2fr]';
 
-/** Повторяемый цикл: 3 + 3 + 4, как в макете anothergaze */
-const ROW_PATTERN: { count: number; kind: JournalRowKind }[] = [
-  { count: 3, kind: 'featured-left' },
-  { count: 3, kind: 'featured-right' },
-  { count: 4, kind: 'quarters' },
-];
+/** Высота рядов 1–2 (+~12% к базе 52vw/620) */
+const ROW_TALL_MIN_H = 'lg:min-h-[min(58vw,700px)]';
+/** Ряд 3: на 20% ниже tall */
+const ROW_SHORT_MIN_H = 'lg:min-h-[min(46.4vw,560px)]';
 
-function buildJournalRows(articles: ArticleSummary[]) {
-  const rows: { kind: JournalRowKind; items: ArticleSummary[] }[] = [];
+function buildJournalRows(items: ArticleSummary[]): ArticleSummary[][] {
+  const rows: ArticleSummary[][] = [];
   let i = 0;
+
+  const pattern = [3, 3, 4] as const;
   let patternIdx = 0;
 
-  while (i < articles.length) {
-    const { count, kind } = ROW_PATTERN[patternIdx % ROW_PATTERN.length];
-    const items = articles.slice(i, i + count);
-    if (items.length > 0) {
-      rows.push({ kind, items });
-    }
-    i += count;
+  while (i < items.length) {
+    const size = pattern[patternIdx % pattern.length];
+    rows.push(items.slice(i, i + size));
+    i += size;
     patternIdx += 1;
   }
 
   return rows;
 }
 
-/** Сетка журнала: чередование крупных рядов (3) и ряда из четырёх карточек */
-export function ArticleJournalGrid({ articles }: ArticleJournalGridProps) {
-  const rows = buildJournalRows(articles);
+/** Ряд 1: широкая слева, две узкие справа */
+function WideLeftRow({ items }: { items: ArticleSummary[] }) {
+  const [wide, narrowA, narrowB] = items;
 
   return (
-    <div className="flex flex-col gap-[3px] px-[3px]">
-      {rows.map((row, idx) => {
-        if (row.kind === 'featured-left') {
-          return <FeaturedLeftRow key={idx} items={row.items} />;
-        }
-        if (row.kind === 'featured-right') {
-          return <FeaturedRightRow key={idx} items={row.items} />;
-        }
-        return <QuartersRow key={idx} items={row.items} />;
-      })}
+    <div
+      className={cn(
+        'grid grid-cols-1 sm:grid-cols-2 gap-[3px] items-stretch',
+        ROW_WIDE_LEFT,
+        ROW_TALL_MIN_H,
+      )}
+    >
+      {[
+        { article: wide, split: '75-25' as const, className: 'sm:col-span-2 lg:col-span-1' },
+        { article: narrowA, split: '45-55' as const },
+        { article: narrowB, split: '45-55' as const },
+      ].map(
+        ({ article, split, className }, i) =>
+          article && (
+            <ArticleCard
+              key={article.id}
+              article={article}
+              split={split}
+              className={className}
+            />
+          ),
+      )}
     </div>
   );
 }
 
-function FeaturedLeftRow({ items }: { items: ArticleSummary[] }) {
-  const [featured, ...stacked] = items;
+/** Ряд 2: две узкие слева, широкая справа */
+function WideRightRow({ items }: { items: ArticleSummary[] }) {
+  const [narrowA, narrowB, wide] = items;
 
   return (
-    <JournalRow>
-      {featured && (
-        <ArticleCard article={featured} layout="featured" className="lg:col-span-2" />
+    <div
+      className={cn(
+        'grid grid-cols-1 sm:grid-cols-2 gap-[3px] items-stretch',
+        ROW_WIDE_RIGHT,
+        ROW_TALL_MIN_H,
       )}
-      {stacked.length > 0 && (
-        <StackColumn>
-          {stacked.map((article) => (
+    >
+      {[
+        { article: narrowA, split: '45-55' as const },
+        { article: narrowB, split: '45-55' as const },
+        {
+          article: wide,
+          split: '75-25' as const,
+          className: 'sm:col-span-2 lg:col-span-1',
+        },
+      ].map(
+        ({ article, split, className }) =>
+          article && (
             <ArticleCard
               key={article.id}
               article={article}
-              layout="half"
-              className="flex-1 min-h-0"
+              split={split}
+              className={className}
             />
-          ))}
-        </StackColumn>
+          ),
       )}
-    </JournalRow>
+    </div>
   );
 }
 
-function FeaturedRightRow({ items }: { items: ArticleSummary[] }) {
-  const featured = items[items.length - 1];
-  const stacked = items.slice(0, -1);
-
+/** Ряд 3: 4 равные колонки, фото 60% / текст 40% (текст внизу), ниже рядов 1–2 на 20% */
+function QuartetRow({ items }: { items: ArticleSummary[] }) {
   return (
-    <JournalRow>
-      {stacked.length > 0 && (
-        <StackColumn className="order-2 lg:order-1">
-          {stacked.map((article) => (
-            <ArticleCard
-              key={article.id}
-              article={article}
-              layout="half"
-              className="flex-1 min-h-0"
-            />
-          ))}
-        </StackColumn>
+    <div
+      className={cn(
+        'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[3px] items-stretch',
+        ROW_SHORT_MIN_H,
       )}
-      {featured && (
-        <ArticleCard
-          article={featured}
-          layout="featured"
-          className="lg:col-span-2 order-1 lg:order-2"
-        />
-      )}
-    </JournalRow>
-  );
-}
-
-function QuartersRow({ items }: { items: ArticleSummary[] }) {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[3px]">
+    >
       {items.map((article) => (
-        <ArticleCard key={article.id} article={article} layout="quarter" />
+        <ArticleCard key={article.id} article={article} split="60-40" />
       ))}
     </div>
   );
 }
 
-function StackColumn({
-  children,
-  className = '',
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div className={`flex flex-col gap-[3px] lg:col-span-1 min-h-0 ${className}`.trim()}>
-      {children}
-    </div>
-  );
-}
+export function ArticleJournalGrid({ articles }: ArticleJournalGridProps) {
+  const rows = buildJournalRows(articles);
 
-function JournalRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-[3px] lg:items-stretch lg:min-h-[480px]">
-      {children}
+    <div className="flex flex-col gap-[3px] px-[3px]">
+      {rows.map((row, rowIndex) => {
+        const layout = rowIndex % 3;
+        if (layout === 0) {
+          return <WideLeftRow key={rowIndex} items={row} />;
+        }
+        if (layout === 1) {
+          return <WideRightRow key={rowIndex} items={row} />;
+        }
+        return <QuartetRow key={rowIndex} items={row} />;
+      })}
     </div>
   );
 }

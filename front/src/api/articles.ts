@@ -24,12 +24,7 @@ export async function listArticles(
   return data;
 }
 
-export async function getArticleBySlug(
-  slug: string,
-  lang: 'ru' | 'en' = 'ru'
-): Promise<ArticleDetail> {
-  const { data } = await apiClient.get<ArticleDetail>(`/api/article/${slug}`, {
-    params: { lang },
-  });
+export async function getArticleBySlug(slug: string): Promise<ArticleDetail> {
+  const { data } = await apiClient.get<ArticleDetail>(`/api/article/${slug}`);
   return data;
 }

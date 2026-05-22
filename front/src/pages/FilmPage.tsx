@@ -1,21 +1,38 @@
-import { useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect, useRef, useState, type RefObject } from 'react';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getFilm } from '@/api/entity';
 import { getRecommendations } from '@/api/recommendations';
 import type { FilmDetail } from '@/api/types';
-import { FilmRatingBlock } from '@/components/film/FilmRatingBlock';
-import { cn } from '@/lib/utils';
+import { FilmAboutPanel } from '@/components/film/FilmAboutPanel';
+import { FilmRatingSection } from '@/components/film/FilmRatingSection';
+import { FilmCreatorsPanel } from '@/components/film/FilmCreatorsPanel';
+import { FilmCreatorsPreview } from '@/components/film/FilmCreatorsPreview';
+import {
+  FilmArticlesPanel,
+  FilmAwardsPanel,
+  FilmSimilarPanel,
+  FilmStillsPanel,
+} from '@/components/film/FilmSectionPanels';
+import { FilmSubNav, type FilmSectionId } from '@/components/film/FilmSubNav';
+import { PageContent } from '@/components/layout/PageContent';
+import { useTranslation } from '@/hooks/useTranslation';
+import { useSiteLang } from '@/lib/siteLang';
 
-const TABS = [
-  { id: 'about', label: 'О фильме' },
-  { id: 'creators', label: 'Создатели и актёры' },
-  { id: 'stills', label: 'Кадры' },
-  { id: 'articles', label: 'Статьи' },
-  { id: 'more', label: 'Ещё' },
-] as const;
+const VALID_TABS: FilmSectionId[] = [
+  'about',
+  'creators',
+  'stills',
+  'articles',
+  'similar',
+  'awards',
+];
 
-type TabId = (typeof TABS)[number]['id'];
+const SECTION_SCROLL_MT = 'scroll-mt-44';
+
+function isFilmSectionId(v: string | null): v is FilmSectionId {
+  return v != null && VALID_TABS.includes(v as FilmSectionId);
+}
 
 function formatRating(v: unknown): string | null {
   if (v == null || v === '') return null;
@@ -24,46 +41,122 @@ function formatRating(v: unknown): string | null {
   return n.toFixed(1).replace('.', ',');
 }
 
+function mediaKindLabel(
+  film: FilmDetail,
+  labels: { film: string; series: string },
+): string {
+  const kind = film.extra_metadata?.media_type ?? film.extra_metadata?.content_type;
+  if (kind === 'tv' || kind === 'series' || kind === 'сериал') return labels.series;
+  return labels.film;
+}
+
+function aboutTextBlocks(film: FilmDetail): { lead: string | null; body: string | null } {
+  const summary = film.summary?.trim() ?? '';
+  const description = film.description?.trim() ?? '';
+  if (!summary && !description) return { lead: null, body: null };
+  if (!summary) return { lead: null, body: description };
+  if (!description) return { lead: summary, body: null };
+  if (summary === description) return { lead: summary, body: null };
+  if (description.startsWith(summary)) return { lead: null, body: description };
+  return { lead: summary, body: description };
+}
+
 function buildHeroMeta(film: FilmDetail): string {
   const parts: string[] = [];
-  const orig = film.original_title || film.title;
+  const orig = film.original_title?.trim();
   if (orig) parts.push(orig.toUpperCase());
   if (film.release_year) parts.push(String(film.release_year));
-  if (film.genres?.length) {
-    parts.push(film.genres.map((g) => g.name.toUpperCase()).join(', '));
+  const genres = film.genres?.slice(0, 3) ?? [];
+  if (genres.length) {
+    parts.push(genres.map((g) => g.name.toUpperCase()).join(', '));
   }
-  if (film.production_countries) parts.push(film.production_countries.toUpperCase());
+  const country = film.production_countries?.split(',')[0]?.trim();
+  if (country) parts.push(country.toUpperCase());
+  const age = film.age_rating?.trim();
+  if (age) parts.push(age);
   return parts.join(' · ');
 }
 
 export function FilmPage() {
+  const lang = useSiteLang();
+  const tr = useTranslation();
   const { id } = useParams();
   const filmId = id ? parseInt(id, 10) : 0;
-  const [activeTab, setActiveTab] = useState<TabId>('about');
-  const sectionRefs = {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get('tab');
+
+  const [activeSection, setActiveSection] = useState<FilmSectionId>(
+    isFilmSectionId(tabParam) ? tabParam : 'about',
+  );
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  const sectionRefs: Record<FilmSectionId, RefObject<HTMLElement | null>> = {
     about: useRef<HTMLElement>(null),
     creators: useRef<HTMLElement>(null),
     stills: useRef<HTMLElement>(null),
     articles: useRef<HTMLElement>(null),
-    more: useRef<HTMLElement>(null),
+    similar: useRef<HTMLElement>(null),
+    awards: useRef<HTMLElement>(null),
   };
 
   const { data: film, isLoading, error } = useQuery({
-    queryKey: ['film', filmId],
+    queryKey: ['film', filmId, lang],
     queryFn: () => getFilm(filmId),
     enabled: filmId > 0,
   });
 
   const { data: similar } = useQuery({
-    queryKey: ['recommendations', 'film', filmId],
+    queryKey: ['recommendations', 'film', filmId, lang],
     queryFn: () => getRecommendations({ for_film_id: filmId, limit: 8 }),
     enabled: filmId > 0,
   });
 
-  function scrollToTab(tab: TabId) {
-    setActiveTab(tab);
+  function scrollToSection(tab: FilmSectionId) {
+    if (tab === 'about') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
     sectionRefs[tab].current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+
+  function openCreatorsFull() {
+    setActiveSection('creators');
+    setMoreOpen(false);
+    setSearchParams({ tab: 'creators' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function backToFilm() {
+    setActiveSection('about');
+    setSearchParams({});
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function selectTab(tab: FilmSectionId) {
+    setActiveSection(tab);
+    setMoreOpen(false);
+    if (tab === 'about') {
+      setSearchParams({});
+      scrollToSection('about');
+      return;
+    }
+    if (tab === 'creators') {
+      openCreatorsFull();
+      return;
+    }
+    setSearchParams({ tab });
+    scrollToSection(tab);
+  }
+
+  const creatorsFullView = tabParam === 'creators';
+
+  useEffect(() => {
+    if (!film || !isFilmSectionId(tabParam)) return;
+    setActiveSection(tabParam);
+    if (tabParam === 'creators') return;
+    const t = window.setTimeout(() => scrollToSection(tabParam), 80);
+    return () => window.clearTimeout(t);
+  }, [film, tabParam]);
 
   if (isLoading) {
     return (
@@ -75,12 +168,12 @@ export function FilmPage() {
 
   if (error || !film) {
     return (
-      <div className="max-w-page mx-auto px-6 py-24 text-center text-ink-50">
+      <PageContent className="py-24 text-center text-ink-50">
         Фильм не найден
         <Link to="/films" className="block mt-4 text-wine-500 hover:underline">
           ← К каталогу
         </Link>
-      </div>
+      </PageContent>
     );
   }
 
@@ -88,11 +181,19 @@ export function FilmPage() {
     film.backdrop_url || film.images.primary || film.images.thumbnail || null;
   const voteAvg = formatRating(film.extra_metadata?.vote_average);
   const metaLine = buildHeroMeta(film);
+  const aboutText = aboutTextBlocks(film);
+  const kindLabel = mediaKindLabel(film, {
+    film: tr('mediaFilm'),
+    series: tr('mediaSeries'),
+  });
+  const hasCrew = (film.directors?.length ?? 0) > 0 || (film.cast?.length ?? 0) > 0;
+
+  const sectionHeading = 'text-4xl sm:text-6xl font-bold text-ink-500 mb-6 sm:mb-8';
+  const sectionBlock = 'pt-10 sm:pt-12 border-t border-ink-50/15';
 
   return (
-    <div className="bg-white min-h-screen">
-      {/* Хлебные крошки */}
-      <div className="w-full px-5 sm:px-10 lg:px-16 xl:px-20 pt-4 text-sm sm:text-base text-ink-50">
+    <div className="bg-site-bg min-h-screen">
+      <PageContent className="pt-4 pb-2 text-sm sm:text-base text-ink-50">
         <Link to="/" className="hover:text-ink-300">
           Главная
         </Link>
@@ -102,256 +203,131 @@ export function FilmPage() {
         </Link>
         <span className="mx-2">»</span>
         <span className="text-ink-300">{film.title}</span>
-      </div>
+      </PageContent>
 
-      {/* Hero: кадр из backdrop_url */}
-      <section className="relative w-full mt-2 min-h-[min(78vh,720px)] flex items-end overflow-hidden">
-        {heroImage ? (
-          <img
-            src={heroImage}
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+      {!creatorsFullView && (
+      <PageContent className="mt-2">
+        <section className="relative w-full min-h-[min(156vh,1440px)] flex items-end overflow-hidden bg-black">
+          {heroImage ? (
+            <img
+              src={heroImage}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+            />
+          ) : (
+            <div className="absolute inset-0 bg-ink-500" />
+          )}
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10"
+            aria-hidden
           />
-        ) : (
-          <div className="absolute inset-0 bg-ink-500" />
-        )}
-        <div
-          className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/10"
-          aria-hidden
-        />
 
-        <div className="relative z-10 w-full px-5 sm:px-10 lg:px-16 xl:px-20 pb-10 sm:pb-14 lg:pb-16 pt-32 text-center text-white">
-          <h1 className="font-serif text-[2.5rem] sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-3 sm:mb-4">
-            {film.title}
-          </h1>
-          <p className="text-xl sm:text-2xl lg:text-[1.65rem] text-white/90 mb-4 sm:mb-5">
-            (фильм{film.release_year ? `, ${film.release_year}` : ''})
-          </p>
-          {metaLine && (
-            <p className="text-sm sm:text-base lg:text-lg uppercase tracking-[0.14em] text-white/80 max-w-5xl mx-auto mb-5 sm:mb-6 leading-relaxed">
-              {metaLine}
+          <div className="relative z-10 w-full px-2 sm:px-4 pb-24 sm:pb-32 md:pb-40 lg:pb-48 xl:pb-56 pt-28 sm:pt-32 text-center">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.25rem] font-bold leading-[1.08] text-white">
+              {film.title}
+            </h1>
+            <p className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-white mt-2 sm:mt-3 leading-tight">
+              ({kindLabel}
+              {film.release_year ? `, ${film.release_year}` : ''})
             </p>
-          )}
-          {film.summary && (
-            <p className="text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed line-clamp-4 sm:line-clamp-5">
-              {film.summary}
-            </p>
-          )}
-        </div>
-      </section>
-
-      {/* Вкладки — на всю ширину */}
-      <nav className="sticky top-[4.75rem] lg:top-20 z-30 w-full bg-white border-b border-ink-50/15">
-        <div className="w-full px-5 sm:px-10 lg:px-16 xl:px-20 flex gap-8 sm:gap-12 lg:gap-16 xl:gap-20 overflow-x-auto">
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              type="button"
-              onClick={() => scrollToTab(tab.id)}
-              className={cn(
-                'shrink-0 py-5 sm:py-6 text-base sm:text-lg lg:text-xl font-medium border-b-[3px] -mb-px transition-colors whitespace-nowrap',
-                activeTab === tab.id
-                  ? 'border-ink-500 text-ink-500'
-                  : 'border-transparent text-ink-50 hover:text-ink-300',
-              )}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-      </nav>
-
-      <div className="w-full px-5 sm:px-10 lg:px-16 xl:px-20 py-10 sm:py-14 lg:py-16 space-y-20 sm:space-y-24 max-w-[1920px] mx-auto">
-        {/* О фильме */}
-        <section ref={sectionRefs.about} id="about" className="scroll-mt-40">
-          <div className="grid lg:grid-cols-[1fr_280px] gap-10 lg:gap-16 max-w-5xl">
-            <div>
-              <h2 className="text-base sm:text-lg uppercase tracking-wider text-ink-50 mb-4">
-                Оценить фильм
-              </h2>
-              <FilmRatingBlock entityId={film.id} />
-
-              {voteAvg && (
-                <p className="text-2xl font-bold text-ink-500 mb-6">
-                  TMDB: {voteAvg}
-                </p>
-              )}
-
-              {film.description && (
-                <div className="prose-essay text-ink-300 whitespace-pre-line">
-                  {film.description}
-                </div>
-              )}
-            </div>
-
-            <aside className="lg:pt-8">
-              <h3 className="text-sm uppercase tracking-wider text-ink-50 mb-4">
-                Сведения
-              </h3>
-              <dl className="space-y-3 text-base text-ink-300">
-                {film.production_countries && (
-                  <>
-                    <dt className="text-ink-50 text-sm">Страна</dt>
-                    <dd className="mb-2">{film.production_countries}</dd>
-                  </>
-                )}
-                {film.release_year && (
-                  <>
-                    <dt className="text-ink-50 text-sm">Год</dt>
-                    <dd className="mb-2">{film.release_year}</dd>
-                  </>
-                )}
-                {film.genres && film.genres.length > 0 && (
-                  <>
-                    <dt className="text-ink-50 text-sm">Жанр</dt>
-                    <dd className="mb-2">{film.genres.map((g) => g.name).join(', ')}</dd>
-                  </>
-                )}
-                {film.runtime_min != null && (
-                  <>
-                    <dt className="text-ink-50 text-sm">Длительность</dt>
-                    <dd>{film.runtime_min} мин</dd>
-                  </>
-                )}
-              </dl>
-            </aside>
+            {metaLine && (
+              <p className="mt-4 sm:mt-5 text-xs sm:text-sm md:text-base uppercase tracking-[0.12em] sm:tracking-[0.14em] text-white leading-relaxed max-w-5xl mx-auto">
+                {metaLine}
+              </p>
+            )}
           </div>
         </section>
+      </PageContent>
+      )}
 
-        {/* Создатели */}
-        <section ref={sectionRefs.creators} id="creators" className="scroll-mt-40">
-          <h2 className="text-2xl font-bold text-ink-500 mb-8">Создатели и актёры</h2>
+      {creatorsFullView && (
+        <PageContent className="pt-6 sm:pt-8 pb-2">
+          <button
+            type="button"
+            onClick={backToFilm}
+            className="text-lg sm:text-xl lg:text-2xl text-ink-50 hover:text-ink-500 transition-colors"
+          >
+            ← К фильму «{film.title}»
+          </button>
+        </PageContent>
+      )}
 
-          {film.directors && film.directors.length > 0 && (
-            <div className="mb-10">
-              <h3 className="text-sm uppercase tracking-wider text-ink-50 mb-4">
-                Режиссёр
-              </h3>
-              <div className="flex flex-wrap gap-6">
-                {film.directors.map((d) => (
-                  <PersonChip key={d.id} person={d} />
-                ))}
-              </div>
-            </div>
-          )}
+      <FilmSubNav
+        entityId={film.id}
+        active={activeSection}
+        moreOpen={moreOpen}
+        onTab={selectTab}
+        onMoreToggle={() => setMoreOpen((v) => !v)}
+        onMoreClose={() => setMoreOpen(false)}
+      />
 
-          {film.cast && film.cast.length > 0 && (
-            <div>
-              <h3 className="text-sm uppercase tracking-wider text-ink-50 mb-4">
-                В ролях
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-                {film.cast.map((p) => (
-                  <PersonChip key={p.id} person={p} showRole />
-                ))}
-              </div>
-            </div>
-          )}
-        </section>
+      <PageContent className="film-page-body py-10 sm:py-14 lg:py-16 space-y-0">
+        {creatorsFullView && hasCrew ? (
+          <FilmCreatorsPanel film={film} metaLine={metaLine} />
+        ) : (
+          <>
+            <section
+              ref={sectionRefs.about}
+              id="about"
+              className={SECTION_SCROLL_MT}
+            >
+              <h2 className={sectionHeading}>О фильме</h2>
+              <FilmAboutPanel film={film} aboutText={aboutText} />
+              <FilmRatingSection entityId={film.id} voteAvg={voteAvg} />
+            </section>
 
-        {/* Кадры */}
-        <section ref={sectionRefs.stills} id="stills" className="scroll-mt-40">
-          <h2 className="text-2xl font-bold text-ink-500 mb-8">Кадры</h2>
-          {film.stills_urls && film.stills_urls.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-              {film.stills_urls.map((url, i) => (
-                <a
-                  key={url}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="block aspect-video overflow-hidden bg-cream-200 hover:opacity-90 transition-opacity"
-                >
-                  <img
-                    src={url}
-                    alt={`Кадр ${i + 1}`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
-          ) : (
-            <p className="text-ink-50">
-              Кадры ещё не загружены. Запустите{' '}
-              <code className="text-xs bg-cream-200 px-1">load_tmdb_images</code> на бэке.
-            </p>
-          )}
-        </section>
+            {hasCrew && (
+              <section
+                ref={sectionRefs.creators}
+                id="creators"
+                className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
+              >
+                <FilmCreatorsPreview
+                  directors={film.directors ?? []}
+                  cast={film.cast ?? []}
+                  onOpenAll={openCreatorsFull}
+                />
+              </section>
+            )}
 
-        {/* Статьи */}
-        <section ref={sectionRefs.articles} id="articles" className="scroll-mt-40">
-          <h2 className="text-2xl font-bold text-ink-500 mb-4">Статьи</h2>
-          <p className="text-ink-50">
-            <Link to="/articles" className="text-wine-500 hover:underline">
-              Журнал
-            </Link>{' '}
-            — скоро материалы об этом фильме.
-          </p>
-        </section>
+            <section
+              ref={sectionRefs.stills}
+              id="stills"
+              className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
+            >
+              <h2 className={sectionHeading}>Кадры</h2>
+              <FilmStillsPanel film={film} />
+            </section>
 
-        {/* Ещё */}
-        <section ref={sectionRefs.more} id="more" className="scroll-mt-40">
-          <h2 className="text-2xl font-bold text-ink-500 mb-8">Похожие фильмы</h2>
-          {similar && similar.items.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-              {similar.items.map((item) => (
-                <Link
-                  key={item.entity_id}
-                  to={`/film/${item.entity_id}`}
-                  className="group"
-                >
-                  {item.images.primary ? (
-                    <img
-                      src={item.images.primary}
-                      alt={item.title}
-                      className="w-full aspect-[2/3] object-cover group-hover:opacity-85 transition-opacity"
-                    />
-                  ) : (
-                    <div className="aspect-[2/3] bg-cream-300" />
-                  )}
-                  <p className="mt-2 text-sm font-medium text-ink-400 line-clamp-2 group-hover:text-ink-500">
-                    {item.title}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="text-ink-50">Пока нет рекомендаций.</p>
-          )}
-        </section>
-      </div>
+            <section
+              ref={sectionRefs.articles}
+              id="articles"
+              className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
+            >
+              <h2 className={sectionHeading}>Статьи</h2>
+              <FilmArticlesPanel />
+            </section>
+
+            <section
+              ref={sectionRefs.similar}
+              id="similar"
+              className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
+            >
+              <h2 className={sectionHeading}>Похожие фильмы</h2>
+              <FilmSimilarPanel items={similar?.items ?? []} />
+            </section>
+
+            <section
+              ref={sectionRefs.awards}
+              id="awards"
+              className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
+            >
+              <h2 className={sectionHeading}>Награды</h2>
+              <FilmAwardsPanel />
+            </section>
+          </>
+        )}
+      </PageContent>
     </div>
-  );
-}
-
-function PersonChip({
-  person,
-  showRole,
-}: {
-  person: { id: number; title: string; images: { primary?: string | null }; character_name?: string | null };
-  showRole?: boolean;
-}) {
-  return (
-    <Link
-      to={`/director/${person.id}`}
-      className="flex flex-col items-center text-center group max-w-[120px]"
-    >
-      {person.images.primary ? (
-        <img
-          src={person.images.primary}
-          alt={person.title}
-          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mb-2 group-hover:opacity-90"
-        />
-      ) : (
-        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-cream-300 mb-2" />
-      )}
-      <span className="text-sm font-medium text-ink-400 group-hover:text-ink-500 leading-snug">
-        {person.title}
-      </span>
-      {showRole && person.character_name && (
-        <span className="text-xs text-ink-50 mt-0.5 line-clamp-2">{person.character_name}</span>
-      )}
-    </Link>
   );
 }

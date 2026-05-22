@@ -1,7 +1,10 @@
 """
 Авторизация: регистрация, логин, профиль, смена пароля.
 """
-from fastapi import APIRouter, Depends, HTTPException, status
+from pathlib import Path
+import uuid
+
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.deps import CurrentUser, require_user
@@ -15,7 +18,16 @@ from app.schemas.auth import (
     UpdateProfileRequest,
     UserMe,
 )
+from app.config import settings
 from app.services.auth_service import AuthError, AuthService
+
+ALLOWED_AVATAR_TYPES = {"image/jpeg", "image/png", "image/webp", "image/gif"}
+AVATAR_EXT = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+    "image/gif": ".gif",
+}
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -109,6 +121,50 @@ async def update_me(
         )
     except AuthError as exc:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(exc))
+    return UserMe(**updated)
+
+
+@router.post(
+    "/me/avatar",
+    response_model=UserMe,
+    summary="Загрузить аватар с компьютера",
+)
+async def upload_avatar(
+    file: UploadFile = File(...),
+    user: CurrentUser = Depends(require_user),
+    db: AsyncSession = Depends(get_db),
+) -> UserMe:
+    """Принимает JPEG/PNG/WebP/GIF до 2 MB, сохраняет в uploads/avatars/."""
+    if file.content_type not in ALLOWED_AVATAR_TYPES:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Допустимы только JPEG, PNG, WebP или GIF",
+        )
+
+    raw = await file.read()
+    if not raw:
+        raise HTTPException(status_code=400, detail="Пустой файл")
+    if len(raw) > settings.avatar_max_bytes:
+        raise HTTPException(status_code=400, detail="Файл больше 2 MB")
+
+    ext = AVATAR_EXT[file.content_type]
+    avatars_dir = Path(settings.uploads_dir) / "avatars"
+    avatars_dir.mkdir(parents=True, exist_ok=True)
+
+    for old in avatars_dir.glob(f"user_{user.id}.*"):
+        old.unlink(missing_ok=True)
+
+    filename = f"user_{user.id}_{uuid.uuid4().hex[:8]}{ext}"
+    dest = avatars_dir / filename
+    dest.write_bytes(raw)
+
+    avatar_url = f"/uploads/avatars/{filename}"
+    service = AuthService(db)
+    try:
+        updated = await service.update_profile(user.id, avatar_url=avatar_url)
+    except AuthError as exc:
+        dest.unlink(missing_ok=True)
+        raise HTTPException(status_code=400, detail=str(exc))
     return UserMe(**updated)
 
 

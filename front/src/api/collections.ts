@@ -8,6 +8,7 @@ import type {
 export interface ListCollectionsParams {
   kind?: 'editorial' | 'custom' | 'auto';
   only_featured?: boolean;
+  for_entity_id?: number;
   lang?: 'ru' | 'en';
   limit?: number;
   offset?: number;
@@ -23,13 +24,9 @@ export async function listCollections(
   return data;
 }
 
-export async function getCollection(
-  collectionId: number,
-  lang: 'ru' | 'en' = 'ru'
-): Promise<CollectionDetail> {
+export async function getCollection(collectionId: number): Promise<CollectionDetail> {
   const { data } = await apiClient.get<CollectionDetail>(
     `/api/collection/${collectionId}`,
-    { params: { lang } }
   );
   return data;
 }

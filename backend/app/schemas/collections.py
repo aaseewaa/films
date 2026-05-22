@@ -13,6 +13,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.schemas.common import ImageURLs
+from app.schemas.entity import PersonRef
 
 
 class CollectionItem(BaseModel):
@@ -53,6 +54,7 @@ class CollectionDetail(BaseModel):
     cover_image: str | None = None
     items_count: int = 0
     tags: list[str] = Field(default_factory=list)
+    directors: list[PersonRef] = Field(default_factory=list)
     items: list[CollectionItem]
 
     model_config = ConfigDict(from_attributes=True)

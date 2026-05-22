@@ -29,15 +29,18 @@ function FilterSelect({
   return (
     <label
       className={cn(
-        'relative flex items-center h-11 w-full pl-4 pr-10 rounded-full border border-ink-50/20',
-        'bg-white text-sm font-medium text-ink-400 cursor-pointer hover:border-ink-50/35',
+        'group relative flex items-center h-14 sm:h-[3.75rem] w-full pl-6 pr-12 rounded-full border border-ink-50/20',
+        'bg-site-bg text-lg sm:text-xl font-medium text-ink-400 cursor-pointer transition-colors duration-150',
+        'hover:border-tiffany hover:bg-[rgba(10,186,181,0.16)]',
+        'focus-within:border-tiffany focus-within:bg-[rgba(10,186,181,0.24)]',
+        'active:border-tiffany active:bg-[rgba(10,186,181,0.24)]',
       )}
     >
       <span className="sr-only">{label}</span>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="appearance-none bg-transparent outline-none w-full cursor-pointer truncate"
+        className="appearance-none bg-transparent outline-none w-full cursor-pointer truncate text-inherit"
         aria-label={label}
       >
         {options.map((o) => (
@@ -47,8 +50,11 @@ function FilterSelect({
         ))}
       </select>
       <ChevronDown
-        size={16}
-        className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-ink-50"
+        size={22}
+        className={cn(
+          'absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-ink-50 transition-colors',
+          'group-hover:text-tiffany group-focus-within:text-tiffany',
+        )}
       />
     </label>
   );
@@ -62,7 +68,7 @@ export function CollectionCatalogSidebar({
   className,
 }: CollectionCatalogSidebarProps) {
   return (
-    <aside className={cn('flex flex-col gap-8', className)}>
+    <aside className={cn('flex flex-col gap-10', className)}>
       <div className="space-y-3">
         <FilterSelect
           label="Сортировка"
@@ -76,20 +82,20 @@ export function CollectionCatalogSidebar({
       </div>
 
       <div>
-        <h2 className="text-sm font-bold text-ink-500 uppercase tracking-wide mb-4">
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-ink-500 uppercase tracking-wide mb-6 pl-2">
           Быстрый поиск по темам
         </h2>
-        <nav className="flex flex-col gap-0.5 max-h-[420px] overflow-y-auto pr-2">
+        <nav className="flex flex-col gap-1.5 max-h-[520px] overflow-y-auto pr-2 pl-5 sm:pl-7">
           {COLLECTION_TOPICS.map((topic: CollectionTopic) => (
             <button
               key={topic.id}
               type="button"
               onClick={() => onTopicChange(topic.id)}
               className={cn(
-                'text-left text-base py-2.5 px-1 transition-colors',
+                'text-left text-xl sm:text-2xl py-3.5 pr-2 transition-colors leading-snug',
                 topicId === topic.id
-                  ? 'font-bold text-ink-500'
-                  : 'text-ink-50 hover:text-ink-300',
+                  ? 'font-bold text-tiffany'
+                  : 'text-ink-50 hover:text-tiffany',
               )}
             >
               {topic.label}

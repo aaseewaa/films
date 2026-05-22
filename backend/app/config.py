@@ -53,6 +53,10 @@ class Settings(BaseSettings):
     jwt_algorithm: str = "HS256"
     jwt_expire_minutes: int = 60 * 24 * 7  # неделя
 
+    # ─── Загрузки (аватары) ─────────────────────────────────────
+    uploads_dir: str = "uploads"
+    avatar_max_bytes: int = 2 * 1024 * 1024  # 2 MB
+
     # ─── Удобные свойства ─────────────────────────────────────────
     @property
     def supported_languages_list(self) -> list[str]:

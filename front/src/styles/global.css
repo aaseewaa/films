@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Логотип FMW — Pluffy Loon Outline Shadow */
+@font-face {
+  font-family: 'Pluffy Loon Outline Shadow';
+  src: url('/fonts/pluffy-loon-outline-shadow.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ─── База ──────────────────────────────────────── */
 @layer base {
   html {
@@ -9,10 +18,10 @@
   }
 
   body {
-    @apply bg-cream-100 font-sans;
-    /* Тонкая бумажная текстура — едва заметная */
+    @apply bg-site-bg font-sans;
+    /* Тонкая текстура — едва заметная на Alice Blue */
     background-image:
-      radial-gradient(circle at 1px 1px, rgba(52, 51, 45, 0.02) 1px, transparent 0);
+      radial-gradient(circle at 1px 1px, rgba(66, 47, 51, 0.03) 1px, transparent 0);
     background-size: 24px 24px;
   }
 
@@ -38,6 +47,24 @@
   .prose-essay strong {
     @apply text-ink-400 font-semibold;
   }
+
+  /* Текст «О фильме» — уже колонки «Сведения», без max-w-reading */
+  .film-page-body .film-about-text-col .prose-essay-film {
+    @apply max-w-none text-2xl sm:text-[1.75rem] leading-relaxed text-ink-300;
+  }
+
+  .film-page-body .prose-essay-film p {
+    @apply mb-8;
+  }
+
+  /* Биография персоны — крупнее обычного эссе */
+  .prose-essay-person {
+    @apply max-w-none text-xl sm:text-2xl lg:text-3xl leading-relaxed text-ink-300 text-left;
+  }
+
+  .prose-essay-person p {
+    @apply mb-0;
+  }
 }
 
 /* ─── Утилиты ───────────────────────────────────── */
@@ -49,11 +76,111 @@
 
   /* Карточка с минимальным оформлением */
   .card-paper {
-    @apply bg-cream-50 border border-ink-50/10 rounded-sm;
+    @apply bg-site-bg border border-ink-50/10 rounded-sm;
   }
 
-  /* Только для страницы графа: тёмный фон */
+  /* Интерактивные плашки: hover #97D2FB */
+  .surface-interactive {
+    @apply bg-site-bg transition-colors duration-150;
+  }
+
+  .surface-interactive:hover {
+    background-color: #97d2fb;
+  }
+
+  /* Логотип в шапке — Pluffy, Tiffany, плотный кернинг */
+  .logo-fmw,
+  a:hover .logo-fmw {
+    font-family: 'Pluffy Loon Outline Shadow', system-ui, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    color: #0abab5;
+    -webkit-text-fill-color: #0abab5;
+  }
+
+  /* Страница графа — светлый фон палитры */
   .theme-dark {
     @apply bg-graph-bg text-graph-text;
+  }
+
+  /* Каталог: Tiffany #0ABAB5 — как логотип, тёмный текст */
+  .catalog-pill {
+    @apply bg-site-bg border border-ink-50/20 text-ink-400 transition-colors duration-150;
+  }
+
+  .catalog-pill:hover {
+    background-color: rgba(10, 186, 181, 0.16);
+    border-color: #0abab5;
+    color: #0abab5;
+  }
+
+  .catalog-pill.is-active {
+    background-color: rgba(10, 186, 181, 0.24);
+    border-color: #0abab5;
+    color: #0abab5;
+  }
+
+  .catalog-pill.is-active:hover {
+    background-color: rgba(10, 186, 181, 0.3);
+    color: #0abab5;
+  }
+
+  /* Поиск: активный фильтр — Tiffany как логотип, текст остаётся тёмным */
+  .search-filter-chip-active {
+    background-color: rgba(10, 186, 181, 0.24);
+    border-color: #0abab5;
+    color: #0f0f0d;
+  }
+
+  .search-filter-chip-active:hover {
+    background-color: rgba(10, 186, 181, 0.3);
+    border-color: #0abab5;
+    color: #0f0f0d;
+  }
+
+  .catalog-pill .catalog-pill-icon {
+    color: #71706b;
+  }
+
+  .catalog-pill:hover .catalog-pill-icon,
+  .catalog-pill.is-active .catalog-pill-icon {
+    color: inherit;
+  }
+
+  /* Заголовок каталога и вкладки «Все фильмы» / «Мультфильмы» */
+  .catalog-pluffy-title {
+    font-family: 'Pluffy Loon Outline Shadow', system-ui, sans-serif;
+    color: #0abab5;
+    -webkit-text-fill-color: #0abab5;
+    @apply uppercase leading-none tracking-wide font-normal;
+    font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  }
+
+  .catalog-pluffy-tab {
+    font-family: 'Pluffy Loon Outline Shadow', system-ui, sans-serif;
+    -webkit-text-fill-color: currentColor;
+    @apply uppercase leading-none tracking-wide font-normal;
+    font-size: clamp(1.35rem, 2.8vw, 2rem);
+  }
+
+  .catalog-film-row:hover {
+    background-color: rgba(10, 186, 181, 0.14);
+  }
+
+  .catalog-film-row:hover .catalog-film-title {
+    color: #0abab5;
+  }
+
+  /* Коллекции в каталоге: при наведении — фон тиффани, текст остаётся тёмным */
+  .collection-catalog-row:hover {
+    background-color: rgba(10, 186, 181, 0.14);
+  }
+
+  /* Центральная колонка как kinomania: ~88% ширины, поля ~6vw (кроме графа) */
+  .page-content {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: max(1.25rem, 6vw);
   }
 }

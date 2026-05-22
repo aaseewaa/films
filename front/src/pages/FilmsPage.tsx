@@ -7,10 +7,14 @@ import {
   type FilmFiltersState,
 } from '@/components/films/FilmCatalogFilters';
 import { FilmCatalogCard } from '@/components/films/FilmCatalogCard';
+import { PageContent } from '@/components/layout/PageContent';
+import { useSiteLang } from '@/lib/siteLang';
 
 const PAGE_SIZE = 50;
+const ANIMATION_GENRE_CODE = 'tmdb-16';
 
 const DEFAULT_FILTERS: FilmFiltersState = {
+  catalogType: 'films',
   sortBy: 'popularity',
 };
 
@@ -23,12 +27,23 @@ function pluralFilms(n: number): string {
   return 'фильмов';
 }
 
+function pluralMultfilms(n: number): string {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 14) return 'мультфильмов';
+  if (mod10 === 1) return 'мультфильм';
+  if (mod10 >= 2 && mod10 <= 4) return 'мультфильма';
+  return 'мультфильмов';
+}
+
 export function FilmsPage() {
+  const lang = useSiteLang();
   const [filters, setFilters] = useState<FilmFiltersState>(DEFAULT_FILTERS);
 
   const filterKey = useMemo(
     () =>
       JSON.stringify({
+        catalogType: filters.catalogType,
         genre: filters.genre,
         country: filters.country,
         yearFrom: filters.yearFrom,
@@ -39,20 +54,28 @@ export function FilmsPage() {
   );
 
   const hasActiveFilters =
+    filters.catalogType !== DEFAULT_FILTERS.catalogType ||
     !!filters.genre ||
     !!filters.country ||
     filters.yearFrom != null ||
     filters.yearTo != null ||
     filters.sortBy !== DEFAULT_FILTERS.sortBy;
 
+  const isAnimation = filters.catalogType === 'animation';
+
   const { data: genres = [] } = useQuery({
-    queryKey: ['genres', 'ru'],
-    queryFn: () => listGenres('ru'),
+    queryKey: ['genres', lang],
+    queryFn: () => listGenres(),
   });
 
+  const filterGenres = useMemo(
+    () => genres.filter((g) => g.code !== ANIMATION_GENRE_CODE),
+    [genres],
+  );
+
   const { data: countries = [] } = useQuery({
-    queryKey: ['production-countries', 'ru'],
-    queryFn: () => listProductionCountries('ru'),
+    queryKey: ['production-countries', lang],
+    queryFn: () => listProductionCountries(),
   });
 
   const {
@@ -63,10 +86,10 @@ export function FilmsPage() {
     hasNextPage,
     isFetchingNextPage,
   } = useInfiniteQuery({
-    queryKey: ['films', 'catalog', filterKey],
+    queryKey: ['films', 'catalog', filterKey, lang],
     queryFn: ({ pageParam }) =>
       listFilms({
-        lang: 'ru',
+        catalog: filters.catalogType,
         genre: filters.genre,
         country: filters.country,
         year_from: filters.yearFrom,
@@ -93,22 +116,24 @@ export function FilmsPage() {
   const loadingAll = isLoading || (hasNextPage && isFetchingNextPage);
 
   return (
-    <div className="bg-white min-h-[calc(100vh-4.75rem)] lg:min-h-[calc(100vh-5rem)]">
-      <div className="max-w-page w-full mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12">
+    <div className="bg-site-bg min-h-[calc(100vh-5.75rem)] sm:min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-6.5rem)]">
+      <PageContent className="py-8 sm:py-12">
         <header className="mb-8 sm:mb-10">
-          <h1 className="text-2xl sm:text-3xl font-bold text-ink-500 uppercase tracking-wide mb-2">
-            Все фильмы
+          <h1 className="catalog-pluffy-title mb-2 sm:mb-3">
+            {isAnimation ? 'Мультфильмы' : 'Все фильмы'}
           </h1>
-          <p className="text-base text-ink-50">
+          <p className="text-lg sm:text-xl text-ink-50">
             {loadingAll
               ? 'Загружаем каталог…'
-              : `${total.toLocaleString('ru-RU')} ${pluralFilms(total)} в коллекции`}
+              : isAnimation
+                ? `${total.toLocaleString('ru-RU')} ${pluralMultfilms(total)} в коллекции`
+                : `${total.toLocaleString('ru-RU')} ${pluralFilms(total)} в коллекции`}
           </p>
         </header>
 
         <FilmCatalogFilters
           filters={filters}
-          genres={genres}
+          genres={filterGenres}
           countries={countries}
           onChange={setFilters}
           onReset={() => setFilters(DEFAULT_FILTERS)}
@@ -136,7 +161,7 @@ export function FilmsPage() {
             <FilmCatalogCard key={film.id} film={film} />
           ))}
         </section>
-      </div>
+      </PageContent>
     </div>
   );
 }

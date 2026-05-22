@@ -182,6 +182,23 @@ class TmdbClient:
             {"language": language, "append_to_response": "external_ids"},
         )
 
+    async def person_images(self, person_id: int) -> dict:
+        """Доп. фото персоны (profiles), если profile_path в /person пустой."""
+        return await self._get(f"/person/{person_id}/images", {})
+
+    async def search_person(
+        self,
+        query: str,
+        *,
+        language: str = "en-US",
+        page: int = 1,
+    ) -> list[dict]:
+        data = await self._get(
+            "/search/person",
+            {"query": query, "language": language, "page": page},
+        )
+        return data.get("results", []) or []
+
     async def genres(self, *, language: str = "en-US") -> list[dict]:
         data = await self._get("/genre/movie/list", {"language": language})
         return data.get("genres", [])

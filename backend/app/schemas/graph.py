@@ -51,3 +51,23 @@ class GraphResponse(BaseModel):
     links: list[GraphLink]
     center_id: int | None = None     # для /api/graph/director/{id} — id центра
     depth: int = 1                   # сколько шагов в глубину
+
+
+class GraphCenterCandidate(BaseModel):
+    """Режиссёр, подходящий для центра радиального графа на главной."""
+
+    id: int
+    name: str
+    incoming_count: int = 0
+    outgoing_count: int = 0
+    manual_incoming_count: int = 0
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class GraphCentersResponse(BaseModel):
+    """Пул центров для кнопки «Случайный режиссёр»."""
+
+    centers: list[GraphCenterCandidate]
+    min_incoming: int
+    limit: int
