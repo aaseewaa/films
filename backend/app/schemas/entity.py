@@ -101,10 +101,9 @@ class FilmRead(BaseModel):
 
     images: ImageURLs = ImageURLs()
 
-    # ─── НОВЫЕ ПОЛЯ: backdrop (фоновый кадр) и кадры из фильма ───
-    backdrop_url: str | None = None      # большой широкий кадр, 1280×720
-    stills_urls: list[str] = []          # до 10 кадров для галереи, 780×x
-    # ────────────────────────────────────────────────────────────
+    backdrop_url: str | None = None
+    stills_urls: list[str] = []
+    media_kind: str | None = None  # фильм | мультфильм | сериал
 
     genres: list[TaxonomyTermRead] = []
     production_countries: str | None = None

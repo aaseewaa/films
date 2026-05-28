@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { ChevronRight } from 'lucide-react';
@@ -22,6 +22,7 @@ import {
   ProfileSubNav,
   type ProfileSectionId,
 } from '@/components/profile/ProfileSubNav';
+import { useDivRef } from '@/lib/sectionRef';
 import { useAuthStore } from '@/stores/auth';
 
 const SECTION_SCROLL_MT = 'scroll-mt-36 sm:scroll-mt-40';
@@ -39,10 +40,10 @@ export function ProfilePage() {
   const [activeSection, setActiveSection] = useState<ProfileSectionId>('overview');
 
   const sectionRefs = {
-    overview: useRef<HTMLDivElement>(null),
-    favorites: useRef<HTMLElement>(null),
-    activity: useRef<HTMLElement>(null),
-    history: useRef<HTMLElement>(null),
+    overview: useDivRef(),
+    favorites: useDivRef(),
+    activity: useDivRef(),
+    history: useDivRef(),
   };
 
   useEffect(() => {

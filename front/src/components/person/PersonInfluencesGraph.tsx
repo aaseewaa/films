@@ -228,8 +228,10 @@ function Ring2Cluster({
   const away = Math.atan2(anchor.y, anchor.x);
   const span = Math.PI;
   const start = away - span / 2;
-  const slots = Array.from({ length: RING2_SLOTS }, (_, i) => {
-    const angle = RING2_SLOTS === 1 ? away : start + (i / (RING2_SLOTS - 1)) * span;
+  const ring2Count = RING2_SLOTS;
+  const slots = Array.from({ length: ring2Count }, (_, i) => {
+    const angle =
+      ring2Count <= 1 ? away : start + (i / (ring2Count - 1)) * span;
     return {
       angle,
       x: anchor.x + Math.cos(angle) * RING2_RADIUS,

@@ -3,18 +3,8 @@ from __future__ import annotations
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.film_media import film_media_kind
 from app.services.catalog_service import ANIMATION_GENRE_CODE
-
-
-def _film_media_kind(genres: list[str], extra: dict | None) -> str:
-    meta = extra or {}
-    media = str(meta.get("media_type") or meta.get("content_type") or "").lower()
-    if media in ("tv", "series", "сериал"):
-        return "сериал"
-    blob = " ".join(genres).lower()
-    if "анимац" in blob or "animation" in blob:
-        return "мультфильм"
-    return "фильм"
 
 
 class EntityService:
@@ -28,8 +18,6 @@ class EntityService:
         Возвращает полные данные сущности по id или None.
         Автоматически определяет тип (film/person) и подгружает связи.
         """
-        # 1. Базовая информация: тип и есть ли вообще такая сущность
-        # ─── ИЗМЕНЕНИЕ: добавлен primary_backdrop_url ───
         base_sql = """
             SELECT e.id, e.entity_type::text AS entity_type, e.status,
                    e.primary_image_url, e.thumbnail_url,
@@ -191,8 +179,6 @@ class EntityService:
         result = await self.db.execute(text(sql), {"eid": entity_id, "lang": lang})
         return [dict(r) for r in result.mappings().all()]
 
-    # ─── Кадры из фильма (галерея) ──────────────────────────────
-    # ─── НОВЫЙ МЕТОД ───
     async def _get_stills(self, entity_id: int, limit: int = 10) -> list[str]:
         """
         Возвращает до N URL-ов кадров из фильма (entity_media role='still').
@@ -271,6 +257,7 @@ class EntityService:
                 cast.append(person_ref)
 
         genres = await self._get_genres(base["id"], lang)
+        genre_titles = [g["name"] for g in genres]
         stills_urls = await self._get_stills(base["id"], limit=10)
         original_title = await self._get_title_in_lang(base["id"], "en")
         if original_title and original_title == tr.get("title"):
@@ -305,10 +292,9 @@ class EntityService:
                 "primary": base["primary_image_url"],
                 "thumbnail": base["thumbnail_url"],
             },
-            # ─── НОВЫЕ ПОЛЯ ───
             "backdrop_url": base["primary_backdrop_url"],
             "stills_urls": stills_urls,
-            # ──────────────────
+            "media_kind": film_media_kind(genre_titles, meta),
             "genres": genres,
             "production_countries": production_countries,
             "directors": directors,
@@ -509,7 +495,7 @@ class EntityService:
                         "thumbnail": r["img_thumb"],
                     },
                     "role_type": r["role_type"],
-                    "media_kind": _film_media_kind(genres, extra),
+                    "media_kind": film_media_kind(genres, extra),
                     "genres": genres,
                     "country": r["country"],
                     "director": r["director"],

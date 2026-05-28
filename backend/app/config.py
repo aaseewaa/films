@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     db_max_overflow: int = 10
 
     # ─── Приложение ───────────────────────────────────────────────
-    app_name: str = "FilmsDB API"
+    app_name: str = "FMW API"
     app_version: str = "0.1.0"
     app_debug: bool = True
 
@@ -49,7 +49,10 @@ class Settings(BaseSettings):
     omdb_api_key: str = ""
 
     # ─── Безопасность ─────────────────────────────────────────────
-    secret_key: str = "dev-only-secret-change-in-production"
+    secret_key: str = Field(
+        default="dev-only-secret-change-in-production",
+        description="JWT signing key; override via SECRET_KEY in production",
+    )
     jwt_algorithm: str = "HS256"
     jwt_expire_minutes: int = 60 * 24 * 7  # неделя
 

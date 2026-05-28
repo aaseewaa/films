@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getFilm } from '@/api/entity';
@@ -18,6 +18,7 @@ import { FilmSubNav, type FilmSectionId } from '@/components/film/FilmSubNav';
 import { PageContent } from '@/components/layout/PageContent';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useSiteLang } from '@/lib/siteLang';
+import { useSectionRef } from '@/lib/sectionRef';
 
 const VALID_TABS: FilmSectionId[] = [
   'about',
@@ -43,10 +44,11 @@ function formatRating(v: unknown): string | null {
 
 function mediaKindLabel(
   film: FilmDetail,
-  labels: { film: string; series: string },
+  labels: { film: string; series: string; animation?: string },
 ): string {
-  const kind = film.extra_metadata?.media_type ?? film.extra_metadata?.content_type;
-  if (kind === 'tv' || kind === 'series' || kind === 'сериал') return labels.series;
+  const kind = film.media_kind;
+  if (kind === 'сериал') return labels.series;
+  if (kind === 'мультфильм' && labels.animation) return labels.animation;
   return labels.film;
 }
 
@@ -90,13 +92,13 @@ export function FilmPage() {
   );
   const [moreOpen, setMoreOpen] = useState(false);
 
-  const sectionRefs: Record<FilmSectionId, RefObject<HTMLElement | null>> = {
-    about: useRef<HTMLElement>(null),
-    creators: useRef<HTMLElement>(null),
-    stills: useRef<HTMLElement>(null),
-    articles: useRef<HTMLElement>(null),
-    similar: useRef<HTMLElement>(null),
-    awards: useRef<HTMLElement>(null),
+  const sectionRefs: Record<FilmSectionId, ReturnType<typeof useSectionRef>> = {
+    about: useSectionRef(),
+    creators: useSectionRef(),
+    stills: useSectionRef(),
+    articles: useSectionRef(),
+    similar: useSectionRef(),
+    awards: useSectionRef(),
   };
 
   const { data: film, isLoading, error } = useQuery({

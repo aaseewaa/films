@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type RefObject } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getEntity } from '@/api/entity';
@@ -22,6 +22,7 @@ import {
 import { orderArticlesForJournal } from '@/lib/articleMosaic';
 import { buildPersonBio } from '@/lib/personBio';
 import { useSiteLang } from '@/lib/siteLang';
+import { useSectionRef } from '@/lib/sectionRef';
 import { cn } from '@/lib/utils';
 
 const VALID_TABS = PERSON_TABS.map((t) => t.id);
@@ -44,13 +45,13 @@ export function PersonPage() {
     isPersonSectionId(tabParam) ? tabParam : 'about',
   );
 
-  const sectionRefs: Record<PersonSectionId, RefObject<HTMLElement | null>> = {
-    about: useRef<HTMLElement>(null),
-    filmography: useRef<HTMLElement>(null),
-    influences: useRef<HTMLElement>(null),
-    awards: useRef<HTMLElement>(null),
-    articles: useRef<HTMLElement>(null),
-    collections: useRef<HTMLElement>(null),
+  const sectionRefs: Record<PersonSectionId, ReturnType<typeof useSectionRef>> = {
+    about: useSectionRef(),
+    filmography: useSectionRef(),
+    influences: useSectionRef(),
+    awards: useSectionRef(),
+    articles: useSectionRef(),
+    collections: useSectionRef(),
   };
 
   const { data: person, isLoading, error } = useQuery({

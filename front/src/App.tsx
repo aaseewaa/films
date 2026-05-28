@@ -12,14 +12,12 @@ import { LoginPage } from '@/pages/LoginPage';
 import { RegisterPage } from '@/pages/RegisterPage';
 import { NewsPage } from '@/pages/NewsPage';
 import { SearchPage } from '@/pages/SearchPage';
-import {
-  DirectorPage,
-  ProfilePage,
-  FavoritesPage,
-  RatingsPage,
-  HistoryPage,
-  NotFoundPage,
-} from '@/pages/Placeholders';
+import { PersonPage as DirectorPage } from '@/pages/PersonPage';
+import { ProfilePage } from '@/pages/ProfilePage';
+import { FavoritesPage } from '@/pages/me/FavoritesPage';
+import { RatingsPage } from '@/pages/me/RatingsPage';
+import { HistoryPage } from '@/pages/me/HistoryPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 
 function App() {
   return (

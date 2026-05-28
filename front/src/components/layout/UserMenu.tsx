@@ -114,7 +114,7 @@ export function UserMenu() {
 
 interface MenuLinkProps {
   to: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   children: React.ReactNode;
   onClick?: () => void;
 }

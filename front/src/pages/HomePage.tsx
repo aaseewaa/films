@@ -10,69 +10,41 @@ import {
   type RadialRing1Node,
 } from '@/api/graph';
 import { pickRandomCenterId } from '@/lib/favoriteDirectors';
-import { graphSpreadScale, SITE_UI_SCALE } from '@/lib/siteScale';
+import {
+  CENTER_HOVER_SIZE,
+  CENTER_SIZE,
+  GRAPH_VIEW_HALF,
+  HISTORY_ORIGIN,
+  HISTORY_SIZES,
+  HOVER_CLEAR_MS,
+  HOVER_INFLUENCER_RADIUS,
+  HOVER_PAN,
+  LABEL_SMALL_THRESHOLD,
+  MAX_HISTORY,
+  NESTED_HOVER_ORBIT_PLACEHOLDER,
+  NESTED_HOVER_ORBIT_RADIUS,
+  NESTED_HOVER_ORBIT_SIZE,
+  NODE_TRANSITION,
+  PAN_TRANSITION,
+  PLACEHOLDER_SIZE,
+  RING1_POSITIONS,
+  RING1_RADIUS,
+  RING1_SIZE,
+  RING1_SLOTS,
+  RING2_ORBIT_PLACEHOLDER,
+  RING2_ORBIT_RADIUS,
+  RING2_ORBIT_SIZE,
+  RING2_SLOTS,
+  NODE_SCALE,
+  SINGLE_CLICK_DELAY_MS,
+  TIFFANY,
+} from '@/lib/homeGraphLayout';
 import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
+import { SITE_UI_SCALE } from '@/lib/siteScale';
 import { useSiteLang } from '@/lib/siteLang';
 import { cn } from '@/lib/utils';
 
-/** Tiffany Blue — как у логотипа FMW */
-const TIFFANY = '#0ABAB5';
-
-const RING1_SLOTS = 4;
-const RING2_SLOTS = 4;
-const MAX_HISTORY = 3;
-
-/**
- * Масштаб по скетчу: крупный центр, ring1 к краям экрана,
- * ring2/mini заполняют периферию (узлы и расстояния раздельно).
- */
-const NODE_SCALE = 2.05 * SITE_UI_SCALE;
-const SPREAD_SCALE = 2.2 * graphSpreadScale();
-
-const CENTER_SIZE = Math.round(200 * NODE_SCALE);
-const RING1_SIZE = Math.round(120 * NODE_SCALE);
-const CENTER_HOVER_SIZE = Math.round(108 * NODE_SCALE);
-const RING2_ORBIT_SIZE = Math.round(54 * NODE_SCALE * 1.1);
-const RING2_ORBIT_PLACEHOLDER = Math.round(38 * NODE_SCALE);
-const NESTED_HOVER_ORBIT_SIZE = Math.round(44 * NODE_SCALE * 1.08);
-const NESTED_HOVER_ORBIT_PLACEHOLDER = Math.round(30 * NODE_SCALE);
-const PLACEHOLDER_SIZE = Math.round(88 * NODE_SCALE);
-
-const RING1_RADIUS = Math.round(220 * SPREAD_SCALE);
-const HOVER_INFLUENCER_RADIUS = Math.round(175 * SPREAD_SCALE);
-const RING2_ORBIT_RADIUS = Math.round(96 * SPREAD_SCALE * 1.15);
-const NESTED_HOVER_ORBIT_RADIUS = Math.round(80 * SPREAD_SCALE * 1.12);
-const HOVER_PAN = 0.5;
-
-/** viewBox по реальному радиусу кластера — без лишнего поля, граф заполняет экран. */
-const GRAPH_VIEW_HALF = Math.round(
-  (RING1_RADIUS +
-    RING2_ORBIT_RADIUS +
-    NESTED_HOVER_ORBIT_RADIUS +
-    RING2_ORBIT_SIZE) *
-    0.9,
-);
-
-const HISTORY_ORIGIN = { x: -400, y: 400 };
-const HISTORY_SIZES = [56, 48, 40].map((s) => Math.round(s * NODE_SCALE));
-
-const LABEL_SMALL_THRESHOLD = Math.round(90 * NODE_SCALE);
-
-const PAN_TRANSITION = 'transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1)';
-const NODE_TRANSITION = 'opacity 0.4s ease, transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1)';
-/** Задержка перед сбросом hover — не мерцает при переходе между узлами и во время pan. */
-const HOVER_CLEAR_MS = 160;
-/** Одиночный клик ждёт, чтобы не сработать вместе с двойным (смена центра vs карточка). */
-const SINGLE_CLICK_DELAY_MS = 280;
-
-const POSITIONS = Array.from({ length: RING1_SLOTS }, (_, i) => {
-  const angle = -Math.PI / 2 + (i * 2 * Math.PI) / RING1_SLOTS;
-  return {
-    angle,
-    x: Math.cos(angle) * RING1_RADIUS,
-    y: Math.sin(angle) * RING1_RADIUS,
-  };
-});
+const POSITIONS = RING1_POSITIONS;
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -830,7 +802,11 @@ function NodeAvatar({
     [],
   );
 
-  const labelGap = isCenter ? Math.round(14 * NODE_SCALE / 2) : size < LABEL_SMALL_THRESHOLD ? 10 : 12;
+  const labelGap = isCenter
+    ? Math.round((14 * NODE_SCALE) / 2)
+    : size < LABEL_SMALL_THRESHOLD
+      ? 10
+      : 12;
   const labelY = radius + labelGap;
 
   const handleClick = (e: React.MouseEvent) => {

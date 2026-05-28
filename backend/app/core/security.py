@@ -30,12 +30,6 @@ from app.config import settings
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-# JWT-настройки. Секрет берём из .env, чтобы можно было подменить
-# в продакшене. Для дипломного проекта подойдёт любая случайная строка.
-JWT_ALGORITHM = "HS256"
-JWT_EXPIRES_HOURS = 24 * 7  # неделя — пользователь не должен заново логиниться часто
-
-
 def hash_password(plain: str) -> str:
     """Хешировать пароль для хранения в БД."""
     return pwd_context.hash(plain)
@@ -59,12 +53,12 @@ def create_access_token(*, user_id: int, extra: dict[str, Any] | None = None) ->
     payload: dict[str, Any] = {
         "sub": str(user_id),
         "iat": datetime.now(timezone.utc),
-        "exp": datetime.now(timezone.utc) + timedelta(hours=JWT_EXPIRES_HOURS),
+        "exp": datetime.now(timezone.utc) + timedelta(minutes=settings.jwt_expire_minutes),
     }
     if extra:
         payload.update(extra)
 
-    return jwt.encode(payload, settings.secret_key, algorithm=JWT_ALGORITHM)
+    return jwt.encode(payload, settings.secret_key, algorithm=settings.jwt_algorithm)
 
 
 def decode_access_token(token: str) -> int | None:
@@ -73,7 +67,11 @@ def decode_access_token(token: str) -> int | None:
     (истёк, подделан, испорчен).
     """
     try:
-        payload = jwt.decode(token, settings.secret_key, algorithms=[JWT_ALGORITHM])
+        payload = jwt.decode(
+            token,
+            settings.secret_key,
+            algorithms=[settings.jwt_algorithm],
+        )
         sub = payload.get("sub")
         if sub is None:
             return None

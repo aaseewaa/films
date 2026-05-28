@@ -130,6 +130,7 @@ export interface FilmDetail {
   images: ImageURLs;
   backdrop_url?: string | null;
   stills_urls?: string[];
+  media_kind?: string | null;
   genres?: TaxonomyTerm[];
   production_countries?: string | null;
   directors?: PersonRef[];

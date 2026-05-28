@@ -8,6 +8,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.deps import CurrentUser, get_current_user
+from app.core.deps import get_entity_service
 from app.database import get_db
 from app.schemas.entity import FilmRead, PersonRead
 from app.services.entity_service import EntityService
@@ -24,17 +25,17 @@ router = APIRouter(prefix="/api/entity", tags=["entity"])
 )
 async def get_entity(
     request: Request,
-    entity_id: int, 
+    entity_id: int,
     lang: Annotated[Literal["ru", "en"], Query(description="Язык переводов")] = "ru",
     db: AsyncSession = Depends(get_db),
     current_user: CurrentUser | None = Depends(get_current_user),
+    service: EntityService = Depends(get_entity_service),
 ) -> FilmRead | PersonRead:
     """
     Универсальная карточка сущности.
 
     Если пользователь авторизован — просмотр привязывается к его истории.
     """
-    service = EntityService(db)
     data = await service.get_entity(entity_id, lang=lang)
 
     if not data:
