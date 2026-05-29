@@ -1,73 +1,80 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
 import {
+  getGraphCenters,
   getRadialGraph,
   type RadialCenter,
   type RadialPerson,
   type RadialRing1Node,
 } from '@/api/graph';
-import { pickRandomFavorite } from '@/lib/favoriteDirectors';
+import { pickRandomCenterId } from '@/lib/favoriteDirectors';
+import {
+  CENTER_HOVER_SIZE,
+  CENTER_SIZE,
+  GRAPH_VIEW_HALF,
+  HISTORY_ORIGIN,
+  HISTORY_SIZES,
+  HOVER_CLEAR_MS,
+  HOVER_INFLUENCER_RADIUS,
+  HOVER_PAN,
+  LABEL_SMALL_THRESHOLD,
+  MAX_HISTORY,
+  NESTED_HOVER_ORBIT_PLACEHOLDER,
+  NESTED_HOVER_ORBIT_RADIUS,
+  NESTED_HOVER_ORBIT_SIZE,
+  NODE_TRANSITION,
+  PAN_TRANSITION,
+  PLACEHOLDER_SIZE,
+  RING1_POSITIONS,
+  RING1_RADIUS,
+  RING1_SIZE,
+  RING1_SLOTS,
+  RING2_ORBIT_PLACEHOLDER,
+  RING2_ORBIT_RADIUS,
+  RING2_ORBIT_SIZE,
+  RING2_SLOTS,
+  NODE_SCALE,
+  SINGLE_CLICK_DELAY_MS,
+  TIFFANY,
+} from '@/lib/homeGraphLayout';
+import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
+import { SITE_UI_SCALE } from '@/lib/siteScale';
+import { useSiteLang } from '@/lib/siteLang';
+import { cn } from '@/lib/utils';
 
-const RING1_SLOTS = 4;
-const RING2_SLOTS = 4;
-const MAX_HISTORY = 3;
-
-/**
- * Масштаб по скетчу: крупный центр, ring1 к краям экрана,
- * ring2/mini заполняют периферию (узлы и расстояния раздельно).
- */
-const NODE_SCALE = 2.05;
-const SPREAD_SCALE = 2.2;
-
-const CENTER_SIZE = Math.round(200 * NODE_SCALE);
-const RING1_SIZE = Math.round(120 * NODE_SCALE);
-const CENTER_HOVER_SIZE = Math.round(108 * NODE_SCALE);
-const RING2_ORBIT_SIZE = Math.round(54 * NODE_SCALE * 1.1);
-const RING2_ORBIT_PLACEHOLDER = Math.round(38 * NODE_SCALE);
-const NESTED_HOVER_ORBIT_SIZE = Math.round(44 * NODE_SCALE * 1.08);
-const NESTED_HOVER_ORBIT_PLACEHOLDER = Math.round(30 * NODE_SCALE);
-const PLACEHOLDER_SIZE = Math.round(88 * NODE_SCALE);
-
-const RING1_RADIUS = Math.round(220 * SPREAD_SCALE);
-const HOVER_INFLUENCER_RADIUS = Math.round(175 * SPREAD_SCALE);
-const RING2_ORBIT_RADIUS = Math.round(96 * SPREAD_SCALE * 1.15);
-const NESTED_HOVER_ORBIT_RADIUS = Math.round(80 * SPREAD_SCALE * 1.12);
-const HOVER_PAN = 0.5;
-
-/** viewBox по реальному радиусу кластера — без лишнего поля, граф заполняет экран. */
-const GRAPH_VIEW_HALF = Math.round(
-  RING1_RADIUS +
-    RING2_ORBIT_RADIUS +
-    NESTED_HOVER_ORBIT_RADIUS +
-    RING2_ORBIT_SIZE,
-);
-
-const HISTORY_ORIGIN = { x: -400, y: 400 };
-const HISTORY_SIZES = [56, 48, 40].map((s) => Math.round(s * NODE_SCALE));
-
-const LABEL_SMALL_THRESHOLD = Math.round(90 * NODE_SCALE);
-
-const PAN_TRANSITION = 'transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1)';
-const NODE_TRANSITION = 'opacity 0.4s ease, transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1)';
-
-const POSITIONS = Array.from({ length: RING1_SLOTS }, (_, i) => {
-  const angle = -Math.PI / 2 + (i * 2 * Math.PI) / RING1_SLOTS;
-  return {
-    angle,
-    x: Math.cos(angle) * RING1_RADIUS,
-    y: Math.sin(angle) * RING1_RADIUS,
-  };
-});
+const POSITIONS = RING1_POSITIONS;
 
 export function HomePage() {
   const navigate = useNavigate();
-  const [currentCenterId, setCurrentCenterId] = useState(() => {
-    const saved = sessionStorage.getItem('filmcine:current-center');
-    if (saved) return parseInt(saved, 10);
-    return pickRandomFavorite().id;
+  const lang = useSiteLang();
+  const [currentCenterId, setCurrentCenterId] = useState<number | null>(null);
+
+  const { data: centersData, isLoading: centersLoading } = useQuery({
+    queryKey: ['graph', 'centers', lang],
+    queryFn: () => getGraphCenters(80, 2),
+    staleTime: 5 * 60_000,
   });
+  const centerPool = useMemo(
+    () => centersData?.centers ?? [],
+    [centersData?.centers],
+  );
+
+  useEffect(() => {
+    if (centersLoading || currentCenterId !== null) return;
+    const saved = sessionStorage.getItem('filmcine:current-center');
+    const savedId = saved ? parseInt(saved, 10) : NaN;
+    if (centerPool.length > 0 && centerPool.some((c) => c.id === savedId)) {
+      setCurrentCenterId(savedId);
+      return;
+    }
+    if (centerPool.length > 0) {
+      setCurrentCenterId(pickRandomCenterId(centerPool));
+      return;
+    }
+    setCurrentCenterId(pickRandomCenterId([]));
+  }, [centersLoading, centerPool, currentCenterId]);
   const [history, setHistory] = useState<RadialCenter[]>([]);
   /** Ring1 в режиме «героя» (остаётся, пока курсор в кластере). */
   const [expandedRing1Id, setExpandedRing1Id] = useState<number | null>(null);
@@ -79,29 +86,51 @@ export function HomePage() {
     heroRadius: number;
   } | null>(null);
 
-  const clearHover = () => {
+  const hoverClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearHover = useCallback(() => {
     setExpandedRing1Id(null);
     setNestedHover(null);
-  };
+  }, []);
+
+  const cancelScheduledClearHover = useCallback(() => {
+    if (hoverClearTimer.current !== null) {
+      clearTimeout(hoverClearTimer.current);
+      hoverClearTimer.current = null;
+    }
+  }, []);
+
+  const scheduleClearHover = useCallback(() => {
+    cancelScheduledClearHover();
+    hoverClearTimer.current = setTimeout(() => {
+      hoverClearTimer.current = null;
+      clearHover();
+    }, HOVER_CLEAR_MS);
+  }, [cancelScheduledClearHover, clearHover]);
+
+  useEffect(() => () => cancelScheduledClearHover(), [cancelScheduledClearHover]);
 
   useEffect(() => {
-    sessionStorage.setItem('filmcine:current-center', String(currentCenterId));
+    if (currentCenterId !== null) {
+      sessionStorage.setItem('filmcine:current-center', String(currentCenterId));
+    }
   }, [currentCenterId]);
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ['graph', 'radial', currentCenterId, RING1_SLOTS, RING2_SLOTS],
-    queryFn: () => getRadialGraph(currentCenterId, RING1_SLOTS, RING2_SLOTS),
+    queryKey: ['graph', 'radial', currentCenterId, RING1_SLOTS, RING2_SLOTS, lang],
+    queryFn: () => getRadialGraph(currentCenterId!, RING1_SLOTS, RING2_SLOTS),
+    enabled: currentCenterId !== null,
   });
 
   const { data: expandedData } = useQuery({
-    queryKey: ['graph', 'radial', 'expanded', expandedRing1Id, RING2_SLOTS],
+    queryKey: ['graph', 'radial', 'expanded', expandedRing1Id, RING2_SLOTS, lang],
     queryFn: () => getRadialGraph(expandedRing1Id!, RING1_SLOTS, RING2_SLOTS),
     enabled:
       expandedRing1Id !== null && expandedRing1Id !== currentCenterId,
   });
 
   const { data: nestedData } = useQuery({
-    queryKey: ['graph', 'radial', 'nested', nestedHover?.id, RING2_SLOTS],
+    queryKey: ['graph', 'radial', 'nested', nestedHover?.id, RING2_SLOTS, lang],
     queryFn: () => getRadialGraph(nestedHover!.id, RING1_SLOTS, RING2_SLOTS),
     enabled:
       nestedHover !== null &&
@@ -131,6 +160,7 @@ export function HomePage() {
     hovering: boolean,
   ) => {
     if (hovering) {
+      cancelScheduledClearHover();
       setNestedHover({
         id: node.id,
         x: anchor.x,
@@ -157,9 +187,17 @@ export function HomePage() {
     clearHover();
   };
 
+  if (currentCenterId === null || (centersLoading && !data)) {
+    return (
+      <div className="h-[calc(100vh-5.75rem)] sm:h-[calc(100vh-6rem)] lg:h-[calc(100vh-6.5rem)] flex items-center justify-center bg-site-bg">
+        <p className="text-graph-text/60 text-sm">Подбираем режиссёров...</p>
+      </div>
+    );
+  }
+
   if (error) {
     return (
-      <div className="h-[calc(100vh-4.75rem)] lg:h-[calc(100vh-5rem)] flex items-center justify-center bg-header-bar text-white">
+      <div className="h-[calc(100vh-5.75rem)] sm:h-[calc(100vh-6rem)] lg:h-[calc(100vh-6.5rem)] flex items-center justify-center bg-site-bg text-ink-400">
         <div className="text-center max-w-md px-6">
           <h2 className="font-serif text-2xl mb-2">Не удалось загрузить граф</h2>
           <code className="text-xs bg-graph-surface px-2 py-1 rounded">
@@ -187,27 +225,20 @@ export function HomePage() {
     );
 
   return (
-    <div className="h-[calc(100vh-4.75rem)] lg:h-[calc(100vh-5rem)] bg-header-bar relative overflow-hidden">
-      <HeaderPanel
+    <div className="h-[calc(100vh-5.75rem)] sm:h-[calc(100vh-6rem)] lg:h-[calc(100vh-6.5rem)] bg-site-bg relative overflow-hidden">
+      <GraphTopBar
         data={data}
         hoverActive={ring1Expanded}
         focusNode={focusNode}
         nestedFocusName={nestedFocusName}
+        onRandomDirector={() => {
+          const pool = centerPool.length > 0 ? centerPool : [];
+          setCurrentCenterId(pickRandomCenterId(pool));
+          setHistory([]);
+          clearHover();
+        }}
+        randomDisabled={centersLoading && centerPool.length === 0}
       />
-
-      <div className="absolute top-6 right-6 z-10">
-        <button
-          type="button"
-          onClick={() => {
-            setCurrentCenterId(pickRandomFavorite().id);
-            setHistory([]);
-            clearHover();
-          }}
-          className="text-xs text-white/60 hover:text-white px-3 py-1.5 rounded border border-white/25 hover:border-white/50 transition-colors"
-        >
-          ↻ Случайный режиссёр
-        </button>
-      </div>
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none text-center">
         <p className="text-xs text-graph-text/40 tracking-wide">
@@ -236,8 +267,25 @@ export function HomePage() {
 
           <g
             style={{ transform: `translate(${pan.x}px, ${pan.y}px)`, transition: PAN_TRANSITION }}
-            onMouseLeave={clearHover}
+            onMouseEnter={cancelScheduledClearHover}
+            onMouseLeave={scheduleClearHover}
           >
+            {ring1Expanded && expandedSlotIdx >= 0 && (
+              <circle
+                cx={POSITIONS[expandedSlotIdx].x}
+                cy={POSITIONS[expandedSlotIdx].y}
+                r={
+                  CENTER_SIZE / 2 +
+                  HOVER_INFLUENCER_RADIUS +
+                  NESTED_HOVER_ORBIT_RADIUS +
+                  RING1_SIZE / 2
+                }
+                fill="transparent"
+                style={{ pointerEvents: 'all' }}
+                onMouseEnter={cancelScheduledClearHover}
+              />
+            )}
+
             {POSITIONS.map((pos, idx) => {
               const node = data.ring1[idx];
               const isHover = ring1Expanded && idx === expandedSlotIdx;
@@ -266,6 +314,59 @@ export function HomePage() {
                   }
                   strokeWidth={isHover ? 2 : 1}
                   style={{ transition: 'stroke 0.4s ease, stroke-width 0.4s ease' }}
+                />
+              );
+            })}
+
+            <NodeAvatar
+              cx={0}
+              cy={0}
+              size={ring1Expanded ? CENTER_HOVER_SIZE : CENTER_SIZE}
+              name={data.center.name}
+              image={data.center.image}
+              isCenter={!ring1Expanded}
+              dimmed={ring1Expanded}
+              pointerEvents={ring1Expanded ? 'none' : 'auto'}
+              onHover={() => {}}
+              onClick={() => {}}
+              onDoubleClick={() => navigate(`/director/${data.center.id}`)}
+            />
+
+            {POSITIONS.map((pos, idx) => {
+              const node = data.ring1[idx];
+              if (!node) {
+                return (
+                  <PlaceholderRing
+                    key={`ph1-${idx}`}
+                    cx={pos.x}
+                    cy={pos.y}
+                    size={PLACEHOLDER_SIZE}
+                    label="?"
+                  />
+                );
+              }
+
+              const isHover = ring1Expanded && idx === expandedSlotIdx;
+              return (
+                <NodeAvatar
+                  key={node.id}
+                  cx={pos.x}
+                  cy={pos.y}
+                  size={isHover ? CENTER_SIZE : RING1_SIZE}
+                  name={node.name}
+                  image={node.image}
+                  isCenter={isHover}
+                  dimmed={ring1Expanded && !isHover}
+                  pointerEvents={ring1Expanded && !isHover ? 'none' : 'auto'}
+                  onHover={(h) => {
+                    if (h) {
+                      cancelScheduledClearHover();
+                      setExpandedRing1Id(node.id);
+                      setNestedHover(null);
+                    }
+                  }}
+                  onClick={() => promoteToCenter(node)}
+                  onDoubleClick={() => navigate(`/director/${node.id}`)}
                 />
               );
             })}
@@ -305,56 +406,6 @@ export function HomePage() {
               });
             })}
 
-            <NodeAvatar
-              cx={0}
-              cy={0}
-              size={ring1Expanded ? CENTER_HOVER_SIZE : CENTER_SIZE}
-              name={data.center.name}
-              image={data.center.image}
-              isCenter={!ring1Expanded}
-              dimmed={ring1Expanded}
-              onHover={() => clearHover()}
-              onClick={() => {}}
-              onDoubleClick={() => navigate(`/director/${data.center.id}`)}
-            />
-
-            {POSITIONS.map((pos, idx) => {
-              const node = data.ring1[idx];
-              if (!node) {
-                return (
-                  <PlaceholderRing
-                    key={`ph1-${idx}`}
-                    cx={pos.x}
-                    cy={pos.y}
-                    size={PLACEHOLDER_SIZE}
-                    label="?"
-                  />
-                );
-              }
-
-              const isHover = ring1Expanded && idx === expandedSlotIdx;
-              return (
-                <NodeAvatar
-                  key={node.id}
-                  cx={pos.x}
-                  cy={pos.y}
-                  size={isHover ? CENTER_SIZE : RING1_SIZE}
-                  name={node.name}
-                  image={node.image}
-                  isCenter={isHover}
-                  dimmed={ring1Expanded && !isHover}
-                  onHover={(h) => {
-                    if (h) {
-                      setExpandedRing1Id(node.id);
-                      setNestedHover(null);
-                    }
-                  }}
-                  onClick={() => promoteToCenter(node)}
-                  onDoubleClick={() => navigate(`/director/${node.id}`)}
-                />
-              );
-            })}
-
             {nestedHover &&
               nestedData &&
               nestedHover.id !== expandedRing1Id &&
@@ -379,53 +430,85 @@ export function HomePage() {
   );
 }
 
-function HeaderPanel({
+function GraphTopBar({
   data,
   hoverActive,
   focusNode,
   nestedFocusName,
+  onRandomDirector,
+  randomDisabled,
 }: {
   data: Awaited<ReturnType<typeof getRadialGraph>> | undefined;
   hoverActive: boolean;
   focusNode: { name: string } | null | undefined;
   nestedFocusName?: string | null;
+  onRandomDirector: () => void;
+  randomDisabled: boolean;
 }) {
   return (
-    <div className="absolute top-6 left-6 z-10 pointer-events-none">
-      <p className="font-serif text-white text-3xl tracking-tight">Граф влияний</p>
-      <p className="text-sm text-white/60 mt-1.5">
-        {data ? (
-          hoverActive && focusNode ? (
-            <>
-              Смотрим: <span className="text-white">{focusNode.name}</span>
-              {nestedFocusName && (
-                <span className="opacity-70">
-                  {' '}
-                  → <span className="text-white">{nestedFocusName}</span>
-                </span>
-              )}
-              <span className="opacity-50"> · центр: {data.center.name}</span>
-            </>
-          ) : (
-            <>Центр: {data.center.name}</>
-          )
-        ) : (
-          'Загружаем...'
-        )}
-      </p>
-      {data && (
-        <p className="text-xs text-white/40 mt-0.5">
-          {data.ring1.length > 0 ? (
-            <>
-              {data.ring1.length}{' '}
-              {plural(data.ring1.length, 'вдохновитель', 'вдохновителя', 'вдохновителей')}
-            </>
-          ) : (
-            <span className="opacity-70">в БД пока нет связей — серые круги-заглушки</span>
-          )}
-          <span className="opacity-50"> · до {RING2_SLOTS} у каждого</span>
-        </p>
+    <div
+      className={cn(
+        'absolute top-6 left-0 right-0 z-10',
+        SITE_GUTTER_CLASS,
       )}
+    >
+      <div className="flex items-start justify-between gap-6">
+        <div className="pointer-events-none min-w-0">
+          <p
+            className="font-serif text-[3.25rem] font-bold tracking-tight leading-none"
+            style={{ color: TIFFANY }}
+          >
+            Граф влияний
+          </p>
+          <p className="text-[1.375rem] text-ink-500 mt-1.5">
+            {data ? (
+              hoverActive && focusNode ? (
+                <>
+                  Смотрим: <span className="font-medium">{focusNode.name}</span>
+                  {nestedFocusName && (
+                    <>
+                      {' '}
+                      → <span className="font-medium">{nestedFocusName}</span>
+                    </>
+                  )}
+                  <span className="text-ink-300"> · центр: {data.center.name}</span>
+                </>
+              ) : (
+                <>Центр: {data.center.name}</>
+              )
+            ) : (
+              'Загружаем...'
+            )}
+          </p>
+          {data && (
+            <p className="text-[1.25rem] text-ink-500 mt-0.5">
+              {data.ring1.length > 0 ? (
+                <>
+                  {data.ring1.length}{' '}
+                  {plural(data.ring1.length, 'вдохновитель', 'вдохновителя', 'вдохновителей')}
+                </>
+              ) : (
+                'в БД пока нет связей — серые круги-заглушки'
+              )}
+              <span> · до {RING2_SLOTS} у каждого</span>
+            </p>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={onRandomDirector}
+          disabled={randomDisabled}
+          className={cn(
+            'shrink-0 text-base sm:text-lg font-medium leading-tight',
+            'text-[#0ABAB5] px-4 py-2 rounded border border-[#0ABAB5]/40',
+            'hover:border-[#0ABAB5] transition-colors',
+            'disabled:opacity-40 disabled:cursor-not-allowed',
+          )}
+        >
+          ↻ Случайный режиссёр
+        </button>
+      </div>
     </div>
   );
 }
@@ -660,7 +743,10 @@ function PlaceholderRing({
           textAnchor="middle"
           dominantBaseline="central"
           fill="rgba(232, 223, 200, 0.25)"
-          style={{ fontSize: small ? 14 : 20, fontFamily: 'Inter, sans-serif' }}
+          style={{
+            fontSize: Math.round((small ? 14 : 20) * SITE_UI_SCALE),
+            fontFamily: 'Inter, sans-serif',
+          }}
         >
           {label}
         </text>
@@ -677,6 +763,7 @@ interface NodeAvatarProps {
   image?: string | null;
   isCenter?: boolean;
   dimmed?: boolean;
+  pointerEvents?: 'auto' | 'none';
   onHover: (hovering: boolean) => void;
   onClick: () => void;
   onDoubleClick?: () => void;
@@ -690,20 +777,59 @@ function NodeAvatar({
   image,
   isCenter,
   dimmed,
+  pointerEvents = 'auto',
   onHover,
   onClick,
   onDoubleClick,
 }: NodeAvatarProps) {
   const radius = size / 2;
   const clipId = `clip-${cx}-${cy}-${size}-${name.slice(0, 3)}`;
-  const initial = name?.[0] ?? '?';
+  const initials = (name || '?')
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase() || '?';
+  const singleClickTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const labelAngle =
-    cx === 0 && cy === 0 ? Math.PI / 2 : Math.atan2(cy, cx);
-  const labelGap = isCenter ? Math.round(14 * NODE_SCALE / 2) : size < LABEL_SMALL_THRESHOLD ? 10 : 12;
-  const labelR = radius + labelGap;
-  const labelX = Math.cos(labelAngle) * labelR;
-  const labelY = Math.sin(labelAngle) * labelR;
+  useEffect(
+    () => () => {
+      if (singleClickTimer.current !== null) {
+        clearTimeout(singleClickTimer.current);
+      }
+    },
+    [],
+  );
+
+  const labelGap = isCenter
+    ? Math.round((14 * NODE_SCALE) / 2)
+    : size < LABEL_SMALL_THRESHOLD
+      ? 10
+      : 12;
+  const labelY = radius + labelGap;
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (pointerEvents === 'none') return;
+    if (singleClickTimer.current !== null) {
+      clearTimeout(singleClickTimer.current);
+    }
+    singleClickTimer.current = setTimeout(() => {
+      singleClickTimer.current = null;
+      onClick();
+    }, SINGLE_CLICK_DELAY_MS);
+  };
+
+  const handleDoubleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (pointerEvents === 'none') return;
+    if (singleClickTimer.current !== null) {
+      clearTimeout(singleClickTimer.current);
+      singleClickTimer.current = null;
+    }
+    onDoubleClick?.();
+  };
 
   return (
     <g
@@ -711,18 +837,19 @@ function NodeAvatar({
         transform: `translate(${cx}px, ${cy}px)`,
         opacity: dimmed ? 0.4 : 1,
         transition: NODE_TRANSITION,
-        cursor: 'pointer',
+        cursor: pointerEvents === 'none' ? 'default' : 'pointer',
+        pointerEvents,
       }}
-      onMouseEnter={() => onHover(true)}
-      onMouseLeave={() => onHover(false)}
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick();
+      onMouseEnter={() => {
+        if (pointerEvents === 'none') return;
+        onHover(true);
       }}
-      onDoubleClick={(e) => {
-        e.stopPropagation();
-        onDoubleClick?.();
+      onMouseLeave={() => {
+        if (pointerEvents === 'none') return;
+        onHover(false);
       }}
+      onClick={handleClick}
+      onDoubleClick={onDoubleClick ? handleDoubleClick : undefined}
     >
       <defs>
         <clipPath id={clipId}>
@@ -731,6 +858,15 @@ function NodeAvatar({
       </defs>
 
       <circle cx={0} cy={0} r={radius} fill={isCenter ? '#48473F' : '#34332D'} />
+
+      {!image && (
+        <circle
+          cx={0}
+          cy={0}
+          r={radius * 0.92}
+          fill="rgba(246, 215, 126, 0.12)"
+        />
+      )}
 
       {image && (
         <image
@@ -757,7 +893,7 @@ function NodeAvatar({
             fontWeight: 600,
           }}
         >
-          {initial}
+          {initials}
         </text>
       )}
 
@@ -771,17 +907,19 @@ function NodeAvatar({
       />
 
       <text
-        x={labelX}
+        x={0}
         y={labelY}
         textAnchor="middle"
-        dominantBaseline="middle"
+        dominantBaseline="hanging"
         fill="#FFFFFF"
         stroke="rgba(26, 24, 21, 0.75)"
         strokeWidth={2.5}
         paintOrder="stroke fill"
         style={{
           fontFamily: 'Inter, sans-serif',
-          fontSize: isCenter ? 18 : size < LABEL_SMALL_THRESHOLD ? 12 : 14,
+          fontSize: Math.round(
+            (isCenter ? 18 : size < LABEL_SMALL_THRESHOLD ? 12 : 14) * SITE_UI_SCALE,
+          ),
           fontWeight: 500,
           pointerEvents: 'none',
         }}

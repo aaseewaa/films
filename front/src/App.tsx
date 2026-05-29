@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
+import { LocaleSync } from '@/components/layout/LocaleSync';
 import { HomePage } from '@/pages/HomePage';
 import { FilmsPage } from '@/pages/FilmsPage';
 import { FilmPage } from '@/pages/FilmPage';
@@ -11,18 +12,17 @@ import { LoginPage } from '@/pages/LoginPage';
 import { RegisterPage } from '@/pages/RegisterPage';
 import { NewsPage } from '@/pages/NewsPage';
 import { SearchPage } from '@/pages/SearchPage';
-import {
-  DirectorPage,
-  ProfilePage,
-  FavoritesPage,
-  RatingsPage,
-  HistoryPage,
-  NotFoundPage,
-} from '@/pages/Placeholders';
+import { PersonPage as DirectorPage } from '@/pages/PersonPage';
+import { ProfilePage } from '@/pages/ProfilePage';
+import { FavoritesPage } from '@/pages/me/FavoritesPage';
+import { RatingsPage } from '@/pages/me/RatingsPage';
+import { HistoryPage } from '@/pages/me/HistoryPage';
+import { NotFoundPage } from '@/pages/NotFoundPage';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-site-bg">
+      <LocaleSync />
       <Header />
 
       <main className="flex-1">

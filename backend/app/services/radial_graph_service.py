@@ -16,6 +16,25 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 log = logging.getLogger(__name__)
 
+# Портрет режиссёра или постер его последнего фильма (для графа без headshot в TMDB).
+_PERSON_IMAGE_SQL = """
+    COALESCE(
+        NULLIF(trim(e.primary_image_url), ''),
+        (
+            SELECT fe.primary_image_url
+            FROM film_person fp
+            JOIN entity fe ON fe.id = fp.film_id
+            JOIN film f ON f.id = fp.film_id
+            WHERE fp.person_id = p.id
+              AND fp.role_type = 'director'
+              AND fe.primary_image_url IS NOT NULL
+              AND trim(fe.primary_image_url) <> ''
+            ORDER BY f.release_year DESC NULLS LAST
+            LIMIT 1
+        )
+    )
+"""
+
 
 class RadialGraphService:
     """Сервис для радиальной карточки графа влияний."""
@@ -65,10 +84,10 @@ class RadialGraphService:
     async def _get_director(self, person_id: int, lang: str) -> Optional[dict]:
         row = (
             await self.db.execute(
-                text("""
+                text(f"""
                     SELECT p.id,
                            COALESCE(et.title, p.sort_name) AS name,
-                           e.primary_image_url AS image
+                           {_PERSON_IMAGE_SQL} AS image
                     FROM person p
                     JOIN entity e ON e.id = p.id
                     LEFT JOIN entity_translation et
@@ -100,12 +119,12 @@ class RadialGraphService:
         """
         rows = (
             await self.db.execute(
-                text("""
+                text(f"""
                     SELECT
                         di.source_director_id AS id,
                         COALESCE(di.weight, 3) AS weight,
                         COALESCE(et.title, p.sort_name) AS name,
-                        e.primary_image_url AS image,
+                        {_PERSON_IMAGE_SQL} AS image,
                         COALESCE((
                             SELECT count(*) FROM film_person fp
                             WHERE fp.person_id = di.source_director_id
@@ -155,7 +174,7 @@ class RadialGraphService:
 
         rows = (
             await self.db.execute(
-                text("""
+                text(f"""
                     SELECT parent_id, id, weight, name, image, films_count
                     FROM (
                         SELECT
@@ -163,7 +182,7 @@ class RadialGraphService:
                             di.source_director_id AS id,
                             COALESCE(di.weight, 3) AS weight,
                             COALESCE(et.title, p.sort_name) AS name,
-                            e.primary_image_url AS image,
+                            {_PERSON_IMAGE_SQL} AS image,
                             COALESCE((
                                 SELECT count(*) FROM film_person fp
                                 WHERE fp.person_id = di.source_director_id
@@ -205,3 +224,71 @@ class RadialGraphService:
                 "films_count": int(r["films_count"] or 0),
             })
         return result
+
+    async def get_center_candidates(
+        self,
+        *,
+        limit: int = 80,
+        min_incoming: int = 2,
+        lang: str = "ru",
+    ) -> list[dict[str, Any]]:
+        """
+        Режиссёры, у которых достаточно «учителей» для кольца 1 на главной.
+
+        Сортировка: входящие связи → ручная разметка (confidence≥0.9) → всего связей.
+        """
+        rows = (
+            await self.db.execute(
+                text("""
+                    SELECT
+                        p.id,
+                        COALESCE(et.title, p.sort_name) AS name,
+                        COALESCE(inc.cnt, 0) AS incoming_count,
+                        COALESCE(out.cnt, 0) AS outgoing_count,
+                        COALESCE(inc.manual_cnt, 0) AS manual_incoming_count
+                    FROM person p
+                    JOIN entity e ON e.id = p.id
+                    LEFT JOIN entity_translation et
+                        ON et.entity_id = p.id
+                        AND et.language_id = (
+                            SELECT id FROM language WHERE code = :lang
+                        )
+                    LEFT JOIN (
+                        SELECT
+                            target_director_id AS pid,
+                            count(*) AS cnt,
+                            count(*) FILTER (
+                                WHERE confidence >= 0.9
+                                  AND inferred_by_system = false
+                            ) AS manual_cnt
+                        FROM director_influence
+                        GROUP BY target_director_id
+                    ) inc ON inc.pid = p.id
+                    LEFT JOIN (
+                        SELECT source_director_id AS pid, count(*) AS cnt
+                        FROM director_influence
+                        GROUP BY source_director_id
+                    ) out ON out.pid = p.id
+                    WHERE p.is_director = true
+                      AND e.status = 'published'
+                      AND COALESCE(inc.cnt, 0) >= :min_incoming
+                    ORDER BY inc.cnt DESC,
+                        inc.manual_cnt DESC,
+                        (COALESCE(inc.cnt, 0) + COALESCE(out.cnt, 0)) DESC,
+                        p.id
+                    LIMIT :lim
+                """),
+                {"lang": lang, "min_incoming": min_incoming, "lim": limit},
+            )
+        ).mappings().all()
+
+        return [
+            {
+                "id": r["id"],
+                "name": r["name"] or "Без имени",
+                "incoming_count": int(r["incoming_count"]),
+                "outgoing_count": int(r["outgoing_count"]),
+                "manual_incoming_count": int(r["manual_incoming_count"]),
+            }
+            for r in rows
+        ]

@@ -76,9 +76,7 @@ TMDB_COLLECTIONS = [
     (1709,   "Хищник"),
     (8945,   "Безумный Макс"),
     (8650,   "Шрек"),
-    # ── Анимация Pixar ─────────────────────────
-    (10194,  "Toy Story"),
-    (137697, "Cars"),
+    # Pixar / мультики убраны — см. hide_films_by_genre
     # ── Романтика, классика ───────────────────────
     (2806,   "American Pie"),
     (87359,  "Mission Impossible"),
@@ -190,16 +188,8 @@ TMDB_DISCOVER = [
         },
         "pages": 5,
     },
-    # ── Анимация и мультфильмы (Pixar, Studio Ghibli, Disney) ─
-    {
-        "label": "Лучшая анимация",
-        "params": {
-            "with_genres": 16,
-            "sort_by": "vote_average.desc",
-            "vote_count.gte": 800,
-        },
-        "pages": 5,
-    },
+    # Анимация отключена — мультики засоряли каталог.
+    # Нужны мультфильмы: отдельный discover или scripts/load_tmdb_quality не трогает 16.
     # ── Военное кино ───────────────────────────────
     {
         "label": "Военное кино",

@@ -21,6 +21,10 @@ class PersonRef(BaseModel):
     role_type: str | None = None       # "director", "actor", ... — для крю фильма
     character_name: str | None = None  # для актёров
     billing_order: int | None = None
+    title_en: str | None = None
+    directed_count: int | None = None  # фильмы как режиссёр в нашей БД
+    acted_count: int | None = None   # фильмы как актёр в нашей БД
+    series_count: int | None = None  # сериалы (пока не загружаем)
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -30,9 +34,15 @@ class FilmRef(BaseModel):
 
     id: int
     title: str
+    original_title: str | None = None
     release_year: int | None = None
     images: ImageURLs = ImageURLs()
     role_type: str | None = None
+    media_kind: str | None = None  # фильм | мультфильм | сериал
+    genres: list[str] = []
+    country: str | None = None
+    director: str | None = None
+    actors: list[str] = []
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -46,6 +56,26 @@ class InfluenceRef(BaseModel):
     weight: int
     confidence: float
     relation_note: str | None = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class PersonAwardItem(BaseModel):
+    """Одна номинация / победа персоны (award_nomination.person_id)."""
+
+    status: Literal["won", "nominated"]
+    year: int
+    award_name: str
+    category_name: str | None = None
+    film_title: str | None = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class PersonAwardsBlock(BaseModel):
+    wins_count: int = 0
+    nominations_count: int = 0  # только status=nominated (без побед)
+    items: list[PersonAwardItem] = []
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -71,10 +101,9 @@ class FilmRead(BaseModel):
 
     images: ImageURLs = ImageURLs()
 
-    # ─── НОВЫЕ ПОЛЯ: backdrop (фоновый кадр) и кадры из фильма ───
-    backdrop_url: str | None = None      # большой широкий кадр, 1280×720
-    stills_urls: list[str] = []          # до 10 кадров для галереи, 780×x
-    # ────────────────────────────────────────────────────────────
+    backdrop_url: str | None = None
+    stills_urls: list[str] = []
+    media_kind: str | None = None  # фильм | мультфильм | сериал
 
     genres: list[TaxonomyTermRead] = []
     production_countries: str | None = None
@@ -94,6 +123,7 @@ class PersonRead(BaseModel):
     entity_type: Literal["person"] = "person"
 
     title: str
+    title_en: str | None = None
     summary: str | None = None
     description: str | None = None  # биография
 
@@ -103,6 +133,10 @@ class PersonRead(BaseModel):
     primary_profession: str | None = None
     is_director: bool = False
     is_actor: bool = False
+    directed_count: int | None = None
+    acted_count: int | None = None
+    series_count: int | None = None
+    crew_roles: list[str] = []
 
     images: ImageURLs = ImageURLs()
 
@@ -110,6 +144,8 @@ class PersonRead(BaseModel):
     # Граф влияний — только для режиссёров
     influenced_by: list[InfluenceRef] = []  # повлияли на эту персону
     influenced: list[InfluenceRef] = []     # эта персона повлияла на других
+
+    awards: PersonAwardsBlock | None = None
 
     external_ids: dict = {}
 

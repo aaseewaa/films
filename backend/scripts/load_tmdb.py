@@ -11,13 +11,21 @@
        - EntityTaxonomy — жанры (TaxonomyTerm уже должны быть, см. seed_genres.py)
   4. Идемпотентно: по external_ids->>'tmdb' определяет уже загруженные сущности
 
-Запуск:
-    cd backend
-    source venv/bin/activate
-    python -m scripts.load_tmdb --pages 10 --top-actors 10
+Запуск (топ мирового кино):
+    cd backend && source venv/bin/activate
 
-    # для пробного запуска:
-    python -m scripts.load_tmdb --pages 1 --top-actors 5
+    # Классика / аналог IMDb Top 250 (~500 фильмов)
+    python -m scripts.load_tmdb --source top_rated --pages 25 --top-actors 10
+
+    # Современные хиты
+    python -m scripts.load_tmdb --source popular --pages 15 --top-actors 10
+
+    # Коллекции + discover (саги, нуар, европейская классика…)
+    python -m scripts.load_tmdb_extra
+
+    # Эмбеддинги после загрузки:
+    python -m scripts.generate_embeddings
+    python -m scripts.generate_embeddings --force   # после смены модели e5
 """
 from __future__ import annotations
 
@@ -187,6 +195,10 @@ async def upsert_person(
                 **(existing.external_ids or {}),
                 "imdb": imdb_val,
             }
+        img_p = TmdbClient.image_url(profile_path, "w500")
+        if img_p and not existing.primary_image_url:
+            existing.primary_image_url = img_p
+            existing.thumbnail_url = TmdbClient.image_url(profile_path, "w185")
         return person
 
     ext_ids: dict[str, str] = {"tmdb": str(tmdb_id)}
@@ -221,6 +233,7 @@ async def upsert_person(
         EntityTranslation(
             entity_id=entity.id,
             language_id=languages["en"],
+            search_config="english",
             slug=make_slug(name_en, tmdb_id),
             title=name_en,
             summary=biography_en[:500] if biography_en else None,
@@ -232,6 +245,7 @@ async def upsert_person(
             EntityTranslation(
                 entity_id=entity.id,
                 language_id=languages["ru"],
+                search_config="russian",
                 slug=make_slug(name_ru, tmdb_id),
                 title=name_ru,
                 summary=biography_ru[:500] if biography_ru else None,
@@ -311,6 +325,7 @@ async def upsert_film(
         EntityTranslation(
             entity_id=entity.id,
             language_id=languages["en"],
+            search_config="english",
             slug=make_slug(title_en, tmdb_id),
             title=title_en,
             summary=overview_en[:500] if overview_en else None,
@@ -322,6 +337,7 @@ async def upsert_film(
             EntityTranslation(
                 entity_id=entity.id,
                 language_id=languages["ru"],
+                search_config="russian",
                 slug=make_slug(title_ru, tmdb_id),
                 title=title_ru,
                 summary=overview_ru[:500] if overview_ru else None,

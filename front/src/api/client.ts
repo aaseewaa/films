@@ -4,6 +4,7 @@
  * Авторизационный токен берётся из Zustand auth store.
  */
 import axios from 'axios';
+import { getSiteLang } from '@/lib/siteLang';
 import { useAuthStore } from '@/stores/auth';
 
 export const apiClient = axios.create({
@@ -17,6 +18,7 @@ apiClient.interceptors.request.use((config) => {
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+  config.params = { ...(config.params ?? {}), lang: getSiteLang() };
   return config;
 });
 

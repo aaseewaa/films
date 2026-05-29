@@ -28,6 +28,7 @@ class CollectionsService:
         kind: Optional[str] = None,  # 'editorial' / 'custom' / 'auto'
         lang: str = "ru",
         only_featured: bool = False,
+        for_entity_id: Optional[int] = None,
         limit: int = 20,
         offset: int = 0,
     ) -> dict:
@@ -45,6 +46,15 @@ class CollectionsService:
 
         if only_featured:
             where_parts.append("COALESCE((c.extra_metadata->>'is_featured')::boolean, false) = true")
+
+        if for_entity_id is not None:
+            where_parts.append("""
+                EXISTS (
+                    SELECT 1 FROM collection_item ci
+                    WHERE ci.collection_id = c.id AND ci.entity_id = :ent_id
+                )
+            """)
+            params["ent_id"] = for_entity_id
 
         where_sql = " AND ".join(where_parts)
 
@@ -192,6 +202,34 @@ class CollectionsService:
             "cid": collection_id, "lang": lang,
         })).mappings().all()
 
+        directors_sql = text("""
+            SELECT
+                p.id,
+                COALESCE(et_lang.title, et_en.title, p.sort_name) AS title,
+                e.primary_image_url AS img_primary,
+                e.thumbnail_url AS img_thumb,
+                count(DISTINCT ci.entity_id) AS films_in_collection
+            FROM collection_item ci
+            JOIN entity ef ON ef.id = ci.entity_id AND ef.entity_type = 'film'
+            JOIN film_person fp ON fp.film_id = ci.entity_id AND fp.role_type = 'director'
+            JOIN person p ON p.id = fp.person_id AND p.is_director = true
+            JOIN entity e ON e.id = p.id AND e.status = 'published'
+            LEFT JOIN entity_translation et_lang
+                ON et_lang.entity_id = p.id
+                AND et_lang.language_id = (SELECT id FROM language WHERE code = :lang)
+            LEFT JOIN entity_translation et_en
+                ON et_en.entity_id = p.id
+                AND et_en.language_id = (SELECT id FROM language WHERE code = 'en')
+            WHERE ci.collection_id = :cid
+            GROUP BY p.id, et_lang.title, et_en.title, p.sort_name,
+                     e.primary_image_url, e.thumbnail_url
+            ORDER BY films_in_collection DESC, title
+            LIMIT 16
+        """)
+        director_rows = (await self.db.execute(directors_sql, {
+            "cid": collection_id, "lang": lang,
+        })).mappings().all()
+
         items = [
             {
                 "entity_id": r["entity_id"],
@@ -209,6 +247,19 @@ class CollectionsService:
             for r in rows
         ]
 
+        directors = [
+            {
+                "id": r["id"],
+                "title": r["title"] or "Без имени",
+                "images": {
+                    "primary": r["img_primary"],
+                    "thumbnail": r["img_thumb"],
+                },
+                "role_type": "director",
+            }
+            for r in director_rows
+        ]
+
         return {
             "id": head["id"],
             "kind": head["kind"],
@@ -218,5 +269,6 @@ class CollectionsService:
             "cover_image": head["cover_image"],
             "items_count": head["items_count"] or len(items),
             "tags": list(head["tags"] or []),
+            "directors": directors,
             "items": items,
         }

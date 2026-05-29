@@ -14,6 +14,7 @@ FastAPI-зависимости (Depends) для авторизации.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Annotated
 
 from fastapi import Depends, HTTPException, Request, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
@@ -22,6 +23,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.security import decode_access_token
 from app.database import get_db
+from app.services.auth_service import AuthService
+from app.services.catalog_service import CatalogService
+from app.services.entity_service import EntityService
 
 
 @dataclass
@@ -86,3 +90,21 @@ async def require_user(
             headers={"WWW-Authenticate": "Bearer"},
         )
     return user
+
+
+def get_auth_service(db: AsyncSession = Depends(get_db)) -> AuthService:
+    return AuthService(db)
+
+
+def get_catalog_service(db: AsyncSession = Depends(get_db)) -> CatalogService:
+    return CatalogService(db)
+
+
+def get_entity_service(db: AsyncSession = Depends(get_db)) -> EntityService:
+    return EntityService(db)
+
+
+# Type aliases for annotations in tests and type checkers.
+AuthServiceDep = Annotated[AuthService, Depends(get_auth_service)]
+CatalogServiceDep = Annotated[CatalogService, Depends(get_catalog_service)]
+EntityServiceDep = Annotated[EntityService, Depends(get_entity_service)]

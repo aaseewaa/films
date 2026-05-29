@@ -4,8 +4,11 @@
 from contextlib import asynccontextmanager
 
 import structlog
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.api import (
     auth, catalog, entities, graph, health, news, recommendations, search, user_data,
@@ -66,6 +69,10 @@ app.include_router(recommendations.router)    # день 7: рекомендац
 app.include_router(collections_router)
 app.include_router(articles_router)
 app.include_router(news.router)
+
+_uploads = Path(settings.uploads_dir)
+_uploads.mkdir(parents=True, exist_ok=True)
+app.mount("/uploads", StaticFiles(directory=str(_uploads)), name="uploads")
 
 
 @app.get("/", tags=["root"])

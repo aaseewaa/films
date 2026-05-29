@@ -21,4 +21,4 @@ export function AuthField({ id, label, error, children, className }: AuthFieldPr
 }
 
 export const authInputClass =
-  'w-full h-11 px-3 rounded-sm border border-ink-50/20 bg-cream-50 text-ink-400 placeholder:text-ink-50 focus:outline-none focus:ring-2 focus:ring-wine-500/30 focus:border-wine-500/40';
+  'w-full h-11 px-3 rounded-sm border border-ink-50/20 bg-site-bg text-ink-400 placeholder:text-ink-50 hover:bg-site-hover focus:outline-none focus:ring-2 focus:ring-wine-500/30 focus:border-wine-500/40 focus:bg-site-hover transition-colors';

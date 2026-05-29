@@ -1,12 +1,14 @@
 """
 Авторизация: регистрация, логин, профиль, смена пароля.
 """
-from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.ext.asyncio import AsyncSession
+from pathlib import Path
+import uuid
 
-from app.core.deps import CurrentUser, require_user
+from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
+
+from app.core.deps import CurrentUser, get_auth_service, require_user
+from app.services.auth_service import AuthService
 from app.core.security import create_access_token
-from app.database import get_db
 from app.schemas.auth import (
     ChangePasswordRequest,
     LoginRequest,
@@ -15,7 +17,16 @@ from app.schemas.auth import (
     UpdateProfileRequest,
     UserMe,
 )
-from app.services.auth_service import AuthError, AuthService
+from app.config import settings
+from app.services.auth_service import AuthError
+
+ALLOWED_AVATAR_TYPES = {"image/jpeg", "image/png", "image/webp", "image/gif"}
+AVATAR_EXT = {
+    "image/jpeg": ".jpg",
+    "image/png": ".png",
+    "image/webp": ".webp",
+    "image/gif": ".gif",
+}
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
@@ -28,13 +39,12 @@ router = APIRouter(prefix="/api/auth", tags=["auth"])
 )
 async def register(
     body: RegisterRequest,
-    db: AsyncSession = Depends(get_db),
+    service: AuthService = Depends(get_auth_service),
 ) -> TokenResponse:
     """
     Создаёт нового пользователя и возвращает JWT-токен.
     Email должен быть уникальным, пароль ≥ 8 символов.
     """
-    service = AuthService(db)
     try:
         user = await service.register(
             email=body.email,
@@ -57,10 +67,9 @@ async def register(
 )
 async def login(
     body: LoginRequest,
-    db: AsyncSession = Depends(get_db),
+    service: AuthService = Depends(get_auth_service),
 ) -> TokenResponse:
     """Возвращает JWT-токен при успешной проверке email + пароль."""
-    service = AuthService(db)
     try:
         user = await service.login(email=body.email, password=body.password)
     except AuthError as exc:
@@ -77,10 +86,9 @@ async def login(
 )
 async def get_me(
     user: CurrentUser = Depends(require_user),
-    db: AsyncSession = Depends(get_db),
+    service: AuthService = Depends(get_auth_service),
 ) -> UserMe:
     """Профиль текущего пользователя."""
-    service = AuthService(db)
     full = await service.get_me(user.id)
     return UserMe(**full)
 
@@ -93,12 +101,11 @@ async def get_me(
 async def update_me(
     body: UpdateProfileRequest,
     user: CurrentUser = Depends(require_user),
-    db: AsyncSession = Depends(get_db),
+    service: AuthService = Depends(get_auth_service),
 ) -> UserMe:
     """
     Обновить любое из полей профиля. Передавай только те что хочешь поменять.
     """
-    service = AuthService(db)
     try:
         updated = await service.update_profile(
             user.id,
@@ -113,6 +120,49 @@ async def update_me(
 
 
 @router.post(
+    "/me/avatar",
+    response_model=UserMe,
+    summary="Загрузить аватар с компьютера",
+)
+async def upload_avatar(
+    file: UploadFile = File(...),
+    user: CurrentUser = Depends(require_user),
+    service: AuthService = Depends(get_auth_service),
+) -> UserMe:
+    """Принимает JPEG/PNG/WebP/GIF до 2 MB, сохраняет в uploads/avatars/."""
+    if file.content_type not in ALLOWED_AVATAR_TYPES:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Допустимы только JPEG, PNG, WebP или GIF",
+        )
+
+    raw = await file.read()
+    if not raw:
+        raise HTTPException(status_code=400, detail="Пустой файл")
+    if len(raw) > settings.avatar_max_bytes:
+        raise HTTPException(status_code=400, detail="Файл больше 2 MB")
+
+    ext = AVATAR_EXT[file.content_type]
+    avatars_dir = Path(settings.uploads_dir) / "avatars"
+    avatars_dir.mkdir(parents=True, exist_ok=True)
+
+    for old in avatars_dir.glob(f"user_{user.id}.*"):
+        old.unlink(missing_ok=True)
+
+    filename = f"user_{user.id}_{uuid.uuid4().hex[:8]}{ext}"
+    dest = avatars_dir / filename
+    dest.write_bytes(raw)
+
+    avatar_url = f"/uploads/avatars/{filename}"
+    try:
+        updated = await service.update_profile(user.id, avatar_url=avatar_url)
+    except AuthError as exc:
+        dest.unlink(missing_ok=True)
+        raise HTTPException(status_code=400, detail=str(exc))
+    return UserMe(**updated)
+
+
+@router.post(
     "/change-password",
     status_code=status.HTTP_204_NO_CONTENT,
     summary="Сменить пароль",
@@ -120,10 +170,9 @@ async def update_me(
 async def change_password(
     body: ChangePasswordRequest,
     user: CurrentUser = Depends(require_user),
-    db: AsyncSession = Depends(get_db),
+    service: AuthService = Depends(get_auth_service),
 ) -> None:
     """Требует знания старого пароля для безопасности."""
-    service = AuthService(db)
     try:
         await service.change_password(
             user.id, old_password=body.old_password, new_password=body.new_password,

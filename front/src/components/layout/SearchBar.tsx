@@ -49,12 +49,12 @@ export function SearchBar({
         className={cn(
           'w-full text-sm transition-colors focus:outline-none',
           isPill
-            ? 'h-9 pl-9 pr-4 rounded-full bg-white text-ink-300 placeholder:text-ink-50/80 focus:ring-2 focus:ring-white/30'
+            ? 'h-9 pl-9 pr-4 rounded-full bg-site-bg text-ink-300 placeholder:text-ink-50/80 hover:bg-site-hover focus:ring-2 focus:ring-site-hover/50 focus:bg-site-hover transition-colors'
             : cn(
                 'h-10 pl-10 pr-4 rounded-sm',
-                'bg-cream-50 border border-ink-50/15',
-                'text-ink-300 placeholder:text-ink-50',
-                'focus:border-wine-500 focus:bg-cream-50',
+                'bg-site-bg border border-ink-50/15',
+                'text-ink-300 placeholder:text-ink-50 hover:bg-site-hover',
+                'focus:border-wine-500 focus:bg-site-hover',
               ),
         )}
       />

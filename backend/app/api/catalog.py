@@ -8,17 +8,15 @@
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Depends, Query
-from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.database import get_db
+from app.core.deps import get_catalog_service
+from app.services.catalog_service import CatalogService
 from app.schemas.catalog import (
     FilmsResponse,
     GenreItem,
     PersonsResponse,
     PopularResponse,
 )
-from app.services.catalog_service import CatalogService
-
 router = APIRouter(prefix="/api", tags=["catalog"])
 
 
@@ -35,16 +33,22 @@ async def list_films(
     ] = None,
     year_from: Annotated[int | None, Query(ge=1880, le=2100)] = None,
     year_to: Annotated[int | None, Query(ge=1880, le=2100)] = None,
+    catalog: Annotated[
+        Literal["films", "animation"],
+        Query(
+            description="films — без мультфильмов; animation — только анимация (tmdb-16)",
+        ),
+    ] = "films",
     sort_by: Annotated[
         Literal["popularity", "vote_average", "year", "year_asc", "title"],
         Query(
-            description="Сортировка: popularity, vote_average, year (новые), "
-            "year_asc (старые), title (А–Я)",
+            description="Сортировка: popularity (редакционные → популярность, без приоритета "
+            "свежих релизов), vote_average, year (новые), year_asc (старые), title (А–Я)",
         ),
     ] = "popularity",
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
     offset: Annotated[int, Query(ge=0, le=10_000)] = 0,
-    db: AsyncSession = Depends(get_db),
+    service: CatalogService = Depends(get_catalog_service),
 ) -> FilmsResponse:
     """
     Каталог фильмов с фильтрами и сортировкой.
@@ -55,9 +59,9 @@ async def list_films(
     - Страницы фильмов по годам: `?year_from=2000&year_to=2010`
     - Топ-листов: `?sort_by=vote_average`
     """
-    service = CatalogService(db)
     result = await service.list_films(
         lang=lang,
+        catalog=catalog,
         genre=genre,
         country=country,
         year_from=year_from,
@@ -76,9 +80,8 @@ async def list_films(
 )
 async def list_production_countries(
     lang: Annotated[Literal["ru", "en"], Query()] = "ru",
-    db: AsyncSession = Depends(get_db),
+    service: CatalogService = Depends(get_catalog_service),
 ) -> list[GenreItem]:
-    service = CatalogService(db)
     items = await service.list_production_countries(lang=lang)
     return [GenreItem(**item) for item in items]
 
@@ -97,7 +100,7 @@ async def list_persons(
     ] = "influences",
     limit: Annotated[int, Query(ge=1, le=50)] = 20,
     offset: Annotated[int, Query(ge=0, le=10_000)] = 0,
-    db: AsyncSession = Depends(get_db),
+    service: CatalogService = Depends(get_catalog_service),
 ) -> PersonsResponse:
     """
     Каталог персон (режиссёры и актёры) с фильтрами и сортировкой.
@@ -107,7 +110,6 @@ async def list_persons(
     - Страницы "Все актёры": `?is_actor=true`
     - Топ влиятельных режиссёров: `?is_director=true&sort_by=influences`
     """
-    service = CatalogService(db)
     result = await service.list_persons(
         lang=lang,
         is_director=is_director,
@@ -126,7 +128,7 @@ async def list_persons(
 )
 async def list_genres(
     lang: Annotated[Literal["ru", "en"], Query()] = "ru",
-    db: AsyncSession = Depends(get_db),
+    service: CatalogService = Depends(get_catalog_service),
 ) -> list[GenreItem]:
     """
     Все жанры с переводом названия на запрошенный язык и количеством
@@ -136,7 +138,6 @@ async def list_genres(
     - Меню/sidebar с навигацией по жанрам
     - Автокомплита фильтра жанра
     """
-    service = CatalogService(db)
     items = await service.list_genres(lang=lang)
     return [GenreItem(**item) for item in items]
 
@@ -152,7 +153,7 @@ async def popular(
         int,
         Query(ge=4, le=24, description="Количество элементов в каждой подборке"),
     ] = 12,
-    db: AsyncSession = Depends(get_db),
+    service: CatalogService = Depends(get_catalog_service),
 ) -> PopularResponse:
     """
     Три подборки для главной страницы одним запросом:
@@ -164,6 +165,5 @@ async def popular(
     - Главной страницы сайта
     - Виджета "Что посмотреть" в sidebar
     """
-    service = CatalogService(db)
     result = await service.popular(lang=lang, limit=limit)
     return PopularResponse(**result)

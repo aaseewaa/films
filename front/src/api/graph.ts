@@ -50,6 +50,31 @@ export interface RadialResponse {
   top_n_requested: number;
 }
 
+export interface GraphCenterCandidate {
+  id: number;
+  name: string;
+  incoming_count: number;
+  outgoing_count: number;
+  manual_incoming_count: number;
+}
+
+export interface GraphCentersResponse {
+  centers: GraphCenterCandidate[];
+  min_incoming: number;
+  limit: number;
+}
+
+export async function getGraphCenters(
+  limit = 80,
+  minIncoming = 2,
+  lang: 'ru' | 'en' = 'ru',
+): Promise<GraphCentersResponse> {
+  const { data } = await apiClient.get<GraphCentersResponse>('/api/graph/centers', {
+    params: { limit, min_incoming: minIncoming, lang },
+  });
+  return data;
+}
+
 export async function getRadialGraph(
   directorId: number,
   topN = 4,

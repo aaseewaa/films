@@ -17,7 +17,10 @@ from app.schemas.user_data import (
     FavoriteCheckResponse,
     FavoritesResponse,
     HistoryResponse,
+    MyRatingsResponse,
+    ProfileStatsResponse,
     RateRequest,
+    RatingDistributionResponse,
     RatingItem,
     SearchHistoryItem,
     ViewHistoryItem,
@@ -140,6 +143,53 @@ async def unrate_entity(
     removed = await service.remove_rating(user.id, entity_id)
     if not removed:
         raise HTTPException(status_code=404, detail="Оценка не найдена")
+
+
+@router.get(
+    "/ratings/me",
+    response_model=MyRatingsResponse,
+    summary="Все мои оценки",
+)
+async def list_my_ratings(
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    limit: Annotated[int, Query(ge=1, le=100)] = 20,
+    offset: Annotated[int, Query(ge=0)] = 0,
+    user: CurrentUser = Depends(require_user),
+    db: AsyncSession = Depends(get_db),
+) -> MyRatingsResponse:
+    service = UserDataService(db)
+    result = await service.list_my_ratings(
+        user.id, lang=lang, limit=limit, offset=offset,
+    )
+    return MyRatingsResponse(**result)
+
+
+@router.get(
+    "/ratings/me/distribution",
+    response_model=RatingDistributionResponse,
+    summary="Распределение моих оценок (гистограмма)",
+)
+async def my_rating_distribution(
+    user: CurrentUser = Depends(require_user),
+    db: AsyncSession = Depends(get_db),
+) -> RatingDistributionResponse:
+    service = UserDataService(db)
+    result = await service.get_rating_distribution(user.id)
+    return RatingDistributionResponse(**result)
+
+
+@router.get(
+    "/profile/stats",
+    response_model=ProfileStatsResponse,
+    summary="Счётчики профиля",
+)
+async def profile_stats(
+    user: CurrentUser = Depends(require_user),
+    db: AsyncSession = Depends(get_db),
+) -> ProfileStatsResponse:
+    service = UserDataService(db)
+    stats = await service.get_profile_stats(user.id)
+    return ProfileStatsResponse(**stats)
 
 
 @router.get(

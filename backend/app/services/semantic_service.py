@@ -33,6 +33,12 @@ from typing import ClassVar
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.embedding_config import (
+    MIN_SEMANTIC_SIMILARITY,
+    MODEL_NAME as EMBEDDING_MODEL_NAME,
+    wrap_query,
+)
+
 log = logging.getLogger(__name__)
 
 
@@ -44,7 +50,7 @@ class SemanticService:
     # Загружается лениво при первом обращении.
     _model: ClassVar[object | None] = None
 
-    MODEL_NAME: ClassVar[str] = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    MODEL_NAME: ClassVar[str] = EMBEDDING_MODEL_NAME
 
     def __init__(self, db: AsyncSession):
         self.db = db
@@ -64,8 +70,8 @@ class SemanticService:
         """Кодирует запрос в вектор и возвращает строку для PostgreSQL."""
         model = self._get_model()
         vec = model.encode(
-            query.strip(),
-            normalize_embeddings=True,  # обязательно для cosine
+            wrap_query(query),
+            normalize_embeddings=True,
             show_progress_bar=False,
         )
         return "[" + ",".join(f"{x:.6f}" for x in vec) + "]"
@@ -91,10 +97,10 @@ class SemanticService:
         """
         vec_str = self._encode_query(query)
 
-        # Cosine distance: чем меньше, тем ближе (0 = идентично).
-        # Cosine similarity = 1 - distance. Нам нужна similarity для UI.
+        # Берём с запасом, потом отсекаем по MIN_SEMANTIC_SIMILARITY
+        fetch_limit = min(200, max(60, (limit + offset) * 4))
         where_parts = ["et.embedding IS NOT NULL"]
-        params: dict = {"vec": vec_str, "lim": limit, "off": offset}
+        params: dict = {"vec": vec_str, "lim": fetch_limit, "off": 0}
 
         if lang:
             where_parts.append("l.code = :lang")
@@ -106,31 +112,52 @@ class SemanticService:
         where_parts.append("e.status = 'published'")
         where_sql = " AND ".join(where_parts)
 
+        # 1) MIN distance на сущность  2) глобальный ORDER BY distance  3) текст ближайшего перевода
+        # Раньше LIMIT резал по entity_id до сортировки по similarity — одни и те же хиты.
+        pref_lang = lang or "ru"
+        params["pref_lang"] = pref_lang
+
         sql = f"""
-            SELECT DISTINCT ON (et.entity_id)
-                et.entity_id,
+            WITH per_entity AS (
+                SELECT
+                    et.entity_id,
+                    MIN(et.embedding <=> CAST(:vec AS vector)) AS distance
+                FROM entity_translation et
+                JOIN entity e ON e.id = et.entity_id
+                LEFT JOIN language l ON l.id = et.language_id
+                WHERE {where_sql}
+                GROUP BY et.entity_id
+                ORDER BY distance
+                LIMIT :lim OFFSET :off
+            )
+            SELECT DISTINCT ON (pe.entity_id)
+                pe.entity_id,
                 e.entity_type::text AS entity_type,
-                et.title,
-                et.summary,
+                COALESCE(et_pref.title, et.title) AS title,
+                COALESCE(et_pref.summary, et.summary) AS summary,
                 l.code AS language_code,
                 e.primary_image_url AS img_primary,
                 e.thumbnail_url AS img_thumb,
-                1 - (et.embedding <=> CAST(:vec AS vector)) AS similarity
-            FROM entity_translation et
-            JOIN entity e ON e.id = et.entity_id
+                1 - pe.distance AS similarity
+            FROM per_entity pe
+            JOIN entity e ON e.id = pe.entity_id
+            JOIN entity_translation et
+                ON et.entity_id = pe.entity_id
+               AND et.embedding IS NOT NULL
             LEFT JOIN language l ON l.id = et.language_id
-            WHERE {where_sql}
-            ORDER BY et.entity_id, et.embedding <=> CAST(:vec AS vector)
-            LIMIT :lim OFFSET :off
-        """
-        # Внешняя сортировка по similarity (после DISTINCT ON каждой сущности)
-        outer_sql = f"""
-            SELECT * FROM ({sql}) ranked
-            ORDER BY similarity DESC
-            LIMIT :lim
+            LEFT JOIN entity_translation et_pref
+                ON et_pref.entity_id = pe.entity_id
+               AND et_pref.language_id = (SELECT id FROM language WHERE code = :pref_lang)
+            ORDER BY pe.entity_id, et.embedding <=> CAST(:vec AS vector)
         """
 
-        rows = (await self.db.execute(text(outer_sql), params)).mappings().all()
+        rows = (await self.db.execute(text(sql), params)).mappings().all()
+        rows = sorted(rows, key=lambda r: -float(r["similarity"]))
+        rows = [
+            r for r in rows
+            if float(r["similarity"]) >= MIN_SEMANTIC_SIMILARITY
+        ]
+        rows = rows[offset : offset + limit]
 
         return [
             {

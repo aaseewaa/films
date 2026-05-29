@@ -1,53 +1,53 @@
 /**
- * Топ-10 «любимых» режиссёров для рандомного центра графа на главной.
- * Каждый раз когда пользователь заходит на сайт — случайный центр.
+ * Пул центров графа на главной.
  *
- * ID соответствуют записям в твоей БД (person.id с is_director=true).
- * Если ID не совпадает — поправь здесь.
+ * Основной источник — GET /api/graph/centers (режиссёры с ≥2 входящими связями в БД).
+ * FAVORITE_DIRECTORS — запасной список, если API недоступен.
  */
+
 export interface FavoriteDirector {
   id: number;
   name: string;
-  hint?: string; // для отладки
 }
 
+/** Запасной список (10 классиков), если /api/graph/centers не ответил. */
 export const FAVORITE_DIRECTORS: FavoriteDirector[] = [
-  { id: 3217, name: 'Альфонсо Куарон',   hint: '20 связей' },
-  { id: 3234, name: 'Сэм Мендес',         hint: '10 связей' },
-  { id: 2172, name: 'Пол Томас Андерсон', hint: '9 связей' },
-  { id: 3219, name: 'Жак Риветт',         hint: '5 связей' },
-  { id: 3243, name: 'Альфред Хичкок',     hint: 'Хичкок' },
-  { id: 3281, name: 'Стэнли Кубрик',      hint: 'Kubrick' },
-  { id: 2160, name: 'Мартин Скорсезе',    hint: 'Scorsese' },
-  { id: 2216, name: 'Стивен Спилберг',    hint: 'Spielberg' },
-  { id: 1520, name: 'Фрэнсис Форд Коппола', hint: 'Coppola' },
-  { id: 1728, name: 'Квентин Тарантино',  hint: 'Tarantino' },
-  // Из топ-15 БД (proven хабы):
-  // Pryor(10), Аллен(6), Хоукс(5), Скорсезе(4), Спилберг(4), Disney(4), Ford(4)
-  // Если знаешь их ID — добавь сюда вручную через SQL запрос:
-  //   SELECT et.title, p.id FROM person p
-  //   JOIN entity_translation et ON et.entity_id = p.id
-  //     AND et.language_id = (SELECT id FROM language WHERE code='ru')
-  //   WHERE p.is_director = true
-  //     AND et.title IN ('Вуди Аллен','Мартин Скорсезе','Стивен Спилберг','Уолт Дисней');
+  { id: 3217, name: 'Альфонсо Куарон' },
+  { id: 3234, name: 'Сэм Мендес' },
+  { id: 2172, name: 'Пол Томас Андерсон' },
+  { id: 3219, name: 'Жак Риветт' },
+  { id: 3243, name: 'Альфред Хичкок' },
+  { id: 3281, name: 'Стэнли Кубрик' },
+  { id: 2160, name: 'Мартин Скорсезе' },
+  { id: 2216, name: 'Стивен Спилберг' },
+  { id: 1520, name: 'Фрэнсис Форд Коппола' },
+  { id: 1728, name: 'Квентин Тарантино' },
 ];
 
-/**
- * Возвращает случайного режиссёра из списка.
- * Использует sessionStorage чтобы избежать повторов в рамках одной сессии:
- * каждый раз новый, пока не пройдём весь список.
- */
-export function pickRandomFavorite(): FavoriteDirector {
-  const seenKey = 'filmcine:graph:seenCenters';
-  const seen = JSON.parse(sessionStorage.getItem(seenKey) || '[]') as number[];
+const SEEN_KEY = 'filmcine:graph:seenCenters';
 
-  let available = FAVORITE_DIRECTORS.filter((d) => !seen.includes(d.id));
+/**
+ * Случайный id из пула без повторов в рамках сессии.
+ */
+export function pickRandomCenterId(pool: { id: number }[]): number {
+  if (pool.length === 0) {
+    return FAVORITE_DIRECTORS[0].id;
+  }
+
+  const seen = JSON.parse(sessionStorage.getItem(SEEN_KEY) || '[]') as number[];
+  let available = pool.filter((d) => !seen.includes(d.id));
   if (available.length === 0) {
-    sessionStorage.removeItem(seenKey);
-    available = FAVORITE_DIRECTORS;
+    sessionStorage.removeItem(SEEN_KEY);
+    available = pool;
   }
 
   const chosen = available[Math.floor(Math.random() * available.length)];
-  sessionStorage.setItem(seenKey, JSON.stringify([...seen, chosen.id]));
-  return chosen;
+  sessionStorage.setItem(SEEN_KEY, JSON.stringify([...seen, chosen.id]));
+  return chosen.id;
+}
+
+/** @deprecated Используй pickRandomCenterId(centers) после загрузки /api/graph/centers */
+export function pickRandomFavorite(): FavoriteDirector {
+  const id = pickRandomCenterId(FAVORITE_DIRECTORS);
+  return FAVORITE_DIRECTORS.find((d) => d.id === id) ?? FAVORITE_DIRECTORS[0];
 }

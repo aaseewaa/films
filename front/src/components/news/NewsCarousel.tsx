@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { NewsFilmItem } from '@/api/news';
 import { NewsFilmCard } from './NewsFilmCard';
+import { PageContent } from '@/components/layout/PageContent';
 import { cn } from '@/lib/utils';
 
 interface NewsCarouselProps {
@@ -25,8 +26,8 @@ export function NewsCarousel({
   }
 
   return (
-    <section className="w-full">
-      <div className="flex items-end justify-between gap-4 mb-4 sm:mb-6 px-5 sm:px-10 lg:px-16 xl:px-20 max-w-[1920px] mx-auto">
+    <PageContent as="section" className="w-full">
+      <div className="flex items-end justify-between gap-4 mb-4 sm:mb-6">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-ink-50 mb-1">
             Афиша
@@ -40,7 +41,7 @@ export function NewsCarousel({
             <button
               type="button"
               onClick={() => scroll(-1)}
-              className="p-2 border border-ink-50/20 text-ink-400 hover:bg-ink-50/5 rounded-sm"
+              className="p-2 border border-ink-50/20 text-ink-400 bg-site-bg hover:bg-site-hover rounded-sm transition-colors"
               aria-label="Назад"
             >
               <ChevronLeft size={22} />
@@ -48,7 +49,7 @@ export function NewsCarousel({
             <button
               type="button"
               onClick={() => scroll(1)}
-              className="p-2 border border-ink-50/20 text-ink-400 hover:bg-ink-50/5 rounded-sm"
+              className="p-2 border border-ink-50/20 text-ink-400 bg-site-bg hover:bg-site-hover rounded-sm transition-colors"
               aria-label="Вперёд"
             >
               <ChevronRight size={22} />
@@ -58,13 +59,13 @@ export function NewsCarousel({
       </div>
 
       {films.length === 0 ? (
-        <p className="text-center text-ink-50 py-10 px-6">
+        <p className="text-center text-ink-50 py-10">
           Премьеры временно недоступны.
         </p>
       ) : (
         <div
           ref={trackRef}
-          className="flex gap-[3px] overflow-x-auto snap-x snap-mandatory px-[3px]"
+          className="flex gap-[3px] overflow-x-auto snap-x snap-mandatory"
         >
           {films.map((film, i) => (
             <div
@@ -78,6 +79,6 @@ export function NewsCarousel({
           ))}
         </div>
       )}
-    </section>
+    </PageContent>
   );
 }

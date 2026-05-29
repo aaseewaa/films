@@ -1,8 +1,12 @@
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import type { FilmCatalogType } from '@/api/catalog';
 import type { FilmSortBy, GenreItem } from '@/api/types';
 
+export type { FilmCatalogType };
+
 export interface FilmFiltersState {
+  catalogType: FilmCatalogType;
   yearFrom?: number;
   yearTo?: number;
   genre?: string;
@@ -44,59 +48,70 @@ function FilterSelect({
   onChange,
   children,
   disabled,
+  active,
+  size = 'default',
 }: {
   label: string;
   value: string;
   onChange: (v: string) => void;
   children: React.ReactNode;
   disabled?: boolean;
+  active?: boolean;
+  size?: 'default' | 'large';
 }) {
+  const large = size === 'large';
+
   return (
     <label
-      className={cn(
-        'relative inline-flex items-center h-10 pl-4 pr-9 rounded-full border border-ink-50/20',
-        'bg-white text-sm font-medium text-ink-400',
-        disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:border-ink-50/35',
-      )}
+        className={cn(
+          'catalog-pill group relative inline-flex items-center rounded-full font-medium',
+          large ? 'h-14 sm:h-[3.75rem] pl-5 sm:pl-6 pr-11 text-lg sm:text-xl' : 'h-12 sm:h-14 pl-4 sm:pl-5 pr-10 text-base sm:text-lg',
+          disabled && 'opacity-50 cursor-not-allowed pointer-events-none',
+          !disabled && active && 'is-active',
+          !disabled && 'cursor-pointer',
+        )}
     >
       <span className="sr-only">{label}</span>
-      <select
-        value={value}
-        disabled={disabled}
-        onChange={(e) => onChange(e.target.value)}
-        className="appearance-none bg-transparent outline-none cursor-pointer pr-1 min-w-[7rem] max-w-[11rem] truncate disabled:cursor-not-allowed"
-        aria-label={label}
-      >
-        {children}
-      </select>
-      <ChevronDown
-        size={16}
-        className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-ink-50"
-      />
+        <select
+          value={value}
+          disabled={disabled}
+          onChange={(e) => onChange(e.target.value)}
+          className={cn(
+            'appearance-none bg-transparent text-inherit outline-none cursor-pointer pr-1 truncate disabled:cursor-not-allowed',
+            large ? 'min-w-[10rem] sm:min-w-[12rem] max-w-[16rem] sm:max-w-[18rem]' : 'min-w-[8rem] sm:min-w-[9rem] max-w-[13rem] sm:max-w-[15rem]',
+          )}
+          aria-label={label}
+        >
+          {children}
+        </select>
+        <ChevronDown
+          size={large ? 22 : 18}
+          className="catalog-pill-icon absolute right-3.5 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none transition-colors"
+        />
     </label>
   );
 }
 
 function TabPill({
   active,
-  disabled,
+  onClick,
   children,
 }: {
   active?: boolean;
-  disabled?: boolean;
+  onClick?: () => void;
   children: React.ReactNode;
 }) {
   return (
-    <span
+    <button
+      type="button"
+      onClick={onClick}
       className={cn(
-        'inline-flex items-center h-10 px-5 rounded-full text-sm font-semibold uppercase tracking-wide',
-        active && 'bg-ink-500 text-white',
-        !active && !disabled && 'bg-white border border-ink-50/20 text-ink-400',
-        disabled && 'bg-white/60 border border-ink-50/10 text-ink-50',
+        'catalog-pill catalog-pluffy-tab inline-flex items-center h-14 sm:h-16 px-7 sm:px-10 rounded-full',
+        active && 'is-active',
       )}
     >
       {children}
-    </span>
+    </button>
   );
 }
 
@@ -114,15 +129,36 @@ export function FilmCatalogFilters({
     )?.label ?? 'Все годы';
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-        <TabPill active>Фильмы</TabPill>
-        <TabPill disabled>Сериалы</TabPill>
+    <div className="space-y-5 sm:space-y-6">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-4 lg:gap-5">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+          <TabPill
+            active={filters.catalogType === 'films'}
+            onClick={() => {
+              if (filters.catalogType !== 'films') {
+                onChange({ ...filters, catalogType: 'films' });
+              }
+            }}
+          >
+            Все фильмы
+          </TabPill>
+          <TabPill
+            active={filters.catalogType === 'animation'}
+            onClick={() => {
+              if (filters.catalogType !== 'animation') {
+                onChange({ ...filters, catalogType: 'animation', genre: undefined });
+              }
+            }}
+          >
+            Мультфильмы
+          </TabPill>
+        </div>
 
-        <span className="hidden sm:block w-px h-6 bg-ink-50/20 mx-1" aria-hidden />
+        <span className="hidden sm:block w-px h-12 sm:h-14 bg-ink-50/20 mx-0.5 self-center" aria-hidden />
 
         <FilterSelect
           label="Год"
+          active={filters.yearFrom != null || filters.yearTo != null}
           value={yearValue}
           onChange={(label) => {
             const opt = YEAR_OPTIONS.find((o) => o.label === label);
@@ -142,6 +178,7 @@ export function FilmCatalogFilters({
 
         <FilterSelect
           label="Жанр"
+          active={!!filters.genre}
           value={filters.genre ?? ''}
           onChange={(code) => {
             onChange({ ...filters, genre: code || undefined });
@@ -157,6 +194,7 @@ export function FilmCatalogFilters({
 
         <FilterSelect
           label="Производство"
+          active={!!filters.country}
           value={filters.country ?? ''}
           disabled={countries.length === 0}
           onChange={(code) => {
@@ -175,6 +213,8 @@ export function FilmCatalogFilters({
 
         <FilterSelect
           label="Сортировка"
+          size="large"
+          active={filters.sortBy !== 'popularity'}
           value={filters.sortBy}
           onChange={(sortBy) => {
             onChange({ ...filters, sortBy: sortBy as FilmSortBy });
@@ -192,7 +232,7 @@ export function FilmCatalogFilters({
         <button
           type="button"
           onClick={onReset}
-          className="text-sm text-ink-50 hover:text-ink-300 transition-colors"
+          className="text-base sm:text-lg text-ink-50 transition-colors hover:text-[#0abab5]"
         >
           ✕ Сбросить фильтры
         </button>

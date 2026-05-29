@@ -25,3 +25,23 @@ export async function getMe(): Promise<User> {
   const { data } = await apiClient.get<User>('/api/auth/me');
   return data;
 }
+
+export interface UpdateProfileData {
+  display_name?: string;
+  city?: string;
+  preferred_language?: 'ru' | 'en';
+}
+
+export async function updateProfile(data: UpdateProfileData): Promise<User> {
+  const { data: user } = await apiClient.put<User>('/api/auth/me', data);
+  return user;
+}
+
+export async function uploadAvatar(file: File): Promise<User> {
+  const form = new FormData();
+  form.append('file', file);
+  const { data } = await apiClient.post<User>('/api/auth/me/avatar', form, {
+    headers: { 'Content-Type': 'multipart/form-data' },
+  });
+  return data;
+}

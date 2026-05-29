@@ -10,7 +10,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
-from app.schemas.graph import GraphResponse
+from app.schemas.graph import GraphCentersResponse, GraphResponse
 from app.services.graph_service import GraphService
 from app.services.radial_graph_service import RadialGraphService
 from app.services.semantic_radial_service import SemanticRadialService
@@ -82,6 +82,42 @@ async def full_graph(
     service = GraphService(db)
     result = await service.get_full_graph(limit=limit, lang=lang)
     return GraphResponse(**result)
+
+@router.get(
+    "/centers",
+    response_model=GraphCentersResponse,
+    summary="Пул центров для главной (случайный режиссёр)",
+)
+async def graph_centers(
+    limit: Annotated[
+        int, Query(ge=10, le=200, description="Максимум кандидатов"),
+    ] = 80,
+    min_incoming: Annotated[
+        int,
+        Query(
+            ge=1,
+            le=10,
+            description="Минимум входящих связей (учителей) у центра",
+        ),
+    ] = 2,
+    lang: Annotated[Literal["ru", "en"], Query()] = "ru",
+    db: AsyncSession = Depends(get_db),
+) -> GraphCentersResponse:
+    """
+    Режиссёры с достаточным числом входящих влияний для радиального графа.
+
+    Используется на главной для «Случайный режиссёр» вместо захардкоженного списка.
+    """
+    service = RadialGraphService(db)
+    centers = await service.get_center_candidates(
+        limit=limit, min_incoming=min_incoming, lang=lang,
+    )
+    return GraphCentersResponse(
+        centers=centers,
+        min_incoming=min_incoming,
+        limit=limit,
+    )
+
 
 @router.get(
     "/director/{center_id}/radial",

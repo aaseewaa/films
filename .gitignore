@@ -1,11 +1,21 @@
 # Python
 venv/
+.venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.eggs/
 
-# Секреты
+# Секреты (шаблон .env.example коммитим)
 .env
+.env.local
+.env.*.local
 *.key
 
 # IDE
@@ -15,6 +25,7 @@ __pycache__/
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Кэш скриптов (большие JSON-файлы)
 backend/scripts/cache/
@@ -22,3 +33,20 @@ backend/app/cache/
 
 # Логи
 *.log
+
+# Загрузки пользователей (аватары), относительно backend при запуске API
+uploads/
+backend/uploads/
+
+# Node / Vite
+node_modules/
+**/node_modules/
+front/.vite/
+front/dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Локальные настройки Vite
+front/.env
+front/.env.local
+front/.env.production

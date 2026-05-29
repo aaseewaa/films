@@ -6,40 +6,23 @@ interface LogoProps {
   size?: 'default' | 'large';
 }
 
-/**
- * Логотип «ЛОГО» + три линии над «О» (крупный вариант — как KNMN на kinomania).
- */
+const SIZE_CLASS = {
+  large: 'text-[3.8rem] sm:text-[4.8rem] lg:text-[5.7rem]',
+  default: 'text-[3.3rem]',
+} as const;
+
+/** Логотип FMW — один слой Pluffy Loon Outline Shadow (как заголовки каталога) */
 export function Logo({ className, size = 'default' }: LogoProps) {
   const isLarge = size === 'large';
-  const barColor = 'bg-ink-500';
+  const textClass = cn(SIZE_CLASS[isLarge ? 'large' : 'default'], className);
 
   return (
     <Link
       to="/"
-      className={cn(
-        'inline-flex items-end gap-0 font-sans font-black uppercase leading-none select-none text-ink-500',
-        isLarge
-          ? 'text-[2.25rem] sm:text-5xl lg:text-[3.25rem] tracking-[-0.03em]'
-          : 'text-2xl tracking-tight',
-        className,
-      )}
+      className={cn('inline-flex items-center select-none hover:no-underline', textClass)}
       aria-label="На главную"
     >
-      <span>ЛОГ</span>
-      <span className={cn('relative inline-block', isLarge ? 'pb-1' : 'pb-0.5')}>
-        <span
-          className={cn(
-            'absolute left-1/2 -translate-x-1/2 flex flex-col items-center',
-            isLarge ? '-top-5 sm:-top-6 gap-1' : '-top-[18px] gap-[3px]',
-          )}
-          aria-hidden
-        >
-          <span className={cn('rounded-full', barColor, isLarge ? 'h-[3px] w-7 sm:w-9' : 'h-[2px] w-[22px]')} />
-          <span className={cn('rounded-full', barColor, isLarge ? 'h-[3px] w-5 sm:w-7' : 'h-[2px] w-[16px]')} />
-          <span className={cn('rounded-full', barColor, isLarge ? 'h-[3px] w-3 sm:w-4' : 'h-[2px] w-[10px]')} />
-        </span>
-        О
-      </span>
+      <span className="logo-fmw text-tiffany uppercase leading-none whitespace-nowrap">FMW</span>
     </Link>
   );
 }

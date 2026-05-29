@@ -11,6 +11,8 @@ import { cn } from '@/lib/utils';
 
 interface FilmRatingBlockProps {
   entityId: number;
+  /** Крупные подписи и квадраты оценки (страница фильма). */
+  large?: boolean;
 }
 
 function formatAvg(v: number | null | undefined): string | null {
@@ -27,7 +29,7 @@ function pluralRatings(n: number): string {
   return 'оценок';
 }
 
-export function FilmRatingBlock({ entityId }: FilmRatingBlockProps) {
+export function FilmRatingBlock({ entityId, large }: FilmRatingBlockProps) {
   const queryClient = useQueryClient();
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const [hoverScore, setHoverScore] = useState<number | null>(null);
@@ -82,12 +84,13 @@ export function FilmRatingBlock({ entityId }: FilmRatingBlockProps) {
               aria-label={`Оценка ${score}`}
               aria-pressed={myRating?.rating === score}
               className={cn(
-                'w-8 h-8 sm:w-9 sm:h-9 border rounded-sm transition-colors',
+                large ? 'w-12 h-12 sm:w-14 sm:h-14' : 'w-8 h-8 sm:w-9 sm:h-9',
+                'border rounded-sm transition-colors',
                 'disabled:cursor-default',
                 isAuthenticated && 'cursor-pointer hover:border-ink-400',
                 filled
                   ? 'bg-ink-500 border-ink-500'
-                  : 'border-ink-50/25 bg-white hover:bg-cream-200',
+                  : 'border-ink-50/25 bg-site-bg hover:bg-site-hover',
               )}
             />
           );
@@ -95,7 +98,7 @@ export function FilmRatingBlock({ entityId }: FilmRatingBlockProps) {
       </div>
 
       {!isAuthenticated && (
-        <p className="text-sm text-ink-50 mb-2">
+        <p className={cn(large ? 'text-lg sm:text-xl' : 'text-sm', 'text-ink-50 mb-2')}>
           <Link to="/auth/login" className="text-wine-500 hover:underline">
             Войдите
           </Link>
@@ -104,20 +107,20 @@ export function FilmRatingBlock({ entityId }: FilmRatingBlockProps) {
       )}
 
       {isAuthenticated && rateMutation.isError && (
-        <p className="text-sm text-wine-500 mb-2">
+        <p className={cn(large ? 'text-lg sm:text-xl' : 'text-sm', 'text-wine-500 mb-2')}>
           Не удалось сохранить оценку. Попробуйте ещё раз.
         </p>
       )}
 
       {myRating && (
-        <p className="text-base text-ink-300 mb-2">
+        <p className={cn(large ? 'text-xl sm:text-2xl' : 'text-base', 'text-ink-300 mb-2')}>
           Ваша оценка:{' '}
           <span className="font-semibold text-ink-500">{myRating.rating}</span>
         </p>
       )}
 
       {communityAvg && totalRatings > 0 && (
-        <p className="text-base text-ink-300">
+        <p className={cn(large ? 'text-xl sm:text-2xl' : 'text-base', 'text-ink-300')}>
           Средняя оценка пользователей:{' '}
           <span className="font-semibold text-ink-500">{communityAvg}</span>
           <span className="text-ink-50">

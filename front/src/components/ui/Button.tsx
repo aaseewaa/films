@@ -22,9 +22,9 @@ export function Button({
         variant === 'primary' &&
           'bg-wine-500 text-cream-50 hover:bg-wine-600',
         variant === 'ghost' &&
-          'text-ink-300 hover:bg-ink-50/10',
+          'text-ink-300 hover:bg-site-hover',
         variant === 'outline' &&
-          'border border-ink-50/30 text-ink-300 hover:bg-ink-50/5',
+          'border border-ink-50/30 text-ink-300 bg-site-bg hover:bg-site-hover',
         // sizes
         size === 'sm' && 'h-9 px-3 text-sm rounded-sm',
         size === 'md' && 'h-10 px-4 text-sm rounded-sm',
