@@ -6,8 +6,9 @@ from contextlib import asynccontextmanager
 import structlog
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api import (
@@ -75,26 +76,57 @@ _uploads.mkdir(parents=True, exist_ok=True)
 app.mount("/uploads", StaticFiles(directory=str(_uploads)), name="uploads")
 
 
-@app.get("/", tags=["root"])
-async def root() -> dict:
-    return {
-        "app": settings.app_name,
-        "version": settings.app_version,
-        "docs": "/docs",
-        "endpoints": {
-            "search": "/api/search?q=...",
-            "entity": "/api/entity/{id}",
-            "films": "/api/films",
-            "persons": "/api/persons",
-            "genres": "/api/genres",
-            "popular": "/api/popular",
-            "auth": "/api/auth/(register|login|me)",
-            "favorites": "/api/favorites",
-            "ratings": "/api/ratings/{id}",
-            "history": "/api/history",
-            "graph_director": "/api/graph/director/{id}?depth=2",
-            "graph_full": "/api/graph/full?limit=50",
-            "recommendations": "/api/recommendations?for_film_id=...",
-            "news": "/api/news?city=...",
-        },
-    }
+def _frontend_static_dir() -> Path | None:
+    if settings.static_dir:
+        root = Path(settings.static_dir)
+    else:
+        root = Path(__file__).resolve().parent.parent / "static"
+    return root if (root / "index.html").is_file() else None
+
+
+_frontend_static = _frontend_static_dir()
+
+if _frontend_static:
+    _assets = _frontend_static / "assets"
+    if _assets.is_dir():
+        app.mount("/assets", StaticFiles(directory=str(_assets)), name="frontend-assets")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_spa(full_path: str) -> FileResponse:
+        if full_path.startswith(("api/", "uploads/")) or full_path in (
+            "docs",
+            "redoc",
+            "openapi.json",
+        ):
+            raise HTTPException(status_code=404)
+        if full_path.startswith("health"):
+            raise HTTPException(status_code=404)
+        candidate = _frontend_static / full_path
+        if candidate.is_file():
+            return FileResponse(candidate)
+        return FileResponse(_frontend_static / "index.html")
+else:
+
+    @app.get("/", tags=["root"])
+    async def root() -> dict:
+        return {
+            "app": settings.app_name,
+            "version": settings.app_version,
+            "docs": "/docs",
+            "endpoints": {
+                "search": "/api/search?q=...",
+                "entity": "/api/entity/{id}",
+                "films": "/api/films",
+                "persons": "/api/persons",
+                "genres": "/api/genres",
+                "popular": "/api/popular",
+                "auth": "/api/auth/(register|login|me)",
+                "favorites": "/api/favorites",
+                "ratings": "/api/ratings/{id}",
+                "history": "/api/history",
+                "graph_director": "/api/graph/director/{id}?depth=2",
+                "graph_full": "/api/graph/full?limit=50",
+                "recommendations": "/api/recommendations?for_film_id=...",
+                "news": "/api/news?city=...",
+            },
+        }

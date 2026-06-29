@@ -58,9 +58,21 @@ class Settings(BaseSettings):
 
     # ─── Загрузки (аватары) ─────────────────────────────────────
     uploads_dir: str = "uploads"
-    avatar_max_bytes: int = 2 * 1024 * 1024  # 2 MB
+    avatar_max_bytes: int = 10 * 1024 * 1024  # 10 MB
+
+    # ─── Production: статика фронта (Docker кладёт front/dist сюда) ─
+    static_dir: str = ""
 
     # ─── Удобные свойства ─────────────────────────────────────────
+    @property
+    def async_database_url(self) -> str:
+        """Railway отдаёт postgres:// — asyncpg нужен postgresql+asyncpg://."""
+        url = self.database_url.strip()
+        if url.startswith("postgres://"):
+            return "postgresql+asyncpg://" + url[len("postgres://") :]
+        if url.startswith("postgresql://") and "+asyncpg" not in url:
+            return "postgresql+asyncpg://" + url[len("postgresql://") :]
+        return url
     @property
     def supported_languages_list(self) -> list[str]:
         return [lang.strip() for lang in self.supported_languages.split(",") if lang.strip()]
