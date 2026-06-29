@@ -1,22 +1,30 @@
 # ── Stage 1: сборка React ─────────────────────────────────────────
 FROM node:20-alpine AS frontend
 WORKDIR /app/front
+ENV NODE_OPTIONS=--max-old-space-size=4096
 COPY front/package.json front/package-lock.json* ./
 RUN npm ci
 COPY front/ ./
 RUN npm run build
 
 # ── Stage 2: FastAPI + статика ────────────────────────────────────
-FROM python:3.11-slim
+FROM python:3.11-slim-bookworm
 WORKDIR /app
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     STATIC_DIR=static \
-    APP_DEBUG=false
+    APP_DEBUG=false \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+      gcc libxml2-dev libxslt1-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY backend/requirements-prod.txt .
-RUN pip install --no-cache-dir -r requirements-prod.txt
+RUN pip install --prefer-binary -r requirements-prod.txt
 
 COPY backend/ .
 COPY --from=frontend /app/front/dist ./static
