@@ -7,8 +7,8 @@ interface LogoProps {
 }
 
 const SIZE_CLASS = {
-  large: 'text-[2.5rem] sm:text-[3rem] 2xl:text-[3.75rem]',
-  default: 'text-[2rem] sm:text-[2.35rem]',
+  large: 'text-[2.5rem] sm:text-[3rem] lg:text-[3.35rem] xl:text-[4rem] 2xl:text-[5.7rem]',
+  default: 'text-[2.5rem] sm:text-[2.85rem]',
 } as const;
 
 /** Логотип FMW — один слой Pluffy Loon Outline Shadow (как заголовки каталога) */

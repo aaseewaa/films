@@ -12,6 +12,8 @@ import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
 import {
   HEADER_NAV_LINK_CLASS,
   HEADER_NAV_SEP_CLASS,
+  HEADER_CONTROL_HIT_CLASS,
+  HEADER_CONTROL_ICON_CLASS,
 } from '@/lib/headerNavTheme';
 
 type NavItem =
@@ -38,13 +40,12 @@ function NavItemLabel({ item }: { item: NavItem }) {
 const MENU_SECTION_TITLE_CLASS =
   'font-sans text-4xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] font-bold leading-tight text-[#0ABAB5] mb-5 sm:mb-6';
 
-/** Высота шапки для calc(100vh - …) на главной */
-export const HEADER_HEIGHT_CLASS = 'min-h-[5.75rem] sm:min-h-[6rem] lg:min-h-[6.5rem]';
-
 /**
  * Шапка в духе kinomania: белый фон, бургер + крупный логотип слева,
  * крупные пункты меню и лупа справа. Бургер открывает полноэкранное меню.
  */
+export const HEADER_HEIGHT_CLASS = 'min-h-[5.75rem] sm:min-h-[6rem] lg:min-h-[6.5rem]';
+
 export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -123,26 +124,25 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-site-bg border-b border-ink-50/12">
         <div
           className={cn(
-            'flex items-center justify-between gap-4 lg:gap-6',
-            'pt-3 pb-2 sm:pt-3.5 sm:pb-2.5',
+            'flex items-center justify-between gap-6 lg:gap-8',
             SITE_GUTTER_CLASS,
             HEADER_HEIGHT_CLASS,
           )}
         >
-          <div className="flex items-center gap-3 sm:gap-5 lg:gap-8 min-w-0 shrink-0">
+          <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 min-w-0 shrink-0">
             <HeaderMenuToggle
               open={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
             />
-            <Logo size="default" className="shrink min-w-0" />
+            <Logo size="large" className="shrink min-w-0" />
           </div>
 
-          <div className="hidden 2xl:flex items-center justify-end flex-1 min-w-0 gap-3 overflow-hidden">
+          <div className="hidden md:flex items-center justify-end flex-1 min-w-0 gap-4 lg:gap-5">
             <nav
               className={cn(
                 'flex flex-nowrap items-center justify-end shrink min-w-0',
                 'transition-transform duration-300 ease-out',
-                searchExpanded && '-translate-x-1',
+                searchExpanded && '-translate-x-2 lg:-translate-x-4 xl:-translate-x-6',
               )}
               aria-label="Основное меню"
             >
@@ -151,7 +151,7 @@ export function Header() {
                   {index > 0 && (
                     <span
                       className={cn(
-                        'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                        'shrink-0 px-3 lg:px-4 xl:px-6 text-ink-500 font-semibold leading-none select-none',
                         HEADER_NAV_SEP_CLASS,
                       )}
                       aria-hidden
@@ -164,7 +164,7 @@ export function Header() {
                     className={cn(
                       'shrink-0 uppercase font-semibold tracking-[0.06em] text-ink-500 leading-none',
                       HEADER_NAV_LINK_CLASS,
-                      'px-2 xl:px-3 py-1.5 rounded-sm transition-colors duration-150',
+                      'px-2 lg:px-3 py-1.5 rounded-sm transition-colors duration-150',
                       'hover:text-[#0ABAB5]',
                     )}
                     aria-current={
@@ -179,7 +179,7 @@ export function Header() {
 
             <span
               className={cn(
-                'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                'shrink-0 px-3 lg:px-4 xl:px-6 text-ink-500 font-semibold leading-none select-none',
                 HEADER_NAV_SEP_CLASS,
               )}
               aria-hidden
@@ -191,7 +191,7 @@ export function Header() {
 
             <span
               className={cn(
-                'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                'shrink-0 px-3 lg:px-4 xl:px-6 text-ink-500 font-semibold leading-none select-none',
                 HEADER_NAV_SEP_CLASS,
               )}
               aria-hidden
@@ -202,26 +202,28 @@ export function Header() {
             <LanguageToggle />
           </div>
 
-          <div className="2xl:hidden flex items-center gap-3 shrink-0">
+          <div className="md:hidden flex items-center gap-3 shrink-0">
             <LanguageToggle />
             <button
               type="button"
               onClick={() => navigate('/search')}
-              className="p-1 rounded-sm text-ink-500 hover:text-ink-400 hover:bg-site-hover transition-colors"
+              className={cn(
+                'rounded-sm text-tiffany hover:opacity-85 transition-colors',
+                HEADER_CONTROL_HIT_CLASS,
+              )}
               aria-label={tr('searchAria')}
             >
-            <svg
-              width="26"
-              height="26"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              aria-hidden
-            >
-              <circle cx="11" cy="11" r="7" />
-              <path d="M20 20 16 16" />
-            </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                className={HEADER_CONTROL_ICON_CLASS}
+                aria-hidden
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="M20 20 16 16" />
+              </svg>
             </button>
           </div>
         </div>

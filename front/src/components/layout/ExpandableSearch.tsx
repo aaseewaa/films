@@ -3,21 +3,26 @@ import { useNavigate } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { cn } from '@/lib/utils';
+import { HEADER_CONTROL_HIT_CLASS, HEADER_CONTROL_ICON_CLASS } from '@/lib/headerNavTheme';
 
 interface ExpandableSearchProps {
-  /** Родитель узнаёт, раскрыт ли поиск (сдвинуть навигацию) */
+  /** Родитель сдвигает навигацию, когда поиск раскрыт */
   onExpandedChange?: (expanded: boolean) => void;
   className?: string;
 }
 
-/** Соразмерно крупной навигации в Header (фильмы, Гении/вдохновители…) */
-const ICON_BTN =
-  'shrink-0 flex items-center justify-center bg-site-bg transition-colors hover:bg-site-hover w-[2.5rem] xl:w-[3rem] 2xl:w-[3.5rem]';
-const ICON_SIZE = 'w-[1.35rem] h-[1.35rem] xl:w-[1.65rem] xl:h-[1.65rem] 2xl:w-[2rem] 2xl:h-[2rem]';
+const OPEN_OVAL_CLASS = cn(
+  'flex items-stretch rounded-full overflow-hidden cursor-text',
+  'bg-site-bg',
+  'border border-tiffany/30',
+  'shadow-[0_2px_14px_rgba(10,186,181,0.22),0_4px_24px_rgba(10,186,181,0.1)]',
+  'h-[3.4rem] lg:h-[3.9rem] xl:h-[4.4rem]',
+  'w-[min(88vw,280px)] sm:w-[320px] lg:w-[380px] xl:w-[440px]',
+  'transition-all duration-300 ease-out',
+);
 
 /**
- * Поиск: иконка соразмерна пунктам меню → по клику раскрывается крупная «капсула»,
- * остаётся открытой до клика вне или Escape.
+ * Поиск в шапке: до клика — только лупа; после — овал #E1EFF6 с тенью, лупа и | в tiffany.
  */
 export function ExpandableSearch({ onExpandedChange, className }: ExpandableSearchProps) {
   const navigate = useNavigate();
@@ -27,36 +32,39 @@ export function ExpandableSearch({ onExpandedChange, className }: ExpandableSear
   const wrapRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const expanded = open;
-
   useEffect(() => {
-    onExpandedChange?.(expanded);
-  }, [expanded, onExpandedChange]);
+    onExpandedChange?.(open);
+  }, [open, onExpandedChange]);
 
   useEffect(() => {
     if (!open) return;
-    function onDocClick(e: MouseEvent) {
-      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
         setOpen(false);
+        setQuery('');
       }
     }
-    function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setOpen(false);
-    }
-    document.addEventListener('mousedown', onDocClick);
     document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onDocClick);
-      document.removeEventListener('keydown', onKey);
-    };
+    return () => document.removeEventListener('keydown', onKey);
   }, [open]);
 
   useEffect(() => {
-    if (expanded) {
-      const t = window.setTimeout(() => inputRef.current?.focus(), 80);
+    if (open) {
+      const t = window.setTimeout(() => inputRef.current?.focus(), 60);
       return () => window.clearTimeout(t);
     }
-  }, [expanded]);
+  }, [open]);
+
+  function collapseIfEmpty() {
+    if (!query.trim()) {
+      setOpen(false);
+    }
+  }
+
+  function openSearch() {
+    setOpen(true);
+    inputRef.current?.focus();
+  }
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
@@ -64,56 +72,68 @@ export function ExpandableSearch({ onExpandedChange, className }: ExpandableSear
     if (trimmed) {
       navigate(`/search?q=${encodeURIComponent(trimmed)}`);
       setOpen(false);
+      setQuery('');
     }
   }
 
   return (
     <div
       ref={wrapRef}
-      className={cn(
-        'relative shrink-0 transition-transform duration-300 ease-out',
-        expanded && 'scale-[1.04] lg:scale-[1.05]',
-        className,
-      )}
+      className={cn('relative shrink-0', className)}
+      onMouseLeave={collapseIfEmpty}
     >
-      <form
-        onSubmit={onSubmit}
-        className={cn(
-          'flex items-stretch rounded-full overflow-hidden',
-          'bg-[#b5b5b5] transition-all duration-300 ease-out',
-          expanded
-            ? [
-                'cursor-text',
-                'h-[3.5rem] lg:h-[4.2rem] xl:h-[4.85rem]',
-                'w-[min(100vw-2rem,300px)] sm:w-[360px] lg:w-[420px] xl:w-[480px]',
-              ]
-            : [
-                'cursor-pointer',
-                'h-[3.1rem] w-[3.1rem] lg:h-[3.7rem] lg:w-[3.7rem] xl:h-[4.2rem] xl:w-[4.2rem]',
-              ],
-        )}
-        onClick={() => setOpen(true)}
-      >
-        <div className={cn(ICON_BTN, 'h-full')} aria-hidden>
-          <Search strokeWidth={2.25} className={cn('text-ink-500', ICON_SIZE)} />
-        </div>
+      <form onSubmit={onSubmit}>
+        {!open ? (
+          <button
+            type="button"
+            onClick={openSearch}
+            className={cn(
+              'shrink-0 rounded-sm text-tiffany hover:opacity-85 transition-opacity',
+              HEADER_CONTROL_HIT_CLASS,
+            )}
+            aria-label={tr('searchAria')}
+            aria-expanded={false}
+          >
+            <Search strokeWidth={2} className={HEADER_CONTROL_ICON_CLASS} aria-hidden />
+          </button>
+        ) : (
+          <div className={OPEN_OVAL_CLASS} onClick={() => inputRef.current?.focus()}>
+            <div
+              className={cn(
+                'shrink-0 flex items-center justify-center h-full text-tiffany',
+                'w-[3.4rem] lg:w-[3.9rem] xl:w-[4.4rem]',
+              )}
+              aria-hidden
+            >
+              <Search strokeWidth={2.25} className={HEADER_CONTROL_ICON_CLASS} />
+            </div>
 
-        <input
-          ref={inputRef}
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onFocus={() => setOpen(true)}
-          placeholder={tr('searchPlaceholder')}
-          aria-label={tr('searchAria')}
-          tabIndex={expanded ? 0 : -1}
-          className={cn(
-            'min-w-0 h-full bg-transparent text-ink-500 placeholder:text-ink-50/90',
-            'font-semibold outline-none transition-opacity duration-200',
-            'text-[1.15rem] lg:text-[1.4rem] xl:text-[1.65rem]',
-            expanded ? 'flex-1 opacity-100 px-4 lg:px-5' : 'w-0 opacity-0 px-0 pointer-events-none',
-          )}
-        />
+            <div className="flex items-center flex-1 min-w-0 pr-4 lg:pr-5">
+              {!query && (
+                <span
+                  className="text-tiffany font-semibold leading-none animate-pulse select-none mr-0.5"
+                  aria-hidden
+                >
+                  |
+                </span>
+              )}
+              <input
+                ref={inputRef}
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onFocus={() => setOpen(true)}
+                placeholder=""
+                aria-label={tr('searchAria')}
+                className={cn(
+                  'min-w-0 w-full h-full bg-transparent text-ink-500',
+                  'font-semibold outline-none caret-tiffany',
+                  'text-[1.05rem] lg:text-[1.2rem] xl:text-[1.45rem] 2xl:text-[1.75rem]',
+                )}
+              />
+            </div>
+          </div>
+        )}
       </form>
     </div>
   );

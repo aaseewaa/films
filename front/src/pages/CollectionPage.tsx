@@ -133,14 +133,14 @@ export function CollectionPage() {
             В подборке пока нет фильмов из каталога — они появятся после загрузки TMDB.
           </p>
         ) : (
-          <ul className="divide-y divide-ink-50/15 max-w-3xl sm:max-w-4xl lg:max-w-5xl mx-auto">
+          <ul className="divide-y divide-ink-50/15 max-w-5xl sm:max-w-6xl lg:max-w-7xl mx-auto">
             {films.map((film) => (
               <li key={film.entity_id}>
                 <Link
                   to={`/film/${film.entity_id}`}
-                  className="collection-catalog-row flex items-center gap-8 sm:gap-10 lg:gap-12 py-10 sm:py-12 group transition-colors"
+                  className="collection-catalog-row flex items-center gap-16 sm:gap-20 lg:gap-24 py-20 sm:py-24 group transition-colors"
                 >
-                  <div className="shrink-0 w-[140px] sm:w-[180px] md:w-[210px]">
+                  <div className="shrink-0 w-[280px] sm:w-[360px] md:w-[420px]">
                     {film.images.primary ? (
                       <img
                         src={film.images.primary}
@@ -153,21 +153,21 @@ export function CollectionPage() {
                     )}
                   </div>
                   <div className="min-w-0 flex-1 flex flex-col justify-center py-2">
-                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-ink-500 leading-[1.15] mb-2">
+                    <h2 className="text-2xl sm:text-[1.75rem] lg:text-4xl font-bold text-ink-500 leading-[1.15] mb-4">
                       {film.title}
                     </h2>
                     {film.release_year && (
-                      <p className="text-ink-50 text-sm sm:text-base mb-2">
+                      <p className="text-ink-50 text-base sm:text-lg lg:text-xl mb-4">
                         {film.release_year} · фильм
                       </p>
                     )}
                     {film.note && (
-                      <p className="text-ink-300 text-sm sm:text-base leading-relaxed line-clamp-3">
+                      <p className="text-ink-300 text-base sm:text-lg lg:text-xl leading-relaxed line-clamp-3">
                         {film.note}
                       </p>
                     )}
                     {film.summary && (
-                      <p className="text-ink-50 text-sm sm:text-base leading-relaxed mt-2 line-clamp-3">
+                      <p className="text-ink-50 text-base sm:text-lg lg:text-xl leading-relaxed mt-4 line-clamp-3">
                         {film.summary}
                       </p>
                     )}

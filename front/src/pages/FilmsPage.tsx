@@ -116,13 +116,13 @@ export function FilmsPage() {
   const loadingAll = isLoading || (hasNextPage && isFetchingNextPage);
 
   return (
-    <div className="bg-site-bg min-h-[calc(100vh-5.75rem)] sm:min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-6.5rem)]">
+    <div className="films-page bg-site-bg min-h-[calc(100vh-5.75rem)] sm:min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-6.5rem)]">
       <PageContent className="py-8 sm:py-12">
-        <header className="mb-8 sm:mb-10">
-          <h1 className="catalog-pluffy-title mb-2 sm:mb-3">
+        <header className="mb-12 sm:mb-16">
+          <h1 className="catalog-pluffy-title mb-3 sm:mb-4">
             {isAnimation ? 'Мультфильмы' : 'Все фильмы'}
           </h1>
-          <p className="text-base sm:text-lg text-ink-50">
+          <p className="text-[1.5rem] sm:text-[1.6875rem] text-ink-50">
             {loadingAll
               ? 'Загружаем каталог…'
               : isAnimation
@@ -138,21 +138,22 @@ export function FilmsPage() {
           onChange={setFilters}
           onReset={() => setFilters(DEFAULT_FILTERS)}
           hasActiveFilters={hasActiveFilters}
+          size="large"
         />
 
-        <section className="mt-10 sm:mt-12">
+        <section className="mt-10 sm:mt-12 w-full">
           {loadingAll && films.length === 0 && (
-            <p className="text-ink-50 py-16 text-center">Загрузка фильмов…</p>
+            <p className="text-ink-50 py-16">Загрузка фильмов…</p>
           )}
 
           {isError && (
-            <p className="text-wine-500 py-16 text-center">
+            <p className="text-wine-500 py-16">
               Не удалось загрузить каталог. Проверьте, что бэкенд запущен.
             </p>
           )}
 
           {!loadingAll && !isError && films.length === 0 && (
-            <p className="text-ink-50 py-16 text-center">
+            <p className="text-ink-50 py-16">
               По выбранным фильтрам ничего не найдено.
             </p>
           )}

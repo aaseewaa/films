@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { LOCALE_EN_ACCENT, TIFFANY } from '@/lib/sitePalette';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useLocaleStore, type SiteLocale } from '@/stores/locale';
-import { HEADER_LANG_CLASS } from '@/lib/headerNavTheme';
+import { HEADER_CONTROL_HIT_CLASS, HEADER_LANG_CLASS } from '@/lib/headerNavTheme';
 
 const LOCALE_COLORS: Record<SiteLocale, string> = {
   ru: TIFFANY,
@@ -22,7 +22,8 @@ export function LanguageToggle({ className }: { className?: string }) {
       type="button"
       onClick={toggleLocale}
       className={cn(
-        'shrink-0 px-2.5 lg:px-3.5 py-1.5 rounded-sm',
+        'shrink-0 px-1 lg:px-2 rounded-sm',
+        HEADER_CONTROL_HIT_CLASS,
         'hover:opacity-85 active:opacity-75 transition-opacity',
         className,
       )}
