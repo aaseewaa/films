@@ -133,7 +133,7 @@ export function Header() {
             <Logo size="large" className="shrink min-w-0" />
           </div>
 
-          <div className="hidden md:flex items-center justify-end flex-1 min-w-0 gap-4 lg:gap-5 overflow-hidden">
+          <div className="hidden md:flex items-center justify-end flex-1 min-w-0 gap-4 lg:gap-5">
             <nav
               className={cn(
                 'flex flex-nowrap items-center justify-end shrink-0',

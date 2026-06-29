@@ -84,21 +84,6 @@ export function HomePage() {
   } | null>(null);
 
   const hoverClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [graphFillScale, setGraphFillScale] = useState(1);
-
-  useEffect(() => {
-    const updateGraphFillScale = () => {
-      const w = window.innerWidth;
-      const h = Math.max(320, window.innerHeight - 104);
-      const fitted = Math.min(w, h);
-      const scale =
-        w > h * 1.15 ? (w * 0.78) / fitted : (h * 0.82) / fitted;
-      setGraphFillScale(Math.min(1.85, Math.max(1, scale)));
-    };
-    updateGraphFillScale();
-    window.addEventListener('resize', updateGraphFillScale);
-    return () => window.removeEventListener('resize', updateGraphFillScale);
-  }, []);
 
   const clearHover = useCallback(() => {
     setExpandedRing1Id(null);
@@ -258,7 +243,7 @@ export function HomePage() {
       />
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none text-center">
-        <p className="text-sm text-graph-text/50 tracking-wide">
+        <p className="text-xs text-graph-text/40 tracking-wide">
           Наведи на вдохновителя — раскроется его круг · клик — новый центр · двойной клик — карточка
         </p>
         {history.length > 0 && (
@@ -280,7 +265,6 @@ export function HomePage() {
           viewBox={`-${GRAPH_VIEW_HALF} -${GRAPH_VIEW_HALF} ${GRAPH_VIEW_HALF * 2} ${GRAPH_VIEW_HALF * 2}`}
           preserveAspectRatio="xMidYMid meet"
         >
-          <g transform={`scale(${graphFillScale})`}>
           {renderHistory(history, goBackTo, (id) => navigate(`/director/${id}`))}
 
           <g
@@ -442,7 +426,6 @@ export function HomePage() {
                 onOpenCard: (id) => navigate(`/director/${id}`),
               })}
           </g>
-          </g>
         </svg>
       )}
     </div>
@@ -471,15 +454,15 @@ function GraphTopBar({
         SITE_GUTTER_CLASS,
       )}
     >
-      <div className="mx-auto flex w-full max-w-page items-start justify-between gap-4 sm:gap-6">
+      <div className="mx-auto flex w-full max-w-page items-start justify-between gap-6">
         <div className="pointer-events-none min-w-0">
           <p
-            className="font-serif text-[clamp(1.75rem,3.5vw,3.25rem)] font-bold tracking-tight leading-none"
+            className="font-serif text-[3.25rem] font-bold tracking-tight leading-none"
             style={{ color: TIFFANY }}
           >
             Граф влияний
           </p>
-          <p className="text-[clamp(0.95rem,1.6vw,1.375rem)] text-ink-500 mt-1.5">
+          <p className="text-[1.375rem] text-ink-500 mt-1.5">
             {data ? (
               hoverActive && focusNode ? (
                 <>
@@ -500,7 +483,7 @@ function GraphTopBar({
             )}
           </p>
           {data && (
-            <p className="text-[clamp(0.875rem,1.4vw,1.25rem)] text-ink-500 mt-0.5">
+            <p className="text-[1.25rem] text-ink-500 mt-0.5">
               {data.ring1.length > 0 ? (
                 <>
                   {data.ring1.length}{' '}

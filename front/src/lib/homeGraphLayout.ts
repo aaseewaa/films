@@ -29,7 +29,7 @@ export const GRAPH_VIEW_HALF = Math.round(
     RING2_ORBIT_RADIUS +
     NESTED_HOVER_ORBIT_RADIUS +
     RING2_ORBIT_SIZE) *
-    0.68,
+    0.9,
 );
 
 export const HISTORY_ORIGIN = { x: -400, y: 400 };
