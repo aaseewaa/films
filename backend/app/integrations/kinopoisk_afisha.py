@@ -165,7 +165,7 @@ def parse_afisha_html(html: str, *, city: CityRef) -> list[KinopoiskAfishaFilm]:
     by_id: dict[int, KinopoiskAfishaFilm] = {}
     cinema_names: dict[str, str] = {}
 
-    soup = BeautifulSoup(html, "lxml")
+    soup = BeautifulSoup(html, "html.parser")
 
     for a in soup.find_all("a", href=True):
         href = a["href"]

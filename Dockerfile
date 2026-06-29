@@ -15,11 +15,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     STATIC_DIR=static \
     APP_DEBUG=false
 
-# lxml и bcrypt wheels иногда требуют системные lib
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc libxml2-dev libxslt1-dev \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY backend/requirements-prod.txt .
 RUN pip install --no-cache-dir -r requirements-prod.txt
 
