@@ -134,10 +134,10 @@ export function Header() {
               open={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
             />
-            <Logo size="large" className="shrink min-w-0" />
+            <Logo size="default" className="shrink min-w-0" />
           </div>
 
-          <div className="hidden lg:flex items-center justify-end flex-1 min-w-0 gap-3 xl:gap-4 overflow-hidden">
+          <div className="hidden 2xl:flex items-center justify-end flex-1 min-w-0 gap-3 overflow-hidden">
             <nav
               className={cn(
                 'flex flex-nowrap items-center justify-end shrink min-w-0',
@@ -202,7 +202,7 @@ export function Header() {
             <LanguageToggle />
           </div>
 
-          <div className="lg:hidden flex items-center gap-3 shrink-0">
+          <div className="2xl:hidden flex items-center gap-3 shrink-0">
             <LanguageToggle />
             <button
               type="button"

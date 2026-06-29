@@ -65,7 +65,7 @@ function FilterSelect({
     <label
         className={cn(
           'catalog-pill group relative inline-flex items-center rounded-full font-medium',
-          large ? 'h-14 sm:h-[3.75rem] pl-5 sm:pl-6 pr-11 text-lg sm:text-xl' : 'h-12 sm:h-14 pl-4 sm:pl-5 pr-10 text-base sm:text-lg',
+          large ? 'h-12 sm:h-[3.25rem] pl-4 sm:pl-5 pr-10 text-base sm:text-lg' : 'h-10 sm:h-11 pl-3.5 sm:pl-4 pr-9 text-sm sm:text-base',
           disabled && 'opacity-50 cursor-not-allowed pointer-events-none',
           !disabled && active && 'is-active',
           !disabled && 'cursor-pointer',
@@ -106,7 +106,7 @@ function TabPill({
       type="button"
       onClick={onClick}
       className={cn(
-        'catalog-pill catalog-pluffy-tab inline-flex items-center h-14 sm:h-16 px-7 sm:px-10 rounded-full',
+        'catalog-pill catalog-pluffy-tab inline-flex items-center h-11 sm:h-12 px-5 sm:px-7 rounded-full',
         active && 'is-active',
       )}
     >
@@ -213,7 +213,6 @@ export function FilmCatalogFilters({
 
         <FilterSelect
           label="Сортировка"
-          size="large"
           active={filters.sortBy !== 'popularity'}
           value={filters.sortBy}
           onChange={(sortBy) => {

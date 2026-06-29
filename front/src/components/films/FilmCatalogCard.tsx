@@ -39,9 +39,9 @@ export function FilmCatalogCard({ film }: FilmCatalogCardProps) {
     <article className="border-b border-ink-50/15 last:border-b-0">
       <Link
         to={`/film/${film.id}`}
-        className="catalog-film-row flex items-center gap-8 sm:gap-10 lg:gap-12 py-10 sm:py-12 lg:py-14 group transition-colors"
+        className="catalog-film-row flex items-center gap-6 sm:gap-8 lg:gap-10 py-8 sm:py-10 lg:py-12 group transition-colors"
       >
-        <div className="shrink-0 w-[200px] sm:w-[260px] lg:w-[320px]">
+        <div className="shrink-0 w-[140px] sm:w-[180px] lg:w-[220px]">
           {film.images.primary ? (
             <img
               src={film.images.primary}
@@ -55,29 +55,29 @@ export function FilmCatalogCard({ film }: FilmCatalogCardProps) {
         </div>
 
         <div className="min-w-0 flex-1 flex flex-col justify-center py-2">
-          <h2 className="catalog-film-title text-2xl sm:text-[1.65rem] lg:text-[2rem] font-bold text-ink-500 leading-[1.15] mb-3 sm:mb-4 transition-colors">
+          <h2 className="catalog-film-title text-xl sm:text-2xl lg:text-[1.65rem] font-bold text-ink-500 leading-[1.15] mb-2 sm:mb-3 transition-colors">
             {film.title}
           </h2>
 
           {subtitle && (
-            <p className="text-base sm:text-lg text-ink-50 mb-2 sm:mb-2.5 leading-snug">
+            <p className="text-sm sm:text-base text-ink-50 mb-2 leading-snug">
               {subtitle}
             </p>
           )}
 
           {genresCountry && (
-            <p className="text-base sm:text-lg text-ink-300 mb-2 sm:mb-2.5 leading-snug">
+            <p className="text-sm sm:text-base text-ink-300 mb-2 leading-snug">
               {genresCountry}
             </p>
           )}
 
           {castLine && (
-            <p className="text-base sm:text-lg text-ink-300 mb-4 sm:mb-5 leading-relaxed">
+            <p className="text-sm sm:text-base text-ink-300 mb-3 sm:mb-4 leading-relaxed">
               {castLine}
             </p>
           )}
 
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-base sm:text-lg text-ink-300">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm sm:text-base text-ink-300">
             {film.vote_average != null && (
               <span>
                 <span className="text-ink-50">TMDB:</span>{' '}

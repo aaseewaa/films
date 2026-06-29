@@ -122,7 +122,7 @@ export function FilmsPage() {
           <h1 className="catalog-pluffy-title mb-2 sm:mb-3">
             {isAnimation ? 'Мультфильмы' : 'Все фильмы'}
           </h1>
-          <p className="text-lg sm:text-xl text-ink-50">
+          <p className="text-base sm:text-lg text-ink-50">
             {loadingAll
               ? 'Загружаем каталог…'
               : isAnimation
