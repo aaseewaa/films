@@ -34,6 +34,10 @@ backend/app/cache/
 # Логи
 *.log
 
+# Дампы БД — только локально для pg_restore, не в GitHub
+*.dump
+films.dump
+
 # Загрузки пользователей (аватары), относительно backend при запуске API
 uploads/
 backend/uploads/
