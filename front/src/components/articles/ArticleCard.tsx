@@ -44,34 +44,34 @@ export function ArticleCard({
     wide
       ? 'text-[1.0625rem] sm:text-lg'
       : narrow
-        ? 'text-sm sm:text-base'
+        ? 'text-xl sm:text-[1.375rem]'
         : 'text-xs sm:text-sm lg:text-[0.9375rem]',
     light ? 'text-white/80' : 'text-ink-500/70',
   );
   const titleClass = cn(
     'font-serif font-bold leading-[1.12]',
     wide
-      ? 'text-xl sm:text-2xl lg:text-3xl'
+      ? 'text-[1.6875rem] sm:text-[1.875rem] lg:text-4xl'
       : narrow
-        ? 'text-lg sm:text-xl lg:text-2xl'
+        ? 'text-[1.75rem] sm:text-[2rem]'
         : 'text-base sm:text-lg lg:text-xl',
     light ? 'text-white' : 'text-ink-500',
   );
   const bylineClass = cn(
     'font-sans',
     wide
-      ? 'text-base sm:text-lg'
+      ? 'text-xl sm:text-2xl'
       : narrow
-        ? 'text-sm sm:text-base'
+        ? 'text-2xl sm:text-[1.75rem]'
         : 'text-sm sm:text-base lg:text-lg',
     light ? 'text-white/90' : 'text-ink-400',
   );
   const excerptClass = cn(
     'font-serif leading-relaxed',
     wide
-      ? 'text-base sm:text-lg line-clamp-4'
+      ? 'text-xl sm:text-2xl line-clamp-4'
       : narrow
-        ? 'text-sm sm:text-base line-clamp-3'
+        ? 'text-2xl sm:text-[1.75rem] line-clamp-3'
         : 'text-sm sm:text-base lg:text-lg line-clamp-4',
     light ? 'text-white/92' : 'text-ink-400',
   );

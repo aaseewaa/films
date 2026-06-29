@@ -24,7 +24,11 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY backend/requirements-prod.txt .
-RUN pip install --prefer-binary -r requirements-prod.txt
+RUN pip install torch --index-url https://download.pytorch.org/whl/cpu \
+    && pip install --prefer-binary -r requirements-prod.txt
+
+ENV HF_HOME=/app/.cache/huggingface
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('intfloat/multilingual-e5-small')"
 
 COPY backend/ .
 COPY --from=frontend /app/front/dist ./static
