@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 /** Высота совпадает с крупным логотипом FMW в шапке */
 const TOGGLE_SIZE_CLASS = 'h-[3.8rem] sm:h-[4.8rem] lg:h-[5.7rem]';
 const BAR_CLASS =
-  'absolute left-0 right-0 rounded-full bg-current transition-all duration-300 ease-out h-[0.38rem] sm:h-[0.46rem] lg:h-[0.54rem]';
+  'absolute left-0 right-0 rounded-full bg-current transition-all duration-300 ease-out h-[0.2rem] sm:h-[0.24rem] lg:h-[0.28rem]';
 
 interface HeaderMenuToggleProps {
   open: boolean;

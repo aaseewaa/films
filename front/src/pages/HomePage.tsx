@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback, type ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
@@ -38,14 +38,15 @@ import {
   SINGLE_CLICK_DELAY_MS,
   TIFFANY,
 } from '@/lib/homeGraphLayout';
-import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
 import { SITE_UI_SCALE } from '@/lib/siteScale';
 import { useSiteLang } from '@/lib/siteLang';
+import { useGraphHeader } from '@/contexts/GraphHeaderContext';
 import { cn } from '@/lib/utils';
 
 export function HomePage() {
   const navigate = useNavigate();
   const lang = useSiteLang();
+  const { setGraphHeader, clearGraphHeader } = useGraphHeader();
   const [currentCenterId, setCurrentCenterId] = useState<number | null>(null);
 
   const { data: centersData, isLoading: centersLoading } = useQuery({
@@ -148,6 +149,82 @@ export function HomePage() {
   const ring1Expanded =
     expandedSlotIdx >= 0 && data !== undefined;
 
+  const pickRandomDirector = useCallback(() => {
+    const pool = centerPool.length > 0 ? centerPool : [];
+    setCurrentCenterId(pickRandomCenterId(pool));
+    setHistory([]);
+    clearHover();
+  }, [centerPool, clearHover]);
+
+  useEffect(() => () => clearGraphHeader(), [clearGraphHeader]);
+
+  useEffect(() => {
+    if (error) return;
+
+    const focusNode =
+      expandedSlotIdx >= 0 && data ? data.ring1[expandedSlotIdx] : null;
+    const hoverActive = ring1Expanded;
+    const nestedFocusName =
+      nestedHover && nestedData?.center.name
+        ? nestedData.center.name
+        : nestedHover
+          ? data?.ring1.find((n) => n.id === nestedHover.id)?.name ??
+            data?.ring1.flatMap((n) => n.ring2).find((n) => n.id === nestedHover.id)?.name
+          : null;
+
+    let centerLine: ReactNode = null;
+    let statsLine: ReactNode = null;
+
+    if (data) {
+      centerLine =
+        hoverActive && focusNode ? (
+          <>
+            Смотрим: <span className="font-medium">{focusNode.name}</span>
+            {nestedFocusName && (
+              <>
+                {' '}
+                → <span className="font-medium">{nestedFocusName}</span>
+              </>
+            )}
+            <span className="text-ink-300"> · центр: {data.center.name}</span>
+          </>
+        ) : (
+          <>Центр: {data.center.name}</>
+        );
+
+      statsLine =
+        data.ring1.length > 0 ? (
+          <>
+            {data.ring1.length}{' '}
+            {plural(data.ring1.length, 'вдохновитель', 'вдохновителя', 'вдохновителей')}
+            <span> · до {RING2_SLOTS} у каждого</span>
+          </>
+        ) : (
+          <>в БД пока нет связей — серые круги-заглушки · до {RING2_SLOTS} у каждого</>
+        );
+    }
+
+    setGraphHeader({
+      loading: isLoading || !data,
+      centerLine,
+      statsLine,
+      onRandomDirector: pickRandomDirector,
+      randomDisabled: centersLoading && centerPool.length === 0,
+    });
+  }, [
+    error,
+    data,
+    isLoading,
+    expandedSlotIdx,
+    ring1Expanded,
+    nestedHover,
+    nestedData,
+    pickRandomDirector,
+    centersLoading,
+    centerPool.length,
+    setGraphHeader,
+  ]);
+
   const pan = ring1Expanded
     ? {
         x: -ring1Positions[expandedSlotIdx].x * HOVER_PAN,
@@ -210,15 +287,6 @@ export function HomePage() {
     );
   }
 
-  const focusNode = ring1Expanded ? data?.ring1[expandedSlotIdx] : null;
-  const nestedFocusName =
-    nestedHover && nestedData?.center.name
-      ? nestedData.center.name
-      : nestedHover
-        ? data?.ring1.find((n) => n.id === nestedHover.id)?.name ??
-          data?.ring1.flatMap((n) => n.ring2).find((n) => n.id === nestedHover.id)?.name
-        : null;
-
   const nestedShownWithExpanded =
     ring1Expanded &&
     nestedHover !== null &&
@@ -228,20 +296,6 @@ export function HomePage() {
 
   return (
     <div className="h-[calc(100vh-5.75rem)] sm:h-[calc(100vh-6rem)] lg:h-[calc(100vh-6.5rem)] bg-site-bg relative overflow-hidden">
-      <GraphTopBar
-        data={data}
-        hoverActive={ring1Expanded}
-        focusNode={focusNode}
-        nestedFocusName={nestedFocusName}
-        onRandomDirector={() => {
-          const pool = centerPool.length > 0 ? centerPool : [];
-          setCurrentCenterId(pickRandomCenterId(pool));
-          setHistory([]);
-          clearHover();
-        }}
-        randomDisabled={centersLoading && centerPool.length === 0}
-      />
-
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none text-center">
         <p className="text-xs text-graph-text/40 tracking-wide">
           Наведи на вдохновителя — раскроется его круг · клик — новый центр · двойной клик — карточка
@@ -428,89 +482,6 @@ export function HomePage() {
           </g>
         </svg>
       )}
-    </div>
-  );
-}
-
-function GraphTopBar({
-  data,
-  hoverActive,
-  focusNode,
-  nestedFocusName,
-  onRandomDirector,
-  randomDisabled,
-}: {
-  data: Awaited<ReturnType<typeof getRadialGraph>> | undefined;
-  hoverActive: boolean;
-  focusNode: { name: string } | null | undefined;
-  nestedFocusName?: string | null;
-  onRandomDirector: () => void;
-  randomDisabled: boolean;
-}) {
-  return (
-    <div
-      className={cn(
-        'absolute top-6 left-0 right-0 z-10',
-        SITE_GUTTER_CLASS,
-      )}
-    >
-      <div className="mx-auto flex w-full max-w-page items-start justify-between gap-6">
-        <div className="pointer-events-none min-w-0">
-          <p
-            className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] font-bold tracking-tight leading-none"
-            style={{ color: TIFFANY }}
-          >
-            Граф влияний
-          </p>
-          <p className="text-[clamp(0.95rem,1.4vw,1.25rem)] text-ink-500 mt-1.5">
-            {data ? (
-              hoverActive && focusNode ? (
-                <>
-                  Смотрим: <span className="font-medium">{focusNode.name}</span>
-                  {nestedFocusName && (
-                    <>
-                      {' '}
-                      → <span className="font-medium">{nestedFocusName}</span>
-                    </>
-                  )}
-                  <span className="text-ink-300"> · центр: {data.center.name}</span>
-                </>
-              ) : (
-                <>Центр: {data.center.name}</>
-              )
-            ) : (
-              'Загружаем...'
-            )}
-          </p>
-          {data && (
-            <p className="text-[clamp(0.875rem,1.2vw,1.125rem)] text-ink-500 mt-0.5">
-              {data.ring1.length > 0 ? (
-                <>
-                  {data.ring1.length}{' '}
-                  {plural(data.ring1.length, 'вдохновитель', 'вдохновителя', 'вдохновителей')}
-                </>
-              ) : (
-                'в БД пока нет связей — серые круги-заглушки'
-              )}
-              <span> · до {RING2_SLOTS} у каждого</span>
-            </p>
-          )}
-        </div>
-
-        <button
-          type="button"
-          onClick={onRandomDirector}
-          disabled={randomDisabled}
-          className={cn(
-            'shrink-0 text-base sm:text-lg font-medium leading-tight',
-            'text-[#0ABAB5] px-4 py-2 rounded border border-[#0ABAB5]/40',
-            'hover:border-[#0ABAB5] transition-colors',
-            'disabled:opacity-40 disabled:cursor-not-allowed',
-          )}
-        >
-          ↻ Случайный режиссёр
-        </button>
-      </div>
     </div>
   );
 }

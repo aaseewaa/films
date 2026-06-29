@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/layout/Header';
 import { LocaleSync } from '@/components/layout/LocaleSync';
+import { GraphHeaderProvider } from '@/contexts/GraphHeaderContext';
 import { HomePage } from '@/pages/HomePage';
 import { FilmsPage } from '@/pages/FilmsPage';
 import { FilmPage } from '@/pages/FilmPage';
@@ -23,10 +24,11 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-site-bg">
       <LocaleSync />
-      <Header />
+      <GraphHeaderProvider>
+        <Header />
 
-      <main className="flex-1">
-        <Routes>
+        <main className="flex-1">
+          <Routes>
           {/* Главная — граф */}
           <Route path="/" element={<HomePage />} />
 
@@ -61,8 +63,9 @@ function App() {
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </main>
+          </Routes>
+        </main>
+      </GraphHeaderProvider>
     </div>
   );
 }
