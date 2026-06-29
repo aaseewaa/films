@@ -9,6 +9,10 @@ import { useAuthStore } from '@/stores/auth';
 import { useTranslation } from '@/hooks/useTranslation';
 import { cn } from '@/lib/utils';
 import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
+import {
+  HEADER_NAV_LINK_CLASS,
+  HEADER_NAV_SEP_CLASS,
+} from '@/lib/headerNavTheme';
 
 type NavItem =
   | { to: string; label: string }
@@ -133,10 +137,10 @@ export function Header() {
             <Logo size="large" className="shrink min-w-0" />
           </div>
 
-          <div className="hidden md:flex items-center justify-end flex-1 min-w-0 gap-4 lg:gap-5">
+          <div className="hidden lg:flex items-center justify-end flex-1 min-w-0 gap-3 xl:gap-4 overflow-hidden">
             <nav
               className={cn(
-                'flex flex-nowrap items-center justify-end shrink-0',
+                'flex flex-nowrap items-center justify-end shrink min-w-0',
                 'transition-transform duration-300 ease-out',
                 searchExpanded && '-translate-x-1',
               )}
@@ -146,7 +150,10 @@ export function Header() {
                 <Fragment key={item.to}>
                   {index > 0 && (
                     <span
-                      className="shrink-0 px-3 lg:px-5 xl:px-7 text-ink-500 font-semibold text-[1.6rem] lg:text-[1.95rem] xl:text-[2.25rem] leading-none select-none"
+                      className={cn(
+                        'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                        HEADER_NAV_SEP_CLASS,
+                      )}
                       aria-hidden
                     >
                       |
@@ -155,9 +162,9 @@ export function Header() {
                   <Link
                     to={item.to}
                     className={cn(
-                      'shrink-0 uppercase font-semibold tracking-[0.06em] text-ink-500',
-                      'text-[1.6rem] lg:text-[1.95rem] xl:text-[2.25rem] leading-none',
-                      'px-2.5 lg:px-3.5 py-1.5 rounded-sm transition-colors duration-150',
+                      'shrink-0 uppercase font-semibold tracking-[0.06em] text-ink-500 leading-none',
+                      HEADER_NAV_LINK_CLASS,
+                      'px-2 xl:px-3 py-1.5 rounded-sm transition-colors duration-150',
                       'hover:text-[#0ABAB5]',
                     )}
                     aria-current={
@@ -171,7 +178,10 @@ export function Header() {
             </nav>
 
             <span
-              className="shrink-0 px-3 lg:px-5 xl:px-7 text-ink-500 font-semibold text-[1.6rem] lg:text-[1.95rem] xl:text-[2.25rem] leading-none select-none"
+              className={cn(
+                'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                HEADER_NAV_SEP_CLASS,
+              )}
               aria-hidden
             >
               |
@@ -180,7 +190,10 @@ export function Header() {
             <ExpandableSearch onExpandedChange={setSearchExpanded} />
 
             <span
-              className="shrink-0 px-3 lg:px-5 xl:px-7 text-ink-500 font-semibold text-[1.6rem] lg:text-[1.95rem] xl:text-[2.25rem] leading-none select-none"
+              className={cn(
+                'shrink-0 px-2 xl:px-4 2xl:px-6 text-ink-500 font-semibold leading-none select-none',
+                HEADER_NAV_SEP_CLASS,
+              )}
               aria-hidden
             >
               |
@@ -189,7 +202,7 @@ export function Header() {
             <LanguageToggle />
           </div>
 
-          <div className="md:hidden flex items-center gap-3 shrink-0">
+          <div className="lg:hidden flex items-center gap-3 shrink-0">
             <LanguageToggle />
             <button
               type="button"

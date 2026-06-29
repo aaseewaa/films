@@ -457,12 +457,12 @@ function GraphTopBar({
       <div className="mx-auto flex w-full max-w-page items-start justify-between gap-6">
         <div className="pointer-events-none min-w-0">
           <p
-            className="font-serif text-[3.25rem] font-bold tracking-tight leading-none"
+            className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] font-bold tracking-tight leading-none"
             style={{ color: TIFFANY }}
           >
             Граф влияний
           </p>
-          <p className="text-[1.375rem] text-ink-500 mt-1.5">
+          <p className="text-[clamp(0.95rem,1.4vw,1.25rem)] text-ink-500 mt-1.5">
             {data ? (
               hoverActive && focusNode ? (
                 <>
@@ -483,7 +483,7 @@ function GraphTopBar({
             )}
           </p>
           {data && (
-            <p className="text-[1.25rem] text-ink-500 mt-0.5">
+            <p className="text-[clamp(0.875rem,1.2vw,1.125rem)] text-ink-500 mt-0.5">
               {data.ring1.length > 0 ? (
                 <>
                   {data.ring1.length}{' '}

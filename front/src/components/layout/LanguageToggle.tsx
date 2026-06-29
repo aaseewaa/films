@@ -8,10 +8,7 @@ const LOCALE_COLORS: Record<SiteLocale, string> = {
   en: LOCALE_EN_ACCENT,
 };
 
-const LABEL_CLASS =
-  'uppercase font-semibold tracking-[0.06em] text-[1.6rem] lg:text-[1.95rem] xl:text-[2.25rem] leading-none transition-colors duration-150';
-
-/**
+import { HEADER_LANG_CLASS } from '@/lib/headerNavTheme';
  * Переключатель языка: показывает ru (Tiffany) или en (#ECCBD9), по клику меняет.
  */
 export function LanguageToggle({ className }: { className?: string }) {
@@ -31,7 +28,7 @@ export function LanguageToggle({ className }: { className?: string }) {
       style={{ color: LOCALE_COLORS[locale] }}
       aria-label={locale === 'ru' ? tr('langSwitchToEn') : tr('langSwitchToRu')}
     >
-      <span className={LABEL_CLASS}>{locale}</span>
+      <span className={cn(HEADER_LANG_CLASS, 'uppercase font-semibold tracking-[0.06em] leading-none transition-colors duration-150')}>{locale}</span>
     </button>
   );
 }

@@ -67,7 +67,7 @@ export function CollectionsPage() {
     <div className="bg-site-bg min-h-[calc(100vh-5.75rem)] sm:min-h-[calc(100vh-6rem)] lg:min-h-[calc(100vh-6.5rem)]">
       <PageContent className="py-8 sm:py-12">
         <header className="mb-8 lg:mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold text-ink-500 uppercase tracking-wide">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-ink-500 uppercase tracking-wide">
             Коллекции
           </h1>
         </header>

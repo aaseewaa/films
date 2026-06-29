@@ -153,14 +153,14 @@
     color: #0abab5;
     -webkit-text-fill-color: #0abab5;
     @apply uppercase leading-none tracking-wide font-normal;
-    font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+    font-size: clamp(1.85rem, 3.8vw, 3rem);
   }
 
   .catalog-pluffy-tab {
     font-family: 'Pluffy Loon Outline Shadow', system-ui, sans-serif;
     -webkit-text-fill-color: currentColor;
     @apply uppercase leading-none tracking-wide font-normal;
-    font-size: clamp(1.35rem, 2.8vw, 2rem);
+    font-size: clamp(1.1rem, 2.2vw, 1.65rem);
   }
 
   .catalog-film-row:hover {

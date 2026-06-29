@@ -12,8 +12,8 @@ interface ExpandableSearchProps {
 
 /** Соразмерно крупной навигации в Header (фильмы, Гении/вдохновители…) */
 const ICON_BTN =
-  'shrink-0 flex items-center justify-center bg-site-bg transition-colors hover:bg-site-hover w-[3.1rem] lg:w-[3.7rem] xl:w-[4.2rem]';
-const ICON_SIZE = 'w-[1.75rem] h-[1.75rem] lg:w-[2.1rem] lg:h-[2.1rem] xl:w-[2.45rem] xl:h-[2.45rem]';
+  'shrink-0 flex items-center justify-center bg-site-bg transition-colors hover:bg-site-hover w-[2.5rem] xl:w-[3rem] 2xl:w-[3.5rem]';
+const ICON_SIZE = 'w-[1.35rem] h-[1.35rem] xl:w-[1.65rem] xl:h-[1.65rem] 2xl:w-[2rem] 2xl:h-[2rem]';
 
 /**
  * Поиск: иконка соразмерна пунктам меню → по клику раскрывается крупная «капсула»,
