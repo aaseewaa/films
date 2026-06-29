@@ -18,7 +18,7 @@ from app.config import settings
 # ─── Engine ──────────────────────────────────────────────────────
 # Один engine на всё приложение, держит пул соединений.
 engine = create_async_engine(
-    settings.database_url,
+    settings.async_database_url,
     echo=settings.db_echo,
     pool_size=settings.db_pool_size,
     max_overflow=settings.db_max_overflow,

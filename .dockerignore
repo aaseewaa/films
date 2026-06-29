@@ -1,0 +1,15 @@
+**/.git
+**/.env
+**/.env.*
+**/venv
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/node_modules
+front/dist
+backend/uploads
+backend/scripts/cache
+**/*.log
+**/.DS_Store
+films.dump
+*.dump
