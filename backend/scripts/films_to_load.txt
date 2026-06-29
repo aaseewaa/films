@@ -1,0 +1,84 @@
+# ================================================================
+# Загрузка недостающих фильмов для seed_collections_update.py
+#
+# Формат строк:
+#   123456          — TMDB id (комментарий после # на той же строке — ok)
+#   Title Year      — поиск по названию + год
+#   # комментарий   — строка целиком игнорируется
+# Уже есть в БД — скрипт пропустит автоматически.
+#
+# Запуск:
+#   cd backend && source venv/bin/activate
+#   python -m scripts.load_film_by_title --file scripts/films_to_load.txt
+#   python -m scripts.seed_collections_update
+# ================================================================
+
+# ─── Кино для клипового мышления ────────────────────────────────
+476600    # Skate Kitchen (2018)
+591       # The Da Vinci Code (2006)
+13851     # RocknRolla (2008)
+249397    # Nymphomaniac: Vol. I (2013)
+116745    # The Secret Life of Walter Mitty (2013)
+57214     # Project X (2012)
+51876     # Limitless (2011)
+37735     # Easy A (2010)
+10201     # Yes Man (2008)
+18377     # Wild Child (2008)
+20994     # Жмурки / Dead Man's Bluff (2005)
+632617    # C'mon C'mon (2021)
+480629    # The Art of Self-Defense (2019)
+496       # Borat (2006)
+283562    # Brüno (2009)
+
+# ─── Католическая церковь в кино ────────────────────────────────
+1184918   # Conclave (2024)
+537108    # By the Grace of God (2018)
+68726     # Silence (2016)
+13475     # Angels & Demons (2009)
+561       # Constantine (2005)
+219064    # Calvary / Голгофа (2014)
+581600    # The Two Popes (2019)
+574021    # The Apparition (2018)
+613504    # Corpus Christi (2019)
+11009     # The Magdalene Sisters (2002)
+58        # Bad Education (2004)
+439       # La Dolce Vita (1960)
+31566     # Amen. (2002)
+# Молодой папа — СЕРИАЛ (TMDB tv/62699), load_film_by_title не загрузит
+
+# ─── Поколение 2000-х ───────────────────────────────────────────
+9291      # The Basketball Diary (1995)
+680       # Pulp Fiction (1994)
+481       # American Pie (1999)
+11685     # District 13 (2004)
+9799      # The Fast and the Furious (2001)
+671       # Harry Potter and the Philosopher's Stone (2001)
+4247      # Scary Movie (2000)
+627       # Trainspotting (1996)
+19995     # Avatar (2009)
+115       # The Big Lebowski (1998)
+278       # The Shawshank Redemption (1994)
+550       # Fight Club (1999)
+641       # Requiem for a Dream (2000)
+100       # Lock, Stock and Two Smoking Barrels (1998)
+808       # Shrek (2001)
+
+# ─── Италия через кино ──────────────────────────────────────────
+1143014   # Parthenope (2024)
+39018     # La Piscine (1969)
+11820     # Stealing Beauty (1996)
+33487     # Baarìa (2009)
+323664    # Leoni / A Holy Venetian Family (2015) — «венецианские львы»
+541660    # Loro (2018)
+
+# ─── Женщины-режиссёры ──────────────────────────────────────────
+11158     # The Virgin Suicides (1999)
+1887      # Marie Antoinette (2006)
+73576     # Русалка / Mermaid (2007)
+333277    # Mustang (2015)
+933260    # The Substance (2024)
+747188    # Nomadland (2020)
+899827    # Unclenching the Fists (2021)
+960       # Cléo from 5 to 7 (1962)
+21711     # Daughters of the Dust (1991)
+64736     # Питер FM / Piter FM (2006)

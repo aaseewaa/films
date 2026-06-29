@@ -27,8 +27,7 @@ import {
   NODE_TRANSITION,
   PAN_TRANSITION,
   PLACEHOLDER_SIZE,
-  RING1_POSITIONS,
-  RING1_RADIUS,
+  ring1LayoutPositions,
   RING1_SIZE,
   RING1_SLOTS,
   RING2_ORBIT_PLACEHOLDER,
@@ -43,8 +42,6 @@ import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
 import { SITE_UI_SCALE } from '@/lib/siteScale';
 import { useSiteLang } from '@/lib/siteLang';
 import { cn } from '@/lib/utils';
-
-const POSITIONS = RING1_POSITIONS;
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -87,6 +84,21 @@ export function HomePage() {
   } | null>(null);
 
   const hoverClearTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [graphFillScale, setGraphFillScale] = useState(1);
+
+  useEffect(() => {
+    const updateGraphFillScale = () => {
+      const w = window.innerWidth;
+      const h = Math.max(320, window.innerHeight - 104);
+      const fitted = Math.min(w, h);
+      const scale =
+        w > h * 1.15 ? (w * 0.78) / fitted : (h * 0.82) / fitted;
+      setGraphFillScale(Math.min(1.85, Math.max(1, scale)));
+    };
+    updateGraphFillScale();
+    window.addEventListener('resize', updateGraphFillScale);
+    return () => window.removeEventListener('resize', updateGraphFillScale);
+  }, []);
 
   const clearHover = useCallback(() => {
     setExpandedRing1Id(null);
@@ -143,13 +155,18 @@ export function HomePage() {
     return data.ring1.findIndex((n) => n.id === expandedRing1Id);
   }, [expandedRing1Id, data]);
 
+  const ring1Positions = useMemo(
+    () => (data ? ring1LayoutPositions(data.ring1.length) : []),
+    [data],
+  );
+
   const ring1Expanded =
     expandedSlotIdx >= 0 && data !== undefined;
 
   const pan = ring1Expanded
     ? {
-        x: -POSITIONS[expandedSlotIdx].x * HOVER_PAN,
-        y: -POSITIONS[expandedSlotIdx].y * HOVER_PAN,
+        x: -ring1Positions[expandedSlotIdx].x * HOVER_PAN,
+        y: -ring1Positions[expandedSlotIdx].y * HOVER_PAN,
       }
     : { x: 0, y: 0 };
 
@@ -241,7 +258,7 @@ export function HomePage() {
       />
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 pointer-events-none text-center">
-        <p className="text-xs text-graph-text/40 tracking-wide">
+        <p className="text-sm text-graph-text/50 tracking-wide">
           Наведи на вдохновителя — раскроется его круг · клик — новый центр · двойной клик — карточка
         </p>
         {history.length > 0 && (
@@ -263,6 +280,7 @@ export function HomePage() {
           viewBox={`-${GRAPH_VIEW_HALF} -${GRAPH_VIEW_HALF} ${GRAPH_VIEW_HALF * 2} ${GRAPH_VIEW_HALF * 2}`}
           preserveAspectRatio="xMidYMid meet"
         >
+          <g transform={`scale(${graphFillScale})`}>
           {renderHistory(history, goBackTo, (id) => navigate(`/director/${id}`))}
 
           <g
@@ -272,8 +290,8 @@ export function HomePage() {
           >
             {ring1Expanded && expandedSlotIdx >= 0 && (
               <circle
-                cx={POSITIONS[expandedSlotIdx].x}
-                cy={POSITIONS[expandedSlotIdx].y}
+                cx={ring1Positions[expandedSlotIdx].x}
+                cy={ring1Positions[expandedSlotIdx].y}
                 r={
                   CENTER_SIZE / 2 +
                   HOVER_INFLUENCER_RADIUS +
@@ -286,7 +304,7 @@ export function HomePage() {
               />
             )}
 
-            {POSITIONS.map((pos, idx) => {
+            {ring1Positions.map((pos, idx) => {
               const node = data.ring1[idx];
               const isHover = ring1Expanded && idx === expandedSlotIdx;
               const centerR = ring1Expanded ? CENTER_HOVER_SIZE / 2 : CENTER_SIZE / 2;
@@ -332,7 +350,7 @@ export function HomePage() {
               onDoubleClick={() => navigate(`/director/${data.center.id}`)}
             />
 
-            {POSITIONS.map((pos, idx) => {
+            {ring1Positions.map((pos, idx) => {
               const node = data.ring1[idx];
               if (!node) {
                 return (
@@ -371,7 +389,7 @@ export function HomePage() {
               );
             })}
 
-            {POSITIONS.map((pos, idx) => {
+            {ring1Positions.map((pos, idx) => {
               const node = data.ring1[idx];
               if (!node) return null;
               const isHover = ring1Expanded && idx === expandedSlotIdx;
@@ -424,6 +442,7 @@ export function HomePage() {
                 onOpenCard: (id) => navigate(`/director/${id}`),
               })}
           </g>
+          </g>
         </svg>
       )}
     </div>
@@ -452,15 +471,15 @@ function GraphTopBar({
         SITE_GUTTER_CLASS,
       )}
     >
-      <div className="flex items-start justify-between gap-6">
+      <div className="mx-auto flex w-full max-w-page items-start justify-between gap-4 sm:gap-6">
         <div className="pointer-events-none min-w-0">
           <p
-            className="font-serif text-[3.25rem] font-bold tracking-tight leading-none"
+            className="font-serif text-[clamp(1.75rem,3.5vw,3.25rem)] font-bold tracking-tight leading-none"
             style={{ color: TIFFANY }}
           >
             Граф влияний
           </p>
-          <p className="text-[1.375rem] text-ink-500 mt-1.5">
+          <p className="text-[clamp(0.95rem,1.6vw,1.375rem)] text-ink-500 mt-1.5">
             {data ? (
               hoverActive && focusNode ? (
                 <>
@@ -481,7 +500,7 @@ function GraphTopBar({
             )}
           </p>
           {data && (
-            <p className="text-[1.25rem] text-ink-500 mt-0.5">
+            <p className="text-[clamp(0.875rem,1.4vw,1.25rem)] text-ink-500 mt-0.5">
               {data.ring1.length > 0 ? (
                 <>
                   {data.ring1.length}{' '}
@@ -911,14 +930,11 @@ function NodeAvatar({
         y={labelY}
         textAnchor="middle"
         dominantBaseline="hanging"
-        fill="#FFFFFF"
-        stroke="rgba(26, 24, 21, 0.75)"
-        strokeWidth={2.5}
-        paintOrder="stroke fill"
+        fill="#1A1815"
         style={{
           fontFamily: 'Inter, sans-serif',
           fontSize: Math.round(
-            (isCenter ? 18 : size < LABEL_SMALL_THRESHOLD ? 12 : 14) * SITE_UI_SCALE,
+            (isCenter ? 20 : size < LABEL_SMALL_THRESHOLD ? 14 : 16) * SITE_UI_SCALE,
           ),
           fontWeight: 500,
           pointerEvents: 'none',

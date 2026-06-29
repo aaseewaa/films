@@ -38,3 +38,17 @@ export function personHeroPlate(person: {
   const idx = (person.id + (longBio ? 2 : 0)) % PERSON_HERO_PLATES.length;
   return PERSON_HERO_PLATES[idx]!;
 }
+
+/** Та же логика палитры, что у режиссёра: id + «длина» профиля. */
+export function profileHeroPlate(user: {
+  id: number;
+  display_name?: string | null;
+  email?: string | null;
+  city?: string | null;
+}): PersonHeroPlate {
+  return personHeroPlate({
+    id: user.id,
+    summary: user.display_name,
+    description: [user.email, user.city].filter(Boolean).join(' · ') || null,
+  });
+}

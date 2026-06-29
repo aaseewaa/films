@@ -4,7 +4,7 @@
 Коллекции - сущности entity с entity_type='collection'.
 - title/description: в entity_translation
 - содержимое: collection_item (collection_id, entity_id, position, note)
-- обложка: entity.primary_image_url ИЛИ collection.cover_entity_id
+- обложка: entity.primary_image_url (редакторская) или постер cover_entity_id
 - теги: entity_taxonomy (для редакторских коллекций можно ставить теги)
 """
 from __future__ import annotations
@@ -76,8 +76,8 @@ class CollectionsService:
                 COALESCE(et_lang.title, et_en.title) AS title,
                 COALESCE(et_lang.summary, et_en.summary) AS summary,
                 COALESCE(
-                    cov.primary_image_url,
-                    e.primary_image_url
+                    NULLIF(trim(e.primary_image_url), ''),
+                    cov.primary_image_url
                 ) AS cover_image,
                 COALESCE(
                     array_agg(DISTINCT tt.code) FILTER (WHERE tt.code IS NOT NULL),
@@ -143,7 +143,10 @@ class CollectionsService:
                 COALESCE(et_lang.title, et_en.title) AS title,
                 COALESCE(et_lang.summary, et_en.summary) AS summary,
                 COALESCE(et_lang.description, et_en.description) AS description,
-                COALESCE(cov.primary_image_url, e.primary_image_url) AS cover_image,
+                COALESCE(
+                    NULLIF(trim(e.primary_image_url), ''),
+                    cov.primary_image_url
+                ) AS cover_image,
                 COALESCE(
                     array_agg(DISTINCT tt.code) FILTER (WHERE tt.code IS NOT NULL),
                     ARRAY[]::text[]

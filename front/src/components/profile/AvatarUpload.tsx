@@ -4,6 +4,7 @@ import { Camera } from 'lucide-react';
 import { uploadAvatar } from '@/api/auth';
 import { useAuthStore } from '@/stores/auth';
 import { cn } from '@/lib/utils';
+import { validateAvatarFile } from '@/lib/avatarUpload';
 
 interface AvatarUploadProps {
   avatarUrl?: string | null;
@@ -44,12 +45,9 @@ export function AvatarUpload({
   function handleFile(file: File | undefined) {
     if (!file) return;
     setError(null);
-    if (!file.type.startsWith('image/')) {
-      setError('Выберите изображение');
-      return;
-    }
-    if (file.size > 2 * 1024 * 1024) {
-      setError('Файл больше 2 MB');
+    const validationError = validateAvatarFile(file);
+    if (validationError) {
+      setError(validationError);
       return;
     }
     setPreview(URL.createObjectURL(file));

@@ -29,7 +29,7 @@ export const GRAPH_VIEW_HALF = Math.round(
     RING2_ORBIT_RADIUS +
     NESTED_HOVER_ORBIT_RADIUS +
     RING2_ORBIT_SIZE) *
-    0.9,
+    0.68,
 );
 
 export const HISTORY_ORIGIN = { x: -400, y: 400 };
@@ -50,3 +50,31 @@ export const RING1_POSITIONS = Array.from({ length: RING1_SLOTS }, (_, i) => {
     y: Math.sin(angle) * RING1_RADIUS,
   };
 });
+
+export type RingPosition = { angle: number; x: number; y: number };
+
+/** n узлов равномерно по окружности; первый — сверху (−π/2). */
+export function ringPositions(count: number, radius = RING1_RADIUS): RingPosition[] {
+  if (count <= 0) return [];
+  return Array.from({ length: count }, (_, i) => {
+    const angle = -Math.PI / 2 + (i * 2 * Math.PI) / count;
+    return {
+      angle,
+      x: Math.cos(angle) * radius,
+      y: Math.sin(angle) * radius,
+    };
+  });
+}
+
+/**
+ * Кольцо 1: при 0 узлах — слоты под заглушки (maxSlots);
+ * при 1…maxSlots−1 — только реальные узлы, равномерно по дуге.
+ */
+export function ring1LayoutPositions(
+  nodeCount: number,
+  maxSlots = RING1_SLOTS,
+  radius = RING1_RADIUS,
+): RingPosition[] {
+  if (nodeCount <= 0) return ringPositions(maxSlots, radius);
+  return ringPositions(Math.min(nodeCount, maxSlots), radius);
+}

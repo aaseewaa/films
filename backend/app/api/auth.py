@@ -31,6 +31,11 @@ AVATAR_EXT = {
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
 
+def _avatar_max_size_label() -> str:
+    mb = settings.avatar_max_bytes / (1024 * 1024)
+    return f"{int(mb)} MB" if mb.is_integer() else f"{mb:.1f} MB"
+
+
 @router.post(
     "/register",
     response_model=TokenResponse,
@@ -129,7 +134,7 @@ async def upload_avatar(
     user: CurrentUser = Depends(require_user),
     service: AuthService = Depends(get_auth_service),
 ) -> UserMe:
-    """Принимает JPEG/PNG/WebP/GIF до 2 MB, сохраняет в uploads/avatars/."""
+    """Принимает JPEG/PNG/WebP/GIF, сохраняет в uploads/avatars/."""
     if file.content_type not in ALLOWED_AVATAR_TYPES:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
@@ -140,7 +145,10 @@ async def upload_avatar(
     if not raw:
         raise HTTPException(status_code=400, detail="Пустой файл")
     if len(raw) > settings.avatar_max_bytes:
-        raise HTTPException(status_code=400, detail="Файл больше 2 MB")
+        raise HTTPException(
+            status_code=400,
+            detail=f"Файл больше {_avatar_max_size_label()}",
+        )
 
     ext = AVATAR_EXT[file.content_type]
     avatars_dir = Path(settings.uploads_dir) / "avatars"

@@ -1,20 +1,8 @@
-export function pluralFilms(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'фильмов';
-  if (mod10 === 1) return 'фильм';
-  if (mod10 >= 2 && mod10 <= 4) return 'фильма';
-  return 'фильмов';
-}
+import { getSiteLang } from '@/lib/siteLang';
+import { pluralFilms, pluralSeries } from '@/lib/pluralize';
+import type { SiteLocale } from '@/stores/locale';
 
-function pluralSeries(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'сериалов';
-  if (mod10 === 1) return 'сериал';
-  if (mod10 >= 2 && mod10 <= 4) return 'сериала';
-  return 'сериалов';
-}
+export { pluralFilms, pluralSeries };
 
 /** Строка «23 фильма | 8 сериалов» по данным из нашей БД. */
 export function formatPersonWorkLine(
@@ -24,16 +12,17 @@ export function formatPersonWorkLine(
     series_count?: number | null;
   },
   mode: 'director' | 'actor',
+  locale: SiteLocale = getSiteLang(),
 ): string | null {
   const films = mode === 'director' ? person.directed_count : person.acted_count;
   const series = person.series_count ?? 0;
   const parts: string[] = [];
 
   if (films != null && films > 0) {
-    parts.push(`${films} ${pluralFilms(films)}`);
+    parts.push(`${films} ${pluralFilms(films, locale)}`);
   }
   if (series > 0) {
-    parts.push(`${series} ${pluralSeries(series)}`);
+    parts.push(`${series} ${pluralSeries(series, locale)}`);
   }
 
   return parts.length > 0 ? parts.join(' | ') : null;

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Heart } from 'lucide-react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import {
   addFavorite,
@@ -8,6 +9,17 @@ import {
 import { useTranslation } from '@/hooks/useTranslation';
 import { useAuthStore } from '@/stores/auth';
 import { cn } from '@/lib/utils';
+
+const HEART_SIZE = 28;
+
+function heartClass(isFavorite: boolean) {
+  return cn(
+    'transition-colors',
+    isFavorite
+      ? 'text-tiffany fill-tiffany hover:text-tiffany-dark hover:fill-tiffany-dark'
+      : 'text-black fill-none hover:text-ink-300',
+  );
+}
 
 interface FavoriteButtonProps {
   entityId: number;
@@ -45,17 +57,16 @@ export function FavoriteButton({ entityId, className }: FavoriteButtonProps) {
   const isFavorite = check?.is_favorite ?? false;
   const pending = addMutation.isPending || removeMutation.isPending;
   const hasError = addMutation.isError || removeMutation.isError;
-
-  const labelClass =
-    'text-lg sm:text-xl lg:text-2xl font-medium transition-colors whitespace-nowrap';
+  const ariaLabel = isFavorite ? tr('inFavorites') : tr('addToFavorites');
 
   if (!isAuthenticated) {
     return (
       <Link
         to="/auth/login"
-        className={cn(labelClass, 'text-ink-50 hover:text-ink-300', className)}
+        className={cn('inline-flex', className)}
+        aria-label={tr('addToFavorites')}
       >
-        {tr('addToFavorites')}
+        <Heart size={HEART_SIZE} strokeWidth={1.75} className={heartClass(false)} />
       </Link>
     );
   }
@@ -75,13 +86,10 @@ export function FavoriteButton({ entityId, className }: FavoriteButtonProps) {
         onClick={handleToggle}
         disabled={pending}
         aria-pressed={isFavorite}
-        className={cn(
-          labelClass,
-          'disabled:opacity-60',
-          isFavorite ? 'text-wine-500 hover:text-wine-600' : 'text-ink-50 hover:text-ink-300',
-        )}
+        aria-label={ariaLabel}
+        className="inline-flex disabled:opacity-60"
       >
-        {isFavorite ? tr('inFavorites') : tr('addToFavorites')}
+        <Heart size={HEART_SIZE} strokeWidth={1.75} className={heartClass(isFavorite)} />
       </button>
       {hasError && (
         <span className="text-sm text-wine-500">{tr('favoriteError')}</span>

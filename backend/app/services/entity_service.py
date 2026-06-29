@@ -198,6 +198,56 @@ class EntityService:
         )).all()
         return [row[0] for row in rows]
 
+    @staticmethod
+    def _image_basename(url: str | None) -> str | None:
+        if not url:
+            return None
+        name = url.rstrip("/").rsplit("/", 1)[-1].split("?", 1)[0]
+        return name or None
+
+    @classmethod
+    def _is_same_image(cls, left: str | None, right: str | None) -> bool:
+        left_name = cls._image_basename(left)
+        right_name = cls._image_basename(right)
+        return bool(left_name and right_name and left_name == right_name)
+
+    async def _get_backdrop_url(
+        self,
+        entity_id: int,
+        *,
+        poster_url: str | None,
+        fallback: str | None,
+    ) -> str | None:
+        """
+        Кадр для hero: entity_media.backdrop → primary_backdrop_url → still.
+        Афишу (poster) не используем.
+        """
+        backdrop_sql = """
+            SELECT ma.url
+            FROM entity_media em
+            JOIN media_asset ma ON ma.id = em.media_id
+            WHERE em.entity_id = :eid
+              AND em.role = 'backdrop'
+            ORDER BY em.is_primary DESC, em.position NULLS LAST
+        """
+        backdrop_rows = (await self.db.execute(
+            text(backdrop_sql), {"eid": entity_id},
+        )).all()
+
+        candidates = [row[0] for row in backdrop_rows]
+        if fallback:
+            candidates.append(fallback)
+
+        for url in candidates:
+            if url and not self._is_same_image(url, poster_url):
+                return url
+
+        for url in await self._get_stills(entity_id, limit=3):
+            if url and not self._is_same_image(url, poster_url):
+                return url
+
+        return None
+
     # ─── Карточка фильма ────────────────────────────────────────
     async def _build_film(self, base: dict, tr: dict, lang: str) -> dict:
         # Спец-поля фильма
@@ -259,6 +309,11 @@ class EntityService:
         genres = await self._get_genres(base["id"], lang)
         genre_titles = [g["name"] for g in genres]
         stills_urls = await self._get_stills(base["id"], limit=10)
+        backdrop_url = await self._get_backdrop_url(
+            base["id"],
+            poster_url=base["primary_image_url"],
+            fallback=base["primary_backdrop_url"],
+        )
         original_title = await self._get_title_in_lang(base["id"], "en")
         if original_title and original_title == tr.get("title"):
             original_title = None
@@ -292,7 +347,7 @@ class EntityService:
                 "primary": base["primary_image_url"],
                 "thumbnail": base["thumbnail_url"],
             },
-            "backdrop_url": base["primary_backdrop_url"],
+            "backdrop_url": backdrop_url,
             "stills_urls": stills_urls,
             "media_kind": film_media_kind(genre_titles, meta),
             "genres": genres,

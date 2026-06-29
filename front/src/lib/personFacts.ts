@@ -1,4 +1,8 @@
 import type { EntityDetail, PersonAwardItem } from '@/api/types';
+import { t } from '@/lib/i18n';
+import { pluralNominations, pluralWins, pluralYears } from '@/lib/pluralize';
+import { getSiteLang } from '@/lib/siteLang';
+import type { SiteLocale } from '@/stores/locale';
 
 const MONTHS_GENITIVE = [
   'января',
@@ -20,15 +24,6 @@ export interface PersonFactRow {
   value: string;
 }
 
-function pluralYears(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'лет';
-  if (mod10 === 1) return 'год';
-  if (mod10 >= 2 && mod10 <= 4) return 'года';
-  return 'лет';
-}
-
 function ageFromIso(iso: string, asOf = new Date()): number | null {
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
   if (!m) return null;
@@ -39,76 +34,75 @@ function ageFromIso(iso: string, asOf = new Date()): number | null {
   return age >= 0 ? age : null;
 }
 
-function formatBirthDate(iso: string, opts?: { withAge?: boolean; deathDate?: string | null }): string | null {
+function formatBirthDate(
+  iso: string,
+  locale: SiteLocale,
+  opts?: { withAge?: boolean; deathDate?: string | null },
+): string | null {
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
   if (!m) return null;
   const day = parseInt(m[3], 10);
   const monthIdx = parseInt(m[2], 10) - 1;
   const year = parseInt(m[1], 10);
   if (monthIdx < 0 || monthIdx > 11 || day < 1) return null;
-  let line = `${day} ${MONTHS_GENITIVE[monthIdx]} ${year}`;
+
+  let line =
+    locale === 'en'
+      ? new Date(year, monthIdx, day).toLocaleDateString('en-US', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })
+      : `${day} ${MONTHS_GENITIVE[monthIdx]} ${year}`;
+
   if (opts?.withAge && !opts.deathDate) {
     const age = ageFromIso(iso);
-    if (age != null) line += ` (${age} ${pluralYears(age)})`;
+    if (age != null) line += ` (${age} ${pluralYears(age, locale)})`;
   }
   return line;
-}
-
-function pluralWins(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'побед';
-  if (mod10 === 1) return 'победа';
-  if (mod10 >= 2 && mod10 <= 4) return 'победы';
-  return 'побед';
-}
-
-function pluralNominations(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'номинаций';
-  if (mod10 === 1) return 'номинация';
-  if (mod10 >= 2 && mod10 <= 4) return 'номинации';
-  return 'номинаций';
 }
 
 export function formatAwardsStatLine(
   wins: number,
   nominationsTotal: number,
+  locale: SiteLocale = getSiteLang(),
 ): string | null {
   const parts: string[] = [];
-  if (wins > 0) parts.push(`${wins} ${pluralWins(wins)}`);
+  if (wins > 0) parts.push(`${wins} ${pluralWins(wins, locale)}`);
   if (nominationsTotal > 0) {
-    parts.push(`${nominationsTotal} ${pluralNominations(nominationsTotal)}`);
+    parts.push(`${nominationsTotal} ${pluralNominations(nominationsTotal, locale)}`);
   }
   return parts.length > 0 ? parts.join(' · ') : null;
 }
 
-export function buildPersonFacts(person: EntityDetail): PersonFactRow[] {
+export function buildPersonFacts(
+  person: EntityDetail,
+  locale: SiteLocale = getSiteLang(),
+): PersonFactRow[] {
   const rows: PersonFactRow[] = [];
 
   if (person.birth_date) {
-    const formatted = formatBirthDate(person.birth_date, {
+    const formatted = formatBirthDate(person.birth_date, locale, {
       withAge: true,
       deathDate: person.death_date,
     });
-    if (formatted) rows.push({ label: 'Дата рождения', value: formatted });
+    if (formatted) rows.push({ label: t(locale, 'factBirthDate'), value: formatted });
   }
 
   if (person.death_date) {
-    const formatted = formatBirthDate(person.death_date);
-    if (formatted) rows.push({ label: 'Дата смерти', value: formatted });
+    const formatted = formatBirthDate(person.death_date, locale);
+    if (formatted) rows.push({ label: t(locale, 'factDeathDate'), value: formatted });
   }
 
   if (person.birth_place?.trim()) {
-    rows.push({ label: 'Место рождения', value: person.birth_place.trim() });
+    rows.push({ label: t(locale, 'factBirthPlace'), value: person.birth_place.trim() });
   }
 
   const awards = person.awards;
   if (awards) {
     const total = awards.wins_count + awards.nominations_count;
-    const line = formatAwardsStatLine(awards.wins_count, total);
-    if (line) rows.push({ label: 'Награды', value: line });
+    const line = formatAwardsStatLine(awards.wins_count, total, locale);
+    if (line) rows.push({ label: t(locale, 'factAwards'), value: line });
   }
 
   return rows;

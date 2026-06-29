@@ -128,12 +128,6 @@ export function ProfilePage() {
     <div className="bg-site-bg min-h-screen text-ink-500">
       <ProfileHero user={user} stats={stats} />
 
-      {/* Резерв под фото (+15% высоты), чтобы вкладки не наезжали на портрет */}
-      <div
-        className="hidden md:block h-[clamp(3rem,10vh,8.5rem)] shrink-0 bg-site-bg"
-        aria-hidden
-      />
-
       <ProfileSubNav active={activeSection} onTab={scrollToSection} />
 
       <PageContent className="py-10 sm:py-14 lg:py-16">

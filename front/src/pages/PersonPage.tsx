@@ -16,16 +16,18 @@ import {
 } from '@/components/person/PersonSectionPanels';
 import {
   PersonSubNav,
-  PERSON_TABS,
+  PERSON_TAB_IDS,
+  usePersonTabLabels,
   type PersonSectionId,
 } from '@/components/person/PersonSubNav';
+import { useTranslation } from '@/hooks/useTranslation';
 import { orderArticlesForJournal } from '@/lib/articleMosaic';
 import { buildPersonBio } from '@/lib/personBio';
 import { useSiteLang } from '@/lib/siteLang';
 import { useSectionRef } from '@/lib/sectionRef';
 import { cn } from '@/lib/utils';
 
-const VALID_TABS = PERSON_TABS.map((t) => t.id);
+const VALID_TABS = PERSON_TAB_IDS;
 const SECTION_SCROLL_MT = 'scroll-mt-44';
 const sectionHeading = 'text-4xl sm:text-6xl font-bold text-ink-500 mb-6 sm:mb-8';
 const sectionBlock = 'pt-10 sm:pt-12 border-t border-ink-50/15';
@@ -36,6 +38,8 @@ function isPersonSectionId(v: string | null): v is PersonSectionId {
 
 export function PersonPage() {
   const lang = useSiteLang();
+  const tr = useTranslation();
+  const tabLabels = usePersonTabLabels();
   const { id } = useParams();
   const personId = id ? parseInt(id, 10) : 0;
   const [searchParams, setSearchParams] = useSearchParams();
@@ -131,7 +135,7 @@ export function PersonPage() {
   if (isLoading) {
     return (
       <div className="min-h-[50vh] flex items-center justify-center text-ink-50">
-        Загружаем…
+        {tr('personLoading')}
       </div>
     );
   }
@@ -139,9 +143,9 @@ export function PersonPage() {
   if (error || !person) {
     return (
       <PageContent className="py-24 text-center text-ink-50">
-        Персона не найдена
+        {tr('personNotFound')}
         <Link to="/search?type=person" className="block mt-4 text-wine-500 hover:underline">
-          ← К поиску
+          {tr('personBackToSearch')}
         </Link>
       </PageContent>
     );
@@ -160,7 +164,7 @@ export function PersonPage() {
 
       <PageContent className="py-10 sm:py-14 lg:py-16 space-y-0">
         <section ref={sectionRefs.about} id="about" className={SECTION_SCROLL_MT}>
-          <h2 className={sectionHeading}>О персоне</h2>
+          <h2 className={sectionHeading}>{tabLabels.about}</h2>
           <PersonAboutPanel bio={bio} filmography={filmography} />
         </section>
 
@@ -170,7 +174,7 @@ export function PersonPage() {
             id="filmography"
             className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
           >
-            <h2 className={sectionHeading}>Фильмография</h2>
+            <h2 className={sectionHeading}>{tabLabels.filmography}</h2>
             <PersonFilmographyPanel items={filmography} />
           </section>
         )}
@@ -181,7 +185,7 @@ export function PersonPage() {
             id="influences"
             className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
           >
-            <h2 className={cn(sectionHeading, 'sr-only')}>Учителя / вдохновители</h2>
+            <h2 className={cn(sectionHeading, 'sr-only')}>{tabLabels.influences}</h2>
             <PersonInfluencesPanel person={person} />
           </section>
         )}
@@ -192,7 +196,7 @@ export function PersonPage() {
             id="awards"
             className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
           >
-            <h2 className={sectionHeading}>Награды</h2>
+            <h2 className={sectionHeading}>{tabLabels.awards}</h2>
             <PersonAwardsPanel items={awardItems} />
           </section>
         )}
@@ -203,7 +207,7 @@ export function PersonPage() {
             id="articles"
             className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
           >
-            <h2 className={sectionHeading}>Публикации</h2>
+            <h2 className={sectionHeading}>{tabLabels.articles}</h2>
             <PersonArticlesPanel articles={articles} />
           </section>
         )}
@@ -214,7 +218,7 @@ export function PersonPage() {
             id="collections"
             className={`${SECTION_SCROLL_MT} ${sectionBlock}`}
           >
-            <h2 className={sectionHeading}>Подборки</h2>
+            <h2 className={sectionHeading}>{tabLabels.collections}</h2>
             <PersonCollectionsPanel collections={collections} />
           </section>
         )}

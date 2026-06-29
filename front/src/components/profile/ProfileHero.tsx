@@ -4,9 +4,10 @@ import type { ProfileStats } from '@/api/userData';
 import { PageContent } from '@/components/layout/PageContent';
 import { ProfileAvatarHero } from '@/components/profile/ProfileAvatarHero';
 import { pluralFilms } from '@/lib/personFilmographyLine';
+import { profileHeroPlate } from '@/lib/personHeroTheme';
+import { useSiteLang } from '@/lib/siteLang';
+import type { SiteLocale } from '@/stores/locale';
 import { cn } from '@/lib/utils';
-
-const PROFILE_PLATE_BG = '#E1EFF6';
 
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ru-RU', {
@@ -48,7 +49,7 @@ interface ProfileHeroMetric {
   label: string;
 }
 
-function buildHeroMetrics(stats?: ProfileStats | null): ProfileHeroMetric[] {
+function buildHeroMetrics(stats: ProfileStats | null | undefined, locale: SiteLocale): ProfileHeroMetric[] {
   if (!stats) return [];
   const items: ProfileHeroMetric[] = [];
   if (stats.ratings_count > 0) {
@@ -60,13 +61,13 @@ function buildHeroMetrics(stats?: ProfileStats | null): ProfileHeroMetric[] {
   if (stats.watched_count > 0) {
     items.push({
       value: stats.watched_count,
-      label: `${pluralFilms(stats.watched_count)} просмотрено`,
+      label: `${pluralFilms(stats.watched_count, locale)} просмотрено`,
     });
   }
   if (stats.want_to_watch_count > 0) {
     items.push({
       value: stats.want_to_watch_count,
-      label: `${pluralFilms(stats.want_to_watch_count)} в планах`,
+      label: `${pluralFilms(stats.want_to_watch_count, locale)} в планах`,
     });
   }
   if (stats.views_count > 0) {
@@ -84,6 +85,10 @@ interface ProfileHeroProps {
 }
 
 export function ProfileHero({ user, stats }: ProfileHeroProps) {
+  const locale = useSiteLang();
+  const plate = profileHeroPlate(user);
+  const light = !plate.textLight;
+
   const facts: { label: string; value: string }[] = [];
   if (user.email) facts.push({ label: 'Email', value: user.email });
   if (user.city?.trim()) facts.push({ label: 'Город', value: user.city.trim() });
@@ -91,52 +96,59 @@ export function ProfileHero({ user, stats }: ProfileHeroProps) {
     facts.push({ label: 'На сайте с', value: formatDate(user.registered_at) });
   }
 
-  const metrics = buildHeroMetrics(stats);
+  const metrics = buildHeroMetrics(stats, locale);
+
+  const textMain = light ? 'text-ink-400' : 'text-white';
+  const textMuted = light ? 'text-ink-50' : 'text-white/70';
+  const textSoft = light ? 'text-ink-100' : 'text-white/90';
+  const textFaint = light ? 'text-ink-50' : 'text-white/80';
+  const labelMuted = light ? 'text-ink-50' : 'text-white/75';
+  const borderStat = light ? 'border-ink-50/30' : 'border-white/20';
+  const linkHover = light ? 'hover:text-ink-300' : 'hover:text-white';
 
   return (
-    <PageContent className="pt-2 sm:pt-3 pb-6 md:pb-0">
+    <PageContent className="pt-2 sm:pt-3 pb-0">
       <section
         className={cn(
-          'grid grid-cols-1 overflow-visible rounded-sm',
-          'md:grid-cols-[3fr_2fr] md:items-stretch',
+          'grid grid-cols-1 overflow-hidden rounded-sm',
+          'md:grid-cols-[3fr_2fr]',
+          'md:h-[75rem]',
+          'lg:h-[78rem]',
         )}
       >
         <div
           className={cn(
             'flex flex-col justify-between px-6 sm:px-8 lg:px-11 py-6 sm:py-7 lg:py-8 order-2 md:order-1 min-h-0',
-            'text-ink-500',
+            textMain,
           )}
-          style={{ backgroundColor: PROFILE_PLATE_BG }}
+          style={{ backgroundColor: plate.bg }}
         >
-          <nav
-            className="text-sm sm:text-base shrink-0 text-ink-50"
-            aria-label="Хлебные крошки"
-          >
-            <Link to="/" className="transition-colors hover:text-ink-400">
+          <nav className={cn('text-sm sm:text-base shrink-0', textMuted)} aria-label="Хлебные крошки">
+            <Link to="/" className={cn('transition-colors', linkHover)}>
               Главная
             </Link>
             <span className="mx-2">»</span>
-            <span className="text-ink-300">Профиль</span>
+            <span className={textSoft}>Профиль</span>
           </nav>
 
           <div className="flex-1 flex flex-col min-h-0 pt-10 sm:pt-12 lg:pt-16">
-            <h1 className="font-serif text-[4.5rem] sm:text-[5.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-[1.04] font-bold text-ink-500">
+            <h1 className="font-serif text-[4.5rem] sm:text-[5.5rem] lg:text-[6.5rem] xl:text-[7.5rem] leading-[1.04] font-bold">
               {user.display_name}
             </h1>
-            <p className="font-sans text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] mt-4 sm:mt-6 leading-relaxed text-ink-100">
+            <p className={cn('font-sans text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] mt-4 sm:mt-6 leading-relaxed', textFaint)}>
               Личный кабинет
             </p>
 
             {facts.length > 0 && (
               <div className="mt-8 sm:mt-10 lg:mt-12">
-                <h2 className="font-sans text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] font-semibold mb-4 sm:mb-6 text-ink-500">
+                <h2 className="font-sans text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] font-semibold mb-4 sm:mb-6">
                   Сведения
                 </h2>
                 <ul className="space-y-3 sm:space-y-4 text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] list-none leading-snug">
                   {facts.map((row) => (
                     <li key={row.label} className="flex flex-wrap gap-x-2 gap-y-0.5">
-                      <span className="shrink-0 text-ink-50">{row.label}</span>
-                      <span className="text-ink-500">{row.value}</span>
+                      <span className={cn('shrink-0', labelMuted)}>{row.label}</span>
+                      <span>{row.value}</span>
                     </li>
                   ))}
                 </ul>
@@ -148,28 +160,26 @@ export function ProfileHero({ user, stats }: ProfileHeroProps) {
             <div
               className={cn(
                 'flex flex-wrap gap-x-8 sm:gap-x-12 mt-5 sm:mt-6 pt-4 sm:pt-5 border-t shrink-0',
-                'border-ink-50/30',
+                borderStat,
               )}
             >
               {metrics.map((m) => (
                 <div key={m.label}>
-                  <p className="font-serif text-4xl sm:text-5xl lg:text-[3.25rem] leading-none tabular-nums text-ink-500">
+                  <p className="font-serif text-4xl sm:text-5xl lg:text-[3.25rem] leading-none tabular-nums">
                     {m.value}
                   </p>
-                  <p className="text-base sm:text-lg mt-0.5 text-ink-50">{m.label}</p>
+                  <p className={cn('text-base sm:text-lg mt-0.5', textFaint)}>{m.label}</p>
                 </div>
               ))}
             </div>
           )}
         </div>
 
-        <div className="relative order-1 md:order-2 w-full h-full min-h-[min(48.3rem,86.25vw)] md:min-h-0 overflow-visible">
-          <div className="relative w-full h-full min-h-[inherit] md:h-[115%] bg-cream-300">
-            <ProfileAvatarHero
-              avatarUrl={user.avatar_url}
-              displayName={user.display_name}
-            />
-          </div>
+        <div className="relative order-1 md:order-2 min-h-[min(48rem,88vw)] md:min-h-0 md:h-full bg-ink-400">
+          <ProfileAvatarHero
+            avatarUrl={user.avatar_url}
+            displayName={user.display_name}
+          />
         </div>
       </section>
     </PageContent>

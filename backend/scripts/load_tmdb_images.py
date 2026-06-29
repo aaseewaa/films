@@ -60,6 +60,44 @@ def tmdb_image_url(path: str | None, base: str) -> str | None:
     return f"{base}{path}"
 
 
+def image_basename(url: str | None) -> str | None:
+    if not url:
+        return None
+    name = url.rstrip("/").rsplit("/", 1)[-1].split("?", 1)[0]
+    return name or None
+
+
+def pick_best_backdrop(
+    backdrops: list[dict[str, Any]],
+    *,
+    poster_path: str | None,
+    poster_url: str | None,
+) -> dict[str, Any] | None:
+    """Лучший кадр: не афиша, предпочитаем горизонтальные."""
+    if not backdrops:
+        return None
+
+    poster_names = {
+        name
+        for name in (image_basename(poster_path), image_basename(poster_url))
+        if name
+    }
+
+    def score(item: dict[str, Any]) -> tuple[float, float, float]:
+        width = item.get("width") or 0
+        height = max(item.get("height") or 1, 1)
+        ratio = width / height
+        landscape_bonus = 1.0 if ratio >= 1.5 else 0.0
+        poster_penalty = -10.0 if image_basename(item.get("file_path")) in poster_names else 0.0
+        return (
+            poster_penalty + landscape_bonus,
+            item.get("vote_average") or 0,
+            item.get("vote_count") or 0,
+        )
+
+    return max(backdrops, key=score)
+
+
 # ─── БД ────────────────────────────────────────────────────
 async def get_films_to_process(
     db: AsyncSession,
@@ -174,6 +212,12 @@ async def process_film(
     """Обработка одного фильма. Возвращает счётчики."""
     stats = {"backdrop": False, "stills": 0, "error": None}
 
+    poster_row = await db.execute(
+        text("SELECT primary_image_url FROM entity WHERE id = :id"),
+        {"id": entity_id},
+    )
+    poster_url = poster_row.scalar_one_or_none()
+
     try:
         images = await tmdb.movie_images(int(tmdb_id))
     except Exception as exc:
@@ -185,14 +229,30 @@ async def process_film(
         log.info("    [%d] нет backdrops в TMDB", entity_id)
         return stats
 
-    # Сортируем по vote_average DESC, потом по vote_count DESC
-    backdrops.sort(
-        key=lambda b: (b.get("vote_average") or 0, b.get("vote_count") or 0),
-        reverse=True,
+    poster_paths = [
+        p.get("file_path")
+        for p in (images.get("posters") or [])
+        if p.get("file_path")
+    ]
+    poster_path = poster_paths[0] if poster_paths else None
+
+    best = pick_best_backdrop(
+        backdrops,
+        poster_path=poster_path,
+        poster_url=poster_url,
     )
+    if not best:
+        log.info("    [%d] не удалось выбрать backdrop", entity_id)
+        return stats
+
+    # Остальные backdrops — в галерею stills (без выбранного hero-кадра)
+    best_path = best.get("file_path")
+    stills_pool = [
+        item for item in backdrops
+        if item.get("file_path") != best_path
+    ][:MAX_STILLS_PER_FILM]
 
     # 1) ЛУЧШИЙ backdrop → primary_backdrop_url
-    best = backdrops[0]
     best_url = tmdb_image_url(best.get("file_path"), TMDB_IMAGE_BASE_BACKDROP)
     if best_url:
         await db.execute(text("""
@@ -218,7 +278,6 @@ async def process_film(
         stats["backdrop"] = True
 
     # 2) Следующие N → stills (галерея)
-    stills_pool = backdrops[1 : 1 + MAX_STILLS_PER_FILM]
     for pos, still in enumerate(stills_pool, start=1):
         still_url = tmdb_image_url(still.get("file_path"), TMDB_IMAGE_BASE_STILL)
         if not still_url:

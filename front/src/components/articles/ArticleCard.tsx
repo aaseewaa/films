@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import type { ArticleSummary } from '@/api/types';
+import { useTranslation } from '@/hooks/useTranslation';
 import {
   articleTypeLabel,
   authorForArticle,
@@ -7,6 +8,7 @@ import {
   resolveImage,
   themeForSlug,
 } from '@/lib/articleMosaic';
+import { useSiteLang } from '@/lib/siteLang';
 import { cn } from '@/lib/utils';
 
 /** Доля высоты карточки: фото / цветной блок */
@@ -23,12 +25,14 @@ export function ArticleCard({
   split = '40-60',
   className,
 }: ArticleCardProps) {
+  const tr = useTranslation();
+  const locale = useSiteLang();
   const theme = themeForSlug(article.slug);
   const imageUrl = resolveImage(article);
-  const typeLabel = articleTypeLabel(article.article_type);
-  const dateStr = formatArticleDate(article.published_at);
+  const typeLabel = articleTypeLabel(article.article_type, locale);
+  const dateStr = formatArticleDate(article.published_at, locale);
   const metaLine = [typeLabel, dateStr].filter(Boolean).join(' / ');
-  const author = authorForArticle(article, theme);
+  const author = authorForArticle(article, theme, locale);
   const light = theme.textLight;
   const wide = split === '75-25';
   const narrow = split === '40-60' || split === '45-55';
@@ -135,7 +139,7 @@ export function ArticleCard({
           )}
           <h2 className={cn(titleClass, narrow ? 'mb-2' : 'mb-1')}>{article.title}</h2>
           <p className={cn(bylineClass, narrow ? 'mb-2 sm:mb-3' : 'mb-1 sm:mb-1.5')}>
-            Автор: {author}
+            {tr('authorLabel')}: {author}
           </p>
           {article.summary && <p className={excerptClass}>{article.summary}</p>}
         </div>

@@ -44,11 +44,11 @@ export function ArticlePage() {
 
   const heroImage = resolveImage(article);
   const theme = themeForSlug(article.slug);
-  const typeLabel = articleTypeLabel(article.article_type);
-  const dateStr = formatArticleDate(article.published_at);
+  const typeLabel = articleTypeLabel(article.article_type, lang);
+  const dateStr = formatArticleDate(article.published_at, lang);
   const author =
     article.author_name?.trim() ||
-    authorForArticle(article, theme);
+    authorForArticle(article, theme, lang);
   const paragraphs = article.body ? splitArticleParagraphs(article.body) : [];
   const director = article.related_entities.find((r) => r.link_type === 'about');
   const frameBg = lightenFrame(theme.bg);

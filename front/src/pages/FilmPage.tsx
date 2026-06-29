@@ -18,6 +18,7 @@ import { FilmSubNav, type FilmSectionId } from '@/components/film/FilmSubNav';
 import { PageContent } from '@/components/layout/PageContent';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useSiteLang } from '@/lib/siteLang';
+import { resolveFilmHeroImage } from '@/lib/filmHero';
 import { useSectionRef } from '@/lib/sectionRef';
 
 const VALID_TABS: FilmSectionId[] = [
@@ -179,8 +180,7 @@ export function FilmPage() {
     );
   }
 
-  const heroImage =
-    film.backdrop_url || film.images.primary || film.images.thumbnail || null;
+  const heroImage = resolveFilmHeroImage(film);
   const voteAvg = formatRating(film.extra_metadata?.vote_average);
   const metaLine = buildHeroMeta(film);
   const aboutText = aboutTextBlocks(film);

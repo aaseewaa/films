@@ -7,6 +7,7 @@ import type {
   PersonFilmographyItem,
 } from '@/api/types';
 import { PersonInfluencesGraph } from '@/components/person/PersonInfluencesGraph';
+import { useTranslation } from '@/hooks/useTranslation';
 import { personHeroPlate } from '@/lib/personHeroTheme';
 import { ArticleJournalGrid } from '@/components/articles/ArticleJournalGrid';
 import { CollectionCatalogCard } from '@/components/collections/CollectionCatalogCard';
@@ -27,12 +28,13 @@ export function PersonInfluencesPanel({ person }: { person: EntityDetail }) {
 const FILMOGRAPHY_PREVIEW = 3;
 
 export function PersonFilmographyPanel({ items }: { items: PersonFilmographyItem[] }) {
+  const tr = useTranslation();
   const [showAll, setShowAll] = useState(false);
 
   if (!items.length) {
     return (
       <p className="text-xl sm:text-2xl lg:text-3xl text-ink-50">
-        Фильмография пока не загружена.
+        {tr('personFilmographyEmpty')}
       </p>
     );
   }
@@ -54,7 +56,7 @@ export function PersonFilmographyPanel({ items }: { items: PersonFilmographyItem
             onClick={() => setShowAll(true)}
             className="text-xl sm:text-2xl lg:text-3xl font-medium text-ink-300 hover:text-ink-500 transition-colors"
           >
-            Показать ещё ({hiddenCount})
+            {tr('personShowMore')} ({hiddenCount})
           </button>
         </div>
       )}
@@ -66,7 +68,7 @@ export function PersonFilmographyPanel({ items }: { items: PersonFilmographyItem
             onClick={() => setShowAll(false)}
             className="text-lg sm:text-xl text-ink-50 hover:text-ink-300 transition-colors"
           >
-            Свернуть
+            {tr('personCollapse')}
           </button>
         </div>
       )}
@@ -75,6 +77,8 @@ export function PersonFilmographyPanel({ items }: { items: PersonFilmographyItem
 }
 
 export function PersonAwardsPanel({ items }: { items: PersonAwardItem[] }) {
+  const tr = useTranslation();
+
   return (
     <ul className="space-y-4 sm:space-y-5">
       {items.map((item, i) => (
@@ -89,7 +93,7 @@ export function PersonAwardsPanel({ items }: { items: PersonAwardItem[] }) {
                 : 'shrink-0 text-xs sm:text-sm uppercase tracking-wide font-medium text-ink-50'
             }
           >
-            {item.status === 'won' ? 'Победа' : 'Номинация'}
+            {item.status === 'won' ? tr('personAwardWon') : tr('personAwardNominated')}
           </span>
           <span>{formatAwardLine(item)}</span>
         </li>

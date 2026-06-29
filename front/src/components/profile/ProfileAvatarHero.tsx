@@ -4,6 +4,7 @@ import { Camera } from 'lucide-react';
 import { uploadAvatar } from '@/api/auth';
 import { useAuthStore } from '@/stores/auth';
 import { cn } from '@/lib/utils';
+import { validateAvatarFile } from '@/lib/avatarUpload';
 
 interface ProfileAvatarHeroProps {
   avatarUrl?: string | null;
@@ -39,12 +40,9 @@ export function ProfileAvatarHero({ avatarUrl, displayName }: ProfileAvatarHeroP
   function handleFile(file: File | undefined) {
     if (!file) return;
     setError(null);
-    if (!file.type.startsWith('image/')) {
-      setError('Выберите изображение');
-      return;
-    }
-    if (file.size > 2 * 1024 * 1024) {
-      setError('Файл больше 2 MB');
+    const validationError = validateAvatarFile(file);
+    if (validationError) {
+      setError(validationError);
       return;
     }
     setPreview(URL.createObjectURL(file));
@@ -64,17 +62,17 @@ export function ProfileAvatarHero({ avatarUrl, displayName }: ProfileAvatarHeroP
           <img
             src={src}
             alt={displayName}
-            className="absolute inset-0 w-full h-full object-cover object-[center_12%]"
+            className="absolute inset-0 w-full h-full object-contain object-center bg-ink-400"
           />
         ) : (
           <div
-            className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-cream-300"
+            className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ink-400"
             aria-hidden
           >
-            <span className="font-serif text-6xl sm:text-7xl text-ink-50/40">
+            <span className="font-serif text-6xl sm:text-7xl text-white/30">
               {initials || '?'}
             </span>
-            <span className="text-sm text-ink-50 px-4 text-center">
+            <span className="text-sm text-white/70 px-4 text-center">
               Нажмите, чтобы загрузить фото
             </span>
           </div>

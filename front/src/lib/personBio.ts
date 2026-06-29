@@ -98,9 +98,15 @@ export function buildPersonBio(
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
-  const sum = summary?.trim();
+  const sum = summary ? stripEmojis(summary.trim()) : null;
   if (sum && body.startsWith(sum)) {
     body = body.slice(sum.length).trim();
+  } else if (sum && body) {
+    const sumNorm = sum.replace(/\s+/g, ' ');
+    const bodyNorm = body.replace(/\s+/g, ' ');
+    if (bodyNorm.startsWith(sumNorm)) {
+      body = bodyNorm.slice(sumNorm.length).trim();
+    }
   }
 
   const lead = sum && sum !== body ? sum : null;

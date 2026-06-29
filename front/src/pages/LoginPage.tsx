@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '@/api/auth';
 import { AuthShell } from '@/components/auth/AuthShell';
-import { AuthField, authInputClass } from '@/components/auth/AuthField';
+import { AuthField, authInputClass, authSubmitButtonClass, authFormClass, authErrorClass } from '@/components/auth/AuthField';
 import { Button } from '@/components/ui/Button';
 import { getAuthErrorMessage } from '@/lib/authErrors';
 import { useAuthStore } from '@/stores/auth';
@@ -42,11 +42,11 @@ export function LoginPage() {
         <>
           <p>
             Нет аккаунта?{' '}
-            <Link to="/auth/register" className="text-wine-500 hover:underline font-medium">
+            <Link to="/auth/register" className="text-tiffany hover:underline font-medium">
               Зарегистрироваться
             </Link>
           </p>
-          <p className="mt-3">
+          <p className="mt-4">
             <Link to="/" className="text-ink-50 hover:text-ink-300">
               Продолжить без аккаунта
             </Link>
@@ -54,9 +54,9 @@ export function LoginPage() {
         </>
       }
     >
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className={authFormClass}>
         {error && (
-          <p className="text-sm text-wine-500 bg-wine-500/5 border border-wine-500/20 rounded-sm px-3 py-2">
+          <p className={authErrorClass}>
             {error}
           </p>
         )}
@@ -88,7 +88,7 @@ export function LoginPage() {
           />
         </AuthField>
 
-        <Button type="submit" className="w-full" size="lg" disabled={loading}>
+        <Button type="submit" className={authSubmitButtonClass} size="lg" disabled={loading}>
           {loading ? 'Входим…' : 'Войти'}
         </Button>
       </form>

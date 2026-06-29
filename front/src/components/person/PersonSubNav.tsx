@@ -1,17 +1,45 @@
+import { useMemo } from 'react';
 import { PageContent } from '@/components/layout/PageContent';
 import { FavoriteButton } from '@/components/user/FavoriteButton';
+import { useTranslation } from '@/hooks/useTranslation';
+import type { UiKey } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 
-export const PERSON_TABS = [
-  { id: 'about', label: 'О персоне' },
-  { id: 'filmography', label: 'Фильмография' },
-  { id: 'influences', label: 'Учителя / вдохновители' },
-  { id: 'awards', label: 'Награды' },
-  { id: 'articles', label: 'Публикации' },
-  { id: 'collections', label: 'Подборки' },
+export const PERSON_TAB_IDS = [
+  'about',
+  'filmography',
+  'influences',
+  'awards',
+  'articles',
+  'collections',
 ] as const;
 
-export type PersonSectionId = (typeof PERSON_TABS)[number]['id'];
+export type PersonSectionId = (typeof PERSON_TAB_IDS)[number];
+
+const TAB_LABEL_KEYS: Record<PersonSectionId, UiKey> = {
+  about: 'personTabAbout',
+  filmography: 'personTabFilmography',
+  influences: 'personTabInfluences',
+  awards: 'personTabAwards',
+  articles: 'personTabArticles',
+  collections: 'personTabCollections',
+};
+
+export function usePersonTabLabels(): Record<PersonSectionId, string> {
+  const tr = useTranslation();
+  return useMemo(
+    () =>
+      Object.fromEntries(
+        PERSON_TAB_IDS.map((id) => [id, tr(TAB_LABEL_KEYS[id])]),
+      ) as Record<PersonSectionId, string>,
+    [tr],
+  );
+}
+
+export function usePersonTabLabel(id: PersonSectionId): string {
+  const tr = useTranslation();
+  return tr(TAB_LABEL_KEYS[id]);
+}
 
 const TAB_CLASS =
   'text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-medium transition-colors whitespace-nowrap';
@@ -24,7 +52,16 @@ interface PersonSubNavProps {
 }
 
 export function PersonSubNav({ entityId, active, visibleTabs, onTab }: PersonSubNavProps) {
-  const tabs = PERSON_TABS.filter((t) => visibleTabs.includes(t.id));
+  const tr = useTranslation();
+
+  const tabs = useMemo(
+    () =>
+      PERSON_TAB_IDS.filter((id) => visibleTabs.includes(id)).map((id) => ({
+        id,
+        label: tr(TAB_LABEL_KEYS[id]),
+      })),
+    [tr, visibleTabs],
+  );
 
   return (
     <nav className="sticky top-[5.75rem] sm:top-[6rem] lg:top-[6.5rem] z-30 w-full bg-site-bg border-b border-ink-50/15">

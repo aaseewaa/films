@@ -1,31 +1,26 @@
 import { Link } from 'react-router-dom';
 import type { EntityDetail } from '@/api/types';
 import { PageContent } from '@/components/layout/PageContent';
+import { useTranslation } from '@/hooks/useTranslation';
 import { buildPersonFacts } from '@/lib/personFacts';
-import { pluralFilms } from '@/lib/personFilmographyLine';
+import { pluralFilms, pluralSeries } from '@/lib/personFilmographyLine';
 import { personHeroPlate } from '@/lib/personHeroTheme';
 import { formatPersonRoles } from '@/lib/personRoles';
+import { useSiteLang } from '@/lib/siteLang';
 import { cn } from '@/lib/utils';
-
-function pluralSeries(n: number): string {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return 'сериалов';
-  if (mod10 === 1) return 'сериал';
-  if (mod10 >= 2 && mod10 <= 4) return 'сериала';
-  return 'сериалов';
-}
 
 interface PersonHeroProps {
   person: EntityDetail;
 }
 
 export function PersonHero({ person }: PersonHeroProps) {
+  const tr = useTranslation();
+  const locale = useSiteLang();
   const plate = personHeroPlate(person);
   const light = !plate.textLight;
 
-  const facts = buildPersonFacts(person);
-  const rolesLine = formatPersonRoles(person);
+  const facts = buildPersonFacts(person, locale);
+  const rolesLine = formatPersonRoles(person, locale);
   const titleEn =
     person.title_en?.trim() &&
     person.title_en.trim().toLowerCase() !== person.title.trim().toLowerCase()
@@ -64,13 +59,13 @@ export function PersonHero({ person }: PersonHeroProps) {
           )}
           style={{ backgroundColor: plate.bg }}
         >
-          <nav className={cn('text-sm sm:text-base shrink-0', textMuted)} aria-label="Хлебные крошки">
+          <nav className={cn('text-sm sm:text-base shrink-0', textMuted)} aria-label="Breadcrumb">
             <Link to="/" className={cn('transition-colors', linkHover)}>
-              Главная
+              {tr('personBreadcrumbHome')}
             </Link>
             <span className="mx-2">»</span>
             <Link to="/search?type=person" className={cn('transition-colors', linkHover)}>
-              Персоны
+              {tr('personBreadcrumbPeople')}
             </Link>
             <span className="mx-2">»</span>
             <span className={textSoft}>{person.title}</span>
@@ -94,7 +89,7 @@ export function PersonHero({ person }: PersonHeroProps) {
             {facts.length > 0 && (
               <div className="mt-8 sm:mt-10 lg:mt-12">
                 <h2 className="font-sans text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] font-semibold mb-4 sm:mb-6">
-                  Сведения
+                  {tr('personFactsHeading')}
                 </h2>
                 <ul className="space-y-3 sm:space-y-4 text-[2rem] sm:text-[2.25rem] lg:text-[2.5rem] list-none leading-snug">
                   {facts.map((row) => (
@@ -121,7 +116,7 @@ export function PersonHero({ person }: PersonHeroProps) {
                     {filmsCount}
                   </p>
                   <p className={cn('text-base sm:text-lg mt-0.5', textFaint)}>
-                    {pluralFilms(filmsCount)}
+                    {pluralFilms(filmsCount, locale)}
                   </p>
                 </div>
               )}
@@ -131,7 +126,7 @@ export function PersonHero({ person }: PersonHeroProps) {
                     {seriesCount}
                   </p>
                   <p className={cn('text-base sm:text-lg mt-0.5', textFaint)}>
-                    {pluralSeries(seriesCount)}
+                    {pluralSeries(seriesCount, locale)}
                   </p>
                 </div>
               )}

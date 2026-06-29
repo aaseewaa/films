@@ -1,5 +1,8 @@
 import type { ArticleSummary } from '@/api/types';
+import { t, type UiKey } from '@/lib/i18n';
+import { getSiteLang } from '@/lib/siteLang';
 import { plateColorForIndex } from '@/lib/sitePalette';
+import type { SiteLocale } from '@/stores/locale';
 
 export type ArticleCardVariant = 'stack' | 'overlay' | 'compact';
 
@@ -73,24 +76,28 @@ const THEMES_WITH_COLORS: ArticleTheme[] = THEMES.map((theme, index) => {
   return { ...theme, bg, textLight };
 });
 
-const TYPE_LABELS: Record<string, string> = {
-  essay: 'Эссе',
-  review: 'Рецензия',
-  analysis: 'Анализ',
-  interview: 'Интервью',
-  editorial: 'Редакция',
-  roundtable: 'Круглый стол',
+const TYPE_KEYS: Record<string, UiKey> = {
+  essay: 'articleTypeEssay',
+  review: 'articleTypeReview',
+  analysis: 'articleTypeAnalysis',
+  interview: 'articleTypeInterview',
+  editorial: 'articleTypeEditorial',
+  roundtable: 'articleTypeRoundtable',
 };
 
-export function articleTypeLabel(type: string): string {
+export function articleTypeLabel(type: string, locale: SiteLocale = getSiteLang()): string {
   const key = type.toLowerCase();
-  return TYPE_LABELS[key] ?? type;
+  const uiKey = TYPE_KEYS[key];
+  return uiKey ? t(locale, uiKey) : type;
 }
 
-export function formatArticleDate(iso: string | null | undefined): string {
+export function formatArticleDate(
+  iso: string | null | undefined,
+  locale: SiteLocale = getSiteLang(),
+): string {
   if (!iso) return '';
   try {
-    return new Date(iso).toLocaleDateString('ru-RU', {
+    return new Date(iso).toLocaleDateString(locale === 'en' ? 'en-US' : 'ru-RU', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
@@ -126,13 +133,14 @@ export function themeForSlug(slug: string): ArticleTheme {
 export function authorForArticle(
   article: ArticleSummary,
   theme: ArticleTheme,
+  locale: SiteLocale = getSiteLang(),
 ): string {
   if (theme.authorName) return theme.authorName;
   if (article.main_subject?.title) {
-    const t = article.main_subject.title;
-    return t.startsWith('О ') || t.startsWith('о ') ? t.slice(2) : t;
+    const title = article.main_subject.title;
+    return title.startsWith('О ') || title.startsWith('о ') ? title.slice(2) : title;
   }
-  return 'Редакция FilmCine';
+  return t(locale, 'authorEditorial');
 }
 
 export function orderArticlesForJournal(items: ArticleSummary[]): ArticleSummary[] {

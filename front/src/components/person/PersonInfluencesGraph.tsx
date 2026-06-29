@@ -2,6 +2,7 @@ import { useRef, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { getRadialGraph, type RadialPerson } from '@/api/graph';
+import { useTranslation } from '@/hooks/useTranslation';
 import type { PersonHeroPlate } from '@/lib/personHeroTheme';
 import { graphSpreadScale, SITE_UI_SCALE } from '@/lib/siteScale';
 import { useSiteLang } from '@/lib/siteLang';
@@ -42,6 +43,7 @@ export function PersonInfluencesGraph({
   plate,
 }: PersonInfluencesGraphProps) {
   const navigate = useNavigate();
+  const tr = useTranslation();
   const lang = useSiteLang();
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -94,28 +96,29 @@ export function PersonInfluencesGraph({
     >
       <div className="absolute top-5 left-5 sm:top-6 sm:left-8 z-10 pointer-events-none max-w-lg">
         <p className={cn('font-serif text-2xl sm:text-3xl', colors.title)}>
-          Учителя и вдохновители
+          {tr('personInfluencesTitle')}
         </p>
         <p className={cn('text-sm sm:text-base mt-1', colors.sub)}>
-          Центр: {directorName}
+          {tr('personInfluencesCenter')}: {directorName}
           {data && data.ring1.length > 0 && (
-            <span> · {data.ring1.length} в карте</span>
+            <span>
+              {' '}
+              · {data.ring1.length} {tr('personInfluencesInMap')}
+            </span>
           )}
         </p>
-        <p className={cn('text-xs mt-1', colors.hint)}>
-          Наведи на режиссёра — раскроется его круг · двойной клик — карточка
-        </p>
+        <p className={cn('text-xs mt-1', colors.hint)}>{tr('personInfluencesHint')}</p>
       </div>
 
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className={cn('text-sm', colors.sub)}>Строим граф…</p>
+          <p className={cn('text-sm', colors.sub)}>{tr('personGraphLoading')}</p>
         </div>
       )}
 
       {error && (
         <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
-          <p className={cn('text-sm', colors.sub)}>Не удалось загрузить граф влияний</p>
+          <p className={cn('text-sm', colors.sub)}>{tr('personGraphError')}</p>
         </div>
       )}
 

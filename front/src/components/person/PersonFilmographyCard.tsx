@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom';
 import type { PersonFilmographyItem } from '@/api/types';
+import { t } from '@/lib/i18n';
+import { useSiteLang } from '@/lib/siteLang';
 
 interface PersonFilmographyCardProps {
   film: PersonFilmographyItem;
 }
 
 export function PersonFilmographyCard({ film }: PersonFilmographyCardProps) {
+  const locale = useSiteLang();
+  const mediaKind = film.media_kind ?? t(locale, 'mediaFilm');
   const subtitle = [
     film.original_title && film.original_title !== film.title ? film.original_title : null,
     film.release_year,
-    film.media_kind ?? 'фильм',
+    mediaKind,
   ]
     .filter(Boolean)
     .join(' / ');
