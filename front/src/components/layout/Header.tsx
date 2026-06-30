@@ -5,11 +5,8 @@ import { Logo } from './Logo';
 import { HeaderMenuToggle } from './HeaderMenuToggle';
 import { ExpandableSearch } from './ExpandableSearch';
 import { LanguageToggle } from './LanguageToggle';
-import { GraphHeaderCaption } from './GraphHeaderCaption';
-import { RandomDirectorButton } from './RandomDirectorButton';
 import { useAuthStore } from '@/stores/auth';
 import { useTranslation } from '@/hooks/useTranslation';
-import { useGraphHeader } from '@/contexts/GraphHeaderContext';
 import { cn } from '@/lib/utils';
 import { SITE_GUTTER_CLASS } from '@/lib/siteGutter';
 import {
@@ -53,12 +50,9 @@ export function Header() {
   const location = useLocation();
   const navigate = useNavigate();
   const tr = useTranslation();
-  const { state: graphHeader } = useGraphHeader();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchExpanded, setSearchExpanded] = useState(false);
   const { isAuthenticated, user, logout } = useAuthStore();
-  const isHome = location.pathname === '/';
-  const showGraphChrome = isHome;
 
   const navItems = useMemo<NavItem[]>(
     () => [
@@ -135,19 +129,12 @@ export function Header() {
             HEADER_HEIGHT_CLASS,
           )}
         >
-          <div className="flex items-center gap-2.5 sm:gap-3.5 lg:gap-4 min-w-0 flex-1 py-0.5">
+          <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 min-w-0 shrink-0">
             <HeaderMenuToggle
               open={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
             />
-            <Logo size="large" className="shrink-0" />
-            {showGraphChrome && (
-              <GraphHeaderCaption
-                centerLine={graphHeader.centerLine}
-                statsLine={graphHeader.statsLine}
-                loading={graphHeader.loading}
-              />
-            )}
+            <Logo size="large" className="shrink min-w-0" />
           </div>
 
           <div className="hidden md:flex items-center justify-end flex-1 min-w-0 gap-4 lg:gap-5">
@@ -200,13 +187,6 @@ export function Header() {
               |
             </span>
 
-            {showGraphChrome && graphHeader.onRandomDirector && (
-              <RandomDirectorButton
-                onClick={graphHeader.onRandomDirector}
-                disabled={graphHeader.randomDisabled}
-              />
-            )}
-
             <ExpandableSearch onExpandedChange={setSearchExpanded} />
 
             <span
@@ -222,14 +202,7 @@ export function Header() {
             <LanguageToggle />
           </div>
 
-          <div className="md:hidden flex items-center gap-2 shrink-0">
-            {showGraphChrome && graphHeader.onRandomDirector && (
-              <RandomDirectorButton
-                onClick={graphHeader.onRandomDirector}
-                disabled={graphHeader.randomDisabled}
-                className="!text-sm !px-2.5"
-              />
-            )}
+          <div className="md:hidden flex items-center gap-3 shrink-0">
             <LanguageToggle />
             <button
               type="button"
